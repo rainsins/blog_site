@@ -1,0 +1,12 @@
+.gsc-reactions{
+    border: var(--box-border);
+    border-radius: 12px;
+    padding: 20px 0;
+}
+.twikoo{
+    border: var(--box-border);
+    padding: 8px 12px;
+    margin: 2rem 4px;
+    border-radius: 16px;
+    /* background-color: var(--box-bg); */
+}

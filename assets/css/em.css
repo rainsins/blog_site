@@ -1,0 +1,14 @@
+.wl-content .wl-emoji[alt*="搜索引擎"],
+.wl-content .wl-emoji[alt*="小人"],
+.wl-content .wl-emoji[alt*="机场"],
+.wl-content .wl-emoji[alt*="猫狗"],
+.wl-content .wl-emoji[alt*="突然"],
+.wl-content .wl-emoji[alt*="抽象"],
+.wl-content .wl-emoji[alt*="商业头盔"]{
+    height: 6em;
+}
+
+.wl-content .wl-emoji[alt*="今天我要嫁给你"],
+.wl-content .wl-emoji[alt*="小黑子"]{
+    height: 10em;
+}

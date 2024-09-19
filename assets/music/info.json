@@ -1,0 +1,58 @@
+{
+    "songs": [
+      {
+        "bg": "#c9bea28f",
+        "artist": "矢野立美",
+        "songName": "LOVE Theme from TIGA",
+        "files": {
+          "song": "https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBb2VyMmNVNVNsT0ZpUGNaTFNrMVlnNG1QNGRyUlE_ZT1UcmN6c3A.flac",
+          "cover": "https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvcyFBb2VyMmNVNVNsT0ZpUGNUOUtwTjdjREJVWElPS0E_ZT05Q2xGQ3k.jpg"
+        }
+      },
+      {
+        "bg": "#0896eba1",
+        "artist": "矢野立美",
+        "songName": "远き呼び声の彼方へ",
+        "files": {
+          "song": "https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBb2VyMmNVNVNsT0ZpUGNjNVBfQnZLSk5uRG0ySWc_ZT1QOXdDM1U.flac",
+          "cover": "https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvcyFBb2VyMmNVNVNsT0ZpUGNUOUtwTjdjREJVWElPS0E_ZT05Q2xGQ3k.jpg"
+        }
+      },
+      {
+        "bg": "#ebbe03",
+        "artist": "矢野立美",
+        "songName": "安らぎを君に",
+        "files": {
+         "song": "https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBb2VyMmNVNVNsT0ZpUGNhVHIwc01wSVZ2eUtjMGc_ZT1GVVo5MXQ.flac",
+         "cover": "https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvcyFBb2VyMmNVNVNsT0ZpUGNUOUtwTjdjREJVWElPS0E_ZT05Q2xGQ3k.jpg"
+        }
+      },
+      {
+        "bg": "#ffc382",
+        "artist": "矢野立美",
+        "songName": "3000万年前からのメッセージ",
+        "files": {
+        "song": "https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBb2VyMmNVNVNsT0ZpUGNiSEVnZ1IyWDVUT254MkE_ZT1Tc2VjRXE.flac",
+        "cover": "https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvcyFBb2VyMmNVNVNsT0ZpUGNUOUtwTjdjREJVWElPS0E_ZT05Q2xGQ3k.jpg"
+        }
+      },
+      {
+        "bg": "#44c16fb5",
+        "artist": "矢野立美",
+        "songName": "Brave Love,TIGA (PIANO VERSION)",
+        "files": {
+        "song": "https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBb2VyMmNVNVNsT0ZpUGNSMGFfNGJhM1FzT1ptX2c_ZT1lN2Vmc1M.flac",
+        "cover": "https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvcyFBb2VyMmNVNVNsT0ZpUGNUOUtwTjdjREJVWElPS0E_ZT05Q2xGQ3k.jpg"
+        }
+      },
+      {
+        "bg": "#ffcbdc",
+        "artist": "矢野立美",
+        "songName": "Lounge Music2",
+        "files": {
+        "song": "https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBb2VyMmNVNVNsT0ZpUGNZalpkc0gwREdtaEVlVVE_ZT1kaXh5Vm8.mp3",
+        "cover": "https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvcyFBb2VyMmNVNVNsT0ZpUGNUOUtwTjdjREJVWElPS0E_ZT05Q2xGQ3k.jpg"
+        }
+      }
+    ]
+  }

@@ -1,0 +1,22 @@
+// Modified from arkui/iconic.styl (http://github.com/mockee/arkui)
+font-face(name='arkicons', path='/fonts/', fontFamily='arkicons', has_block=false)
+  @font-face
+    // IE9 Compat modes: eot
+    // IE6-IE8: #iefix
+    // Safari, Android, iOS: ttf
+    // Legacy iOS: svg
+    font-family: fontFamily
+    src: url(path + name + '.woff') format('woff'), \
+      url(path + name + '.ttf') format('truetype'), \
+      url(path + name + '.svg#arkicons') format('svg')
+
+    if has_block
+      {block}
+    else
+      font-weight: normal
+      font-style: normal
+
+font-path ?= '/fonts/'
++font-face(name: 'arkyakumono', path: font-path, fontFamily: 'arkyakumono', has_block: true)
+  font-weight: 400
+  font-style: normal

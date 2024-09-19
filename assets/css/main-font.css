@@ -1,0 +1,93 @@
+@font-face {
+    font-family: '方正书宋繁';
+    src: url("https://api.rainsin.cn/fontconverter/FZSSK.woff2");
+  }
+  
+  @font-face {
+    font-family: '方正宋黑繁';
+    src: url("https://api.rainsin.cn/fontconverter/FZSHK.woff2");
+  }
+  
+  @font-face {
+    font-family: "筑紫a备";
+    src: url("https://api.rainsin.cn/out_font/500-1721485067.woff2") format('woff2');
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-family: "筑紫a备";
+    src: url("https://api.rainsin.cn/out_font/400-1721485067.woff2") format('woff2');
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: "筑紫a备";
+    src: url("https://api.rainsin.cn/out_font/600-1721485067.woff2") format('woff2');
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-family: "筑紫A备";
+    src: url("https://api.rainsin.cn/out_font/100-1721485067.woff2") format('woff2');
+    font-weight: 100;
+  }
+  
+  @font-face {
+    font-family: "筑紫a备";
+    src: url("https://api.rainsin.cn/out_font/300-1721485067.woff2") format('woff2');
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: "筑紫a备";
+    src: url("https://api.rainsin.cn/out_font/200-1721485067.woff2") format('woff2');
+    font-weight: 200;
+  }
+  
+  @font-face {
+    font-family: "筑紫a主";
+    src: "FZFW ZhuZi A Old Mincho B",url("https://pan.rainsin.cn:2000/d/blog/font/%E7%AD%91%E7%B4%ABold/FZFWZhuZiAOldMinchoB.woff2?sign=RHGoIUyQRm3kOjd4K06MZUzjgMlQTwlTVO1ed01_0dQ=:0"),url("https://mypan.hk.cpolar.io/d/blog/font/%E7%AD%91%E7%B4%ABold/FZFWZhuZiAOldMinchoB.woff2?sign=RHGoIUyQRm3kOjd4K06MZUzjgMlQTwlTVO1ed01_0dQ=:0");
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-family: "筑紫a主";
+    src: "FZFW ZhuZi A Old Mincho D",url("https://pan.rainsin.cn:2000/d/blog/font/%E7%AD%91%E7%B4%ABold/FZFWZhuZiAOldMinchoD.woff2?sign=Y1zSpHonNzTKNoGKWsmV7nXK2RR4uXWiy29uIg2Ao2E=:0"),url("https://mypan.hk.cpolar.io/d/blog/font/%E7%AD%91%E7%B4%ABold/FZFWZhuZiAOldMinchoD.woff2?sign=Y1zSpHonNzTKNoGKWsmV7nXK2RR4uXWiy29uIg2Ao2E=:0");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: "筑紫a主";
+    src:"FZFW ZhuZi A Old Mincho E", url("https://pan.rainsin.cn:2000/d/blog/font/%E7%AD%91%E7%B4%ABold/FZFWZhuZiAOldMinchoE.woff2?sign=wUs3WI2blB4CjXErinaBgSRFM4o_9xXLU6n8so1DTkY=:0"),url("https://mypan.hk.cpolar.io/d/blog/font/%E7%AD%91%E7%B4%ABold/FZFWZhuZiAOldMinchoE.woff2?sign=wUs3WI2blB4CjXErinaBgSRFM4o_9xXLU6n8so1DTkY=:0");
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-family: "筑紫A主";
+    src: "FZFW ZhuZi A Old Mincho L",url("https://pan.rainsin.cn:2000/d/blog/font/%E7%AD%91%E7%B4%ABold/FZFWZhuZiAOldMinchoL.woff2?sign=YbFUa8TK7RLbP3UR-eaG_5pfPps0BueOGLg2xVwUj04=:0"),url("https://mypan.hk.cpolar.io/d/blog/font/%E7%AD%91%E7%B4%ABold/FZFWZhuZiAOldMinchoL.woff2?sign=YbFUa8TK7RLbP3UR-eaG_5pfPps0BueOGLg2xVwUj04=:0");
+    font-weight: 100;
+  }
+  
+  @font-face {
+    font-family: "Cormorant Garamond";
+    src: url(https://pan.rainsin.cn:2000/d/blog/font/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf),url(https://mypan.hk.cpolar.io/d/blog/font/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf);
+    font-style: italic;
+    font-weight: 500;
+  }
+  
+  @font-face {
+    font-family: "Cormorant Garamond";
+    src: url(https://pan.rainsin.cn:2000/d/blog/font/Cormorant_Garamond/CormorantGaramond-Bold.ttf),url(https://mypan.hk.cpolar.io/d/blog/font/Cormorant_Garamond/CormorantGaramond-Bold.ttf);
+  }
+  
+  @font-face {
+    font-family: "筑紫a主";
+    src: "FZFW ZhuZi A Old Mincho M",url("https://pan.rainsin.cn:2000/d/blog/font/%E7%AD%91%E7%B4%ABold/FZFWZhuZiAOldMinchoM.woff2?sign=vUQFz4_v4adNZDQsvIGfeqwBIHEXQ2pwKEfyTNtRbC8=:0"),url("https://mypan.hk.cpolar.io/d/blog/font/%E7%AD%91%E7%B4%ABold/FZFWZhuZiAOldMinchoM.woff2?sign=vUQFz4_v4adNZDQsvIGfeqwBIHEXQ2pwKEfyTNtRbC8=:0");
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: "筑紫a主";
+    src: "FZFW ZhuZi A Old Mincho R",url("https://pan.rainsin.cn:2000/d/blog/font/%E7%AD%91%E7%B4%ABold/FZFWZhuZiAOldMinchoR.woff2?sign=TErq_iUdUdXWYiruSCWJYr1pucMNSQEVIFi6YWRMtZI=:0"),url("https://mypan.hk.cpolar.io/d/blog/font/%E7%AD%91%E7%B4%ABold/FZFWZhuZiAOldMinchoR.woff2?sign=TErq_iUdUdXWYiruSCWJYr1pucMNSQEVIFi6YWRMtZI=:0");
+    font-weight: 200;
+  }

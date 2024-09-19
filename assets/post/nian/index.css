@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "cjpxk";
+    src: url(https://api.rainsin.cn/FZZJ-CJPXKJW.woff2);
+}
+
+@font-face {
+    font-family: "cjpxk备";
+    src: url(/assets/post/nian/FZZJ-CJPXKJW.woff2);
+}
+
+.poem-box{
+    font-family: "cjpxk", "cjpxk备";
+    width: 100%;
+    padding: 20px;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.poem-box div {
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}

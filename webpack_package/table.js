@@ -1,0 +1,378 @@
+const HtmlTableToJson = require('html-table-to-json');
+const fs = require("fs")
+
+const jsonTables = HtmlTableToJson.parse(`
+        <table>
+<tbody><tr>
+  <th>听牌张数</th>
+  <th>听牌名称</th>
+  <th>牌型</th>
+  <th>听张</th>
+  <th>remark</th>
+</tr>
+<tr>
+  <td>听一张</td>
+<td>单钓将</td>
+<td>2</td>
+<td>2</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>边张</td>
+  <td>12</td>
+  <td>3</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>嵌张</td>
+  <td>68</td>
+  <td>7</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>听两张</td>
+  <td>两面听</td>
+  <td>78</td>
+  <td>69</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>双碰听</td>
+  <td>7788</td>
+  <td>78</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>双钓将</td>
+  <td>2345</td>
+  <td>25</td>
+  <td>亦叫单倒</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>单钓带边张</td>
+  <td>1112</td>
+  <td>23</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>听三张</td>
+  <td>三面听</td>
+  <td>45678</td>
+  <td>369</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>三面钓将听</td>
+  <td>2345678</td>
+  <td>258</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>单钓两面听</td>
+  <td>2223</td>
+  <td>3 14</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>双碰两面听</td>
+  <td>2267888</td>
+  <td>28 5</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>双碰单钓听</td>
+  <td>1122233</td>
+  <td>13 2</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>单嵌两面听</td>
+  <td>2224456</td>
+  <td>3 47</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>双钓单嵌听</td>
+  <td>3335678</td>
+  <td>58 4</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>单钓双嵌听</td>
+  <td>4446888</td>
+  <td>6 57</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>甩将单嵌听</td>
+  <td>3333455</td>
+  <td>25 4</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>三飞碰碰听</td>
+  <td>2255667788</td>
+  <td>258</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>听四张</td>
+  <td>四面听</td>
+  <td>5677888</td>
+  <td>47 69</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>双碰两面听</td>
+  <td>45666+条78999</td>
+  <td>36 条69 </td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>钓嵌两面听</td>
+  <td>2333444</td>
+  <td>2 3 14 </td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>双碰三面听</td>
+  <td>1145678999</td>
+  <td>19 36</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>单钓三面听</td>
+  <td>2333456</td>
+  <td>2 147 </td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>四碰听</td>
+  <td>2233445566</td>
+  <td>2356</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>准灯高挂</td>
+  <td>1112345667899</td>
+  <td>1479</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>听5张</td>
+  <td>单钓四面听</td>
+  <td>5556777</td>
+  <td>6 4758 </td>
+  <td>暗刻夹一张，听张为自身和相邻牌；</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>双碰三面听</td>
+  <td>2223344567</td>
+  <td>34 258 </td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>双钓三面听</td>
+  <td>3334567</td>
+  <td>47 258 </td>
+  <td>暗刻连四顺：听张为自身加邻牌(除暗刻本身及等差牌)</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>4567888</td>
+  <td>47 369 </td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>三钓两面听</td>
+  <td>3444456789</td>
+  <td>369 25 </td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>双钓单嵌两面听</td>
+  <td>5556667778</td>
+  <td>58 7 69 </td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>听六张</td>
+  <td>两刻夹张连顺子</td>
+  <td>3334555678</td>
+  <td>234569</td>
+  <td>听张是上面<strong>听5张</strong>的“暗刻夹一张”，听的牌外加一张顺子相邻牌；</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>3456667888</td>
+  <td>256789</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>一副一刻七边顺</td>
+  <td>2223456789</td>
+  <td>147369</td>
+  <td>听牌是暗刻前后相领牌的等差数列</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>2345678999</td>
+  <td>147258</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>一副两刻四连顺</td>
+  <td>3334445678</td>
+  <td>369 58 4 </td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>三钓三面等差听</td>
+  <td>2344445678</td>
+  <td>258369</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>听7张</td>
+  <td>牌铺以5为中心</td>
+  <td>2344445666678</td>
+  <td>1235789</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>37摸完叫对称</td>
+  <td>2333345677778</td>
+  <td>1245689</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>三暗刻连四连顺</td>
+  <td>1112223334567</td>
+  <td>12345678</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>听8张</td>
+  <td>单缺幺九的等差数列</td>
+  <td>3334567888</td>
+  <td>25836947</td>
+  <td>凡属两刻夹四顺，其自向和相邻牌都能成胡；</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>2223456777</td>
+  <td>14725836</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>谓换暗刻的八角灯</td>
+  <td>1112345666678</td>
+  <td>12345789</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>2344445678999</td>
+  <td>12356789</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>出尖缺尖的八门听</td>
+  <td>2223456677778</td>
+  <td>12345689</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>2333344567888</td>
+  <td>12456789</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>两暗刻夹四连顺</td>
+  <td>3334567888</td>
+  <td>23456789</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>听9张</td>
+  <td>九莲宝灯</td>
+  <td>1112345678999</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>听13张</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td colspan="4">等差数列：147，258，369</td>
+  </tr>
+<tr>
+  <td>&nbsp;</td>
+  <td colspan="4">1 两暗刻中间夹一张或夹四顺，则暗刻前后都能成胡；</td>
+  </tr>
+</tbody></table>
+    `);
+
+    const path = './config.json';
+    const config = jsonTables.results;
+    
+    fs.writeFile(path, JSON.stringify(config, null, 2), (error) => {
+      if (error) {
+        console.log('An error has occurred ', error);
+        return;
+      }
+      console.log('Data written successfully to disk');
+    });
+
+console.log(JSON.stringify(jsonTables.results));
