@@ -628,11 +628,8 @@ if(!sessionStorage.getItem("OS")){
   <link href="/assets/css/em.css" rel="stylesheet" />
 
   <script>
-    window.load_event = {
-      ...window.load_event,
-      is_out_alert: () => {
         if (sessionStorage.getItem("isOutAlert")) {
-          return;
+          
         } else {
           if (sessionStorage.getItem("isOut") == "true") {
             sessionStorage.setItem("isOutAlert", "true");
@@ -642,8 +639,6 @@ if(!sessionStorage.getItem("OS")){
             );
           }
         }
-      },
-    };
   </script>
 
   <script type="module">
