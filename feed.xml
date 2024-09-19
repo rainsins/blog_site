@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://localhost:4000/</id>
+  <id>https://blog.rainsin.cn/</id>
   <title>Rainsin • Blog</title>
   <subtitle>rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）</subtitle>
-  <updated>2024-09-19T15:12:30+08:00</updated>
+  <updated>2024-09-19T17:28:12+08:00</updated>
   <author>
     <name>rainsin</name>
-    <uri>http://localhost:4000/</uri>
+    <uri>https://blog.rainsin.cn/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="https://blog.rainsin.cn/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="zh-CN"
-    href="http://localhost:4000/"/>
+    href="https://blog.rainsin.cn/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
   <rights> © 2024 rainsin </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -21,13 +21,13 @@
   
   <entry>
     <title>「工具」一款好用的中文排版工具</title>
-    <link href="http://localhost:4000/posts/heti/" rel="alternate" type="text/html" title="「工具」一款好用的中文排版工具" />
+    <link href="https://blog.rainsin.cn/posts/heti/" rel="alternate" type="text/html" title="「工具」一款好用的中文排版工具" />
     <published>2024-09-08T12:32:10+08:00</published>
   
     <updated>2024-09-17T18:29:07+08:00</updated>
   
-    <id>http://localhost:4000/posts/heti/</id>
-    <content src="http://localhost:4000/posts/heti/" />
+    <id>https://blog.rainsin.cn/posts/heti/</id>
+    <content src="https://blog.rainsin.cn/posts/heti/" />
     <author>
       <name>rainsin</name>
     </author>
@@ -47,13 +47,13 @@
   
   <entry>
     <title>「笔记」尝试了解马克思（doing...）</title>
-    <link href="http://localhost:4000/posts/marx/" rel="alternate" type="text/html" title="「笔记」尝试了解马克思（doing...）" />
+    <link href="https://blog.rainsin.cn/posts/marx/" rel="alternate" type="text/html" title="「笔记」尝试了解马克思（doing...）" />
     <published>2024-08-07T12:32:10+08:00</published>
   
     <updated>2024-09-19T14:17:05+08:00</updated>
   
-    <id>http://localhost:4000/posts/marx/</id>
-    <content src="http://localhost:4000/posts/marx/" />
+    <id>https://blog.rainsin.cn/posts/marx/</id>
+    <content src="https://blog.rainsin.cn/posts/marx/" />
     <author>
       <name>rainsin</name>
     </author>
@@ -73,13 +73,13 @@
   
   <entry>
     <title>「神秘」年年的高雅集</title>
-    <link href="http://localhost:4000/posts/niannian/" rel="alternate" type="text/html" title="「神秘」年年的高雅集" />
+    <link href="https://blog.rainsin.cn/posts/niannian/" rel="alternate" type="text/html" title="「神秘」年年的高雅集" />
     <published>2024-07-23T18:32:10+08:00</published>
   
     <updated>2024-09-16T14:02:56+08:00</updated>
   
-    <id>http://localhost:4000/posts/niannian/</id>
-    <content src="http://localhost:4000/posts/niannian/" />
+    <id>https://blog.rainsin.cn/posts/niannian/</id>
+    <content src="https://blog.rainsin.cn/posts/niannian/" />
     <author>
       <name>rainsin</name>
     </author>
@@ -99,13 +99,13 @@
   
   <entry>
     <title>「集合」好玩的网站、工具</title>
-    <link href="http://localhost:4000/posts/fine/" rel="alternate" type="text/html" title="「集合」好玩的网站、工具" />
+    <link href="https://blog.rainsin.cn/posts/fine/" rel="alternate" type="text/html" title="「集合」好玩的网站、工具" />
     <published>2024-07-08T16:32:10+08:00</published>
   
     <updated>2024-09-17T11:55:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/fine/</id>
-    <content src="http://localhost:4000/posts/fine/" />
+    <id>https://blog.rainsin.cn/posts/fine/</id>
+    <content src="https://blog.rainsin.cn/posts/fine/" />
     <author>
       <name>rainsin</name>
     </author>
@@ -125,13 +125,13 @@
   
   <entry>
     <title>「教程」魔方练习中的各种工具</title>
-    <link href="http://localhost:4000/posts/cube/" rel="alternate" type="text/html" title="「教程」魔方练习中的各种工具" />
+    <link href="https://blog.rainsin.cn/posts/cube/" rel="alternate" type="text/html" title="「教程」魔方练习中的各种工具" />
     <published>2024-06-24T16:32:10+08:00</published>
   
     <updated>2024-08-13T12:58:41+08:00</updated>
   
-    <id>http://localhost:4000/posts/cube/</id>
-    <content src="http://localhost:4000/posts/cube/" />
+    <id>https://blog.rainsin.cn/posts/cube/</id>
+    <content src="https://blog.rainsin.cn/posts/cube/" />
     <author>
       <name>rainsin</name>
     </author>
