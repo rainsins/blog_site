@@ -54,7 +54,6 @@ const questions = [
         ans: "\\frac{e}{2}",
         ans1: "\\frac{1}{2}e",
         ans2: "e",
-        ans3: "?"
     },
 ];
 
@@ -127,7 +126,7 @@ function Question({ lat }) {
     React.useEffect(() => {
         let math3 = document.getElementsByClassName("show-ans-latex");
         MathJax.typeset(math3);
-        if (latexData == lat.ans || latexData == lat.ans1 || latexData == lat.ans2 || latexData == lat.ans3) {
+        if (latexData === lat.ans || latexData === lat.ans1 || latexData === lat.ans2 ) {
             setAns(true);
         }
     }, [latexData]);
