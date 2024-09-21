@@ -5,6 +5,7 @@
 .heti-box {
     max-width: 100%;
     margin: 40px 0;
+    display: grid;
 }
 
 .heti--vertical {
