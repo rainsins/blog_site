@@ -184,11 +184,12 @@ isO();
         xhr.send();
       }).then(function (supported) {
       if (supported) {
-        sessionStorage.setItem("isPan", true);
+        sessionStorage.setItem("isPan", 'true');
       } else {
-        sessionStorage.setItem("isPan", false);
+        sessionStorage.setItem("isPan", 'false');
       }
-    });;
+    });
+    testPan();
 window.addEventListener('beforeunload', (event) => {
   testPan();
 });
@@ -274,7 +275,7 @@ if(!sessionStorage.getItem("OS")){
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://myproxy.rainsin.cn/-----www.clarity.ms/tag/"+i;
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "o8k1pzrsqv");
   </script>
@@ -594,7 +595,7 @@ if(!sessionStorage.getItem("OS")){
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-09-22T12:32:10+08:00","datePublished":"2024-09-22T12:32:10+08:00","description":"「文字」《关于费尔巴哈的提纲》","headline":"「笔记」《关于费尔巴哈的提纲》四、对认识论立场的超越","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/marx3/"},"url":"https://blog.rainsin.cn/posts/marx3/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-09-29T15:55:20+08:00","datePublished":"2024-09-22T12:32:10+08:00","description":"「文字」《关于费尔巴哈的提纲》","headline":"「笔记」《关于费尔巴哈的提纲》四、对认识论立场的超越","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/marx3/"},"url":"https://blog.rainsin.cn/posts/marx3/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -1123,6 +1124,30 @@ observer.observe(targetNode, config);
 
     <!-- lastmod date -->
     
+    <span>
+      更新于
+      <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1727596520"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2024/09/29
+</em>
+
+    </span>
+    
 
   
 
@@ -1179,7 +1204,15 @@ observer.observe(targetNode, config);
 </div> <!-- .post-meta -->
 
 <div class="post-content  charch charch-indent  charch-cjk-latin-space charch-bracket-replace charch-link-space charch-line-height" id="post-content">
-  <h2 id="感性意识论对认识论立场的超越"><span class="me-2">感性意识论：对认识论立场的超越</span><a href="#感性意识论对认识论立场的超越" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+  <style>
+    audio {
+    display: grid;
+    margin: 20px auto;
+    width: 100%
+}
+</style>
+
+<h2 id="感性意识论对认识论立场的超越"><span class="me-2">感性意识论：对认识论立场的超越</span><a href="#感性意识论对认识论立场的超越" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <audio controls="" id="ganxingyishi"></audio>
 
@@ -1401,14 +1434,14 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/heti/">「工具」一款好用的中文排版工具</a>
+          <a href="/posts/marx3/">「笔记」《关于费尔巴哈的提纲》四、对认识论立场的超越</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/fine/">「集合」好玩的网站、工具</a>
+          <a href="/posts/heti/">「工具」一款好用的中文排版工具</a>
         </li>
       
     </ul>
