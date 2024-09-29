@@ -24,78 +24,15 @@ em.charch,
 }
 
 .heti--fangsong * {
-    font-family: "Times New Roman", times, "heti Fangsong" !important;
+    font-family: "Times New Roman", times, "Heti Fangsong" !important;
 }
 
 .heti-fangsong {
-    font-family: "Times New Roman", times, "heti Fangsong" !important;
+    font-family: "Times New Roman", times, "Heti Fangsong" !important;
 }
 
 .heti-fangsong * {
-    font-family: "Times New Roman", times, "heti Fangsong" !important;
-}
-
-@font-face {
-    font-family: "Heti Song";
-    src: local("Songti SC Regular"), local("Songti TC Regular"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2),"Songti SC OSS","STSong",url(https://api.rainsin.cn/blog_data/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), local("Songti SC"), local("Songti TC"), local("STsong"), local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), local("SimSun");
-}
-
-@font-face {
-    font-family: "Heti Song";
-    font-weight: 200;
-    src: local("Songti SC Light"), local("Songti TC Light"), local("Songti SC"), local("Songti TC"),url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2),"Songti SC OSS","STSong",  url(https://api.rainsin.cn/blog_data/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2),local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), "Heti Song Light Fallback";
-}
-
-@font-face {
-    font-family: "Heti Song Light Fallback";
-    font-weight: 200;
-    src: local("SimSun"), local("STsong");
-}
-
-@font-face {
-    font-family: "Heti Song";
-    font-weight: 600;
-    src: local("Songti SC Bold"), local("Songti TC Bold"), local("Songti SC"), local("Songti TC"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2),"Songti SC OSS","STSong",url(https://api.rainsin.cn/blog_data/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), "Heti Song Bold Fallback";
-}
-
-@font-face {
-    font-family: "Heti Song Bold Fallback";
-    font-weight: 600;
-    src: local("STsong"), local("SimSun");
-}
-
-@font-face {
-    font-family: "Heti Song Black";
-    font-weight: 800;
-    src: local("Songti SC Black"), local("Songti SC"), local("Songti TC"), "Songti SC OSS","STSong",local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), local("SimSun");
-}
-
-@font-face {
-    font-family: "Heti Kai";
-    src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("Kaiti SC"), local("Kaiti TC"), local("STKaiti"), local("Kaiti"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2),"KaiTi OSS", "STKaiti SC OSS","STKaiti OSS",url(https://api.rainsin.cn/blog_data/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), local("CESI_KT_GB18030"), local("BiauKai");
-}
-
-@font-face {
-    font-family: "Heti Kai";
-    font-weight: 600;
-    src: local("Kaiti SC Bold"), local("Kaiti TC Bold"), local("Kaiti SC"), local("Kaiti TC"),"KaiTi OSS", "STKaiti SC OSS","STKaiti OSS", url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2),"KaiTi OSS", "STKaiti SC OSS","STKaiti OSS",url(https://api.rainsin.cn/blog_data/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), local("CESI_KT_GB18030"), "Heti Kai Bold Fallback";
-}
-
-@font-face {
-    font-family: "Heti Kai Bold Fallback";
-    font-weight: 600;
-    src: local("STKaiti"), local("Kaiti"), local("BiauKai");
-}
-
-@font-face {
-    font-family: "Heti Kai Black";
-    font-weight: 800;
-    src: local("Kaiti SC Black"), local("Kaiti TC Black"), local("Kaiti SC"), local("Kaiti TC"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2),"KaiTi OSS", "STKaiti SC OSS","STKaiti OSS",url(https://api.rainsin.cn/blog_data/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), local("CESI_KT_GB18030"), local("STKaiti"), local("Kaiti");
-}
-
-@font-face {
-    font-family: "Heti Fangsong";
-    src: local("STFangsong"), local("FangSong"), local("FangSong_GB2312"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E4%BB%BF%E5%AE%8B_%E5%B8%B8%E8%A7%84.woff2), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%8D%8E%E6%96%87%E4%BB%BF%E5%AE%8B.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E4%BB%BF%E5%AE%8B_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%8D%8E%E6%96%87%E4%BB%BF%E5%AE%8B.woff2),"STFangsong OSS","FangSong OSS","FZFangSong-Z02",url(https://api.rainsin.cn/blog_data/font/heti/%E4%BB%BF%E5%AE%8B_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E4%BB%BF%E5%AE%8B.woff2), local("CESI_FS_GB18030"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/FZFSK--GBK1-0.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/FZFSK--GBK1-0.woff2),url(https://api.rainsin.cn/blog_data/font/heti/FZFSK--GBK1-0.woff2);
+    font-family: "Times New Roman", times, "Heti Fangsong" !important;
 }
 
 .heti--ancient h1,

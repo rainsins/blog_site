@@ -257,6 +257,15 @@ if(!sessionStorage.getItem("OS")){
       }
     };
   </script>
+ 
+<script>
+  const sdsd = ["fangsong","STSONG","STfangsong","STkaiti", "kaiti","京華老宋体2","STSongti-SC-Black","STSongti-SC-Bold","STSongti-SC-Light","STSongti-SC-Regular","STKaitiSC-Regular","FZFSK--GBK1-0"];
+
+  sdsd.forEach((el,index)=>{
+    isAppendCDN(`https://pan.rainsin.cn:2000/d/blog/font/heti/split/${el}/result.css`,`https://mypan.hk.cpolar.io/d/blog/font/heti/split/${el}/result.css`,`https://api.rainsin.cn/blog_data/font/heti/split/${el}/result.css`)
+  })
+</script>
+ 
 
   <script>
     const sss = ["B","D","E","L","M","R"];
@@ -312,16 +321,73 @@ if(!sessionStorage.getItem("OS")){
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-
-  <script>
-    const sdsd = ["fangsong","STSONG","STfangsong","STkaiti", "kaiti","京華老宋体2","STSongti-SC-Black","STSongti-SC-Bold","STSongti-SC-Light","STSongti-SC-Regular","STKaitiSC-Regular","FZFSK--GBK1-0"];
-
-    sdsd.forEach((el,index)=>{
-      isAppendCDN(`https://pan.rainsin.cn:2000/d/blog/font/heti/split/${el}/result.css`,`https://mypan.hk.cpolar.io/d/blog/font/heti/split/${el}/result.css`,`https://api.rainsin.cn/blog_data/font/heti/split/${el}/result.css`)
-    })
-  </script>
+  <link
+    rel="stylesheet"
+    href="/assets/css/heti-add-min.css"
+  />
   <style>
-    @import url(/assets/css/heti-add-min.css);
+    @font-face {
+    font-family: "Heti Song";
+    src: local("Songti SC Regular"), local("Songti TC Regular"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2),"Songti SC OSS","STSong",url(https://api.rainsin.cn/blog_data/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), local("Songti SC"), local("Songti TC"), local("STsong"), local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), local("SimSun") !important;
+}
+
+@font-face {
+    font-family: "Heti Song";
+    font-weight: 200;
+    src: local("Songti SC Light"), local("Songti TC Light"), local("Songti SC"), local("Songti TC"),url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2),"Songti SC OSS","STSong",  url(https://api.rainsin.cn/blog_data/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2),local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), "Heti Song Light Fallback" !important;
+}
+
+@font-face {
+    font-family: "Heti Song Light Fallback";
+    font-weight: 200;
+    src: local("SimSun"), local("STsong");
+}
+
+@font-face {
+    font-family: "Heti Song";
+    font-weight: 600;
+    src: local("Songti SC Bold"), local("Songti TC Bold"), local("Songti SC"), local("Songti TC"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2),"Songti SC OSS","STSong",url(https://api.rainsin.cn/blog_data/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), "Heti Song Bold Fallback" !important;
+}
+
+@font-face {
+    font-family: "Heti Song Bold Fallback";
+    font-weight: 600;
+    src: local("STsong"), local("SimSun") !important;
+}
+
+@font-face {
+    font-family: "Heti Song Black";
+    font-weight: 800;
+    src: local("Songti SC Black"), local("Songti SC"), local("Songti TC"), "Songti SC OSS","STSong",local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), local("SimSun") !important;
+}
+
+@font-face {
+    font-family: "Heti Kai";
+    src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("Kaiti SC"), local("Kaiti TC"), local("STKaiti"), local("Kaiti"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2),"KaiTi OSS", "STKaiti SC OSS","STKaiti OSS",url(https://api.rainsin.cn/blog_data/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), local("CESI_KT_GB18030"), local("BiauKai") !important;
+}
+
+@font-face {
+    font-family: "Heti Kai";
+    font-weight: 600;
+    src: local("Kaiti SC Bold"), local("Kaiti TC Bold"), local("Kaiti SC"), local("Kaiti TC"),"KaiTi OSS", "STKaiti SC OSS","STKaiti OSS", url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2),"KaiTi OSS", "STKaiti SC OSS","STKaiti OSS",url(https://api.rainsin.cn/blog_data/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), local("CESI_KT_GB18030"), "Heti Kai Bold Fallback" !important;
+}
+
+@font-face {
+    font-family: "Heti Kai Bold Fallback";
+    font-weight: 600;
+    src: local("STKaiti"), local("Kaiti"), local("BiauKai") !important;
+}
+
+@font-face {
+    font-family: "Heti Kai Black";
+    font-weight: 800;
+    src: local("Kaiti SC Black"), local("Kaiti TC Black"), local("Kaiti SC"), local("Kaiti TC"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2),"KaiTi OSS", "STKaiti SC OSS","STKaiti OSS",url(https://api.rainsin.cn/blog_data/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), local("CESI_KT_GB18030"), local("STKaiti"), local("Kaiti") !important;
+}
+
+@font-face {
+    font-family: "Heti Fangsong";
+    src: local("STFangsong"), local("FangSong"), local("FangSong_GB2312"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E4%BB%BF%E5%AE%8B_%E5%B8%B8%E8%A7%84.woff2), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%8D%8E%E6%96%87%E4%BB%BF%E5%AE%8B.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E4%BB%BF%E5%AE%8B_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%8D%8E%E6%96%87%E4%BB%BF%E5%AE%8B.woff2),"STFangsong OSS","FangSong OSS","FZFangSong-Z02",url(https://api.rainsin.cn/blog_data/font/heti/%E4%BB%BF%E5%AE%8B_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E4%BB%BF%E5%AE%8B.woff2), local("CESI_FS_GB18030"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/FZFSK--GBK1-0.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/FZFSK--GBK1-0.woff2),url(https://api.rainsin.cn/blog_data/font/heti/FZFSK--GBK1-0.woff2) !important;
+}
   </style>
   <script>
     window.load_event = {
@@ -624,14 +690,14 @@ if(!sessionStorage.getItem("OS")){
     src="https://mypan.hk.cpolar.io/d/blog/js/pinyin.min.js"
   ></script>
             <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.3.3" />
+<meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="「工具」一款好用的中文排版工具" />
 <meta name="author" content="Rainsin Yu" />
 <meta property="og:locale" content="zh_CN" />
 <meta name="description" content="「工具」一个好用中文排版工具" />
 <meta property="og:description" content="「工具」一个好用中文排版工具" />
-<link rel="canonical" href="https://blog.rainsin.cn/posts/heti/" />
-<meta property="og:url" content="https://blog.rainsin.cn/posts/heti/" />
+<link rel="canonical" href="http://localhost:4000/posts/heti/" />
+<meta property="og:url" content="http://localhost:4000/posts/heti/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-09-08T12:32:10+08:00" />
@@ -640,7 +706,7 @@ if(!sessionStorage.getItem("OS")){
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-09-17T18:29:07+08:00","datePublished":"2024-09-08T12:32:10+08:00","description":"「工具」一个好用中文排版工具","headline":"「工具」一款好用的中文排版工具","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/heti/"},"url":"https://blog.rainsin.cn/posts/heti/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-09-17T18:29:07+08:00","datePublished":"2024-09-08T12:32:10+08:00","description":"「工具」一个好用中文排版工具","headline":"「工具」一款好用的中文排版工具","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/heti/"},"url":"http://localhost:4000/posts/heti/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -2013,7 +2079,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E5%B7%A5%E5%85%B7%E3%80%8D%E4%B8%80%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84%E4%B8%AD%E6%96%87%E6%8E%92%E7%89%88%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog&url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fheti%2F"
+        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E5%B7%A5%E5%85%B7%E3%80%8D%E4%B8%80%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84%E4%B8%AD%E6%96%87%E6%8E%92%E7%89%88%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fheti%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Twitter"
@@ -2026,7 +2092,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E5%B7%A5%E5%85%B7%E3%80%8D%E4%B8%80%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84%E4%B8%AD%E6%96%87%E6%8E%92%E7%89%88%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog&u=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fheti%2F"
+        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E5%B7%A5%E5%85%B7%E3%80%8D%E4%B8%80%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84%E4%B8%AD%E6%96%87%E6%8E%92%E7%89%88%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fheti%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Facebook"
@@ -2039,7 +2105,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://t.me/share/url?url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fheti%2F&text=%E3%80%8C%E5%B7%A5%E5%85%B7%E3%80%8D%E4%B8%80%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84%E4%B8%AD%E6%96%87%E6%8E%92%E7%89%88%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog"
+        href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fheti%2F&text=%E3%80%8C%E5%B7%A5%E5%85%B7%E3%80%8D%E4%B8%80%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84%E4%B8%AD%E6%96%87%E6%8E%92%E7%89%88%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Telegram"
