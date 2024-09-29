@@ -157,7 +157,7 @@ isO();
 </script> <script>
     const testPan = () =>
       new Promise((resolve, reject) => {
-        let url = "https://pan.rainsin.cn:2000/d/blog/js/data.json";
+        let url = "https://mypan.hk.cpolar.io/d/blog/js/data.json";
         let xhr = new XMLHttpRequest();
         xhr.open("GET", url, true);
         xhr.onload = function () {
@@ -240,11 +240,19 @@ if(!sessionStorage.getItem("OS")){
       }
     };
 
-    window.isAppendCDN = (ins, outs) => {
+    window.isAppendCDN = (ins, outs, err) => {
       if (sessionStorage.getItem("isOut") == "false") {
-        appendJQCDN(ins);
+        if(sessionStorage.getItem("isPan") == "true"){
+          appendJQCDN(ins);
+        }else{
+          appendJQCDN(err);
+        } 
       } else {
-        appendJQCDN(outs);
+        if(sessionStorage.getItem("isPan") == "true"){
+          appendJQCDN(outs);
+        }else{
+          appendJQCDN(err);
+        } 
       }
     };
   </script>
@@ -252,7 +260,7 @@ if(!sessionStorage.getItem("OS")){
   <script>
     const sss = ["B","D","E","L","M","R"];
     sss.forEach((el,index)=>{
-      isAppendCDN(`https://pan.rainsin.cn:2000/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`,`https://mypan.hk.cpolar.io/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`)
+      isAppendCDN(`https://pan.rainsin.cn:2000/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`,`https://mypan.hk.cpolar.io/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`, `https://api.rainsin.cn/blog_data/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`)
     })
   </script>
 
@@ -470,13 +478,22 @@ if(!sessionStorage.getItem("OS")){
         if (sessionStorage.getItem("isOutAlert")) {
           
         } else {
-          if (sessionStorage.getItem("isOut") == "true") {
+          if(sessionStorage.getItem("isPan") == "true"){
+            if (sessionStorage.getItem("isOut") == "true") {
             sessionStorage.setItem("isOutAlert", "true");
             Qmsg.warning(
               "哈，你可能使用了梯子或者在国外访问这个站点，有些资源可能会加载不出来，请见谅！",
               { timeout: 5000 }
             );
           }
+          }else{
+            sessionStorage.setItem("isOutAlert", "true");
+            Qmsg.warning(
+              "我家里停电了，服务器宕了，请见谅！",
+              { timeout: 5000 }
+            );
+          }
+          
         }
   </script>
 
@@ -803,6 +820,106 @@ observer.observe(targetNode, config);
 
 
 
+  
+  
+
+  <!-- CDN URL -->
+  
+
+  <!-- Add image path -->
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+        <!-- add SVG placehoder -->
+        
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+      <!-- create the image wrapper -->
+      
+
+    
+
+    <!-- combine -->
+    
+
+  
+
+  
+
+
 
 <!-- Add header for code snippets -->
 
@@ -866,6 +983,259 @@ observer.observe(targetNode, config);
 
 
 <div id="post-list">
+  
+    <a href="/posts/mei/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            「神秘」形体美
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              
+
+
+
+写真
+
+
+
+  以下内容部分涉及🔞内容，为证明你年满18岁，任选一个作答。
+
+
+
+
+
+  由于要直接展示露骨内容，所以设置了门槛，也可以直接下载-&amp;gt;备用：谷歌网盘，再附加一套写真Pure_Media_Vol_287#Yeha#예하_Sex_Vacation_In_Camping_Car_182P1V-&amp;gt;备用：谷歌网盘。
+
+
+
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1716096730"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/05/19
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    写真,
+                    形体美
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/ao-shan/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+          
+
+          
+          
+
+          
+
+          <div class="preview-img shimmer"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 8'%3E%3C/svg%3E" data-src="https://rainsin-1305486451.file.myqcloud.com/rainsin-blog/img/post/clear/16d5164d-8f6f-4944-91b5-b5b9484d3114.webp" width="15" height="8" alt="Clear"  class="lazyload" data-proofer-ignore></div>
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            「神秘」奥山和纱 写真集 Clear
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              
+
+奥山和纱
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  奥山和纱（奥山かずさ、おくやま かずさ），1994年3月10日出生于日本青森县，日本女演员、模特，隶属于OSCAR PROMOTION
+  
+  
+  壁纸文件： 奥山和纱 写真集 Clear 【蓝奏云】，解压码：奥山。 奥山和纱 写真集 Clear 【OneDrive】。
+  
+
+
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1715848330"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/05/16
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    写真
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/lindan/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            「爱好」绝佳的学习视频：2014年丹麦公开赛林丹VS周天成低视角高清录像
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              
+  
+  全场高清录像下载链接：夸克网盘 、One Drive(密码：lindan66)、Google Drive、自己的服务(IPv6)。
+  
+  
+    右手打球的可以镜像视频进行学习：显示设置 -&amp;gt; 画面翻转 -&amp;gt; 水平。我的Safari浏览器无法播放，Chrome和火狐可以，移动端大概率无法播放。
+  
+  
+    剪辑视频来自up: mcwawa。
+  
+
+
+剪...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1712219530"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/04/04
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    羽毛球
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
   
     <a href="/posts/health-brain/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
@@ -1402,244 +1772,6 @@ sudo certbot -d domain.com -d &quot;*.domain.com&quot; --manual --p...
       </div>
     </a>
   
-    <a href="/posts/majiang/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「玩」麻将听牌类型
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              
-  服务器里跑着一个麻将图片生成器，不过在那落灰，今天想起来了，总是要让它有点用，于是就有了这篇文字，也算是为了这点醋包的这顿饺。
-本人并不常打麻将，这篇文可能会帮到那些牌看半天也不知道自己胡哪些牌的初学者（me）。
-
-
-
-
-
-
-
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1705120330"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/01/13
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    麻将
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/more-system-opencore/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「教程」使用Opencore引导多个系统
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              前提
-
-Mac可以正常引导，其他系统都已经安装好了（本文使用UEFI+GPT引导，传统的方式需要自己查找资料）。
-
-步骤
-
-
-  
-    在OpenCore中安装OpenShell.efi工具。
-
-    下载OpenShell.efi在/EFI/OC/tool路径下，一般OC自带这个文件不用单独下。
-
-    在OC中进行如下设置:
- 
- 重启。
-  
-  
-    如果你的OC隐藏了辅...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1688271780"
-  data-df="YYYY/MM/DD"
-  
->
-  2023/07/02
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    黑苹果,
-                    EFI
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/ax200-bluetooth/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「解决问题」黑苹果Venture 13.4 Intel无线网卡(AX200,AX201,AX210,AX203)蓝牙问题排查
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              信息
-
-
-  
-    系统：Venture 13.4.1 (22F82)
-    网卡：AX200
-  
-
-
-情况
-
-使用 IntelBluetoothFirmware和BlueToolFix之后wifi可以正常使用，蓝牙无法使用，12版本应该没有这个问题。
-
-前提
-
-USB已经定制好了，给蓝牙预留一个USB端口
-
-排查
-
-
-  
-    把Lilu，BlueToolFix更新到最新。
- ...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1688271780"
-  data-df="YYYY/MM/DD"
-  
->
-  2023/07/02
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    黑苹果,
-                    解决问题
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
 </div>
 <!-- #post-list -->
 
@@ -1766,7 +1898,7 @@ USB已经定制好了，给蓝牙预留一个USB端口
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/marx/">「笔记」《关于费尔巴哈的提纲》（doing...）</a>
+          <a href="/posts/marx/">「笔记」《关于费尔巴哈的提纲》前置的准备阶段（doing...）</a>
         </li>
       
         
@@ -1907,6 +2039,105 @@ USB已经定制好了，给蓝牙预留一个USB端口
     
     
     
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2458,43 +2689,6 @@ USB已经定制好了，给蓝牙预留一个USB端口
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2532,6 +2726,9 @@ USB已经定制好了，给蓝牙预留一个USB端口
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/%E5%86%99%E7%9C%9F/">写真</a>
       
         
@@ -2557,9 +2754,6 @@ USB已经定制好了，给蓝牙预留一个USB端口
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/debian/">Debian</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/deepin/">Deepin</a>
       
     </div>
   </div>
@@ -2685,6 +2879,105 @@ USB已经定制好了，给蓝牙预留一个USB端口
     
     
     
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -3236,43 +3529,6 @@ USB已经定制好了，给蓝牙预留一个USB端口
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -3310,6 +3566,9 @@ USB已经定制好了，给蓝牙预留一个USB端口
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/%E5%86%99%E7%9C%9F/">写真</a>
       
         
@@ -3335,9 +3594,6 @@ USB已经定制好了，给蓝牙预留一个USB端口
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/debian/">Debian</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/deepin/">Deepin</a>
       
     </div>
   </div>

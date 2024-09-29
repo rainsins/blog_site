@@ -157,7 +157,7 @@ isO();
 </script> <script>
     const testPan = () =>
       new Promise((resolve, reject) => {
-        let url = "https://pan.rainsin.cn:2000/d/blog/js/data.json";
+        let url = "https://mypan.hk.cpolar.io/d/blog/js/data.json";
         let xhr = new XMLHttpRequest();
         xhr.open("GET", url, true);
         xhr.onload = function () {
@@ -240,11 +240,19 @@ if(!sessionStorage.getItem("OS")){
       }
     };
 
-    window.isAppendCDN = (ins, outs) => {
+    window.isAppendCDN = (ins, outs, err) => {
       if (sessionStorage.getItem("isOut") == "false") {
-        appendJQCDN(ins);
+        if(sessionStorage.getItem("isPan") == "true"){
+          appendJQCDN(ins);
+        }else{
+          appendJQCDN(err);
+        } 
       } else {
-        appendJQCDN(outs);
+        if(sessionStorage.getItem("isPan") == "true"){
+          appendJQCDN(outs);
+        }else{
+          appendJQCDN(err);
+        } 
       }
     };
   </script>
@@ -252,7 +260,7 @@ if(!sessionStorage.getItem("OS")){
   <script>
     const sss = ["B","D","E","L","M","R"];
     sss.forEach((el,index)=>{
-      isAppendCDN(`https://pan.rainsin.cn:2000/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`,`https://mypan.hk.cpolar.io/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`)
+      isAppendCDN(`https://pan.rainsin.cn:2000/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`,`https://mypan.hk.cpolar.io/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`, `https://api.rainsin.cn/blog_data/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`)
     })
   </script>
 
@@ -469,13 +477,22 @@ if(!sessionStorage.getItem("OS")){
         if (sessionStorage.getItem("isOutAlert")) {
           
         } else {
-          if (sessionStorage.getItem("isOut") == "true") {
+          if(sessionStorage.getItem("isPan") == "true"){
+            if (sessionStorage.getItem("isOut") == "true") {
             sessionStorage.setItem("isOutAlert", "true");
             Qmsg.warning(
               "哈，你可能使用了梯子或者在国外访问这个站点，有些资源可能会加载不出来，请见谅！",
               { timeout: 5000 }
             );
           }
+          }else{
+            sessionStorage.setItem("isOutAlert", "true");
+            Qmsg.warning(
+              "我家里停电了，服务器宕了，请见谅！",
+              { timeout: 5000 }
+            );
+          }
+          
         }
   </script>
 
@@ -981,89 +998,6 @@ observer.observe(targetNode, config);
     
 
   
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-
-    
-
-    
-
-    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
-    
-    
-
-    <!-- add image placeholder -->
-    
-      
-        <!-- add SVG placehoder -->
-        
-      
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    
-      <!-- create the image wrapper -->
-      
-
-    
-
-    <!-- combine -->
-    
-
-  
 
   
 
@@ -1131,6 +1065,81 @@ observer.observe(targetNode, config);
 
 
 <div id="post-list">
+  
+    <a href="/posts/marx/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            「笔记」《关于费尔巴哈的提纲》前置的准备阶段（doing...）
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              
+
+
+  这是王德峰老师的马克思视频课，我整理出来文字稿，供大家思考学习，我最近比较忙，只能慢慢抽时间的做，格式问题慢慢来吧。这篇文章会一直更新下去，直到格式和内容都能看了才会结束。我不准备将文章分片，所以这篇文章一定会非常长，这可能会非常挑战耐心，还是分片了，可以伴着老师的课来学，会更容易坚持。有问题下面留言。
+
+
+
+  整理这些文本的过程也是让我一遍又一遍深化思考的过程，学习的本质不就是...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1723005130"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/08/07
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    哲学,
+                    马克思
+                </span>
+              
+            </div>
+
+            
+              <div class="pin ms-1">
+                <i class="fas fa-thumbtack fa-fw"></i>
+                <span></span>
+              </div>
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
   
     <a href="/posts/heti/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
@@ -1200,13 +1209,13 @@ observer.observe(targetNode, config);
       </div>
     </a>
   
-    <a href="/posts/marx/" class="card-wrapper">
+    <a href="/posts/marx3/" class="card-wrapper">
       <div class="card post-preview flex-md-row-reverse">
         
 
         <div class="card-body d-flex flex-column">
           <h1 class="card-title my-2 mt-md-0">
-            「笔记」《关于费尔巴哈的提纲》（doing...）
+            「笔记」《关于费尔巴哈的提纲》：对认识论立场的超越
           </h1>
 
           <div class="card-text post-content mt-0 mb-2">
@@ -1217,14 +1226,155 @@ observer.observe(targetNode, config);
 
 
 
+              感性意识论：对认识论立场的超越
+
+
+
+
+
+    人的思维是否具有对象的［gegenständliche］真理性，这不是一个理论的问题，而是一个实践的问题。人应该在实践中证明自己思维的真理性，即自己思维的现实性和力量，自己思维的此岸性。关于思维——离开实践的思维——的现实性或非现实性的争论，是一个纯粹经院哲学的问题。
+    —— 《关于费尔巴哈的提纲》第二条
+
+
+
+好的，各位，我们继续。我...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1723005130"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/08/07
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    哲学,
+                    马克思
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/marx2/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            「笔记」《关于费尔巴哈的提纲》：扬弃唯物与唯心的对立
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
               
 
 
-  这是王德峰老师的马克思视频课，我整理出来文字稿，供大家思考学习，我最近比较忙，只能慢慢抽时间的做，格式问题慢慢来吧。这篇文章会一直更新下去，直到格式和内容都能看了才会结束。我不准备将文章分片，所以这篇文章一定会非常长，这可能会非常挑战耐心，可以伴着老师的课来学，会更容易坚持。有问题下面留言。
 
 
 
-  整理这些文本的过程也是让我一遍又一遍深化思考的过程，学习的本质不就是用重复的调用...
+              扬弃唯物与唯心的对立
+
+
+
+
+    从前的一切唯物主义（包括费尔巴哈的唯物主义）的主要缺点是：对对象、现实、感性，只是从客体的或者直观的形式去理解，而不是把它们当作感性的人的活动，当作实践去理解，不是从主体方面去理解。因此，和唯物主义相反，能动的方面却被唯心主义抽象地发展了，当然，唯心主义是不知道现实的、感性的活动本身的。费尔巴哈想要研究跟思想客体确实不同的感性客体：但是他没有把人的活动本...
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1723005130"
+  data-df="YYYY/MM/DD"
+  
+>
+  2024/08/07
+</em>
+
+
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    哲学,
+                    马克思
+                </span>
+              
+            </div>
+
+            
+          </div>
+          <!-- .post-meta -->
+        </div>
+        <!-- .card-body -->
+      </div>
+    </a>
+  
+    <a href="/posts/marx1/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
+        
+
+        <div class="card-body d-flex flex-column">
+          <h1 class="card-title my-2 mt-md-0">
+            「笔记」《关于费尔巴哈的提纲》：社会权力与法的权利的关系
+          </h1>
+
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+
+
+
+
+
+              社会权力与法的权利的关系
+
+
+
+我们刚才讲了我们这个课程的第一点，就是社会权力的发现，我们知道马克思在《莱茵报》时期跟莱茵省议会的辩论，这场辩论让他发现了黑格尔法哲学是缺乏根基的，因为法哲学讨论的是法的理性。
+
+如何来面对物质利益的纷争，黑格尔认为我们应用理性能够解决物质利益的争斗，让不同的物质利益服从一个理性的法则，理性的原则，那么这个理性的原则用 right 来表示就是权利，这个英文单词...
             </p>
           </div>
 
@@ -1736,259 +1886,6 @@ observer.observe(targetNode, config);
       </div>
     </a>
   
-    <a href="/posts/mei/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「神秘」形体美
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              
-
-
-
-写真
-
-
-
-  以下内容部分涉及🔞内容，为证明你年满18岁，任选一个作答。
-
-
-
-
-
-  由于要直接展示露骨内容，所以设置了门槛，也可以直接下载-&amp;gt;备用：谷歌网盘，再附加一套写真Pure_Media_Vol_287#Yeha#예하_Sex_Vacation_In_Camping_Car_182P1V-&amp;gt;备用：谷歌网盘。
-
-
-
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1716096730"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/05/19
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    写真,
-                    形体美
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/ao-shan/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-          
-
-          
-          
-
-          
-
-          <div class="preview-img shimmer"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 8'%3E%3C/svg%3E" data-src="https://rainsin-1305486451.file.myqcloud.com/rainsin-blog/img/post/clear/16d5164d-8f6f-4944-91b5-b5b9484d3114.webp" width="15" height="8" alt="Clear"  class="lazyload" data-proofer-ignore></div>
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「神秘」奥山和纱 写真集 Clear
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              
-
-奥山和纱
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  奥山和纱（奥山かずさ、おくやま かずさ），1994年3月10日出生于日本青森县，日本女演员、模特，隶属于OSCAR PROMOTION
-  
-  
-  壁纸文件： 奥山和纱 写真集 Clear 【蓝奏云】，解压码：奥山。 奥山和纱 写真集 Clear 【OneDrive】。
-  
-
-
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1715848330"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/05/16
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    写真
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
-    <a href="/posts/lindan/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「爱好」绝佳的学习视频：2014年丹麦公开赛林丹VS周天成低视角高清录像
-          </h1>
-
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-
-
-
-
-
-              
-  
-  全场高清录像下载链接：夸克网盘 、One Drive(密码：lindan66)、Google Drive、自己的服务(IPv6)。
-  
-  
-    右手打球的可以镜像视频进行学习：显示设置 -&amp;gt; 画面翻转 -&amp;gt; 水平。我的Safari浏览器无法播放，Chrome和火狐可以，移动端大概率无法播放。
-  
-  
-    剪辑视频来自up: mcwawa。
-  
-
-
-剪...
-            </p>
-          </div>
-
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1712219530"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/04/04
-</em>
-
-
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    羽毛球
-                </span>
-              
-            </div>
-
-            
-          </div>
-          <!-- .post-meta -->
-        </div>
-        <!-- .card-body -->
-      </div>
-    </a>
-  
 </div>
 <!-- #post-list -->
 
@@ -2115,7 +2012,7 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/marx/">「笔记」《关于费尔巴哈的提纲》（doing...）</a>
+          <a href="/posts/marx/">「笔记」《关于费尔巴哈的提纲》前置的准备阶段（doing...）</a>
         </li>
       
         
@@ -2256,6 +2153,105 @@ observer.observe(targetNode, config);
     
     
     
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2807,43 +2803,6 @@ observer.observe(targetNode, config);
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2881,6 +2840,9 @@ observer.observe(targetNode, config);
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/%E5%86%99%E7%9C%9F/">写真</a>
       
         
@@ -2906,9 +2868,6 @@ observer.observe(targetNode, config);
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/debian/">Debian</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/deepin/">Deepin</a>
       
     </div>
   </div>
@@ -3034,6 +2993,105 @@ observer.observe(targetNode, config);
     
     
     
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -3585,43 +3643,6 @@ observer.observe(targetNode, config);
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -3659,6 +3680,9 @@ observer.observe(targetNode, config);
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/%E5%86%99%E7%9C%9F/">写真</a>
       
         
@@ -3684,9 +3708,6 @@ observer.observe(targetNode, config);
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/debian/">Debian</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/deepin/">Deepin</a>
       
     </div>
   </div>

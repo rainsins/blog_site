@@ -157,7 +157,7 @@ isO();
 </script> <script>
     const testPan = () =>
       new Promise((resolve, reject) => {
-        let url = "https://pan.rainsin.cn:2000/d/blog/js/data.json";
+        let url = "https://mypan.hk.cpolar.io/d/blog/js/data.json";
         let xhr = new XMLHttpRequest();
         xhr.open("GET", url, true);
         xhr.onload = function () {
@@ -240,11 +240,19 @@ if(!sessionStorage.getItem("OS")){
       }
     };
 
-    window.isAppendCDN = (ins, outs) => {
+    window.isAppendCDN = (ins, outs, err) => {
       if (sessionStorage.getItem("isOut") == "false") {
-        appendJQCDN(ins);
+        if(sessionStorage.getItem("isPan") == "true"){
+          appendJQCDN(ins);
+        }else{
+          appendJQCDN(err);
+        } 
       } else {
-        appendJQCDN(outs);
+        if(sessionStorage.getItem("isPan") == "true"){
+          appendJQCDN(outs);
+        }else{
+          appendJQCDN(err);
+        } 
       }
     };
   </script>
@@ -252,7 +260,7 @@ if(!sessionStorage.getItem("OS")){
   <script>
     const sss = ["B","D","E","L","M","R"];
     sss.forEach((el,index)=>{
-      isAppendCDN(`https://pan.rainsin.cn:2000/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`,`https://mypan.hk.cpolar.io/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`)
+      isAppendCDN(`https://pan.rainsin.cn:2000/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`,`https://mypan.hk.cpolar.io/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`, `https://api.rainsin.cn/blog_data/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`)
     })
   </script>
 
@@ -683,13 +691,22 @@ if(!sessionStorage.getItem("OS")){
         if (sessionStorage.getItem("isOutAlert")) {
           
         } else {
-          if (sessionStorage.getItem("isOut") == "true") {
+          if(sessionStorage.getItem("isPan") == "true"){
+            if (sessionStorage.getItem("isOut") == "true") {
             sessionStorage.setItem("isOutAlert", "true");
             Qmsg.warning(
               "哈，你可能使用了梯子或者在国外访问这个站点，有些资源可能会加载不出来，请见谅！",
               { timeout: 5000 }
             );
           }
+          }else{
+            sessionStorage.setItem("isOutAlert", "true");
+            Qmsg.warning(
+              "我家里停电了，服务器宕了，请见谅！",
+              { timeout: 5000 }
+            );
+          }
+          
         }
   </script>
 
@@ -1385,7 +1402,7 @@ var player = new window.Player({
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/marx/">「笔记」《关于费尔巴哈的提纲》（doing...）</a>
+          <a href="/posts/marx/">「笔记」《关于费尔巴哈的提纲》前置的准备阶段（doing...）</a>
         </li>
       
         
@@ -1526,6 +1543,105 @@ var player = new window.Player({
     
     
     
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2077,43 +2193,6 @@ var player = new window.Player({
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2151,6 +2230,9 @@ var player = new window.Player({
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/%E5%86%99%E7%9C%9F/">写真</a>
       
         
@@ -2176,9 +2258,6 @@ var player = new window.Player({
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/debian/">Debian</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/deepin/">Deepin</a>
       
     </div>
   </div>
@@ -2347,6 +2426,105 @@ var player = new window.Player({
     
     
     
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -2898,43 +3076,6 @@ var player = new window.Player({
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -2972,6 +3113,9 @@ var player = new window.Player({
     <div class="d-flex flex-wrap mt-3 mb-1 me-3">
       
         
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a>
+      
+        
         <a class="post-tag btn btn-outline-primary" href="/tags/%E5%86%99%E7%9C%9F/">写真</a>
       
         
@@ -2997,9 +3141,6 @@ var player = new window.Player({
       
         
         <a class="post-tag btn btn-outline-primary" href="/tags/debian/">Debian</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/deepin/">Deepin</a>
       
     </div>
   </div>
