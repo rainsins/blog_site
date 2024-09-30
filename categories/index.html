@@ -401,17 +401,17 @@ if(!sessionStorage.getItem("OS")){
 <meta property="og:locale" content="zh_CN" />
 <meta name="description" content="分类页" />
 <meta property="og:description" content="分类页" />
-<link rel="canonical" href="https://blog.rainsin.cn/categories/" />
-<meta property="og:url" content="https://blog.rainsin.cn/categories/" />
+<link rel="canonical" href="http://localhost:4000/categories/" />
+<meta property="og:url" content="http://localhost:4000/categories/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-09-30T14:14:05+08:00" />
+<meta property="article:published_time" content="2024-09-30T14:38:28+08:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Categories" />
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-09-30T14:14:05+08:00","datePublished":"2024-09-30T14:14:05+08:00","description":"分类页","headline":"Categories","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/categories/"},"url":"https://blog.rainsin.cn/categories/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-09-30T14:38:28+08:00","datePublished":"2024-09-30T14:38:28+08:00","description":"分类页","headline":"Categories","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/categories/"},"url":"http://localhost:4000/categories/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -475,7 +475,10 @@ if(!sessionStorage.getItem("OS")){
   <link href="/assets/css/font.css" rel="stylesheet" />
   <link href="/assets/css/em.css" rel="stylesheet" />
 
-  <script>
+  <script defer>
+    window.load_event = {
+      ...window.load_event,
+      isOutPan: () => {
         if (sessionStorage.getItem("isOutAlert")) {
           
         } else {
@@ -496,6 +499,8 @@ if(!sessionStorage.getItem("OS")){
           }
           
         }
+      }
+    }
   </script>
 
   <script type="module">
@@ -2424,6 +2429,13 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/health/">「转载」人体系统调优不完全指南</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/marx2/">「笔记」《关于费尔巴哈的提纲》三、扬弃唯物与唯心的对立</a>
         </li>
       
@@ -2446,13 +2458,6 @@ observer.observe(targetNode, config);
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx1/">「笔记」《关于费尔巴哈的提纲》二、社会权力与法的权利的关系</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/mac/">「文件」一个趋于完美的黑苹果EFI文件</a>
         </li>
       
     </ul>

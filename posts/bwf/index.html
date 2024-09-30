@@ -593,8 +593,8 @@ if(!sessionStorage.getItem("OS")){
 <meta property="og:locale" content="zh_CN" />
 <meta name="description" content="喜欢的五场球" />
 <meta property="og:description" content="喜欢的五场球" />
-<link rel="canonical" href="https://blog.rainsin.cn/posts/bwf/" />
-<meta property="og:url" content="https://blog.rainsin.cn/posts/bwf/" />
+<link rel="canonical" href="http://localhost:4000/posts/bwf/" />
+<meta property="og:url" content="http://localhost:4000/posts/bwf/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
 <meta property="og:image" content="https://pan.rainsin.cn:2000/d/blog/img/post/192564005-1-208%20(online-video-cutter.com)~1%2000_00_00-00_00_30.gif" />
 <meta property="og:image:alt" content="林丹" />
@@ -607,7 +607,7 @@ if(!sessionStorage.getItem("OS")){
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-09-01T15:34:54+08:00","datePublished":"2024-05-21T16:32:10+08:00","description":"喜欢的五场球","headline":"「爱好」比较喜欢的五场球","image":{"alt":"林丹","url":"https://pan.rainsin.cn:2000/d/blog/img/post/192564005-1-208%20(online-video-cutter.com)~1%2000_00_00-00_00_30.gif","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/bwf/"},"url":"https://blog.rainsin.cn/posts/bwf/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-09-01T15:34:54+08:00","datePublished":"2024-05-21T16:32:10+08:00","description":"喜欢的五场球","headline":"「爱好」比较喜欢的五场球","image":{"alt":"林丹","url":"https://pan.rainsin.cn:2000/d/blog/img/post/192564005-1-208%20(online-video-cutter.com)~1%2000_00_00-00_00_30.gif","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/bwf/"},"url":"http://localhost:4000/posts/bwf/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -682,7 +682,10 @@ if(!sessionStorage.getItem("OS")){
   <link href="/assets/css/font.css" rel="stylesheet" />
   <link href="/assets/css/em.css" rel="stylesheet" />
 
-  <script>
+  <script defer>
+    window.load_event = {
+      ...window.load_event,
+      isOutPan: () => {
         if (sessionStorage.getItem("isOutAlert")) {
           
         } else {
@@ -703,6 +706,8 @@ if(!sessionStorage.getItem("OS")){
           }
           
         }
+      }
+    }
   </script>
 
   <script type="module">
@@ -1489,7 +1494,7 @@ window.load_event = {
     
       
       <a
-        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E7%88%B1%E5%A5%BD%E3%80%8D%E6%AF%94%E8%BE%83%E5%96%9C%E6%AC%A2%E7%9A%84%E4%BA%94%E5%9C%BA%E7%90%83%20-%20Rainsin%20%E2%80%A2%20Blog&url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fbwf%2F"
+        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E7%88%B1%E5%A5%BD%E3%80%8D%E6%AF%94%E8%BE%83%E5%96%9C%E6%AC%A2%E7%9A%84%E4%BA%94%E5%9C%BA%E7%90%83%20-%20Rainsin%20%E2%80%A2%20Blog&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fbwf%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Twitter"
@@ -1502,7 +1507,7 @@ window.load_event = {
     
       
       <a
-        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E7%88%B1%E5%A5%BD%E3%80%8D%E6%AF%94%E8%BE%83%E5%96%9C%E6%AC%A2%E7%9A%84%E4%BA%94%E5%9C%BA%E7%90%83%20-%20Rainsin%20%E2%80%A2%20Blog&u=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fbwf%2F"
+        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E7%88%B1%E5%A5%BD%E3%80%8D%E6%AF%94%E8%BE%83%E5%96%9C%E6%AC%A2%E7%9A%84%E4%BA%94%E5%9C%BA%E7%90%83%20-%20Rainsin%20%E2%80%A2%20Blog&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fbwf%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Facebook"
@@ -1515,7 +1520,7 @@ window.load_event = {
     
       
       <a
-        href="https://t.me/share/url?url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fbwf%2F&text=%E3%80%8C%E7%88%B1%E5%A5%BD%E3%80%8D%E6%AF%94%E8%BE%83%E5%96%9C%E6%AC%A2%E7%9A%84%E4%BA%94%E5%9C%BA%E7%90%83%20-%20Rainsin%20%E2%80%A2%20Blog"
+        href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fbwf%2F&text=%E3%80%8C%E7%88%B1%E5%A5%BD%E3%80%8D%E6%AF%94%E8%BE%83%E5%96%9C%E6%AC%A2%E7%9A%84%E4%BA%94%E5%9C%BA%E7%90%83%20-%20Rainsin%20%E2%80%A2%20Blog"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Telegram"
@@ -1575,6 +1580,13 @@ window.load_event = {
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/health/">「转载」人体系统调优不完全指南</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/marx2/">「笔记」《关于费尔巴哈的提纲》三、扬弃唯物与唯心的对立</a>
         </li>
       
@@ -1597,13 +1609,6 @@ window.load_event = {
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx1/">「笔记」《关于费尔巴哈的提纲》二、社会权力与法的权利的关系</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/mac/">「文件」一个趋于完美的黑苹果EFI文件</a>
         </li>
       
     </ul>

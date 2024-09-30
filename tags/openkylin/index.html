@@ -401,8 +401,8 @@ if(!sessionStorage.getItem("OS")){
 <meta property="og:locale" content="zh_CN" />
 <meta name="description" content="rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）" />
 <meta property="og:description" content="rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）" />
-<link rel="canonical" href="https://blog.rainsin.cn/tags/openkylin/" />
-<meta property="og:url" content="https://blog.rainsin.cn/tags/openkylin/" />
+<link rel="canonical" href="http://localhost:4000/tags/openkylin/" />
+<meta property="og:url" content="http://localhost:4000/tags/openkylin/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
@@ -410,7 +410,7 @@ if(!sessionStorage.getItem("OS")){
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"description":"rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）","headline":"Openkylin","url":"https://blog.rainsin.cn/tags/openkylin/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"description":"rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）","headline":"Openkylin","url":"http://localhost:4000/tags/openkylin/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -474,7 +474,10 @@ if(!sessionStorage.getItem("OS")){
   <link href="/assets/css/font.css" rel="stylesheet" />
   <link href="/assets/css/em.css" rel="stylesheet" />
 
-  <script>
+  <script defer>
+    window.load_event = {
+      ...window.load_event,
+      isOutPan: () => {
         if (sessionStorage.getItem("isOutAlert")) {
           
         } else {
@@ -495,6 +498,8 @@ if(!sessionStorage.getItem("OS")){
           }
           
         }
+      }
+    }
   </script>
 
   <script type="module">
@@ -886,6 +891,13 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/health/">「转载」人体系统调优不完全指南</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/marx2/">「笔记」《关于费尔巴哈的提纲》三、扬弃唯物与唯心的对立</a>
         </li>
       
@@ -908,13 +920,6 @@ observer.observe(targetNode, config);
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx1/">「笔记」《关于费尔巴哈的提纲》二、社会权力与法的权利的关系</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/mac/">「文件」一个趋于完美的黑苹果EFI文件</a>
         </li>
       
     </ul>

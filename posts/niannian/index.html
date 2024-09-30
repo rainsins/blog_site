@@ -590,8 +590,8 @@ if(!sessionStorage.getItem("OS")){
 <meta property="og:locale" content="zh_CN" />
 <meta name="description" content="「神秘」年年的高雅集" />
 <meta property="og:description" content="「神秘」年年的高雅集" />
-<link rel="canonical" href="https://blog.rainsin.cn/posts/niannian/" />
-<meta property="og:url" content="https://blog.rainsin.cn/posts/niannian/" />
+<link rel="canonical" href="http://localhost:4000/posts/niannian/" />
+<meta property="og:url" content="http://localhost:4000/posts/niannian/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
 <meta property="og:image" content="https://mypan.hk.cpolar.io/d/blog/img/post/%E5%B9%B4%E5%B9%B4/photo_2024-03-28_08-50-56.jpg" />
 <meta property="og:image:alt" content="年年" />
@@ -604,7 +604,7 @@ if(!sessionStorage.getItem("OS")){
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-09-16T14:02:56+08:00","datePublished":"2024-07-23T18:32:10+08:00","description":"「神秘」年年的高雅集","headline":"「神秘」年年的高雅集","image":{"alt":"年年","url":"https://mypan.hk.cpolar.io/d/blog/img/post/%E5%B9%B4%E5%B9%B4/photo_2024-03-28_08-50-56.jpg","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/niannian/"},"url":"https://blog.rainsin.cn/posts/niannian/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-09-16T14:02:56+08:00","datePublished":"2024-07-23T18:32:10+08:00","description":"「神秘」年年的高雅集","headline":"「神秘」年年的高雅集","image":{"alt":"年年","url":"https://mypan.hk.cpolar.io/d/blog/img/post/%E5%B9%B4%E5%B9%B4/photo_2024-03-28_08-50-56.jpg","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/niannian/"},"url":"http://localhost:4000/posts/niannian/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -679,7 +679,10 @@ if(!sessionStorage.getItem("OS")){
   <link href="/assets/css/font.css" rel="stylesheet" />
   <link href="/assets/css/em.css" rel="stylesheet" />
 
-  <script>
+  <script defer>
+    window.load_event = {
+      ...window.load_event,
+      isOutPan: () => {
         if (sessionStorage.getItem("isOutAlert")) {
           
         } else {
@@ -700,6 +703,8 @@ if(!sessionStorage.getItem("OS")){
           }
           
         }
+      }
+    }
   </script>
 
   <script type="module">
@@ -1465,7 +1470,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E7%A5%9E%E7%A7%98%E3%80%8D%E5%B9%B4%E5%B9%B4%E7%9A%84%E9%AB%98%E9%9B%85%E9%9B%86%20-%20Rainsin%20%E2%80%A2%20Blog&url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fniannian%2F"
+        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E7%A5%9E%E7%A7%98%E3%80%8D%E5%B9%B4%E5%B9%B4%E7%9A%84%E9%AB%98%E9%9B%85%E9%9B%86%20-%20Rainsin%20%E2%80%A2%20Blog&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fniannian%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Twitter"
@@ -1478,7 +1483,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E7%A5%9E%E7%A7%98%E3%80%8D%E5%B9%B4%E5%B9%B4%E7%9A%84%E9%AB%98%E9%9B%85%E9%9B%86%20-%20Rainsin%20%E2%80%A2%20Blog&u=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fniannian%2F"
+        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E7%A5%9E%E7%A7%98%E3%80%8D%E5%B9%B4%E5%B9%B4%E7%9A%84%E9%AB%98%E9%9B%85%E9%9B%86%20-%20Rainsin%20%E2%80%A2%20Blog&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fniannian%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Facebook"
@@ -1491,7 +1496,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://t.me/share/url?url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fniannian%2F&text=%E3%80%8C%E7%A5%9E%E7%A7%98%E3%80%8D%E5%B9%B4%E5%B9%B4%E7%9A%84%E9%AB%98%E9%9B%85%E9%9B%86%20-%20Rainsin%20%E2%80%A2%20Blog"
+        href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fniannian%2F&text=%E3%80%8C%E7%A5%9E%E7%A7%98%E3%80%8D%E5%B9%B4%E5%B9%B4%E7%9A%84%E9%AB%98%E9%9B%85%E9%9B%86%20-%20Rainsin%20%E2%80%A2%20Blog"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Telegram"
@@ -1551,6 +1556,13 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/health/">「转载」人体系统调优不完全指南</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/marx2/">「笔记」《关于费尔巴哈的提纲》三、扬弃唯物与唯心的对立</a>
         </li>
       
@@ -1573,13 +1585,6 @@ observer.observe(targetNode, config);
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx1/">「笔记」《关于费尔巴哈的提纲》二、社会权力与法的权利的关系</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/mac/">「文件」一个趋于完美的黑苹果EFI文件</a>
         </li>
       
     </ul>
