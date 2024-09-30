@@ -257,7 +257,15 @@ if(!sessionStorage.getItem("OS")){
       }
     };
   </script>
-  
+ 
+<script>
+  const sdsd = ["fangsong","STSONG","STfangsong","STkaiti", "kaiti","京華老宋体2","STSongti-SC-Black","STSongti-SC-Bold","STSongti-SC-Light","STSongti-SC-Regular","STKaitiSC-Regular","FZFSK--GBK1-0"];
+
+  sdsd.forEach((el,index)=>{
+    isAppendCDN(`https://pan.rainsin.cn:2000/d/blog/font/heti/split/${el}/result.css`,`https://mypan.hk.cpolar.io/d/blog/font/heti/split/${el}/result.css`,`https://api.rainsin.cn/blog_data/font/heti/split/${el}/result.css`)
+  })
+</script>
+ 
 
   <script>
     const sss = ["B","D","E","L","M","R"];
@@ -317,6 +325,115 @@ if(!sessionStorage.getItem("OS")){
   />
    
    
+  
+  <link
+    rel="stylesheet"
+    href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/heti/0.9.4/heti.min.css"
+    integrity="sha512-/My2cHBMxofuHmAIIK29zje0pIqA2iCC9HDMa76E1jzK5u+wudGzJMMnTsdA5FmVGsoXB1xoJM7fKhniOhz+HA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  
+  <style>
+    @font-face {
+    font-family: "Heti Song";
+    src: local("Songti SC Regular"), local("Songti TC Regular"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2),"Songti SC OSS","STSong",url(https://api.rainsin.cn/blog_data/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), local("Songti SC"), local("Songti TC"), local("STsong"), local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), local("SimSun") !important;
+}
+
+@font-face {
+    font-family: "Heti Song";
+    font-weight: 200;
+    src: local("Songti SC Light"), local("Songti TC Light"), local("Songti SC"), local("Songti TC"),url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2),"Songti SC OSS","STSong",  url(https://api.rainsin.cn/blog_data/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2),local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), "Heti Song Light Fallback" !important;
+}
+
+@font-face {
+    font-family: "Heti Song Light Fallback";
+    font-weight: 200;
+    src: local("SimSun"), local("STsong");
+}
+
+@font-face {
+    font-family: "Heti Song";
+    font-weight: 600;
+    src: local("Songti SC Bold"), local("Songti TC Bold"), local("Songti SC"), local("Songti TC"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2),"Songti SC OSS","STSong",url(https://api.rainsin.cn/blog_data/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), "Heti Song Bold Fallback" !important;
+}
+
+@font-face {
+    font-family: "Heti Song Bold Fallback";
+    font-weight: 600;
+    src: local("STsong"), local("SimSun") !important;
+}
+
+@font-face {
+    font-family: "Heti Song Black";
+    font-weight: 800;
+    src: local("Songti SC Black"), local("Songti SC"), local("Songti TC"), "Songti SC OSS","STSong",local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), local("SimSun") !important;
+}
+
+@font-face {
+    font-family: "Heti Kai";
+    src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("Kaiti SC"), local("Kaiti TC"), local("STKaiti"), local("Kaiti"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2),"KaiTi OSS", "STKaiti SC OSS","STKaiti OSS",url(https://api.rainsin.cn/blog_data/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), local("CESI_KT_GB18030"), local("BiauKai") !important;
+}
+
+@font-face {
+    font-family: "Heti Kai";
+    font-weight: 600;
+    src: local("Kaiti SC Bold"), local("Kaiti TC Bold"), local("Kaiti SC"), local("Kaiti TC"),"KaiTi OSS", "STKaiti SC OSS","STKaiti OSS", url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2),"KaiTi OSS", "STKaiti SC OSS","STKaiti OSS",url(https://api.rainsin.cn/blog_data/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), local("CESI_KT_GB18030"), "Heti Kai Bold Fallback" !important;
+}
+
+@font-face {
+    font-family: "Heti Kai Bold Fallback";
+    font-weight: 600;
+    src: local("STKaiti"), local("Kaiti"), local("BiauKai") !important;
+}
+
+@font-face {
+    font-family: "Heti Kai Black";
+    font-weight: 800;
+    src: local("Kaiti SC Black"), local("Kaiti TC Black"), local("Kaiti SC"), local("Kaiti TC"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2),"KaiTi OSS", "STKaiti SC OSS","STKaiti OSS",url(https://api.rainsin.cn/blog_data/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), local("CESI_KT_GB18030"), local("STKaiti"), local("Kaiti") !important;
+}
+
+@font-face {
+    font-family: "Heti Fangsong";
+    src: local("STFangsong"), local("FangSong"), local("FangSong_GB2312"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E4%BB%BF%E5%AE%8B_%E5%B8%B8%E8%A7%84.woff2), url(https://pan.rainsin.cn:2000/d/blog/font/heti/%E5%8D%8E%E6%96%87%E4%BB%BF%E5%AE%8B.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E4%BB%BF%E5%AE%8B_%E5%B8%B8%E8%A7%84.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/%E5%8D%8E%E6%96%87%E4%BB%BF%E5%AE%8B.woff2),"STFangsong OSS","FangSong OSS","FZFangSong-Z02",url(https://api.rainsin.cn/blog_data/font/heti/%E4%BB%BF%E5%AE%8B_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E4%BB%BF%E5%AE%8B.woff2), local("CESI_FS_GB18030"), url(https://pan.rainsin.cn:2000/d/blog/font/heti/FZFSK--GBK1-0.woff2), url(https://mypan.hk.cpolar.io/d/blog/font/heti/FZFSK--GBK1-0.woff2),url(https://api.rainsin.cn/blog_data/font/heti/FZFSK--GBK1-0.woff2) !important;
+}
+  </style>
+
+<link
+rel="stylesheet"
+href="/assets/css/heti-add-min.css"
+/>
+
+  <script>
+    window.load_event = {
+      ...window.load_event,
+      heti_title_style: () => {
+        const OS = sessionStorage.getItem("OS");
+        if (OS == "Linux") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-weight: 400;
+    }</style>`)
+          );
+        } else if (OS == "iOS" || OS == "Mac OS") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-family: "Times New Roman",times,"Heti Kai",serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      font-weight: 600;
+    }</style>`)
+          );
+        } else if (OS == "Android") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-weight: 600;
+    }</style>`)
+          );
+        } else {
+          console.log("哇！");
+        }
+      },
+    };
+  </script>
   
 
   <link rel="stylesheet" href="/assets/css/card-profile.css" />
@@ -1206,7 +1323,7 @@ observer.observe(targetNode, config);
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="13353 字"
+  title="13424 字"
 >
   <em>74 分钟</em>阅读</span>
 
@@ -1227,13 +1344,13 @@ observer.observe(targetNode, config);
 
 <h2 id="扬弃唯物与唯心的对立"><span class="me-2">扬弃唯物与唯心的对立</span><a href="#扬弃唯物与唯心的对立" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<audio controls="" id="weiwuweixin"></audio>
+<!-- <audio controls id="weiwuweixin"></audio>
 
 <script>
     const audio_weiwuweixin = document.getElementById("weiwuweixin");
 
     audio_weiwuweixin.src = sessionStorage.getItem("isOut") == "true" ? "https://mypan.hk.cpolar.io/d/blog/%E9%A9%AC%E5%85%8B%E6%80%9D/aac/%E6%A0%BC%E5%BC%8F%E5%B7%A5%E5%8E%82%E9%9F%B3%E9%A2%91%E5%90%88%E5%B9%B6%20%5B6%5D--%E7%AC%AC%E4%B8%89%E8%AE%B2%2B%5B7%5D--%E7%AC%AC%E4%B8%89%E8%AE%B2.aac" : "https://pan.rainsin.cn:2000/d/blog/%E9%A9%AC%E5%85%8B%E6%80%9D/aac/%E6%A0%BC%E5%BC%8F%E5%B7%A5%E5%8E%82%E9%9F%B3%E9%A2%91%E5%90%88%E5%B9%B6%20%5B6%5D--%E7%AC%AC%E4%B8%89%E8%AE%B2%2B%5B7%5D--%E7%AC%AC%E4%B8%89%E8%AE%B2.aac";
-</script>
+</script> -->
 
 <div class="blockquote-sep-box">
 <blockquote class="blockquote-sep">
@@ -1242,21 +1359,19 @@ observer.observe(targetNode, config);
 </blockquote>
 </div>
 
-<p>现在我们进入第三点，也就是我们这课程的第三部分。</p>
-
 <p>马克思发动了哲学革命，我们知道他为什么要发动，以及这个哲学革命产生的成果是<strong>历史唯物主义</strong>。那么我们还得进一步了解哲学革命本身的内涵，马克思的哲学革命包含哪些内容？</p>
 
 <p>首先要讲的就是马克思提出了感性活动存在论。为什么提出这种存在论是哲学革命呢？因为感性活动存在论扬弃了唯物主义和唯心主义的对立，这是一个很大的问题。我们现在一般的讨论都说马克思是个唯物主义者，马克思本人也用唯物主义这个词来称呼自己新的思想，但是马克思称自己的唯物主义前面是有限定词的，即把<strong>感性理解为实践活动的唯物主义</strong>，也可以非常简要地称其为<strong>实践的唯物主义</strong>。</p>
 
 <p>马克思把实践的概念融入到存在论中去。存在论，我们中国近代以来翻译西方哲学著作，遇到这个词ontology，英语当中的ontology。中国近代以来翻译西方哲学著作，关于ontology该怎么翻译成汉语没有定论，一开始叫万有论，这是一种译法；或者叫本根论，又是一种译法。总觉得不妥当，后来本体论被普遍接受。那么现在看来，还是不妥当的，因为ontology这个词说的是这样一种学说，Onta是诸存在者，来自希腊语，种种的存在者，所以是复数，这是个复数名词Onta。所以最初译成万有论也是因为这个缘故，但是万有论这个译法不好，如果有万有论这种学问，那么所有对万事万物的讨论都包含在里面，那么其他学科也就没了，所以万有论不妥。本根论也是一种译法，这是一种关于诸存在者的学问。“-logy”是一个后缀，通常用来表示学说或学问，比如说什么是心理学，Psychology，关于人类心智的科学，关于人类心智的科学叫心理学。所以这是个后缀，那么前面是诸存在者。这门学问在欧洲语言当中的构词法来说，他就是关于诸存在者的存在规定的学问，讨论存在问题的，所以译成本体论还是不妥当的。在大多数情况下我们扭不过习惯，所以我写文章有时候经常还是称它为本体论的，但是合适的说法应该是存在论，存在者的存在规定的学问。现在我们用存在论这个译法，因为本体是中国哲学概念，而且在中国哲学之前还没有这个概念，佛学进入中国，才讲了本体，比方说禅宗讲本心，心之本体，然后宋明理学家受禅宗的启发和影响，就开始把孟子讲的心称为本心，本心仁体，简称为本体。所以用本体论来翻译ontology会产生误解，所以其实欧洲哲学中没有中国哲学中的所谓本体。所以我们现在把这个词ontology译成存在论。</p>
 
-<p>存在论的基本问题就是讨论存在者的存在规定。恩格斯后来写了一本书，这本书的书名叫《路德维希·费尔巴哈和德国古典哲学的终结》<sup id="fnref:zhongjie" role="doc-noteref"><a href="#fn:zhongjie" class="footnote" rel="footnote">1</a></sup>，这本著作也是蛮有名的，《路德维希·费尔巴哈和德国古典哲学的终结》，简称《费尔巴哈论》，是马克思主义哲学中的经典著作之一。这本书里面恩格斯讲，全部哲学的基本问题，特别是近代以来全部哲学的基本问题，就是<strong>思维与存在的关系</strong>问题。他说在这个问题上分出了两大阵营，一个唯物主义阵营，一个唯心主义阵营。主张存在第一性，思维第二性，主张物质第一性，精神第二性的，叫唯物主义。倒过来的，主张思维第一性的，精神第一性的，存在或物质是第二性的，那叫唯心主义。这是中国近代以来，特别是建国以后我们学校的教育，从基础教育到高等教育，要讲哲学的话，教科书里都这么写的。所以我们大概每个人都有这样的认识，即哲学领域里边分了两大派别，唯物主义一派，唯心主义一派，那么真理在唯物主义那一边，是吧？你们唯心主义是没有真理的。这是我们长久固定下来的一种认识。既然马克思自称唯物主义者，那么我们也相信马克思站在唯物主义阵营中了。如果这么理解的话，或者现在还有许多人继续这么理解，也就错失了马克思发动的那场哲学革命的一个基本方面。这个哲学革命的基本方面就是超越唯物与唯心的对立。</p>
+<p>存在论的基本问题就是讨论存在者的存在规定。恩格斯后来写了一本书，这本书的书名叫《路德维希·费尔巴哈和德国古典哲学的终结》<sup id="fnref:zhongjie" role="doc-noteref"><a href="#fn:zhongjie" class="footnote" rel="footnote">1</a></sup>，这本著作也是蛮有名的，《路德维希·费尔巴哈和德国古典哲学的终结》，简称《费尔巴哈论》，是马克思主义哲学中的经典著作之一。这本书里面恩格斯讲，全部哲学的基本问题，特别是近代以来全部哲学的基本问题，就是<strong>思维与存在的关系</strong>问题。他说在这个问题上分出了两大阵营，一个唯物主义阵营，一个唯心主义阵营。主张存在第一性，思维第二性，主张物质第一性，精神第二性的，叫唯物主义。倒过来的，主张思维第一性的，精神第一性的，存在或物质是第二性的，那叫唯心主义。这是中国近代以来，特别是建国以后我们学校的教育，从基础教育到高等教育，要讲哲学的话，教科书里都这么写的。所以我们大概每个人都有这样的认识，即哲学领域里边分了两大派别，唯物主义一派，唯心主义一派，那么真理在唯物主义那一边，是吧？你们唯心主义是没有真理的。这是我们长久固定下来的一种认识。既然马克思自称唯物主义者，那么我们也相信马克思站在唯物主义阵营中了。如果这么理解的话，或者现在还有许多人继续这么理解，也就错失了马克思发动的那场哲学革命的一个基本方面。这个哲学革命的基本方面就是<em>超越唯物与唯心的对立</em>。</p>
 
 <p>说话要有根据的，先说文本的根据。马克思在1844年发动哲学革命留下的文献是《1844年经济学哲学手稿》，到了1845年，马克思在他的笔记当中写下了《关于费尔巴哈的提纲》，时间是1845年春天。这个《关于费尔巴哈的提纲》与1844年的手稿这两篇文献之间的关系是什么？</p>
 
 <p>在1844年手稿里面发动了哲学革命，而这场哲学革命的基本要点，以非常精要的方式概括在《关于费尔巴哈的提纲》中了。所以这十一条提纲，虽然文字篇幅很短，但是极为重要，它是对哲学革命成果的概括，是马克思打开新哲学形成的全貌。就像阳明心学，王阳明有《传习录》，展开了王阳明心学的一个体系，这个体系的全貌概要的表达在他的《大学问》中了。与此类比，马克思的哲学革命的丰富内容概括在《关于费尔巴哈的提纲》中了。所以《关于费尔巴哈的提纲》是马克思哲学革命的全貌，所以我们了解马克思哲学革命的内容，可以按照《关于费尔巴哈的提纲》这十一条的线索，一步一步了解。</p>
 
-<p>先解决一个问题，马克思是否超越了唯物主义和唯心主义的对立，或者是扬弃了唯物主义和唯心主义的对立？马克思既批判唯物主义，也批判唯心主义。一开头先批判唯物主义，那么先要说唯物主义意味着什么。这种存在论叫唯物主义存在论，它的基本思想是什么？我们大概都背得出来。我们平时说的马克思教材，讲马克思主义哲学四句话：世界是物质的；物质是运动的；运动是有规律的；规律是可以认识的。基本完备。说世界是物质的是存在论，物质是运动的也是存在论，运动是有规律的辩证法进去了，这规律是辩证规律，规律是可以认识的认识论立场进去了，叫可知论。唯物主义思想一定是可知论，因为精神被认为是对物质的反映，思维被认为是对存在的反映，是能反映的，可知论。</p>
+<p>先解决一个问题，马克思是否超越了唯物主义和唯心主义的对立，或者是扬弃了唯物主义和唯心主义的对立？马克思既批判唯物主义，也批判唯心主义。一开头先批判唯物主义，那么先要说唯物主义意味着什么。这种存在论叫唯物主义存在论，它的基本思想是什么？我们大概都背得出来。我们平时说的马克思教材，讲马克思主义哲学四句话：世界是物质的，物质是运动的，运动是有规律的，规律是可以认识的。基本完备。说世界是物质的是存在论，物质是运动的也是存在论，运动是有规律的辩证法进去了，这规律是辩证规律，规律是可以认识的认识论立场进去了，叫可知论。唯物主义思想一定是可知论，因为精神被认为是对物质的反映，思维被认为是对存在的反映，是能反映的，可知论。</p>
 
 <p>那么讲讲物质存在论，我们至少要了解它的基本道理，然后再着手批判。首先，唯物主义告诉我们，这个世界是客观的，不是主观的。所以特别要批判，比如说遇到王阳明了，你得批啊。怎么批呢？王阳明说心外无物，外物都在心中，心之外没有物，这都是唯心主义。你用唯物主义的观点来批嘛。按照你王阳明的说法，心外无物，这个由诸物所构成的世界，这个世界全来自你的心，那他就不是客观的嘛，叫主观唯心主义，所以批判！你就站在客观唯物主义的立场上批。这个世界为什么是客观的？有一个基本范畴叫物质，物质是什么？物质是不依赖人的意识和意志的客观存在，或者叫客观实在。我们现在重温一下唯物主义，我们其实都有唯物主义的修养，而且在本能般的常识般的信任这一点，因为我们心中有一个概念，叫客观实在，不以人的意志和意识为转移的客观实在。这个客观实在用英语来表达是什么呢？Objective reality，Objective，客观的，reality，实在。我们先为唯物主义论证一下。</p>
 
@@ -1268,7 +1383,16 @@ observer.observe(targetNode, config);
 
 <p>那么王阳明怎么应对呢？怎么回应这个问题呢？王阳明这么回应的。王阳明说：汝未去看那花时，汝心与花皆寂然无声，都不存在了。汝一看此花时，汝心与花一时都明了起来。就这样回答了。我们不免要想一想，王阳明这回答是不是很好的对唯物主义的反驳又做了反驳。当时我读到王阳明这段话的时候，我觉得他回避了问题。友人要跟你讲的是花是客观存在，你不能否认花的客观存在吧，而他却跟你讲，你如果不去看花，你的心跟那个花也都不存在了。人家说的是花自开自落嘛，与你的心何干？你偏要说，若不去见那花时，汝心与花一时俱灭，你一旦去见了，如心与花一时都明了起来，这算什么话嘛？我当时的认识水平就这么低啊，就觉得王阳明没有有效地回应那个来自唯物主义立场的反驳。</p>
 
-<p>随着哲学学习的深入，境界开始提升了。我觉得王阳明回答得很好。比方说花吧，某样东西被称为花，这件事情，不是这个东西自己把自己和它物区分开来的，这个区分一定是人做的吧。诸物之间，事物与事物之间的区分，都是人心给出的。你把人心的规定拿掉，统统拿掉，我们没有此事物和彼事物，没了。那么还说客观存在，对的，什么东西，物质。最后只能说物质了。既然讲世界是物质的，等于是什么都没有说。没有万事万物彼此的区别了，你用物质这个词等于没有世界了。物质世界这个词语是哲学上的错误。这两个词在哲学上是非法联用的，有语病的。物质怎么能是世界呢？因为世界是诸存在者，各种不同的事物构成的。你没有各种不同的事物，只有物质，它哪里是世界？动物是没有世界的。动物只是恰好被安置在它所处的那个物质环境里了，它没有世界。只有人类却有大地山川、云城河流、万象呈现。为什么万象能够呈现？因为在语言中，人有语言了，于是世界来了。动物是没有语言的，除非你把广义的信息传达也称为语言，那动物也有语言。但是人类的语言是由语词构成的，还有一个个句子，是吧？这些词语都是观念吧，这种观念跟事物关联了，把事物彼此之间区分开来。所以连基督教都讲了这个道理。上帝造人，用泥土造的，光用泥土造只是造出人的形体，还差最后一道工序，什么工序？对他所造的人的形体吹一口气。什么叫吹一口气？让他有了语言。于是人成功了。语言是存在的家，人在语言之家，这是海德格尔说的。我们在这个屋子里，在屋子里面种种的事物，椅子、桌子、灯，朋友们坐在地上，周围的一切。因为有人才有这种事物的区分。什么叫有人？有人在语言中了。语言是什么？人性给出语言，人与人的交往给出语言。语言离开意识，哪里就有语言？语言离开人的意识会有语言吗？</p>
+<div class="heti-box">
+@Hdiv(classic){
+@Hbq(){
+@Hsp(){
+先生游南镇，一友指岩中花树问曰：“天下无心外之物，如此花树在深山中自开自落，于我心亦何相关？” 先生曰：“你未看此花时，此花与汝心同归于寂；你来看此花时，则此花颜色一时明白起来，便知此花不在你的心外”。
+}
+}}    
+</div>
+
+<p>随着哲学学习的深入，境界开始提升了。我觉得王阳明回答得很好。比方说花吧，某样东西被称为花，这件事情，不是这个东西自己把自己和它物区分开来的，这个区分一定是人做的吧。诸物之间，事物与事物之间的区分，都是人心给出的。你把人心的规定拿掉，统统拿掉，我们没有此事物和彼事物。那么还说客观存在，什么东西，〔物质〕。最后只能说物质了。既然讲世界是物质的，等于是什么都没有说。没有万事万物彼此的区别了，你用物质这个词等于没有世界了。物质世界这个词语是哲学上的错误。这两个词在哲学上是非法联用的，有语病的。物质怎么能是世界呢？因为世界是诸存在者，各种不同的事物构成的。你没有各种不同的事物，只有物质，它哪里是世界？动物是没有世界的。动物只是恰好被安置在它所处的那个物质环境里了，它没有世界。只有人类却有大地山川、云城河流、万象呈现。为什么万象能够呈现？因为在语言中，人有语言了，于是世界来了。动物是没有语言的，除非你把广义的信息传达也称为语言，那动物也有语言。但是人类的语言是由语词构成的，还有一个个句子，是吧？这些词语都是观念吧，这种观念跟事物关联了，把事物彼此之间区分开来。所以连基督教都讲了这个道理。上帝造人，用泥土造的，光用泥土造只是造出人的形体，还差最后一道工序，什么工序？对他所造的人的形体吹一口气。什么叫吹一口气？让他有了语言。于是人成功了。语言是存在的家，人在语言之家，这是海德格尔说的。我们在这个屋子里，在屋子里面种种的事物，椅子、桌子、灯，朋友们坐在地上，周围的一切。因为有人才有这种事物的区分。什么叫有人？有人在语言中了。语言是什么？人性给出语言，人与人的交往给出语言。语言离开意识，哪里就有语言？语言离开人的意识会有语言吗？</p>
 
 <div class="blockquote-sep-box">
 <blockquote class="blockquote-sep">
@@ -1466,6 +1590,13 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/marx/">「笔记」《关于费尔巴哈的提纲》一、前置的准备阶段（doing...）</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/marx1/">「笔记」《关于费尔巴哈的提纲》二、社会权力与法的权利的关系</a>
         </li>
       
@@ -1481,13 +1612,6 @@ observer.observe(targetNode, config);
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx3/">「笔记」《关于费尔巴哈的提纲》四、对认识论立场的超越</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/marx/">「笔记」《关于费尔巴哈的提纲》一、前置的准备阶段（doing...）</a>
         </li>
       
         
@@ -3265,6 +3389,8 @@ observer.observe(targetNode, config);
   </div>
 </footer>
 
+
+<script src="/assets/js/heti.js"></script>
 
 
 
