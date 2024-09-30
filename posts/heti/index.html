@@ -241,19 +241,9 @@ if(!sessionStorage.getItem("OS")){
       }
     };
 
-    window.isAppendCDN = (ins, outs, err) => {
-      if (sessionStorage.getItem("isOut") == "false") {
-        if(sessionStorage.getItem("isPan") == "true"){
-          appendJQCDN(ins);
-        }else{
-          appendJQCDN(err);
-        } 
-      } else {
-        if(sessionStorage.getItem("isPan") == "true"){
-          appendJQCDN(outs);
-        }else{
-          appendJQCDN(err);
-        } 
+    window.isAppendCDN = (err) => {
+      if (sessionStorage.getItem("isPan") == "false") {
+        appendJQCDN(err);
       }
     };
   </script>
@@ -291,6 +281,13 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/汇文明朝体/result.css"
 rel="stylesheet"
 href="https://file.rainsin.cn/d/blog/font/heti/split/STSONG/result.css"
 />
+<script>
+const sss = ["FZFSB","FZKTB","FZKTK","STFANGSO","STSONG","simfang","simkai","京華老宋体2","汇文明朝体"];
+
+sss.forEach((el,ind)=>{
+  isAppendCDN(`https://fonts.rainsin.cn/split/${el}/result.css`);
+})
+</script>
  
 
 <link
@@ -312,6 +309,14 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/STSONG/result.css"
   rel="stylesheet"
   href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoR/result.css"
 />
+
+<script>
+  const ssss = ["B", "D", "E", "L", "M", "R"];
+
+ssss.forEach((el, index) => {
+  isAppendCDN(`https://fonts.rainsin.cn/split/FZFWZhuZiAOldMincho${el}/result.css`);
+})
+</script>
 
 
   <link rel="stylesheet" href="/assets/message/message.min.css" />
@@ -620,7 +625,7 @@ href="/assets/css/heti-add-min.css"
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-09-30T18:07:36+08:00","datePublished":"2024-09-08T12:32:10+08:00","description":"「工具」一个好用中文排版工具","headline":"「工具」一款好用的中文排版工具","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/heti/"},"url":"https://blog.rainsin.cn/posts/heti/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-01T05:42:00+08:00","datePublished":"2024-09-08T12:32:10+08:00","description":"「工具」一个好用中文排版工具","headline":"「工具」一款好用的中文排版工具","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/heti/"},"url":"https://blog.rainsin.cn/posts/heti/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -1420,13 +1425,13 @@ observer.observe(targetNode, config);
 
 <em
   class=""
-  data-ts="1727690856"
+  data-ts="1727732520"
   data-df="YYYY/MM/DD"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  2024/09/30
+  2024/10/01
 </em>
 
     </span>

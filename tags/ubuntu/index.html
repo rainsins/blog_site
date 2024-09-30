@@ -241,19 +241,9 @@ if(!sessionStorage.getItem("OS")){
       }
     };
 
-    window.isAppendCDN = (ins, outs, err) => {
-      if (sessionStorage.getItem("isOut") == "false") {
-        if(sessionStorage.getItem("isPan") == "true"){
-          appendJQCDN(ins);
-        }else{
-          appendJQCDN(err);
-        } 
-      } else {
-        if(sessionStorage.getItem("isPan") == "true"){
-          appendJQCDN(outs);
-        }else{
-          appendJQCDN(err);
-        } 
+    window.isAppendCDN = (err) => {
+      if (sessionStorage.getItem("isPan") == "false") {
+        appendJQCDN(err);
       }
     };
   </script>
@@ -279,6 +269,14 @@ if(!sessionStorage.getItem("OS")){
   rel="stylesheet"
   href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoR/result.css"
 />
+
+<script>
+  const ssss = ["B", "D", "E", "L", "M", "R"];
+
+ssss.forEach((el, index) => {
+  isAppendCDN(`https://fonts.rainsin.cn/split/FZFWZhuZiAOldMincho${el}/result.css`);
+})
+</script>
 
 
   <link rel="stylesheet" href="/assets/message/message.min.css" />
