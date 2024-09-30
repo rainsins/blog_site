@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Rainsin • Blog</title>
   <subtitle>rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）</subtitle>
-  <updated>2024-09-30T14:38:28+08:00</updated>
+  <updated>2024-09-30T16:27:22+08:00</updated>
   <author>
     <name>rainsin</name>
     <uri>http://localhost:4000/</uri>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/health/" rel="alternate" type="text/html" title="「转载」人体系统调优不完全指南" />
     <published>2024-09-30T12:32:10+08:00</published>
   
-    <updated>2024-09-30T14:14:21+08:00</updated>
+    <updated>2024-09-30T16:27:23+08:00</updated>
   
     <id>http://localhost:4000/posts/health/</id>
     <content src="http://localhost:4000/posts/health/" />
@@ -128,7 +128,7 @@
     <link href="http://localhost:4000/posts/marx1/" rel="alternate" type="text/html" title="「笔记」《关于费尔巴哈的提纲》二、社会权力与法的权利的关系" />
     <published>2024-08-07T12:32:10+08:00</published>
   
-    <updated>2024-09-30T12:58:33+08:00</updated>
+    <updated>2024-09-30T16:27:23+08:00</updated>
   
     <id>http://localhost:4000/posts/marx1/</id>
     <content src="http://localhost:4000/posts/marx1/" />

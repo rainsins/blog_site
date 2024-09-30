@@ -259,12 +259,26 @@ if(!sessionStorage.getItem("OS")){
   </script>
   
 
-  <script>
-    const sss = ["B","D","E","L","M","R"];
-    sss.forEach((el,index)=>{
-      isAppendCDN(`https://pan.rainsin.cn:2000/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`,`https://mypan.hk.cpolar.io/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`, `https://api.rainsin.cn/blog_data/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`)
-    })
-  </script>
+<link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoB/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoD/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoE/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoL/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoM/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoR/result.css"
+/>
+
 
   <link rel="stylesheet" href="/assets/message/message.min.css" />
   <script src="/assets/message/message.min.js"></script>
@@ -426,32 +440,31 @@ if(!sessionStorage.getItem("OS")){
     window.load_event = {
       ...window.load_event,
       comments: () => {
-        if (sessionStorage.getItem("isOut") == "false") {
           Waline.init({
             el: "#tcomment",
             serverURL: "https://comment.cpolar.cn/",
             emoji: [
-              "//pan.rainsin.cn:2000/d/blog/em/小黑子",
-              "//pan.rainsin.cn:2000/d/blog/em/Sticker-100",
-              "//pan.rainsin.cn:2000/d/blog/em/小电视",
-              "//pan.rainsin.cn:2000/d/blog/em/Tieba",
-              "//pan.rainsin.cn:2000/d/blog/em/alus",
-              "//pan.rainsin.cn:2000/d/blog/em/商业头盔",
-              "//pan.rainsin.cn:2000/d/blog/em/小人",
-              "//pan.rainsin.cn:2000/d/blog/em/小坏坏",
-              "//pan.rainsin.cn:2000/d/blog/em/抽象",
-              "//pan.rainsin.cn:2000/d/blog/em/搜索引擎",
-              "//pan.rainsin.cn:2000/d/blog/em/机场",
-              "//pan.rainsin.cn:2000/d/blog/em/猥琐萌",
-              "//pan.rainsin.cn:2000/d/blog/em/猫狗",
-              "//pan.rainsin.cn:2000/d/blog/em/白白",
-              "//pan.rainsin.cn:2000/d/blog/em/突然",
-              "//pan.rainsin.cn:2000/d/blog/em/胡桃",
-              "//pan.rainsin.cn:2000/d/blog/em/被子",
-              "//pan.rainsin.cn:2000/d/blog/em/酷安",
-              "//pan.rainsin.cn:2000/d/blog/em/tw",
-              "//pan.rainsin.cn:2000/d/blog/em/qq",
-              "//pan.rainsin.cn:2000/d/blog/em/weibo",
+              "//file.rainsin.cn/d/blog/em/小黑子",
+              "//file.rainsin.cn/d/blog/em/Sticker-100",
+              "//file.rainsin.cn/d/blog/em/小电视",
+              "//file.rainsin.cn/d/blog/em/Tieba",
+              "//file.rainsin.cn/d/blog/em/alus",
+              "//file.rainsin.cn/d/blog/em/商业头盔",
+              "//file.rainsin.cn/d/blog/em/小人",
+              "//file.rainsin.cn/d/blog/em/小坏坏",
+              "//file.rainsin.cn/d/blog/em/抽象",
+              "//file.rainsin.cn/d/blog/em/搜索引擎",
+              "//file.rainsin.cn/d/blog/em/机场",
+              "//file.rainsin.cn/d/blog/em/猥琐萌",
+              "//file.rainsin.cn/d/blog/em/猫狗",
+              "//file.rainsin.cn/d/blog/em/白白",
+              "//file.rainsin.cn/d/blog/em/突然",
+              "//file.rainsin.cn/d/blog/em/胡桃",
+              "//file.rainsin.cn/d/blog/em/被子",
+              "//file.rainsin.cn/d/blog/em/酷安",
+              "//file.rainsin.cn/d/blog/em/tw",
+              "//file.rainsin.cn/d/blog/em/qq",
+              "//file.rainsin.cn/d/blog/em/weibo",
             ],
             pageview: true,
             locale: {
@@ -480,67 +493,13 @@ if(!sessionStorage.getItem("OS")){
             imageUploader: false,
             search: false,
           });
-        } else {
-          Waline.init({
-            el: "#tcomment",
-            serverURL: "https://comment.cpolar.cn/",
-            emoji: [
-              "//mypan.hk.cpolar.io/d/blog/em/小黑子",
-              "//mypan.hk.cpolar.io/d/blog/em/Sticker-100",
-              "//mypan.hk.cpolar.io/d/blog/em/小电视",
-              "//mypan.hk.cpolar.io/d/blog/em/Tieba",
-              "//mypan.hk.cpolar.io/d/blog/em/alus",
-              "//mypan.hk.cpolar.io/d/blog/em/商业头盔",
-              "//mypan.hk.cpolar.io/d/blog/em/小人",
-              "//mypan.hk.cpolar.io/d/blog/em/小坏坏",
-              "//mypan.hk.cpolar.io/d/blog/em/抽象",
-              "//mypan.hk.cpolar.io/d/blog/em/搜索引擎",
-              "//mypan.hk.cpolar.io/d/blog/em/机场",
-              "//mypan.hk.cpolar.io/d/blog/em/猥琐萌",
-              "//mypan.hk.cpolar.io/d/blog/em/猫狗",
-              "//mypan.hk.cpolar.io/d/blog/em/白白",
-              "//mypan.hk.cpolar.io/d/blog/em/突然",
-              "//mypan.hk.cpolar.io/d/blog/em/胡桃",
-              "//mypan.hk.cpolar.io/d/blog/em/被子",
-              "//mypan.hk.cpolar.io/d/blog/em/酷安",
-              "//mypan.hk.cpolar.io/d/blog/em/tw",
-              "//mypan.hk.cpolar.io/d/blog/em/qq",
-              "//mypan.hk.cpolar.io/d/blog/em/weibo",
-            ],
-            pageview: true,
-            locale: {
-              placeholder:
-                "唠唠嗑（登录和上面信息都不是必需的，评论审核后可见，添加邮箱可在被回复时邮件提醒，按🔍进行预览）",
-              reactionTitle: "你是故意找茬是不是啊？",
-              reaction0: "正确的",
-              reaction1: "错误的",
-              reaction2: "小丑的",
-              reaction3: "满昏的",
-              reaction4: "不错的",
-              reaction5: "菜鸡的",
-              reaction6: "超逊的",
-              reaction7: "发烧的",
-              admin: "站长",
-              level0: "素人",
-              level1: "企划",
-              level2: "企划专属",
-              level3: "专属",
-              level4: "双专属",
-              level5: "三社共有",
-              nick: "名称",
-              sofa: "来一起击剑🤺吧",
-            },
-            dark: 'html[data-mode="dark"]',
-            imageUploader: false,
-            search: false,
-          });
-        };
+
         window.time_comment = 0;
         let set_comment_time = setInterval(()=>{
           const get_anno_img = Array.from(document.querySelectorAll(".wl-cards .wl-user .wl-user-avatar[src='https://seccdn.libravatar.org/avatar/d41d8cd98f00b204e9800998ecf8427e']"));
           if(time_comment < 500){
             get_anno_img.forEach((el,index)=>{
-          el.src = sessionStorage.getItem("isOut") == "true" ? "https://mypan.hk.cpolar.io/d/blog/img/comment/act.gif" : "https://pan.rainsin.cn:2000/d/blog/img/comment/act.gif";
+          el.src = "https://file.rainsin.cn/d/blog/img/comment/act.gif";
         });
         time_comment++;
           }else{
@@ -565,7 +524,7 @@ if(!sessionStorage.getItem("OS")){
     }
 
     .wl-editor, .wl-input{
-      background-image: url(https://pan.rainsin.cn:2000/d/blog/img/comment/waline-bg.gif),url(https://mypan.hk.cpolar.io/d/blog/img/comment/waline-bg.gif),url(https://api.rainsin.cn/blog_data/img/comment/waline-bg.gif);
+      background-image: url(https://file.rainsin.cn/d/blog/img/comment/waline-bg.gif),url(https://api.rainsin.cn/blog_data/img/comment/waline-bg.gif);
       background-position: center right;
       background-repeat: no-repeat;
       background-size: auto 100%;
@@ -580,23 +539,14 @@ if(!sessionStorage.getItem("OS")){
   <script>
     const style = document.createElement("style");
     style.type = "text/css";
-    if (sessionStorage.getItem("isOut") == "false") {
+    
       if (modeToggle.modeStatus == "dark") {
         style.innerHTML =
-          "#loading-gif-box{background-color: #000;} .loading-boxs-imgs{background-image: url(https://pan.rainsin.cn:2000/d/blog/img/darkload.gif?sign=HSMBFJIuwRnWabf8E1WJKYaTOneSVDmMdmfOphPDbdw=:0);}";
+          "#loading-gif-box{background-color: #000;} .loading-boxs-imgs{background-image: url(https://file.rainsin.cn/d/blog/img/darkload.gif?sign=HSMBFJIuwRnWabf8E1WJKYaTOneSVDmMdmfOphPDbdw=:0);}";
       } else {
         style.innerHTML =
-          "#loading-gif-box{background-color: #fff;} .loading-boxs-imgs{background-image: url(https://pan.rainsin.cn:2000/d/blog/img/loadlight.gif?sign=FJgpddP5fi4a60y3yWNyJ6chvzOREupwOfPWk03U_ik=:0);}";
+          "#loading-gif-box{background-color: #fff;} .loading-boxs-imgs{background-image: url(https://file.rainsin.cn/d/blog/img/loadlight.gif?sign=FJgpddP5fi4a60y3yWNyJ6chvzOREupwOfPWk03U_ik=:0);}";
       }
-    } else {
-      if (modeToggle.modeStatus == "dark") {
-        style.innerHTML =
-          "#loading-gif-box{background-color: #000;} .loading-boxs-imgs{background-image: url(https://mypan.hk.cpolar.io/d/blog/img/darkload.gif?sign=HSMBFJIuwRnWabf8E1WJKYaTOneSVDmMdmfOphPDbdw=:0);}";
-      } else {
-        style.innerHTML =
-          "#loading-gif-box{background-color: #fff;} .loading-boxs-imgs{background-image: url(https://mypan.hk.cpolar.io/d/blog/img/loadlight.gif?sign=FJgpddP5fi4a60y3yWNyJ6chvzOREupwOfPWk03U_ik=:0);}";
-      }
-    }
     document.getElementsByTagName("head")[0].appendChild(style);
   </script>
 
@@ -706,21 +656,12 @@ if(!sessionStorage.getItem("OS")){
           
         } else {
           if(sessionStorage.getItem("isPan") == "true"){
-            if (sessionStorage.getItem("isOut") == "true") {
             sessionStorage.setItem("isOutAlert", "true");
             Qmsg.warning(
-              "哈，你可能使用了梯子或者在国外访问这个站点，有些资源可能会加载不出来，请见谅！",
+              "家里停电了，服务器宕了，页面可能会有异常，请见谅！",
               { timeout: 5000 }
             );
           }
-          }else{
-            sessionStorage.setItem("isOutAlert", "true");
-            Qmsg.warning(
-              "我家里停电了，服务器宕了，请见谅！",
-              { timeout: 5000 }
-            );
-          }
-          
         }
       }
     }
@@ -1374,21 +1315,14 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/health/">「转载」人体系统调优不完全指南</a>
+          <a href="/posts/tan1/">「转载」「课程资源」王德峰坛经十品文字稿</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/marx2/">「笔记」《关于费尔巴哈的提纲》三、扬弃唯物与唯心的对立</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/heti/">「工具」一款好用的中文排版工具</a>
+          <a href="/posts/niannian/">「神秘」年年的高雅集</a>
         </li>
       
         
@@ -1403,6 +1337,13 @@ observer.observe(targetNode, config);
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx1/">「笔记」《关于费尔巴哈的提纲》二、社会权力与法的权利的关系</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/majiang/">「玩」麻将听牌类型</a>
         </li>
       
     </ul>

@@ -9,7 +9,7 @@ function Majiang() {
 
     if (error) swal("我的服务器崩啦，我的博客好多图片都显示不了啦");
 
-    if (isLoading) return (<div className='majiang-loading'><img src='https://pan.rainsin.cn:2000/d/blog/img/post/majiang/%E9%BA%BB%E5%B0%86.gif'></img></div>);
+    if (isLoading) return (<div className='majiang-loading'><img src='https://file.rainsin.cn/d/blog/img/post/majiang/%E9%BA%BB%E5%B0%86.gif'></img></div>);
 
     const mjdata = data.map((e, i) => {
         const showclassdata = e.map((ele, index) => {

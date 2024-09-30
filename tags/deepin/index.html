@@ -259,12 +259,26 @@ if(!sessionStorage.getItem("OS")){
   </script>
   
 
-  <script>
-    const sss = ["B","D","E","L","M","R"];
-    sss.forEach((el,index)=>{
-      isAppendCDN(`https://pan.rainsin.cn:2000/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`,`https://mypan.hk.cpolar.io/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`, `https://api.rainsin.cn/blog_data/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`)
-    })
-  </script>
+<link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoB/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoD/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoE/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoL/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoM/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoR/result.css"
+/>
+
 
   <link rel="stylesheet" href="/assets/message/message.min.css" />
   <script src="/assets/message/message.min.js"></script>
@@ -374,23 +388,14 @@ if(!sessionStorage.getItem("OS")){
   <script>
     const style = document.createElement("style");
     style.type = "text/css";
-    if (sessionStorage.getItem("isOut") == "false") {
+    
       if (modeToggle.modeStatus == "dark") {
         style.innerHTML =
-          "#loading-gif-box{background-color: #000;} .loading-boxs-imgs{background-image: url(https://pan.rainsin.cn:2000/d/blog/img/darkload.gif?sign=HSMBFJIuwRnWabf8E1WJKYaTOneSVDmMdmfOphPDbdw=:0);}";
+          "#loading-gif-box{background-color: #000;} .loading-boxs-imgs{background-image: url(https://file.rainsin.cn/d/blog/img/darkload.gif?sign=HSMBFJIuwRnWabf8E1WJKYaTOneSVDmMdmfOphPDbdw=:0);}";
       } else {
         style.innerHTML =
-          "#loading-gif-box{background-color: #fff;} .loading-boxs-imgs{background-image: url(https://pan.rainsin.cn:2000/d/blog/img/loadlight.gif?sign=FJgpddP5fi4a60y3yWNyJ6chvzOREupwOfPWk03U_ik=:0);}";
+          "#loading-gif-box{background-color: #fff;} .loading-boxs-imgs{background-image: url(https://file.rainsin.cn/d/blog/img/loadlight.gif?sign=FJgpddP5fi4a60y3yWNyJ6chvzOREupwOfPWk03U_ik=:0);}";
       }
-    } else {
-      if (modeToggle.modeStatus == "dark") {
-        style.innerHTML =
-          "#loading-gif-box{background-color: #000;} .loading-boxs-imgs{background-image: url(https://mypan.hk.cpolar.io/d/blog/img/darkload.gif?sign=HSMBFJIuwRnWabf8E1WJKYaTOneSVDmMdmfOphPDbdw=:0);}";
-      } else {
-        style.innerHTML =
-          "#loading-gif-box{background-color: #fff;} .loading-boxs-imgs{background-image: url(https://mypan.hk.cpolar.io/d/blog/img/loadlight.gif?sign=FJgpddP5fi4a60y3yWNyJ6chvzOREupwOfPWk03U_ik=:0);}";
-      }
-    }
     document.getElementsByTagName("head")[0].appendChild(style);
   </script>
 
@@ -482,21 +487,12 @@ if(!sessionStorage.getItem("OS")){
           
         } else {
           if(sessionStorage.getItem("isPan") == "true"){
-            if (sessionStorage.getItem("isOut") == "true") {
             sessionStorage.setItem("isOutAlert", "true");
             Qmsg.warning(
-              "哈，你可能使用了梯子或者在国外访问这个站点，有些资源可能会加载不出来，请见谅！",
+              "家里停电了，服务器宕了，页面可能会有异常，请见谅！",
               { timeout: 5000 }
             );
           }
-          }else{
-            sessionStorage.setItem("isOutAlert", "true");
-            Qmsg.warning(
-              "我家里停电了，服务器宕了，请见谅！",
-              { timeout: 5000 }
-            );
-          }
-          
         }
       }
     }
@@ -891,21 +887,14 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/health/">「转载」人体系统调优不完全指南</a>
+          <a href="/posts/tan1/">「转载」「课程资源」王德峰坛经十品文字稿</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/marx2/">「笔记」《关于费尔巴哈的提纲》三、扬弃唯物与唯心的对立</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/heti/">「工具」一款好用的中文排版工具</a>
+          <a href="/posts/niannian/">「神秘」年年的高雅集</a>
         </li>
       
         
@@ -920,6 +909,13 @@ observer.observe(targetNode, config);
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx1/">「笔记」《关于费尔巴哈的提纲》二、社会权力与法的权利的关系</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/majiang/">「玩」麻将听牌类型</a>
         </li>
       
     </ul>

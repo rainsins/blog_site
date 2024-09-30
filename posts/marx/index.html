@@ -259,12 +259,26 @@ if(!sessionStorage.getItem("OS")){
   </script>
   
 
-  <script>
-    const sss = ["B","D","E","L","M","R"];
-    sss.forEach((el,index)=>{
-      isAppendCDN(`https://pan.rainsin.cn:2000/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`,`https://mypan.hk.cpolar.io/d/blog/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`, `https://api.rainsin.cn/blog_data/font/heti/split/FZFWZhuZiAOldMincho${el}/result.css`)
-    })
-  </script>
+<link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoB/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoD/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoE/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoL/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoM/result.css"
+/><link
+  rel="stylesheet"
+  href="https://file.rainsin.cn/d/blog/font/heti/split/FZFWZhuZiAOldMinchoR/result.css"
+/>
+
 
   <link rel="stylesheet" href="/assets/message/message.min.css" />
   <script src="/assets/message/message.min.js"></script>
@@ -405,32 +419,31 @@ if(!sessionStorage.getItem("OS")){
     window.load_event = {
       ...window.load_event,
       comments: () => {
-        if (sessionStorage.getItem("isOut") == "false") {
           Waline.init({
             el: "#tcomment",
             serverURL: "https://comment.cpolar.cn/",
             emoji: [
-              "//pan.rainsin.cn:2000/d/blog/em/小黑子",
-              "//pan.rainsin.cn:2000/d/blog/em/Sticker-100",
-              "//pan.rainsin.cn:2000/d/blog/em/小电视",
-              "//pan.rainsin.cn:2000/d/blog/em/Tieba",
-              "//pan.rainsin.cn:2000/d/blog/em/alus",
-              "//pan.rainsin.cn:2000/d/blog/em/商业头盔",
-              "//pan.rainsin.cn:2000/d/blog/em/小人",
-              "//pan.rainsin.cn:2000/d/blog/em/小坏坏",
-              "//pan.rainsin.cn:2000/d/blog/em/抽象",
-              "//pan.rainsin.cn:2000/d/blog/em/搜索引擎",
-              "//pan.rainsin.cn:2000/d/blog/em/机场",
-              "//pan.rainsin.cn:2000/d/blog/em/猥琐萌",
-              "//pan.rainsin.cn:2000/d/blog/em/猫狗",
-              "//pan.rainsin.cn:2000/d/blog/em/白白",
-              "//pan.rainsin.cn:2000/d/blog/em/突然",
-              "//pan.rainsin.cn:2000/d/blog/em/胡桃",
-              "//pan.rainsin.cn:2000/d/blog/em/被子",
-              "//pan.rainsin.cn:2000/d/blog/em/酷安",
-              "//pan.rainsin.cn:2000/d/blog/em/tw",
-              "//pan.rainsin.cn:2000/d/blog/em/qq",
-              "//pan.rainsin.cn:2000/d/blog/em/weibo",
+              "//file.rainsin.cn/d/blog/em/小黑子",
+              "//file.rainsin.cn/d/blog/em/Sticker-100",
+              "//file.rainsin.cn/d/blog/em/小电视",
+              "//file.rainsin.cn/d/blog/em/Tieba",
+              "//file.rainsin.cn/d/blog/em/alus",
+              "//file.rainsin.cn/d/blog/em/商业头盔",
+              "//file.rainsin.cn/d/blog/em/小人",
+              "//file.rainsin.cn/d/blog/em/小坏坏",
+              "//file.rainsin.cn/d/blog/em/抽象",
+              "//file.rainsin.cn/d/blog/em/搜索引擎",
+              "//file.rainsin.cn/d/blog/em/机场",
+              "//file.rainsin.cn/d/blog/em/猥琐萌",
+              "//file.rainsin.cn/d/blog/em/猫狗",
+              "//file.rainsin.cn/d/blog/em/白白",
+              "//file.rainsin.cn/d/blog/em/突然",
+              "//file.rainsin.cn/d/blog/em/胡桃",
+              "//file.rainsin.cn/d/blog/em/被子",
+              "//file.rainsin.cn/d/blog/em/酷安",
+              "//file.rainsin.cn/d/blog/em/tw",
+              "//file.rainsin.cn/d/blog/em/qq",
+              "//file.rainsin.cn/d/blog/em/weibo",
             ],
             pageview: true,
             locale: {
@@ -459,67 +472,13 @@ if(!sessionStorage.getItem("OS")){
             imageUploader: false,
             search: false,
           });
-        } else {
-          Waline.init({
-            el: "#tcomment",
-            serverURL: "https://comment.cpolar.cn/",
-            emoji: [
-              "//mypan.hk.cpolar.io/d/blog/em/小黑子",
-              "//mypan.hk.cpolar.io/d/blog/em/Sticker-100",
-              "//mypan.hk.cpolar.io/d/blog/em/小电视",
-              "//mypan.hk.cpolar.io/d/blog/em/Tieba",
-              "//mypan.hk.cpolar.io/d/blog/em/alus",
-              "//mypan.hk.cpolar.io/d/blog/em/商业头盔",
-              "//mypan.hk.cpolar.io/d/blog/em/小人",
-              "//mypan.hk.cpolar.io/d/blog/em/小坏坏",
-              "//mypan.hk.cpolar.io/d/blog/em/抽象",
-              "//mypan.hk.cpolar.io/d/blog/em/搜索引擎",
-              "//mypan.hk.cpolar.io/d/blog/em/机场",
-              "//mypan.hk.cpolar.io/d/blog/em/猥琐萌",
-              "//mypan.hk.cpolar.io/d/blog/em/猫狗",
-              "//mypan.hk.cpolar.io/d/blog/em/白白",
-              "//mypan.hk.cpolar.io/d/blog/em/突然",
-              "//mypan.hk.cpolar.io/d/blog/em/胡桃",
-              "//mypan.hk.cpolar.io/d/blog/em/被子",
-              "//mypan.hk.cpolar.io/d/blog/em/酷安",
-              "//mypan.hk.cpolar.io/d/blog/em/tw",
-              "//mypan.hk.cpolar.io/d/blog/em/qq",
-              "//mypan.hk.cpolar.io/d/blog/em/weibo",
-            ],
-            pageview: true,
-            locale: {
-              placeholder:
-                "唠唠嗑（登录和上面信息都不是必需的，评论审核后可见，添加邮箱可在被回复时邮件提醒，按🔍进行预览）",
-              reactionTitle: "你是故意找茬是不是啊？",
-              reaction0: "正确的",
-              reaction1: "错误的",
-              reaction2: "小丑的",
-              reaction3: "满昏的",
-              reaction4: "不错的",
-              reaction5: "菜鸡的",
-              reaction6: "超逊的",
-              reaction7: "发烧的",
-              admin: "站长",
-              level0: "素人",
-              level1: "企划",
-              level2: "企划专属",
-              level3: "专属",
-              level4: "双专属",
-              level5: "三社共有",
-              nick: "名称",
-              sofa: "来一起击剑🤺吧",
-            },
-            dark: 'html[data-mode="dark"]',
-            imageUploader: false,
-            search: false,
-          });
-        };
+
         window.time_comment = 0;
         let set_comment_time = setInterval(()=>{
           const get_anno_img = Array.from(document.querySelectorAll(".wl-cards .wl-user .wl-user-avatar[src='https://seccdn.libravatar.org/avatar/d41d8cd98f00b204e9800998ecf8427e']"));
           if(time_comment < 500){
             get_anno_img.forEach((el,index)=>{
-          el.src = sessionStorage.getItem("isOut") == "true" ? "https://mypan.hk.cpolar.io/d/blog/img/comment/act.gif" : "https://pan.rainsin.cn:2000/d/blog/img/comment/act.gif";
+          el.src = "https://file.rainsin.cn/d/blog/img/comment/act.gif";
         });
         time_comment++;
           }else{
@@ -544,7 +503,7 @@ if(!sessionStorage.getItem("OS")){
     }
 
     .wl-editor, .wl-input{
-      background-image: url(https://pan.rainsin.cn:2000/d/blog/img/comment/waline-bg.gif),url(https://mypan.hk.cpolar.io/d/blog/img/comment/waline-bg.gif),url(https://api.rainsin.cn/blog_data/img/comment/waline-bg.gif);
+      background-image: url(https://file.rainsin.cn/d/blog/img/comment/waline-bg.gif),url(https://api.rainsin.cn/blog_data/img/comment/waline-bg.gif);
       background-position: center right;
       background-repeat: no-repeat;
       background-size: auto 100%;
@@ -559,23 +518,14 @@ if(!sessionStorage.getItem("OS")){
   <script>
     const style = document.createElement("style");
     style.type = "text/css";
-    if (sessionStorage.getItem("isOut") == "false") {
+    
       if (modeToggle.modeStatus == "dark") {
         style.innerHTML =
-          "#loading-gif-box{background-color: #000;} .loading-boxs-imgs{background-image: url(https://pan.rainsin.cn:2000/d/blog/img/darkload.gif?sign=HSMBFJIuwRnWabf8E1WJKYaTOneSVDmMdmfOphPDbdw=:0);}";
+          "#loading-gif-box{background-color: #000;} .loading-boxs-imgs{background-image: url(https://file.rainsin.cn/d/blog/img/darkload.gif?sign=HSMBFJIuwRnWabf8E1WJKYaTOneSVDmMdmfOphPDbdw=:0);}";
       } else {
         style.innerHTML =
-          "#loading-gif-box{background-color: #fff;} .loading-boxs-imgs{background-image: url(https://pan.rainsin.cn:2000/d/blog/img/loadlight.gif?sign=FJgpddP5fi4a60y3yWNyJ6chvzOREupwOfPWk03U_ik=:0);}";
+          "#loading-gif-box{background-color: #fff;} .loading-boxs-imgs{background-image: url(https://file.rainsin.cn/d/blog/img/loadlight.gif?sign=FJgpddP5fi4a60y3yWNyJ6chvzOREupwOfPWk03U_ik=:0);}";
       }
-    } else {
-      if (modeToggle.modeStatus == "dark") {
-        style.innerHTML =
-          "#loading-gif-box{background-color: #000;} .loading-boxs-imgs{background-image: url(https://mypan.hk.cpolar.io/d/blog/img/darkload.gif?sign=HSMBFJIuwRnWabf8E1WJKYaTOneSVDmMdmfOphPDbdw=:0);}";
-      } else {
-        style.innerHTML =
-          "#loading-gif-box{background-color: #fff;} .loading-boxs-imgs{background-image: url(https://mypan.hk.cpolar.io/d/blog/img/loadlight.gif?sign=FJgpddP5fi4a60y3yWNyJ6chvzOREupwOfPWk03U_ik=:0);}";
-      }
-    }
     document.getElementsByTagName("head")[0].appendChild(style);
   </script>
 
@@ -596,7 +546,7 @@ if(!sessionStorage.getItem("OS")){
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-09-30T12:58:33+08:00","datePublished":"2024-08-07T12:32:10+08:00","description":"「文字」《关于费尔巴哈的提纲》","headline":"「笔记」《关于费尔巴哈的提纲》一、前置的准备阶段（doing…）","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/marx/"},"url":"http://localhost:4000/posts/marx/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-09-30T16:27:23+08:00","datePublished":"2024-08-07T12:32:10+08:00","description":"「文字」《关于费尔巴哈的提纲》","headline":"「笔记」《关于费尔巴哈的提纲》一、前置的准备阶段（doing…）","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/marx/"},"url":"http://localhost:4000/posts/marx/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -679,21 +629,12 @@ if(!sessionStorage.getItem("OS")){
           
         } else {
           if(sessionStorage.getItem("isPan") == "true"){
-            if (sessionStorage.getItem("isOut") == "true") {
             sessionStorage.setItem("isOutAlert", "true");
             Qmsg.warning(
-              "哈，你可能使用了梯子或者在国外访问这个站点，有些资源可能会加载不出来，请见谅！",
+              "家里停电了，服务器宕了，页面可能会有异常，请见谅！",
               { timeout: 5000 }
             );
           }
-          }else{
-            sessionStorage.setItem("isOutAlert", "true");
-            Qmsg.warning(
-              "我家里停电了，服务器宕了，请见谅！",
-              { timeout: 5000 }
-            );
-          }
-          
         }
       }
     }
@@ -1179,7 +1120,7 @@ observer.observe(targetNode, config);
 
 <em
   class=""
-  data-ts="1727672313"
+  data-ts="1727684843"
   data-df="YYYY/MM/DD"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
@@ -1320,7 +1261,7 @@ observer.observe(targetNode, config);
 <script>
     const audio_frontend = document.getElementById("frontend");
 
-    audio_frontend.src = sessionStorage.getItem("isOut") == "true" ? "https://mypan.hk.cpolar.io/d/blog/%E9%A9%AC%E5%85%8B%E6%80%9D/aac/%5B2%5D--%E9%A9%AC%E5%85%8B%E6%80%9D%E5%AD%A6%E8%AF%B4%E4%B8%8E%E5%BD%93%E4%BB%A3%E4%BA%BA%E7%B1%BB%E7%9A%84%E5%85%B3%E7%B3%BB.aac" : "https://pan.rainsin.cn:2000/d/blog/%E9%A9%AC%E5%85%8B%E6%80%9D/aac/%5B2%5D--%E9%A9%AC%E5%85%8B%E6%80%9D%E5%AD%A6%E8%AF%B4%E4%B8%8E%E5%BD%93%E4%BB%A3%E4%BA%BA%E7%B1%BB%E7%9A%84%E5%85%B3%E7%B3%BB.aac";
+    audio_frontend.src = "https://file.rainsin.cn/d/blog/%E9%A9%AC%E5%85%8B%E6%80%9D/aac/%5B2%5D--%E9%A9%AC%E5%85%8B%E6%80%9D%E5%AD%A6%E8%AF%B4%E4%B8%8E%E5%BD%93%E4%BB%A3%E4%BA%BA%E7%B1%BB%E7%9A%84%E5%85%B3%E7%B3%BB.aac";
 </script> -->
 
 <div class="minip">
@@ -1330,7 +1271,7 @@ observer.observe(targetNode, config);
         <span>KARLMARX</span>
       </div>
     </div>
-    <div class="av" style="background-image: url(https://pan.rainsin.cn:2000/d/blog/img/post/mark/Karl_Marx%2C_1875.jpg);"></div>
+    <div class="av" style="background-image: url(https://file.rainsin.cn/d/blog/img/post/mark/Karl_Marx%2C_1875.jpg);"></div>
     <div class="info">
       <name>卡尔·马克思</name>
       <deets>
@@ -1410,7 +1351,7 @@ observer.observe(targetNode, config);
 <script>
     const audio_faxian = document.getElementById("faxian");
 
-    audio_faxian.src = sessionStorage.getItem("isOut") == "true" ? "https://mypan.hk.cpolar.io/d/blog/%E9%A9%AC%E5%85%8B%E6%80%9D/aac/%5B3%5D--%E7%AC%AC%E4%B8%80%E8%AE%B2%EF%BC%9A%E7%A4%BE%E4%BC%9A%E6%9D%83%E5%8A%9B%E7%9A%84%E5%8F%91%E7%8E%B0.aac" : "https://pan.rainsin.cn:2000/d/blog/%E9%A9%AC%E5%85%8B%E6%80%9D/aac/%5B3%5D--%E7%AC%AC%E4%B8%80%E8%AE%B2%EF%BC%9A%E7%A4%BE%E4%BC%9A%E6%9D%83%E5%8A%9B%E7%9A%84%E5%8F%91%E7%8E%B0.aac";
+    audio_faxian.src = "https://file.rainsin.cn/d/blog/%E9%A9%AC%E5%85%8B%E6%80%9D/aac/%5B3%5D--%E7%AC%AC%E4%B8%80%E8%AE%B2%EF%BC%9A%E7%A4%BE%E4%BC%9A%E6%9D%83%E5%8A%9B%E7%9A%84%E5%8F%91%E7%8E%B0.aac";
 </script> -->
 
 <p>我们在马克思的哲学革命这个题目下说要讲的第一点，也是延承了马克思思想的一个历程来讲的第一点，就是社会权力的发现。</p>
@@ -1470,13 +1411,13 @@ observer.observe(targetNode, config);
       <p>关于 <a href="https://myproxy.rainsin.cn/-----https://zh.wikipedia.org/wiki/%E6%B3%95%E8%98%AD%E8%A5%BF%E6%96%AF%C2%B7%E7%A6%8F%E5%B1%B1" target="_blank">弗朗西斯·福山</a>的维基 <a href="#fnref:fushan" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:lishi" role="doc-endnote">
-      <p><a href="https://pan.rainsin.cn:2000/d/blog/bookfile/%E5%BC%97%E6%9C%97%E8%A5%BF%E6%96%AF%C2%B7%E7%A6%8F%E5%B1%B1%EF%BC%9A%E5%8E%86%E5%8F%B2%E7%9A%84%E7%BB%88%E7%BB%93%E5%8F%8A%E6%9C%80%E5%90%8E%E4%B9%8B%E4%BA%BA%20(%E6%89%AB%E6%8F%8F%E7%89%88).pdf" target="_blank">《历史的终结和最后的人》pdf资源</a> <a href="#fnref:lishi" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p><a href="https://file.rainsin.cn/d/blog/bookfile/%E5%BC%97%E6%9C%97%E8%A5%BF%E6%96%AF%C2%B7%E7%A6%8F%E5%B1%B1%EF%BC%9A%E5%8E%86%E5%8F%B2%E7%9A%84%E7%BB%88%E7%BB%93%E5%8F%8A%E6%9C%80%E5%90%8E%E4%B9%8B%E4%BA%BA%20(%E6%89%AB%E6%8F%8F%E7%89%88).pdf" target="_blank">《历史的终结和最后的人》pdf资源</a> <a href="#fnref:lishi" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:delida" role="doc-endnote">
       <p>关于 <a href="https://myproxy.rainsin.cn/-----https://zh.wikipedia.org/wiki/%E9%9B%85%E5%85%8B%C2%B7%E5%BE%B7%E9%87%8C%E8%BE%BE" target="_blank">德里达</a>的维基 <a href="#fnref:delida" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:youling" role="doc-endnote">
-      <p><a href="https://pan.rainsin.cn:2000/d/blog/bookfile/%E9%A9%AC%E5%85%8B%E6%80%9D%E7%9A%84%E5%B9%BD%E7%81%B5.pdf" target="_blank">《马克思的幽灵》pdf资源</a> <a href="#fnref:youling" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p><a href="https://file.rainsin.cn/d/blog/bookfile/%E9%A9%AC%E5%85%8B%E6%80%9D%E7%9A%84%E5%B9%BD%E7%81%B5.pdf" target="_blank">《马克思的幽灵》pdf资源</a> <a href="#fnref:youling" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:shubenhua" role="doc-endnote">
       <p>关于 <a href="https://myproxy.rainsin.cn/-----https://zh.wikipedia.org/wiki/%E9%98%BF%E5%9B%BE%E5%B0%94%C2%B7%E5%8F%94%E6%9C%AC%E5%8D%8E" target="_blank">叔本华</a> 的维基 <a href="#fnref:shubenhua" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
@@ -1485,10 +1426,10 @@ observer.observe(targetNode, config);
       <p>关于 <a href="https://myproxy.rainsin.cn/-----https://zh.wikipedia.org/wiki/%E4%BC%8A%E6%9B%BC%E5%8A%AA%E5%B0%94%C2%B7%E5%BA%B7%E5%BE%B7" target="_blank">康德</a> 的维基 <a href="#fnref:kangde" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:yizhi" role="doc-endnote">
-      <p><a href="https://pan.rainsin.cn:2000/d/blog/bookfile/%E4%BD%9C%E4%B8%BA%E6%84%8F%E5%BF%97%E5%92%8C%E8%A1%A8%E8%B1%A1%E7%9A%84%E4%B8%96%E7%95%8C%20(%E5%8F%94%E6%9C%AC%E5%8D%8E)%20(Z-Library).pdf" target="_blank">《作为意志和表象的世界》</a> 的pdf资源 <a href="#fnref:yizhi" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p><a href="https://file.rainsin.cn/d/blog/bookfile/%E4%BD%9C%E4%B8%BA%E6%84%8F%E5%BF%97%E5%92%8C%E8%A1%A8%E8%B1%A1%E7%9A%84%E4%B8%96%E7%95%8C%20(%E5%8F%94%E6%9C%AC%E5%8D%8E)%20(Z-Library).pdf" target="_blank">《作为意志和表象的世界》</a> 的pdf资源 <a href="#fnref:yizhi" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:zibenlun" role="doc-endnote">
-      <p><a href="https://pan.rainsin.cn:2000/d/blog/bookfile/%E8%B5%84%E6%9C%AC%E8%AE%BA%EF%BC%88%E5%85%A8%E4%B8%89%E5%8D%B7%EF%BC%89%20(%E5%8D%A1%E5%B0%94%C2%B7%E9%A9%AC%E5%85%8B%E6%80%9D%2C%E4%B8%AD%E5%85%B1%E4%B8%AD%E5%A4%AE%E9%A9%AC%E5%85%8B%E6%80%9D%E6%81%A9%E6%A0%BC%E6%96%AF%E5%88%97%E5%AE%81%E6%96%AF%E5%A4%A7%E6%9E%97%E8%91%97%E4%BD%9C%E7%BC%96%E8%AF%91%E5%B1%80)%20(Z-Library).pdf" target="_blank">《资本论》</a> 的pdf资源 <a href="#fnref:zibenlun" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p><a href="https://file.rainsin.cn/d/blog/bookfile/%E8%B5%84%E6%9C%AC%E8%AE%BA%EF%BC%88%E5%85%A8%E4%B8%89%E5%8D%B7%EF%BC%89%20(%E5%8D%A1%E5%B0%94%C2%B7%E9%A9%AC%E5%85%8B%E6%80%9D%2C%E4%B8%AD%E5%85%B1%E4%B8%AD%E5%A4%AE%E9%A9%AC%E5%85%8B%E6%80%9D%E6%81%A9%E6%A0%BC%E6%96%AF%E5%88%97%E5%AE%81%E6%96%AF%E5%A4%A7%E6%9E%97%E8%91%97%E4%BD%9C%E7%BC%96%E8%AF%91%E5%B1%80)%20(Z-Library).pdf" target="_blank">《资本论》</a> 的pdf资源 <a href="#fnref:zibenlun" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:08" role="doc-endnote">
       <p>关于<a href="https://myproxy.rainsin.cn/-----https://zh.wikipedia.org/wiki/2007%E5%B9%B4%E2%80%942008%E5%B9%B4%E7%92%B0%E7%90%83%E9%87%91%E8%9E%8D%E5%8D%B1%E6%A9%9F" target="_blank">08年金融风暴</a> 的维基 <a href="#fnref:08" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
@@ -1503,7 +1444,7 @@ observer.observe(targetNode, config);
       <p>关于 <a href="https://myproxy.rainsin.cn/-----https://zh.wikipedia.org/wiki/%E9%A9%AC%E4%B8%81%C2%B7%E6%B5%B7%E5%BE%B7%E6%A0%BC%E5%B0%94" target="_blank">海德格尔</a> 的维基 <a href="#fnref:hai" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:tobe" role="doc-endnote">
-      <p><a href="https://pan.rainsin.cn:2000/d/blog/bookfile/%E5%AD%98%E5%9C%A8%E8%88%87%E6%99%82%E9%96%93%20%5B%E4%B8%AD%E6%96%87%E4%BF%AE%E8%A8%82%E7%AC%AC%E4%BA%8C%E7%89%88%5D%20(%E9%A6%AC%E4%B8%81%E2%80%A2%E6%B5%B7%E5%BE%B7%E6%A0%BC%E7%88%BE%20%5BMartin%20Heidegger%5D)%20(Z-Library).pdf" target="_blank">《存在与时间》pdf</a>资源 <a href="#fnref:tobe" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p><a href="https://file.rainsin.cn/d/blog/bookfile/%E5%AD%98%E5%9C%A8%E8%88%87%E6%99%82%E9%96%93%20%5B%E4%B8%AD%E6%96%87%E4%BF%AE%E8%A8%82%E7%AC%AC%E4%BA%8C%E7%89%88%5D%20(%E9%A6%AC%E4%B8%81%E2%80%A2%E6%B5%B7%E5%BE%B7%E6%A0%BC%E7%88%BE%20%5BMartin%20Heidegger%5D)%20(Z-Library).pdf" target="_blank">《存在与时间》pdf</a>资源 <a href="#fnref:tobe" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:1844" role="doc-endnote">
       <p><a href="https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1844.htm" target="_blank">1844年经济学哲学手稿</a> 原文 <a href="#fnref:1844" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
@@ -1521,13 +1462,13 @@ observer.observe(targetNode, config);
       <p><a href="https://www.marxists.org/chinese/marx-engels/01/016.htm" target="_blank">《关于林木盗窃法的辩论》</a>原文 <a href="#fnref:linmu" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:fa" role="doc-endnote">
-      <p><a href="https://pan.rainsin.cn:2000/d/blog/bookfile/%E6%B3%95%E5%93%B2%E5%AD%A6%E5%8E%9F%E7%90%86%EF%BC%9A%E8%87%AA%E7%84%B6%E6%B3%95%E5%92%8C%E5%9B%BD%E5%AE%B6%E5%AD%A6%E7%BA%B2%E8%A6%81%20(%5B%E5%BE%B7%5D%20%E9%BB%91%E6%A0%BC%E5%B0%94)%20(Z-Library).pdf" target="_blank">《法哲学原理》</a>pdf资源 <a href="#fnref:fa" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p><a href="https://file.rainsin.cn/d/blog/bookfile/%E6%B3%95%E5%93%B2%E5%AD%A6%E5%8E%9F%E7%90%86%EF%BC%9A%E8%87%AA%E7%84%B6%E6%B3%95%E5%92%8C%E5%9B%BD%E5%AE%B6%E5%AD%A6%E7%BA%B2%E8%A6%81%20(%5B%E5%BE%B7%5D%20%E9%BB%91%E6%A0%BC%E5%B0%94)%20(Z-Library).pdf" target="_blank">《法哲学原理》</a>pdf资源 <a href="#fnref:fa" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:xuyan" role="doc-endnote">
       <p><a href="https://www.marxists.org/chinese/marx/06.htm" target="_blank">《政治经学批判》序言</a>原文 <a href="#fnref:xuyan" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:simi" role="doc-endnote">
-      <p><a href="https://pan.rainsin.cn:2000/d/blog/bookfile/%E5%9B%BD%E5%AF%8C%E8%AE%BA%20-%20libgen.li.pdf" target="_blank">《国富论》</a>pdf资源 <a href="#fnref:simi" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p><a href="https://file.rainsin.cn/d/blog/bookfile/%E5%9B%BD%E5%AF%8C%E8%AE%BA%20-%20libgen.li.pdf" target="_blank">《国富论》</a>pdf资源 <a href="#fnref:simi" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -1672,21 +1613,14 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/health/">「转载」人体系统调优不完全指南</a>
+          <a href="/posts/tan1/">「转载」「课程资源」王德峰坛经十品文字稿</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/marx2/">「笔记」《关于费尔巴哈的提纲》三、扬弃唯物与唯心的对立</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/heti/">「工具」一款好用的中文排版工具</a>
+          <a href="/posts/niannian/">「神秘」年年的高雅集</a>
         </li>
       
         
@@ -1701,6 +1635,13 @@ observer.observe(targetNode, config);
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx1/">「笔记」《关于费尔巴哈的提纲》二、社会权力与法的权利的关系</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/majiang/">「玩」麻将听牌类型</a>
         </li>
       
     </ul>
