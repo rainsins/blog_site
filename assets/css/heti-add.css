@@ -1,15 +1,3 @@
-@import url(https://file.rainsin.cn/d/blog/font/heti/split/fangsong/result.css);
-@import url(https://file.rainsin.cn/d/blog/font/heti/split/STSONG/result.css);
-@import url(https://file.rainsin.cn/d/blog/font/heti/split/STfangsong/result.css);
-@import url(https://file.rainsin.cn/d/blog/font/heti/split/STkaiti/result.css);
-@import url(https://file.rainsin.cn/d/blog/font/heti/split/kaiti/result.css);
-@import url(https://file.rainsin.cn/d/blog/font/heti/split/京華老宋体2/result.css);
-@import url(https://file.rainsin.cn/d/blog/font/heti/split/STSongti-SC-Bold/result.css);
-@import url(https://file.rainsin.cn/d/blog/font/heti/split/STSongti-SC-Light/result.css);
-@import url(https://file.rainsin.cn/d/blog/font/heti/split/STSongti-SC-Regular/result.css);
-@import url(https://file.rainsin.cn/d/blog/font/heti/split/STKaitiSC-Regular/result.css);
-@import url(https://file.rainsin.cn/d/blog/font/heti/split/FZFSK--GBK1-0/result.css);
-
 @font-face {
     font-family: "Heti Song";
     src: local("Songti SC Regular"), local("Songti TC Regular"), url(https://file.rainsin.cn/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2),"Songti SC OSS","STSong",url(https://api.rainsin.cn/blog_data/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), local("Songti SC"), local("Songti TC"), local("STsong"), local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), local("SimSun");
