@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>https://blog.rainsin.cn/</id>
+  <id>http://localhost:4000/</id>
   <title>Rainsin • Blog</title>
   <subtitle>rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）</subtitle>
-  <updated>2024-09-30T12:57:59+08:00</updated>
+  <updated>2024-09-30T14:06:39+08:00</updated>
   <author>
     <name>rainsin</name>
-    <uri>https://blog.rainsin.cn/</uri>
+    <uri>http://localhost:4000/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="https://blog.rainsin.cn/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="zh-CN"
-    href="https://blog.rainsin.cn/"/>
+    href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
   <rights> © 2024 rainsin </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -20,14 +20,40 @@
 
   
   <entry>
+    <title>「转载」人体系统调优不完全指南</title>
+    <link href="http://localhost:4000/posts/health/" rel="alternate" type="text/html" title="「转载」人体系统调优不完全指南" />
+    <published>2024-09-30T12:32:10+08:00</published>
+  
+    <updated>2024-09-30T12:32:10+08:00</updated>
+  
+    <id>http://localhost:4000/posts/health/</id>
+    <content src="http://localhost:4000/posts/health/" />
+    <author>
+      <name>zijie0</name>
+    </author>
+
+  
+    
+    <category term="健康" />
+    
+    <category term="转载" />
+    
+  
+
+  <summary>「文字」《关于费尔巴哈的提纲》</summary>
+
+  </entry>
+
+  
+  <entry>
     <title>「笔记」《关于费尔巴哈的提纲》四、对认识论立场的超越</title>
-    <link href="https://blog.rainsin.cn/posts/marx3/" rel="alternate" type="text/html" title="「笔记」《关于费尔巴哈的提纲》四、对认识论立场的超越" />
+    <link href="http://localhost:4000/posts/marx3/" rel="alternate" type="text/html" title="「笔记」《关于费尔巴哈的提纲》四、对认识论立场的超越" />
     <published>2024-09-22T12:32:10+08:00</published>
   
-    <updated>2024-09-29T21:30:53+08:00</updated>
+    <updated>2024-09-30T12:58:33+08:00</updated>
   
-    <id>https://blog.rainsin.cn/posts/marx3/</id>
-    <content src="https://blog.rainsin.cn/posts/marx3/" />
+    <id>http://localhost:4000/posts/marx3/</id>
+    <content src="http://localhost:4000/posts/marx3/" />
     <author>
       <name>rainsin</name>
     </author>
@@ -47,13 +73,13 @@
   
   <entry>
     <title>「工具」一款好用的中文排版工具</title>
-    <link href="https://blog.rainsin.cn/posts/heti/" rel="alternate" type="text/html" title="「工具」一款好用的中文排版工具" />
+    <link href="http://localhost:4000/posts/heti/" rel="alternate" type="text/html" title="「工具」一款好用的中文排版工具" />
     <published>2024-09-08T12:32:10+08:00</published>
   
     <updated>2024-09-17T18:29:07+08:00</updated>
   
-    <id>https://blog.rainsin.cn/posts/heti/</id>
-    <content src="https://blog.rainsin.cn/posts/heti/" />
+    <id>http://localhost:4000/posts/heti/</id>
+    <content src="http://localhost:4000/posts/heti/" />
     <author>
       <name>rainsin</name>
     </author>
@@ -73,13 +99,13 @@
   
   <entry>
     <title>「笔记」《关于费尔巴哈的提纲》三、扬弃唯物与唯心的对立</title>
-    <link href="https://blog.rainsin.cn/posts/marx2/" rel="alternate" type="text/html" title="「笔记」《关于费尔巴哈的提纲》三、扬弃唯物与唯心的对立" />
+    <link href="http://localhost:4000/posts/marx2/" rel="alternate" type="text/html" title="「笔记」《关于费尔巴哈的提纲》三、扬弃唯物与唯心的对立" />
     <published>2024-08-27T12:32:10+08:00</published>
   
-    <updated>2024-09-29T21:30:53+08:00</updated>
+    <updated>2024-09-30T12:58:33+08:00</updated>
   
-    <id>https://blog.rainsin.cn/posts/marx2/</id>
-    <content src="https://blog.rainsin.cn/posts/marx2/" />
+    <id>http://localhost:4000/posts/marx2/</id>
+    <content src="http://localhost:4000/posts/marx2/" />
     <author>
       <name>rainsin</name>
     </author>
@@ -99,39 +125,13 @@
   
   <entry>
     <title>「笔记」《关于费尔巴哈的提纲》二、社会权力与法的权利的关系</title>
-    <link href="https://blog.rainsin.cn/posts/marx1/" rel="alternate" type="text/html" title="「笔记」《关于费尔巴哈的提纲》二、社会权力与法的权利的关系" />
+    <link href="http://localhost:4000/posts/marx1/" rel="alternate" type="text/html" title="「笔记」《关于费尔巴哈的提纲》二、社会权力与法的权利的关系" />
     <published>2024-08-07T12:32:10+08:00</published>
   
-    <updated>2024-09-29T21:30:53+08:00</updated>
+    <updated>2024-09-30T12:58:33+08:00</updated>
   
-    <id>https://blog.rainsin.cn/posts/marx1/</id>
-    <content src="https://blog.rainsin.cn/posts/marx1/" />
-    <author>
-      <name>rainsin</name>
-    </author>
-
-  
-    
-    <category term="哲学" />
-    
-    <category term="马克思" />
-    
-  
-
-  <summary>「文字」《关于费尔巴哈的提纲》</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>「笔记」《关于费尔巴哈的提纲》一、前置的准备阶段（doing...）</title>
-    <link href="https://blog.rainsin.cn/posts/marx/" rel="alternate" type="text/html" title="「笔记」《关于费尔巴哈的提纲》一、前置的准备阶段（doing...）" />
-    <published>2024-08-07T12:32:10+08:00</published>
-  
-    <updated>2024-09-29T22:32:44+08:00</updated>
-  
-    <id>https://blog.rainsin.cn/posts/marx/</id>
-    <content src="https://blog.rainsin.cn/posts/marx/" />
+    <id>http://localhost:4000/posts/marx1/</id>
+    <content src="http://localhost:4000/posts/marx1/" />
     <author>
       <name>rainsin</name>
     </author>
