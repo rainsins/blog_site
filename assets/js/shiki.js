@@ -66,6 +66,8 @@ function CodeBox({ code_data, BB_isActive, icon_data, f_node,code_content_index 
                     scrollbarTrackOffsetType: 'clickedPoint'
                 }
             });
+
+            f_node.setAttribute("style","display: block;");
         });
     }, []);
 
