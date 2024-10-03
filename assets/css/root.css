@@ -26,29 +26,25 @@
 }
 
 *::-webkit-scrollbar {
-width: 8px;
-height: 1px;
+  width: 0px;
+  height: 0px;
 }
 
-*::-webkit-scrollbar-thumb {
-border-radius: 4px;
-box-shadow: inset 0 0 5px rgba(182, 176, 176, 0.2);
-background: #bcc1c7;
-border-radius: 4px;
+*::-webkit-scrollbar-track-piece {
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-border-radius: 6px;
 }
 
-*::-webkit-scrollbar-track {
-box-shadow: none;
-border-radius: 4px;
-background: transparent;
+*::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(180, 180, 180, 0.7);
+  -webkit-border-radius: 6px;
 }
 
-* {
-scrollbar-width: thin;
-scrollbar-color: #d1d1d154 #23232300;
-scrollbar-base-color: #EEF4FA;
-scrollbar-track-color: transparent;
-scrollbar-arrow-color: blue;
+*::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(180, 180, 180, 0.7);
+  -webkit-border-radius: 6px;
 }
 
 .qmsg-content span{
