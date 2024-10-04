@@ -26,8 +26,8 @@
 }
 
 *::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
+  width: 5px;
+  height: 5px;
 }
 
 *::-webkit-scrollbar-track-piece {
@@ -288,5 +288,16 @@ text-align: end;
 
 .blockquote-sep-box blockquote.blockquote-sep cite {
   text-align: right;
+}
+}
+
+@media (width <= 576px) {
+#core-wrapper .post-content>blockquote[class^=prompt-] {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.post-content>div[class^=language-]{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 }

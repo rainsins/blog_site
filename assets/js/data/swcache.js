@@ -139,7 +139,7 @@ const resource = [
 const allowedDomains = [
     
 
-    'blog.rainsin.cn',
+    'localhost:4000',
 
     
         'www.rainsin.cn',
