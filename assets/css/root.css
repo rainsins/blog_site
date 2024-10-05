@@ -295,9 +295,11 @@ text-align: end;
 #core-wrapper .post-content>blockquote[class^=prompt-] {
   margin-left: 0 !important;
   margin-right: 0 !important;
+  border-radius: .4rem;
 }
 .post-content>div[class^=language-]{
   margin-left: 0 !important;
   margin-right: 0 !important;
+  border-radius: .4rem;
 }
 }
