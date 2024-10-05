@@ -259,6 +259,20 @@ if(!sessionStorage.getItem("OS")){
   href="https://file.rainsin.cn/d/blog/font/heti/split/FZZzOM/result.css"
 />
 
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZFSB/result.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/STFANGSO/result.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
+/>
 
 <link
   rel="stylesheet"
@@ -266,6 +280,11 @@ if(!sessionStorage.getItem("OS")){
 />
 
 <script>
+  const s = ["FZFSB","STFANGSO","simfang"];
+
+s.forEach((el,ind)=>{
+  isAppendCDN(`https://fonts.rainsin.cn/split/${el}/result.css`);
+});
   isAppendCDN(`https://fonts.rainsin.cn/split/FZZzOM/result.css`);
   isAppendCDN(`https://fonts.rainsin.cn/FOT-TsukuAOldMinPr6/result.css`);
 </script>
@@ -1075,7 +1094,12 @@ observer.observe(targetNode, config);
 
 <h1 data-toc-skip>「解决问题」黑苹果Venture 13.4 Intel无线网卡(AX200,AX201,AX210,AX203)蓝牙问题排查</h1>
 
+<style>.post-meta .post-desc{font-size: 1.1rem;font-family: var(--decs-font) !important;line-height: 1.6;color: var(--heading-color);font-weight: 100 !important;}</style>
+
 <div class="post-meta text-muted">
+    
+    <p class="post-desc fw-light mb-4">黑苹果Venture 13.4 Intel无线网卡(AX200,AX201,AX210,AX203)蓝牙问题排查</p>
+    
     <!-- published date -->
     <span>
       发表于
@@ -1414,6 +1438,13 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/heti/">「工具」一款好用的中文排版工具</a>
         </li>
       
@@ -1429,13 +1460,6 @@ observer.observe(targetNode, config);
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx/">「笔记」《论纲》一、前置的准备阶段（doing...）</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
         </li>
       
         

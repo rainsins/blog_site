@@ -14,12 +14,18 @@
   src: url(https://file.rainsin.cn/d/blog/font/Cormorant_Garamond/CormorantGaramond-Bold.ttf),url(https://mypan.hk.cpolar.io/d/blog/font/Cormorant_Garamond/CormorantGaramond-Bold.ttf),url(https://api.rainsin.cn/blog_data/font/Cormorant_Garamond/CormorantGaramond-Bold.ttf);
 }
 
+@font-face {
+  font-family: "Heti-FangSong";
+  src: local("STFangsong"), local("FangSong"), local("FangSong_GB2312"), url(https://file.rainsin.cn/d/blog/font/heti/%E4%BB%BF%E5%AE%8B_%E5%B8%B8%E8%A7%84.woff2), url(https://file.rainsin.cn/d/blog/font/heti/%E5%8D%8E%E6%96%87%E4%BB%BF%E5%AE%8B.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E4%BB%BF%E5%AE%8B_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E4%BB%BF%E5%AE%8B.woff2), url(https://file.rainsin.cn/d/blog/font/heti/FZFSK--GBK1-0.woff2), url(https://file.rainsin.cn/d/blog/font/heti/FZFSK--GBK1-0.woff2), url(https://api.rainsin.cn/blog_data/font/heti/FZFSK--GBK1-0.woff2), "FZFSB", "FS", "STFS", local("CESI_FS_GB18030");
+}
+
 
 :root {
 --box-border: 1px solid rgba(143, 155, 168, 0.15);
 --Jay-shadow-border: 0 8px 16px -4px #2c2d300c;
 --style-border-always: var(--box-border);
 --main-font: "Libre Baskerville", "Times New Roman", "FZZzOM", "OMPJ";
+--decs-font: "Heti-FangSong";
 --pingfang-font: "Ping Fang", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
 --box-bg: #d3d3d323;
 --box-border-b: var(--box-border);

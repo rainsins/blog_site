@@ -259,6 +259,20 @@ if(!sessionStorage.getItem("OS")){
   href="https://file.rainsin.cn/d/blog/font/heti/split/FZZzOM/result.css"
 />
 
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZFSB/result.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/STFANGSO/result.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
+/>
 
 <link
   rel="stylesheet"
@@ -266,6 +280,11 @@ if(!sessionStorage.getItem("OS")){
 />
 
 <script>
+  const s = ["FZFSB","STFANGSO","simfang"];
+
+s.forEach((el,ind)=>{
+  isAppendCDN(`https://fonts.rainsin.cn/split/${el}/result.css`);
+});
   isAppendCDN(`https://fonts.rainsin.cn/split/FZZzOM/result.css`);
   isAppendCDN(`https://fonts.rainsin.cn/FOT-TsukuAOldMinPr6/result.css`);
 </script>
@@ -507,8 +526,8 @@ if(!sessionStorage.getItem("OS")){
 <meta property="og:title" content="「神秘」奥山和纱 写真集 Clear" />
 <meta name="author" content="Rainsin Yu" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="奥山和纱 写真集 Clear" />
-<meta property="og:description" content="奥山和纱 写真集 Clear" />
+<meta name="description" content="奥山和纱" />
+<meta property="og:description" content="奥山和纱" />
 <link rel="canonical" href="http://localhost:4000/posts/ao-shan/" />
 <meta property="og:url" content="http://localhost:4000/posts/ao-shan/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
@@ -523,7 +542,7 @@ if(!sessionStorage.getItem("OS")){
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-08-15T16:47:55+08:00","datePublished":"2024-05-16T16:32:10+08:00","description":"奥山和纱 写真集 Clear","headline":"「神秘」奥山和纱 写真集 Clear","image":{"alt":"Clear","url":"https://rainsin-1305486451.file.myqcloud.com/rainsin-blog/img/post/clear/16d5164d-8f6f-4944-91b5-b5b9484d3114.webp","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/ao-shan/"},"url":"http://localhost:4000/posts/ao-shan/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-08-15T16:47:55+08:00","datePublished":"2024-05-16T16:32:10+08:00","description":"奥山和纱","headline":"「神秘」奥山和纱 写真集 Clear","image":{"alt":"Clear","url":"https://rainsin-1305486451.file.myqcloud.com/rainsin-blog/img/post/clear/16d5164d-8f6f-4944-91b5-b5b9484d3114.webp","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/ao-shan/"},"url":"http://localhost:4000/posts/ao-shan/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -1925,7 +1944,10 @@ observer.observe(targetNode, config);
 
 <h1 data-toc-skip>「神秘」奥山和纱 写真集 Clear</h1>
 
+<style>.post-meta .post-desc{font-size: 1.1rem;font-family: var(--decs-font) !important;line-height: 1.6;color: var(--heading-color);font-weight: 100 !important;}</style>
+
 <div class="post-meta text-muted">
+    
     <!-- published date -->
     <span>
       发表于
@@ -2211,6 +2233,13 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/heti/">「工具」一款好用的中文排版工具</a>
         </li>
       
@@ -2226,13 +2255,6 @@ observer.observe(targetNode, config);
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx/">「笔记」《论纲》一、前置的准备阶段（doing...）</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
         </li>
       
         

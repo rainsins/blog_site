@@ -259,6 +259,20 @@ if(!sessionStorage.getItem("OS")){
   href="https://file.rainsin.cn/d/blog/font/heti/split/FZZzOM/result.css"
 />
 
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZFSB/result.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/STFANGSO/result.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
+/>
 
 <link
   rel="stylesheet"
@@ -266,6 +280,11 @@ if(!sessionStorage.getItem("OS")){
 />
 
 <script>
+  const s = ["FZFSB","STFANGSO","simfang"];
+
+s.forEach((el,ind)=>{
+  isAppendCDN(`https://fonts.rainsin.cn/split/${el}/result.css`);
+});
   isAppendCDN(`https://fonts.rainsin.cn/split/FZZzOM/result.css`);
   isAppendCDN(`https://fonts.rainsin.cn/FOT-TsukuAOldMinPr6/result.css`);
 </script>
@@ -2011,6 +2030,13 @@ sudo certbot -d domain.com -d &quot;*.domain.com&quot; --manual --p...
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/heti/">「工具」一款好用的中文排版工具</a>
         </li>
       
@@ -2026,13 +2052,6 @@ sudo certbot -d domain.com -d &quot;*.domain.com&quot; --manual --p...
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx/">「笔记」《论纲》一、前置的准备阶段（doing...）</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
         </li>
       
         

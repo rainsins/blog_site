@@ -259,6 +259,20 @@ if(!sessionStorage.getItem("OS")){
   href="https://file.rainsin.cn/d/blog/font/heti/split/FZZzOM/result.css"
 />
 
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZFSB/result.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/STFANGSO/result.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
+/>
 
 <link
   rel="stylesheet"
@@ -266,6 +280,11 @@ if(!sessionStorage.getItem("OS")){
 />
 
 <script>
+  const s = ["FZFSB","STFANGSO","simfang"];
+
+s.forEach((el,ind)=>{
+  isAppendCDN(`https://fonts.rainsin.cn/split/${el}/result.css`);
+});
   isAppendCDN(`https://fonts.rainsin.cn/split/FZZzOM/result.css`);
   isAppendCDN(`https://fonts.rainsin.cn/FOT-TsukuAOldMinPr6/result.css`);
 </script>
@@ -516,8 +535,8 @@ if(!sessionStorage.getItem("OS")){
 <meta property="og:title" content="「笔记」《论纲》四、对认识论立场的超越" />
 <meta name="author" content="Rainsin Yu" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="「文字」《关于费尔巴哈的提纲》" />
-<meta property="og:description" content="「文字」《关于费尔巴哈的提纲》" />
+<meta name="description" content="实践并不只是检验真理的唯一标准，实践是真理的源泉，这是实践在社会科学的范畴中的推论，如果我们把实践的定义扩充为「行干」的活动，则可以说实践就是真理。" />
+<meta property="og:description" content="实践并不只是检验真理的唯一标准，实践是真理的源泉，这是实践在社会科学的范畴中的推论，如果我们把实践的定义扩充为「行干」的活动，则可以说实践就是真理。" />
 <link rel="canonical" href="http://localhost:4000/posts/marx3/" />
 <meta property="og:url" content="http://localhost:4000/posts/marx3/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
@@ -528,7 +547,7 @@ if(!sessionStorage.getItem("OS")){
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-02T01:17:18+08:00","datePublished":"2024-09-22T12:32:10+08:00","description":"「文字」《关于费尔巴哈的提纲》","headline":"「笔记」《论纲》四、对认识论立场的超越","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/marx3/"},"url":"http://localhost:4000/posts/marx3/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-02T01:17:18+08:00","datePublished":"2024-09-22T12:32:10+08:00","description":"实践并不只是检验真理的唯一标准，实践是真理的源泉，这是实践在社会科学的范畴中的推论，如果我们把实践的定义扩充为「行干」的活动，则可以说实践就是真理。","headline":"「笔记」《论纲》四、对认识论立场的超越","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/marx3/"},"url":"http://localhost:4000/posts/marx3/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -1037,7 +1056,12 @@ observer.observe(targetNode, config);
 
 <h1 data-toc-skip>「笔记」《论纲》四、对认识论立场的超越</h1>
 
+<style>.post-meta .post-desc{font-size: 1.1rem;font-family: var(--decs-font) !important;line-height: 1.6;color: var(--heading-color);font-weight: 100 !important;}</style>
+
 <div class="post-meta text-muted">
+    
+    <p class="post-desc fw-light mb-4">实践并不只是检验真理的唯一标准，实践是真理的源泉，这是实践在社会科学的范畴中的推论，如果我们把实践的定义扩充为「行干」的活动，则可以说实践就是真理。</p>
+    
     <!-- published date -->
     <span>
       发表于
@@ -1358,6 +1382,13 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/heti/">「工具」一款好用的中文排版工具</a>
         </li>
       
@@ -1373,13 +1404,6 @@ observer.observe(targetNode, config);
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx/">「笔记」《论纲》一、前置的准备阶段（doing...）</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
         </li>
       
         

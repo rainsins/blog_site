@@ -290,7 +290,7 @@ rel="stylesheet"
 href="https://file.rainsin.cn/d/blog/font/heti/split/HYKB/result.css"
 />
 <script>
-const sss = ["FZFSB","FZKTB","FZKTK","STFANGSO","STSONG","simfang","simkai","京華老宋体2","汇文明朝体"];
+const sss = ["FZKTB","FZKTK","STSONG","simkai","京華老宋体2","汇文明朝体"];
 
 sss.forEach((el,ind)=>{
   isAppendCDN(`https://fonts.rainsin.cn/split/${el}/result.css`);
@@ -304,6 +304,20 @@ isAppendCDN(`https://fonts.rainsin.cn/HYKB/result.css`);
   href="https://file.rainsin.cn/d/blog/font/heti/split/FZZzOM/result.css"
 />
 
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZFSB/result.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/STFANGSO/result.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
+/>
 
 <link
   rel="stylesheet"
@@ -311,6 +325,11 @@ isAppendCDN(`https://fonts.rainsin.cn/HYKB/result.css`);
 />
 
 <script>
+  const s = ["FZFSB","STFANGSO","simfang"];
+
+s.forEach((el,ind)=>{
+  isAppendCDN(`https://fonts.rainsin.cn/split/${el}/result.css`);
+});
   isAppendCDN(`https://fonts.rainsin.cn/split/FZZzOM/result.css`);
   isAppendCDN(`https://fonts.rainsin.cn/FOT-TsukuAOldMinPr6/result.css`);
 </script>
@@ -593,8 +612,8 @@ isAppendCDN(`https://fonts.rainsin.cn/HYKB/result.css`);
 <meta property="og:title" content="「工具」一款好用的中文排版工具" />
 <meta name="author" content="Rainsin Yu" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="「工具」一个好用中文排版工具" />
-<meta property="og:description" content="「工具」一个好用中文排版工具" />
+<meta name="description" content="我在冲浪的时候偶然发现的一个好用中文排版工具，我自己做了一个 markdown 里的使用的指令，要在浏览器里处理，我不熟悉 ruby，后面学一下看能不能在构建的时候就转换好，这样页面速度会好一点。" />
+<meta property="og:description" content="我在冲浪的时候偶然发现的一个好用中文排版工具，我自己做了一个 markdown 里的使用的指令，要在浏览器里处理，我不熟悉 ruby，后面学一下看能不能在构建的时候就转换好，这样页面速度会好一点。" />
 <link rel="canonical" href="http://localhost:4000/posts/heti/" />
 <meta property="og:url" content="http://localhost:4000/posts/heti/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
@@ -605,7 +624,7 @@ isAppendCDN(`https://fonts.rainsin.cn/HYKB/result.css`);
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-04T22:25:05+08:00","datePublished":"2024-09-08T12:32:10+08:00","description":"「工具」一个好用中文排版工具","headline":"「工具」一款好用的中文排版工具","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/heti/"},"url":"http://localhost:4000/posts/heti/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-04T22:25:05+08:00","datePublished":"2024-09-08T12:32:10+08:00","description":"我在冲浪的时候偶然发现的一个好用中文排版工具，我自己做了一个 markdown 里的使用的指令，要在浏览器里处理，我不熟悉 ruby，后面学一下看能不能在构建的时候就转换好，这样页面速度会好一点。","headline":"「工具」一款好用的中文排版工具","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/heti/"},"url":"http://localhost:4000/posts/heti/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -1364,7 +1383,12 @@ observer.observe(targetNode, config);
 
 <h1 data-toc-skip>「工具」一款好用的中文排版工具</h1>
 
+<style>.post-meta .post-desc{font-size: 1.1rem;font-family: var(--decs-font) !important;line-height: 1.6;color: var(--heading-color);font-weight: 100 !important;}</style>
+
 <div class="post-meta text-muted">
+    
+    <p class="post-desc fw-light mb-4">我在冲浪的时候偶然发现的一个好用中文排版工具，我自己做了一个 markdown 里的使用的指令，要在浏览器里处理，我不熟悉 ruby，后面学一下看能不能在构建的时候就转换好，这样页面速度会好一点。</p>
+    
     <!-- published date -->
     <span>
       发表于
@@ -2064,6 +2088,13 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/heti/">「工具」一款好用的中文排版工具</a>
         </li>
       
@@ -2079,13 +2110,6 @@ observer.observe(targetNode, config);
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx/">「笔记」《论纲》一、前置的准备阶段（doing...）</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
         </li>
       
         

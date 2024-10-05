@@ -259,6 +259,20 @@ if(!sessionStorage.getItem("OS")){
   href="https://file.rainsin.cn/d/blog/font/heti/split/FZZzOM/result.css"
 />
 
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZFSB/result.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/STFANGSO/result.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
+/>
 
 <link
   rel="stylesheet"
@@ -266,6 +280,11 @@ if(!sessionStorage.getItem("OS")){
 />
 
 <script>
+  const s = ["FZFSB","STFANGSO","simfang"];
+
+s.forEach((el,ind)=>{
+  isAppendCDN(`https://fonts.rainsin.cn/split/${el}/result.css`);
+});
   isAppendCDN(`https://fonts.rainsin.cn/split/FZZzOM/result.css`);
   isAppendCDN(`https://fonts.rainsin.cn/FOT-TsukuAOldMinPr6/result.css`);
 </script>
@@ -509,8 +528,8 @@ if(!sessionStorage.getItem("OS")){
 <meta property="og:title" content="「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl" />
 <meta name="author" content="Rainsin Yu" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="使用certbot和Let’s Encrypt为本地服务器部署ssl" />
-<meta property="og:description" content="使用certbot和Let’s Encrypt为本地服务器部署ssl" />
+<meta name="description" content="以前我的树莓派的SSL一直需要我在51SSL上手动申请，然后下载证书到服务器，比较麻烦。最近借着过年部署了一下certbot来完成申请证书的操作，记录一下过程。" />
+<meta property="og:description" content="以前我的树莓派的SSL一直需要我在51SSL上手动申请，然后下载证书到服务器，比较麻烦。最近借着过年部署了一下certbot来完成申请证书的操作，记录一下过程。" />
 <link rel="canonical" href="http://localhost:4000/posts/ssl-certbot/" />
 <meta property="og:url" content="http://localhost:4000/posts/ssl-certbot/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
@@ -521,7 +540,7 @@ if(!sessionStorage.getItem("OS")){
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-08-21T13:50:46+08:00","datePublished":"2024-02-02T16:32:10+08:00","description":"使用certbot和Let’s Encrypt为本地服务器部署ssl","headline":"「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/ssl-certbot/"},"url":"http://localhost:4000/posts/ssl-certbot/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-08-21T13:50:46+08:00","datePublished":"2024-02-02T16:32:10+08:00","description":"以前我的树莓派的SSL一直需要我在51SSL上手动申请，然后下载证书到服务器，比较麻烦。最近借着过年部署了一下certbot来完成申请证书的操作，记录一下过程。","headline":"「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/ssl-certbot/"},"url":"http://localhost:4000/posts/ssl-certbot/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -1066,7 +1085,10 @@ observer.observe(targetNode, config);
 
 <h1 data-toc-skip>「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl</h1>
 
+<style>.post-meta .post-desc{font-size: 1.1rem;font-family: var(--decs-font) !important;line-height: 1.6;color: var(--heading-color);font-weight: 100 !important;}</style>
+
 <div class="post-meta text-muted">
+    
     <!-- published date -->
     <span>
       发表于
@@ -1586,6 +1608,13 @@ There were too many requests of a given <span class="nb">type</span> :: Error cr
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/heti/">「工具」一款好用的中文排版工具</a>
         </li>
       
@@ -1601,13 +1630,6 @@ There were too many requests of a given <span class="nb">type</span> :: Error cr
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx/">「笔记」《论纲》一、前置的准备阶段（doing...）</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
         </li>
       
         

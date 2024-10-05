@@ -259,6 +259,20 @@ if(!sessionStorage.getItem("OS")){
   href="https://file.rainsin.cn/d/blog/font/heti/split/FZZzOM/result.css"
 />
 
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZFSB/result.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/STFANGSO/result.css"
+/>
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
+/>
 
 <link
   rel="stylesheet"
@@ -266,6 +280,11 @@ if(!sessionStorage.getItem("OS")){
 />
 
 <script>
+  const s = ["FZFSB","STFANGSO","simfang"];
+
+s.forEach((el,ind)=>{
+  isAppendCDN(`https://fonts.rainsin.cn/split/${el}/result.css`);
+});
   isAppendCDN(`https://fonts.rainsin.cn/split/FZZzOM/result.css`);
   isAppendCDN(`https://fonts.rainsin.cn/FOT-TsukuAOldMinPr6/result.css`);
 </script>
@@ -517,8 +536,8 @@ if(!sessionStorage.getItem("OS")){
 <meta property="og:title" content="「转载」人体系统调优不完全指南" />
 <meta name="author" content="zijie0" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="健康学习到150岁 - 人体系统调优不完全指南" />
-<meta property="og:description" content="健康学习到150岁 - 人体系统调优不完全指南" />
+<meta name="description" content="原标题：健康学习到150岁 - 人体系统调优不完全指南" />
+<meta property="og:description" content="原标题：健康学习到150岁 - 人体系统调优不完全指南" />
 <link rel="canonical" href="http://localhost:4000/posts/health/" />
 <meta property="og:url" content="http://localhost:4000/posts/health/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
@@ -533,7 +552,7 @@ if(!sessionStorage.getItem("OS")){
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@zijie0" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"zijie0","url":"https://github.com/zijie0/HumanSystemOptimization"},"dateModified":"2024-09-30T22:38:16+08:00","datePublished":"2024-09-30T12:32:10+08:00","description":"健康学习到150岁 - 人体系统调优不完全指南","headline":"「转载」人体系统调优不完全指南","image":{"alt":"健康","url":"https://file.rainsin.cn/d/blog/img/post/health/banner.gif","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/health/"},"url":"http://localhost:4000/posts/health/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"zijie0","url":"https://github.com/zijie0/HumanSystemOptimization"},"dateModified":"2024-09-30T22:38:16+08:00","datePublished":"2024-09-30T12:32:10+08:00","description":"原标题：健康学习到150岁 - 人体系统调优不完全指南","headline":"「转载」人体系统调优不完全指南","image":{"alt":"健康","url":"https://file.rainsin.cn/d/blog/img/post/health/banner.gif","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/health/"},"url":"http://localhost:4000/posts/health/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -1772,7 +1791,10 @@ observer.observe(targetNode, config);
 
 <h1 data-toc-skip>「转载」人体系统调优不完全指南</h1>
 
+<style>.post-meta .post-desc{font-size: 1.1rem;font-family: var(--decs-font) !important;line-height: 1.6;color: var(--heading-color);font-weight: 100 !important;}</style>
+
 <div class="post-meta text-muted">
+    
     <!-- published date -->
     <span>
       发表于
@@ -2489,6 +2511,13 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/heti/">「工具」一款好用的中文排版工具</a>
         </li>
       
@@ -2504,13 +2533,6 @@ observer.observe(targetNode, config);
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx/">「笔记」《论纲》一、前置的准备阶段（doing...）</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
         </li>
       
         
