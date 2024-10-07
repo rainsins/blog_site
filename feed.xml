@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Rainsin • Blog</title>
   <subtitle>rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）</subtitle>
-  <updated>2024-10-05T14:07:59+08:00</updated>
+  <updated>2024-10-07T13:52:44+08:00</updated>
   <author>
     <name>rainsin</name>
     <uri>http://localhost:4000/</uri>
@@ -12,7 +12,7 @@
   <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="zh-CN"
     href="http://localhost:4000/"/>
-  <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
+  <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
   <rights> © 2024 rainsin </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
@@ -24,7 +24,7 @@
     <link href="http://localhost:4000/posts/health/" rel="alternate" type="text/html" title="「转载」人体系统调优不完全指南" />
     <published>2024-09-30T12:32:10+08:00</published>
   
-    <updated>2024-09-30T22:38:16+08:00</updated>
+    <updated>2024-10-05T14:09:07+08:00</updated>
   
     <id>http://localhost:4000/posts/health/</id>
     <content src="http://localhost:4000/posts/health/" />
@@ -75,7 +75,7 @@ UPDATES
     <link href="http://localhost:4000/posts/marx3/" rel="alternate" type="text/html" title="「笔记」《论纲》四、对认识论立场的超越" />
     <published>2024-09-22T12:32:10+08:00</published>
   
-    <updated>2024-10-02T01:17:18+08:00</updated>
+    <updated>2024-10-05T14:09:07+08:00</updated>
   
     <id>http://localhost:4000/posts/marx3/</id>
     <content src="http://localhost:4000/posts/marx3/" />
@@ -101,7 +101,7 @@ UPDATES
     <link href="http://localhost:4000/posts/heti/" rel="alternate" type="text/html" title="「工具」一款好用的中文排版工具" />
     <published>2024-09-08T12:32:10+08:00</published>
   
-    <updated>2024-10-04T22:25:05+08:00</updated>
+    <updated>2024-10-05T14:09:07+08:00</updated>
   
     <id>http://localhost:4000/posts/heti/</id>
     <content src="http://localhost:4000/posts/heti/" />
@@ -127,7 +127,7 @@ UPDATES
     <link href="http://localhost:4000/posts/marx2/" rel="alternate" type="text/html" title="「笔记」《论纲》三、扬弃唯物与唯心的对立" />
     <published>2024-08-27T12:32:10+08:00</published>
   
-    <updated>2024-10-02T01:17:18+08:00</updated>
+    <updated>2024-10-05T14:09:07+08:00</updated>
   
     <id>http://localhost:4000/posts/marx2/</id>
     <content src="http://localhost:4000/posts/marx2/" />
@@ -153,7 +153,7 @@ UPDATES
     <link href="http://localhost:4000/posts/marx1/" rel="alternate" type="text/html" title="「笔记」《论纲》二、社会权力与法的权利的关系" />
     <published>2024-08-07T12:32:10+08:00</published>
   
-    <updated>2024-10-05T12:02:57+08:00</updated>
+    <updated>2024-10-05T14:09:07+08:00</updated>
   
     <id>http://localhost:4000/posts/marx1/</id>
     <content src="http://localhost:4000/posts/marx1/" />
@@ -169,7 +169,7 @@ UPDATES
     
   
 
-  <summary>对于社会权力的理解会对我们现在所发生的各种现象、各种矛盾的了解提供一个全新的视角，透过这种视角和我们的传统经典相结合来安顿自己的内心，指导我们的实践。</summary>
+  <summary>对于社会权力的理解会对我们现在所发生的各种现象、各种矛盾的了解提供一个全新的视角。</summary>
 
   </entry>
 
