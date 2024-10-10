@@ -1,6 +1,40 @@
 [
   
   {
+    "title": "「文件」我的心，我的心，蓝蓝的。",
+    "url": "/posts/blue/",
+    "categories": "音乐",
+    "tags": "音乐, 陶喆",
+    "date": "2024-10-10 13:23:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "我的心，蓝蓝的。文件陶吉吉合集，孙燕姿合集，莫文蔚合集。下载下来放在网易云的云盘里。",
+    "content": "我的心，蓝蓝的。文件陶吉吉合集，孙燕姿合集，莫文蔚合集。下载下来放在网易云的云盘里。"
+  },
+  
+  {
+    "title": "「教程」我使用的Opencore的主题包",
+    "url": "/posts/opencore-theme/",
+    "categories": "黑苹果",
+    "tags": "黑苹果, OpenCore",
+    "date": "2024-10-09 12:23:00 +0800",
+    
+
+
+
+
+
+    
+    "snippet": "使用将压缩包解压，将android12文件加移动到EFI-&gt;OC-&gt;Resources-&gt;Image下：打开OC的配置文件，修改启动界面主题为android12/android12：如果有缩放的问题，可以更改设置UIScale，一般为1，我的是2k小屏，如果是4k等大屏可以设为2：效果文件夸克,OneDrive。",
+    "content": "使用将压缩包解压，将android12文件加移动到EFI-&gt;OC-&gt;Resources-&gt;Image下：打开OC的配置文件，修改启动界面主题为android12/android12：如果有缩放的问题，可以更改设置UIScale，一般为1，我的是2k小屏，如果是4k等大屏可以设为2：效果文件夸克,OneDrive。"
+  },
+  
+  {
     "title": "「转载」人体系统调优不完全指南",
     "url": "/posts/health/",
     "categories": "健康, 转载",
@@ -388,7 +422,7 @@
 
     
     "snippet": "前提Mac可以正常引导，其他系统都已经安装好了（本文使用UEFI+GPT引导，传统的方式需要自己查找资料）。步骤      在OpenCore中安装OpenShell.efi工具。    下载OpenShell.efi在/EFI/OC/tool路径下，一般OC自带这个文件不用单独下。    在OC中进行如下设置:  重启。        如果你的OC隐藏了辅助条目，则在开机引导界面看不到UE...",
-    "content": "前提Mac可以正常引导，其他系统都已经安装好了（本文使用UEFI+GPT引导，传统的方式需要自己查找资料）。步骤      在OpenCore中安装OpenShell.efi工具。    下载OpenShell.efi在/EFI/OC/tool路径下，一般OC自带这个文件不用单独下。    在OC中进行如下设置:  重启。        如果你的OC隐藏了辅助条目，则在开机引导界面看不到UEFI Shell项，按空格键就会显示出来，之后选择UEFI Shell项回车进入。            找到所有的要引导的系统的EFI文件分区    FS1:,FS2:,…FS12：是连接到系统的所有硬盘设备的分区，你必须确定哪个是Windows分区，哪个是Mac分区，哪个是Linux分区：    ls或dir命令查看文件目录，cd /路径进入文件目录。熟悉Linux的这些命令都很熟悉，用这些命令找根目录长下面这样的FS：        键入cd EFI，看文件目录，如果有Microsoft文件夹就是windows的EFI分区，如果有Deepin文件夹就是Linux/deepin的EFI分区，记住这些分区对应的FS{n}。    进入你知道的那个EFI分区，比如FS2是windows的EFI分区对应的文件系统，你就可以进入这个分区FS2:，输入map &gt; fast.txt，这个分区根目录就会保存一个fast.txt的文本文件，里面保存着路径信息，当然你也可以选择其它你知道的分区。    我以我的为例： 经过上述步骤我知道我的FS0是OC的分区，FS2是Windows的分区，FS4是Deepin的分区，FS6是OpenKylin的分区，我的分区信息文件保存在windows的EFI分区下，通过OCC工具挂载EFI分区，找到这个文件，记住相应的路径。        在OC中设置    在Misc-&gt;Boot-&gt;Entries中添加条目，Path项就是我们上面得到的那些设备路径再加上具体的EFI文件路径，比如下面这个是我们找到的Windows的设备路径：     PciRoot(0x0)/Pci(0x17,0x0)/Sata(0x1,0xFFFF,0x0)/HD(1,GPT,1EFB24B9-9F07-4C77-8B75-B7D467010F2C,0x800,0x96000)         则Path为     PciRoot(0x0)/Pci(0x1B,0x0)/Pci(0x0,0x0)/NVMe(0x1,EA-AE-B4-91-56-38-25-00)/HD(1,GPT,A64D3A6A-2333-4107-AAA2-6EFD5A06180E,0x800,0x96000) /\\EFI\\Microsoft\\Boot\\bootmgfw.efi        前面的设备路径和后面的文件路径中间有一个空格，如果是Linux，后面的文件路径是     /\\EFI\\{Linux发行版名称}\\grubx64.efi         比如我用的是Deepin则文件路径为 /\\EFI\\deepin\\grubx64.efi。    我的设置：            一些小设置                  如果你想自定义你的引导项标题比如下面这样：                可以到对应的EFI目录下更改.contentDetails文件                    如果开机蓝屏，可能你的路径不对，或者在OC中打开下面的项目，我也忘了是具体哪一个生效的，都试试吧        Kernel中的设置：                Booter中的设置：                    "
+    "content": "前提Mac可以正常引导，其他系统都已经安装好了（本文使用UEFI+GPT引导，传统的方式需要自己查找资料）。步骤      在OpenCore中安装OpenShell.efi工具。    下载OpenShell.efi在/EFI/OC/tool路径下，一般OC自带这个文件不用单独下。    在OC中进行如下设置:  重启。        如果你的OC隐藏了辅助条目，则在开机引导界面看不到UEFI Shell项，按空格键就会显示出来，之后选择UEFI Shell项回车进入。            找到所有的要引导的系统的EFI文件分区    FS1:,FS2:,…FS12：是连接到系统的所有硬盘设备的分区，你必须确定哪个是Windows分区，哪个是Mac分区，哪个是Linux分区：    FS{n}:进入相应的分区，ls或dir命令查看文件目录，cd /路径进入文件目录。熟悉Linux的这些命令都很熟悉，用这些命令找根目录长下面这样的FS：        键入cd EFI，看文件目录，如果有Microsoft文件夹就是windows的EFI分区，如果有Deepin文件夹就是Linux/deepin的EFI分区，记住这些分区对应的FS{n}。    进入你知道的那个EFI分区，比如FS2是windows的EFI分区对应的文件系统，你就可以进入这个分区FS2:，输入map &gt; fast.txt，这个分区根目录就会保存一个fast.txt的文本文件，里面保存着路径信息，当然你也可以选择其它你知道的分区。    我以我的为例： 经过上述步骤我知道我的FS0是OC的分区，FS2是Windows的分区，FS4是Deepin的分区，FS6是OpenKylin的分区，我的分区信息文件保存在windows的EFI分区下，通过OCC工具挂载EFI分区，找到这个文件，记住相应的路径。        在OC中设置    在Misc-&gt;Boot-&gt;Entries中添加条目，Path项就是我们上面得到的那些设备路径再加上具体的EFI文件路径，比如下面这个是我们找到的Windows的设备路径：     PciRoot(0x0)/Pci(0x17,0x0)/Sata(0x1,0xFFFF,0x0)/HD(1,GPT,1EFB24B9-9F07-4C77-8B75-B7D467010F2C,0x800,0x96000)         则Path为     PciRoot(0x0)/Pci(0x1B,0x0)/Pci(0x0,0x0)/NVMe(0x1,EA-AE-B4-91-56-38-25-00)/HD(1,GPT,A64D3A6A-2333-4107-AAA2-6EFD5A06180E,0x800,0x96000) /\\EFI\\Microsoft\\Boot\\bootmgfw.efi        前面的设备路径和后面的文件路径中间有一个空格，如果是Linux，后面的文件路径是     /\\EFI\\{Linux发行版名称}\\grubx64.efi         比如我用的是Deepin则文件路径为 /\\EFI\\deepin\\grubx64.efi。    我的设置：            一些小设置                  如果你想自定义你的引导项标题比如下面这样：                可以到对应的EFI目录下更改.contentDetails文件                    如果开机蓝屏，可能你的路径不对，或者在OC中打开下面的项目，我也忘了是具体哪一个生效的，都试试吧        Kernel中的设置：                Booter中的设置：                    "
   },
   
   {
