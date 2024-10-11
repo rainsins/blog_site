@@ -252,6 +252,15 @@ if(!sessionStorage.getItem("OS")){
 
 
 
+
+<script src="
+https://gcore.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.js
+"></script>
+<link href="
+https://gcore.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.css
+" rel="stylesheet">
+
+
  
 
 <link
@@ -520,10 +529,7 @@ s.forEach((el,ind)=>{
     document.getElementsByTagName("head")[0].appendChild(style);
   </script>
 
-   
-  <script src="https://quantil.jsdelivr.net/npm/artplayer@5.1.7/dist/artplayer.min.js"></script>
-  <script src="https://s4.zstatic.net/npm/artplayer-plugin-danmuku@5.1.4/dist/artplayer-plugin-danmuku.legacy.js"></script>
-               
+                
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="「文件」我的心，我的心，蓝蓝的。" />
@@ -1264,33 +1270,12 @@ observer.observe(targetNode, config);
 <div class="post-content        " id="post-content">
   <h2 id="我的心蓝蓝的"><span class="me-2">我的心，蓝蓝的。</span><a href="#我的心蓝蓝的" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<div id="mse" style="width: 100%; aspect-ratio: 1920/1080;"></div>
+<video id="player" playsinline="" controls="" data-poster="https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvcyFBb2VyMmNVNVNsT0ZpWUVVU3ZFdndYMkRiM2VfRmc_ZT1EVzgwVVk.jpg" style="width: 100%; aspect-ratio: 1920/1080;">
+  <source src="https://file.rainsin.cn/d/blog/music/%E6%B2%99%E6%BB%A9.mov" type="video/mp4" />
+</video>
 
 <script>
-window.load_event = {
-    ...window.load_event,
-    player_video: () => {
-
-    let mseplayer = new Artplayer({
-      container: '#mse',
-      url: 'https://file.rainsin.cn/d/blog/music/%E6%B2%99%E6%BB%A9.mov',
-      theme: "#1677b3",
-        autoMini: true,
-        flip: true,
-        playbackRate: true,
-        screenshot: true,
-        hotkey: true,
-        pip: true,
-        mutex: true,
-        fullscreen: true,
-        fullscreenWeb: true,
-        miniProgressBar: true,
-        playsInline: true,
-        setting: true,
-        autoOrientation: true,
-    });
-    }
-}
+  const player = new Plyr('#player');
 </script>
 
 <h2 id="文件"><span class="me-2">文件</span><a href="#文件" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
