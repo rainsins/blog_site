@@ -30,8 +30,8 @@
 
 
     
-    "snippet": "使用将压缩包解压，将android12文件加移动到EFI-&gt;OC-&gt;Resources-&gt;Image下：打开OC的配置文件，修改启动界面主题为android12/android12：如果有缩放的问题，可以更改设置UIScale，一般为1，我的是2k小屏，如果是4k等大屏可以设为2：效果文件直接下载,夸克,OneDrive。",
-    "content": "使用将压缩包解压，将android12文件加移动到EFI-&gt;OC-&gt;Resources-&gt;Image下：打开OC的配置文件，修改启动界面主题为android12/android12：如果有缩放的问题，可以更改设置UIScale，一般为1，我的是2k小屏，如果是4k等大屏可以设为2：效果文件直接下载,夸克,OneDrive。"
+    "snippet": "使用将压缩包解压，将android12文件加移动到EFI-&gt;OC-&gt;Resources-&gt;Image下：打开OC的配置文件，修改启动界面主题为android12/android12，就是主题的相对与Image/的路径，我的压缩包解压出来好像有三层，如果是三层就是android12/android12/android12，你可以自己看看：如果有缩放的问题，可以更改设置UISc...",
+    "content": "使用将压缩包解压，将android12文件加移动到EFI-&gt;OC-&gt;Resources-&gt;Image下：打开OC的配置文件，修改启动界面主题为android12/android12，就是主题的相对与Image/的路径，我的压缩包解压出来好像有三层，如果是三层就是android12/android12/android12，你可以自己看看：如果有缩放的问题，可以更改设置UIScale，一般为1，我的是2k小屏，如果是4k等大屏可以设为2：效果文件直接下载,夸克,OneDrive。"
   },
   
   {
