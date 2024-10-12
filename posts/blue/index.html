@@ -253,13 +253,6 @@ if(!sessionStorage.getItem("OS")){
 
 
 
-<script src="
-https://gcore.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.js
-"></script>
-<link href="
-https://gcore.jsdelivr.net/npm/plyr@3.7.8/dist/plyr.min.css
-" rel="stylesheet">
-
 
  
 
@@ -529,16 +522,19 @@ s.forEach((el,ind)=>{
     document.getElementsByTagName("head")[0].appendChild(style);
   </script>
 
-                
+   
+  <script src="https://quantil.jsdelivr.net/npm/artplayer@5.1.7/dist/artplayer.min.js"></script>
+  <script src="https://s4.zstatic.net/npm/artplayer-plugin-danmuku@5.1.4/dist/artplayer-plugin-danmuku.legacy.js"></script>
+               
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.3.4" />
+<meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="「文件」我的心，我的心，蓝蓝的。" />
 <meta name="author" content="Rainsin Yu" />
 <meta property="og:locale" content="zh_CN" />
 <meta name="description" content="我的心，蓝蓝的。" />
 <meta property="og:description" content="我的心，蓝蓝的。" />
-<link rel="canonical" href="http://localhost:4000/posts/blue/" />
-<meta property="og:url" content="http://localhost:4000/posts/blue/" />
+<link rel="canonical" href="https://blog.rainsin.cn/posts/blue/" />
+<meta property="og:url" content="https://blog.rainsin.cn/posts/blue/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
 <meta property="og:image" content="https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvcyFBb2VyMmNVNVNsT0ZpWUVVU3ZFdndYMkRiM2VfRmc_ZT1EVzgwVVk.jpg" />
 <meta property="og:image:alt" content="蓝蓝的" />
@@ -551,7 +547,7 @@ s.forEach((el,ind)=>{
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-10T13:23:00+08:00","datePublished":"2024-10-10T13:23:00+08:00","description":"我的心，蓝蓝的。","headline":"「文件」我的心，我的心，蓝蓝的。","image":{"alt":"蓝蓝的","url":"https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvcyFBb2VyMmNVNVNsT0ZpWUVVU3ZFdndYMkRiM2VfRmc_ZT1EVzgwVVk.jpg","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/blue/"},"url":"http://localhost:4000/posts/blue/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-11T22:30:11+08:00","datePublished":"2024-10-10T13:23:00+08:00","description":"我的心，蓝蓝的。","headline":"「文件」我的心，我的心，蓝蓝的。","image":{"alt":"蓝蓝的","url":"https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvcyFBb2VyMmNVNVNsT0ZpWUVVU3ZFdndYMkRiM2VfRmc_ZT1EVzgwVVk.jpg","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/blue/"},"url":"https://blog.rainsin.cn/posts/blue/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -1203,6 +1199,30 @@ observer.observe(targetNode, config);
 
     <!-- lastmod date -->
     
+    <span>
+      更新于
+      <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1728657011"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2024/10/11
+</em>
+
+    </span>
+    
 
   
     
@@ -1270,12 +1290,33 @@ observer.observe(targetNode, config);
 <div class="post-content        " id="post-content">
   <h2 id="我的心蓝蓝的"><span class="me-2">我的心，蓝蓝的。</span><a href="#我的心蓝蓝的" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<video id="player" playsinline="" controls="" data-poster="https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvcyFBb2VyMmNVNVNsT0ZpWUVVU3ZFdndYMkRiM2VfRmc_ZT1EVzgwVVk.jpg" style="width: 100%; aspect-ratio: 1920/1080;">
-  <source src="https://file.rainsin.cn/d/blog/music/%E6%B2%99%E6%BB%A9.mov" type="video/mp4" />
-</video>
+<div id="mse"></div>
 
 <script>
-  const player = new Plyr('#player');
+window.load_event = {
+    ...window.load_event,
+    player_video: () => {
+
+    let mseplayer = new Artplayer({
+      container: '#mse',
+      url: 'https://file.rainsin.cn/d/blog/music/%E6%B2%99%E6%BB%A9.mov',
+      theme: "#1677b3",
+        autoMini: true,
+        flip: true,
+        playbackRate: true,
+        screenshot: true,
+        hotkey: true,
+        pip: true,
+        mutex: true,
+        fullscreen: true,
+        fullscreenWeb: true,
+        miniProgressBar: true,
+        playsInline: true,
+        setting: true,
+        autoOrientation: true,
+    });
+    }
+}
 </script>
 
 <h2 id="文件"><span class="me-2">文件</span><a href="#文件" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
@@ -1338,7 +1379,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E6%96%87%E4%BB%B6%E3%80%8D%E6%88%91%E7%9A%84%E5%BF%83%EF%BC%8C%E6%88%91%E7%9A%84%E5%BF%83%EF%BC%8C%E8%93%9D%E8%93%9D%E7%9A%84%E3%80%82%20-%20Rainsin%20%E2%80%A2%20Blog&url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fblue%2F"
+        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E6%96%87%E4%BB%B6%E3%80%8D%E6%88%91%E7%9A%84%E5%BF%83%EF%BC%8C%E6%88%91%E7%9A%84%E5%BF%83%EF%BC%8C%E8%93%9D%E8%93%9D%E7%9A%84%E3%80%82%20-%20Rainsin%20%E2%80%A2%20Blog&url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fblue%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Twitter"
@@ -1351,7 +1392,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E6%96%87%E4%BB%B6%E3%80%8D%E6%88%91%E7%9A%84%E5%BF%83%EF%BC%8C%E6%88%91%E7%9A%84%E5%BF%83%EF%BC%8C%E8%93%9D%E8%93%9D%E7%9A%84%E3%80%82%20-%20Rainsin%20%E2%80%A2%20Blog&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fblue%2F"
+        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E6%96%87%E4%BB%B6%E3%80%8D%E6%88%91%E7%9A%84%E5%BF%83%EF%BC%8C%E6%88%91%E7%9A%84%E5%BF%83%EF%BC%8C%E8%93%9D%E8%93%9D%E7%9A%84%E3%80%82%20-%20Rainsin%20%E2%80%A2%20Blog&u=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fblue%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Facebook"
@@ -1364,7 +1405,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fblue%2F&text=%E3%80%8C%E6%96%87%E4%BB%B6%E3%80%8D%E6%88%91%E7%9A%84%E5%BF%83%EF%BC%8C%E6%88%91%E7%9A%84%E5%BF%83%EF%BC%8C%E8%93%9D%E8%93%9D%E7%9A%84%E3%80%82%20-%20Rainsin%20%E2%80%A2%20Blog"
+        href="https://t.me/share/url?url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fblue%2F&text=%E3%80%8C%E6%96%87%E4%BB%B6%E3%80%8D%E6%88%91%E7%9A%84%E5%BF%83%EF%BC%8C%E6%88%91%E7%9A%84%E5%BF%83%EF%BC%8C%E8%93%9D%E8%93%9D%E7%9A%84%E3%80%82%20-%20Rainsin%20%E2%80%A2%20Blog"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Telegram"
@@ -1424,6 +1465,13 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/blue/">「文件」我的心，我的心，蓝蓝的。</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/opencore-theme/">「教程」我使用的Opencore的主题包</a>
         </li>
       
@@ -1446,13 +1494,6 @@ observer.observe(targetNode, config);
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx3/">「笔记」《论纲》四、对认识论立场的超越</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/marx/">「笔记」《论纲》一、前置的准备阶段（doing...）</a>
         </li>
       
     </ul>
