@@ -4,7 +4,7 @@
   <id>https://blog.rainsin.cn/</id>
   <title>Rainsin • Blog</title>
   <subtitle>rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）</subtitle>
-  <updated>2024-10-12T21:12:35+08:00</updated>
+  <updated>2024-10-12T21:22:23+08:00</updated>
   <author>
     <name>rainsin</name>
     <uri>https://blog.rainsin.cn/</uri>
@@ -24,7 +24,7 @@
     <link href="https://blog.rainsin.cn/posts/blue/" rel="alternate" type="text/html" title="「文件」我的心，我的心，蓝蓝的。" />
     <published>2024-10-10T13:23:00+08:00</published>
   
-    <updated>2024-10-12T18:12:36+08:00</updated>
+    <updated>2024-10-12T21:22:18+08:00</updated>
   
     <id>https://blog.rainsin.cn/posts/blue/</id>
     <content src="https://blog.rainsin.cn/posts/blue/" />
@@ -48,7 +48,9 @@
 
 文件
 
-陶吉吉合集，孙燕姿合集，莫文蔚合集，周杰伦合集。下载下来放在网易云的云盘里。</summary>
+陶吉吉合集，孙燕姿合集，莫文蔚合集，周杰伦合集，凤凰传奇合集。下载下来放在网易云的云盘里。
+
+附件</summary>
 
   </entry>
 
