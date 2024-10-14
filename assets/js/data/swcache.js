@@ -19,6 +19,8 @@ const resource = [
     
         '/archives/',
     
+        '/comment/',
+    
 
     /* --- Favicons & compressed JS --- */
     
@@ -142,7 +144,7 @@ const allowedDomains = [
     'blog.rainsin.cn',
 
     
-        'www.rainsin.cn',
+        'blogs.rainsin.cn',
     
 
     'fonts.gstatic.com',

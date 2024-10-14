@@ -4,7 +4,7 @@
     "title": "「文件」我的心，我的心，蓝蓝的。",
     "url": "/posts/blue/",
     "categories": "音乐",
-    "tags": "音乐, 陶喆",
+    "tags": "音乐, 周杰伦, 陶喆, 孙燕姿",
     "date": "2024-10-10 13:23:00 +0800",
     
 
@@ -13,8 +13,8 @@
 
 
     
-    "snippet": "我的心，蓝蓝的。文件陶吉吉合集，孙燕姿合集，莫文蔚合集，周杰伦合集，凤凰传奇合集。下载下来放在网易云的云盘里。附件",
-    "content": "我的心，蓝蓝的。文件陶吉吉合集，孙燕姿合集，莫文蔚合集，周杰伦合集，凤凰传奇合集。下载下来放在网易云的云盘里。附件"
+    "snippet": "我的心，蓝蓝的。文件陶吉吉合集，孙燕姿合集，莫文蔚合集，周杰伦合集，凤凰传奇合集。下载下来放在网易云的云盘里。",
+    "content": "我的心，蓝蓝的。文件陶吉吉合集，孙燕姿合集，莫文蔚合集，周杰伦合集，凤凰传奇合集。下载下来放在网易云的云盘里。"
   },
   
   {
@@ -30,8 +30,8 @@
 
 
     
-    "snippet": "使用将压缩包解压，将android12文件加移动到EFI-&gt;OC-&gt;Resources-&gt;Image下：打开OC的配置文件，修改启动界面主题为android12/android12，就是主题的相对与Image/的路径，我的压缩包解压出来好像有三层，如果是三层就是android12/android12/android12，你可以自己看看：如果有缩放的问题，可以更改设置UISc...",
-    "content": "使用将压缩包解压，将android12文件加移动到EFI-&gt;OC-&gt;Resources-&gt;Image下：打开OC的配置文件，修改启动界面主题为android12/android12，就是主题的相对与Image/的路径，我的压缩包解压出来好像有三层，如果是三层就是android12/android12/android12，你可以自己看看：如果有缩放的问题，可以更改设置UIScale，一般为1，我的是2k小屏，如果是4k等大屏可以设为2：效果文件直接下载,夸克,OneDrive。"
+    "snippet": "使用先添加OpenCanopy.efi到EFI/OC/Drivers,将压缩包解压，将android12文件加移动到EFI-&gt;OC-&gt;Resources-&gt;Image下：打开OC的配置文件，修改启动界面主题为android12/android12，就是主题的相对与Image/的路径，我的压缩包解压出来好像有三层，如果是三层就是android12/android12/andr...",
+    "content": "使用先添加OpenCanopy.efi到EFI/OC/Drivers,将压缩包解压，将android12文件加移动到EFI-&gt;OC-&gt;Resources-&gt;Image下：打开OC的配置文件，修改启动界面主题为android12/android12，就是主题的相对与Image/的路径，我的压缩包解压出来好像有三层，如果是三层就是android12/android12/android12，你可以自己看看：如果有缩放的问题，可以更改设置UIScale，一般为1，我的是2k小屏，如果是4k等大屏可以设为2：效果文件直接下载,夸克,OneDrive。"
   },
   
   {
