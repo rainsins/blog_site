@@ -144,8 +144,6 @@ const allowedDomains = [
     'blog.rainsin.cn',
 
     
-        'blogs.rainsin.cn',
-    
 
     'fonts.gstatic.com',
     'fonts.googleapis.com',
