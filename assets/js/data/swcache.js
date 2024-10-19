@@ -19,8 +19,6 @@ const resource = [
     
         '/archives/',
     
-        '/comment/',
-    
 
     /* --- Favicons & compressed JS --- */
     
