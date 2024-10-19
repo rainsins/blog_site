@@ -1159,7 +1159,9 @@ em.charch,
 .heti .heti-intent-4em {
     text-indent: 4em;
 }
-
+.heti .heti-mt4{
+    margin-top: .4em;
+}
 html[data-mode="dark"] .heti blockquote {
     background-color: #7474744a;
 }

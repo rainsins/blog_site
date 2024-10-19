@@ -256,6 +256,51 @@ if(!sessionStorage.getItem("OS")){
 
 
 
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZFSB/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZKTK/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/simkai/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/STFANGSO/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/京華老宋体2/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/汇文明朝体/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/STSONG/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/HYKB/result.css"
+/>
+<script>
+const sss = ["FZKTB","FZKTK","STSONG","simkai","京華老宋体2","汇文明朝体"];
+
+sss.forEach((el,ind)=>{
+  isAppendCDN(`https://fonts.rainsin.cn/split/${el}/result.css`);
+});
+isAppendCDN(`https://fonts.rainsin.cn/HYKB/result.css`);
+</script>
  
 
 <link
@@ -339,6 +384,42 @@ s.forEach((el,ind)=>{
   />
    
    
+  
+  <link
+    rel="stylesheet"
+    href="/assets/css/heti-min.css"
+  />
+
+  <script>
+    window.load_event = {
+      ...window.load_event,
+      heti_title_style: () => {
+        const OS = sessionStorage.getItem("OS");
+        if (OS == "Linux") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-weight: 400;
+    }</style>`)
+          );
+        } else if (OS == "iOS" || OS == "Mac OS") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-family: "Times New Roman",times,"Heti Kai",serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      font-weight: 600;
+    }</style>`)
+          );
+        } else if (OS == "Android") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-weight: 600;
+    }</style>`)
+          );
+        } else {
+          console.log("哇！");
+        }
+      },
+    };
+  </script>
   
 
   <link rel="stylesheet" href="/assets/css/card-profile.css" />
@@ -537,9 +618,11 @@ s.forEach((el,ind)=>{
     document.getElementsByTagName("head")[0].appendChild(style);
   </script>
 
-                <!-- Begin Jekyll SEO tag v2.8.0 -->
-<meta name="generator" content="Jekyll v4.3.4" />
-<meta property="og:title" content="「笔记」《论纲》四、对认识论立场的超越" />
+     
+  <script src="https://s4.zstatic.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+             <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="「文字稿」《论纲》四、对认识论立场的超越" />
 <meta name="author" content="Rainsin Yu" />
 <meta property="og:locale" content="zh_CN" />
 <meta name="description" content="实践并不只是检验真理的唯一标准，实践是真理的源泉，这是实践在社会科学的范畴中的推论，如果我们把实践的定义扩充为「行干」的活动，则可以说实践就是真理。" />
@@ -550,15 +633,15 @@ s.forEach((el,ind)=>{
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-09-22T12:32:10+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="「笔记」《论纲》四、对认识论立场的超越" />
+<meta property="twitter:title" content="「文字稿」《论纲》四、对认识论立场的超越" />
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-19T16:27:11+08:00","datePublished":"2024-09-22T12:32:10+08:00","description":"实践并不只是检验真理的唯一标准，实践是真理的源泉，这是实践在社会科学的范畴中的推论，如果我们把实践的定义扩充为「行干」的活动，则可以说实践就是真理。","headline":"「笔记」《论纲》四、对认识论立场的超越","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/marx3/"},"url":"https://blog.rainsin.cn/posts/marx3/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-19T19:48:01+08:00","datePublished":"2024-09-22T12:32:10+08:00","description":"实践并不只是检验真理的唯一标准，实践是真理的源泉，这是实践在社会科学的范畴中的推论，如果我们把实践的定义扩充为「行干」的活动，则可以说实践就是真理。","headline":"「文字稿」《论纲》四、对认识论立场的超越","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/marx3/"},"url":"https://blog.rainsin.cn/posts/marx3/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
-  <title>「笔记」《论纲》四、对认识论立场的超越 | Rainsin • Blog
+  <title>「文字稿」《论纲》四、对认识论立场的超越 | Rainsin • Blog
   </title>
 
   <!--
@@ -718,12 +801,12 @@ observer.observe(targetNode, config);
     <a href="/" id="avatar" class="rounded-circle">
       
         
-        <img src="/assets/img/avator.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
+        <img src="/assets/img/avatar.webp" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
       
     </a>
 
     <div class="site-title">
-      <a href="/">Rainsin</a>
+      <a href="/">Rainsin's Blog</a>
     </div>
     <div class="site-subtitle">如人饮水，冷暖自知。</div>
   </div>
@@ -914,7 +997,7 @@ observer.observe(targetNode, config);
         
           
             
-              <span>「笔记」《论纲》四、对认识论立场的超越</span>
+              <span>「文字稿」《论纲》四、对认识论立场的超越</span>
             
 
           
@@ -1075,7 +1158,7 @@ observer.observe(targetNode, config);
 
 
 
-<h1 data-toc-skip>「笔记」《论纲》四、对认识论立场的超越</h1>
+<h1 data-toc-skip>「文字稿」《论纲》四、对认识论立场的超越</h1>
 
 <style>.post-meta .post-desc{font-size: 1.1rem;font-family: var(--decs-font) !important;line-height: 1.6;color: var(--heading-color);font-weight: 100 !important;}</style>
 
@@ -1123,7 +1206,7 @@ observer.observe(targetNode, config);
 
 <em
   class=""
-  data-ts="1729326431"
+  data-ts="1729338481"
   data-df="YYYY/MM/DD"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
@@ -1179,7 +1262,7 @@ observer.observe(targetNode, config);
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="7535 字"
+  title="7540 字"
 >
   <em>41 分钟</em>阅读</span>
 
@@ -1224,11 +1307,13 @@ observer.observe(targetNode, config);
     audio_ganxingyishi.src = "https://file.rainsin.cn/d/blog/%E9%A9%AC%E5%85%8B%E6%80%9D/aac/%5B8%5D--%E7%AC%AC%E5%9B%9B%E8%AE%B2%EF%BC%9A%20%E6%84%9F%E6%80%A7%E6%84%8F%E8%AF%86%E8%AE%BA%EF%BC%9A%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%AB%8B%E5%9C%BA%E7%9A%84%E8%B6%85%E8%B6%8A.ogg";
 </script> -->
 
-<div class="blockquote-sep-box">
-<blockquote class="blockquote-sep">
-    <p>人的思维是否具有对象的［gegenständliche］真理性，这不是一个理论的问题，而是一个实践的问题。人应该在实践中证明自己思维的真理性，即自己思维的现实性和力量，自己思维的此岸性。关于思维——离开实践的思维——的现实性或非现实性的争论，是一个纯粹经院哲学的问题。</p>
-    <cite>—— 《关于费尔巴哈的提纲》第二条</cite>
-</blockquote>
+<div class="heti-box">
+@Hdiv(classic){
+@Hbq(){
+@Hsp(){
+@Hp(intent){人的思维是否具有对象的［gegenständliche］真理性，这不是一个理论的问题，而是一个实践的问题。人应该在实践中证明自己思维的真理性，即自己思维的现实性和力量，自己思维的此岸性。关于思维——离开实践的思维——的现实性或非现实性的争论，是一个纯粹经院哲学的问题。}@Hp(end,fangsong){——《关于费尔巴哈的提纲》第二条}
+}
+}}
 </div>
 
 <p>我们首先探讨了这场哲学革命的第一个方面，即存在论革命。这一存在论革命超越了唯物主义的存在论和唯心主义的存在论的对立。我们解读了关于《费尔巴哈提纲》的第一条，马克思一方面批判了以往一切的唯物主义，也包括费尔巴哈的唯物主义；另一方面也批判了唯心主义。对唯物主义和唯心主义的批判依据是同一个，即“实践”这个概念。实践即是感性活动。我们借助了海德格尔的说法，所谓的感性活动就是与事物打交道，使事物上手。在与事物打交道的过程中，我们建构了所谓的客观事物。<strong>客观事物并不是现成地放在我们面前供我们去认识的一个客体，然后我们以直观的形式去理解和把握它</strong>。这样的理解是以往一切唯物主义的主要缺点，它们忘记了，所谓<strong>客观事物是通过实践建构起来的</strong>。因此，马克思说，没有把事物、现实、感性理解为感性活动，理解为实践，也就是没有从主体方面去理解，这是一个非常重要的存在论立场，是哲学革命的一个重要方面，基本方面，扬弃唯物与唯心的对立。</p>
@@ -1333,7 +1418,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E7%AC%94%E8%AE%B0%E3%80%8D%E3%80%8A%E8%AE%BA%E7%BA%B2%E3%80%8B%E5%9B%9B%E3%80%81%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%AB%8B%E5%9C%BA%E7%9A%84%E8%B6%85%E8%B6%8A%20-%20Rainsin%20%E2%80%A2%20Blog&url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fmarx3%2F"
+        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E6%96%87%E5%AD%97%E7%A8%BF%E3%80%8D%E3%80%8A%E8%AE%BA%E7%BA%B2%E3%80%8B%E5%9B%9B%E3%80%81%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%AB%8B%E5%9C%BA%E7%9A%84%E8%B6%85%E8%B6%8A%20-%20Rainsin%20%E2%80%A2%20Blog&url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fmarx3%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Twitter"
@@ -1346,7 +1431,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E7%AC%94%E8%AE%B0%E3%80%8D%E3%80%8A%E8%AE%BA%E7%BA%B2%E3%80%8B%E5%9B%9B%E3%80%81%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%AB%8B%E5%9C%BA%E7%9A%84%E8%B6%85%E8%B6%8A%20-%20Rainsin%20%E2%80%A2%20Blog&u=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fmarx3%2F"
+        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E6%96%87%E5%AD%97%E7%A8%BF%E3%80%8D%E3%80%8A%E8%AE%BA%E7%BA%B2%E3%80%8B%E5%9B%9B%E3%80%81%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%AB%8B%E5%9C%BA%E7%9A%84%E8%B6%85%E8%B6%8A%20-%20Rainsin%20%E2%80%A2%20Blog&u=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fmarx3%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Facebook"
@@ -1359,7 +1444,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://t.me/share/url?url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fmarx3%2F&text=%E3%80%8C%E7%AC%94%E8%AE%B0%E3%80%8D%E3%80%8A%E8%AE%BA%E7%BA%B2%E3%80%8B%E5%9B%9B%E3%80%81%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%AB%8B%E5%9C%BA%E7%9A%84%E8%B6%85%E8%B6%8A%20-%20Rainsin%20%E2%80%A2%20Blog"
+        href="https://t.me/share/url?url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fmarx3%2F&text=%E3%80%8C%E6%96%87%E5%AD%97%E7%A8%BF%E3%80%8D%E3%80%8A%E8%AE%BA%E7%BA%B2%E3%80%8B%E5%9B%9B%E3%80%81%E5%AF%B9%E8%AE%A4%E8%AF%86%E8%AE%BA%E7%AB%8B%E5%9C%BA%E7%9A%84%E8%B6%85%E8%B6%8A%20-%20Rainsin%20%E2%80%A2%20Blog"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Telegram"
@@ -1419,35 +1504,35 @@ observer.observe(targetNode, config);
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/marx/">「笔记」《论纲》一、前置的准备阶段</a>
+          <a href="/posts/marx/">「文字稿」《论纲》一、前置的准备阶段</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/marx1/">「笔记」《论纲》二、社会权力与法的权利的关系</a>
+          <a href="/posts/marx1/">「文字稿」《论纲》二、社会权力与法的权利的关系</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/marx2/">「笔记」《论纲》三、扬弃唯物与唯心的对立</a>
+          <a href="/posts/marx2/">「文字稿」《论纲》三、扬弃唯物与唯心的对立</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/marx3/">「笔记」《论纲》四、对认识论立场的超越</a>
+          <a href="/posts/heti/">「分享」一款好用的中文排版工具</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/blue/">「文件」我的心，我的心，蓝蓝的。</a>
+          <a href="/posts/marx3/">「文字稿」《论纲》四、对认识论立场的超越</a>
         </li>
       
     </ul>
@@ -2446,7 +2531,7 @@ observer.observe(targetNode, config);
       class="btn btn-outline-primary"
       prompt="上一篇"
     >
-      <p>「工具」一款好用的中文排版工具</p>
+      <p>「分享」一款好用的中文排版工具</p>
     </a>
   
 
@@ -3494,6 +3579,8 @@ observer.observe(targetNode, config);
   </div>
 </footer>
 
+
+<script src="/assets/js/heti.js"></script>
 
 
 
