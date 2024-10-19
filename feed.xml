@@ -4,7 +4,7 @@
   <id>https://blog.rainsin.cn/</id>
   <title>Rainsin • Blog</title>
   <subtitle>rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）</subtitle>
-  <updated>2024-10-16T21:27:30+08:00</updated>
+  <updated>2024-10-19T16:27:28+08:00</updated>
   <author>
     <name>rainsin</name>
     <uri>https://blog.rainsin.cn/</uri>
@@ -17,6 +17,110 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>「笔记」《论纲》六、社会权力论与意识形态论</title>
+    <link href="https://blog.rainsin.cn/posts/marx5/" rel="alternate" type="text/html" title="「笔记」《论纲》六、社会权力论与意识形态论" />
+    <published>2024-10-18T12:32:10+08:00</published>
+  
+    <updated>2024-10-18T12:32:10+08:00</updated>
+  
+    <id>https://blog.rainsin.cn/posts/marx5/</id>
+    <content src="https://blog.rainsin.cn/posts/marx5/" />
+    <author>
+      <name>rainsin</name>
+    </author>
+
+  
+    
+    <category term="哲学" />
+    
+    <category term="马克思" />
+    
+  
+
+  <summary>索引
+
+一、前置的准备阶段
+
+二、社会权力与法的权利的关系
+
+三、扬弃唯物与唯心的对立
+
+四、对认识论立场的超越
+
+五、马克思的历史观
+
+六、社会权力论与意识形态论☑️
+
+…
+
+社会权力论与意识形态论
+
+
+
+    费尔巴哈是从宗教上的自我异化，从世界被二重化为宗教世界和世俗世界这一事实出发的。他做的工作是把宗教世界归结于它的世俗基础。但是，世俗基础使自己从自身中分离出去，并在云霄中固定为一个独立王国，这只能用这个世俗基础的自我分裂和自我矛盾来说明。因此，对于这个世俗基础本身应当在自身中、从它的矛盾中去理解，并在实践中使之革命化。因此，例如，自从发现神圣家族的秘密在于世俗家庭之后，世俗家庭本身就应当在理论上和实践中被消灭。
+    —— 《关于费尔巴哈的提纲》第四条
+
+
+
+我们已经讲读了费尔巴哈提纲的第一条、第二条、第三条。第一条是感性活动存在论，第二条是感性意识论，然后第三条，我们...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>「笔记」《论纲》五、马克思的历史观</title>
+    <link href="https://blog.rainsin.cn/posts/marx4/" rel="alternate" type="text/html" title="「笔记」《论纲》五、马克思的历史观" />
+    <published>2024-10-16T12:32:10+08:00</published>
+  
+    <updated>2024-10-16T12:32:10+08:00</updated>
+  
+    <id>https://blog.rainsin.cn/posts/marx4/</id>
+    <content src="https://blog.rainsin.cn/posts/marx4/" />
+    <author>
+      <name>rainsin</name>
+    </author>
+
+  
+    
+    <category term="哲学" />
+    
+    <category term="马克思" />
+    
+  
+
+  <summary>索引
+
+一、前置的准备阶段
+
+二、社会权力与法的权利的关系
+
+三、扬弃唯物与唯心的对立
+
+四、对认识论立场的超越
+
+五、马克思的历史观☑️
+
+六、社会权力论与意识形态论
+
+…
+
+切入社会制度之感性根基：马克思的历史观
+
+
+
+    关于环境和教育起改变作用的唯物主义学说忘记了：环境是由人来改变的，而教育者本人一定是受教育的。因此，这种学说一定把社会分成两部分，其中一部分凌驾于社会之上。环境的改变和人的活动或自我改变的一致，只能被看作是并合理地理解为革命的实践。
+    —— 《关于费尔巴哈的提纲》第三条
+
+
+
+那么下面我们就进入第三条，也就是我们这课程的第五讲。我们就用这句话来表达费尔巴哈提纲第三条的内容：切入社会制度之感性根基。这就是马克思的历史观。
+
+第三条批判的是法国唯物主义，特别是其中重要人物爱尔维修1，这是一个近代法国的唯物主义哲学家。爱尔维修有非常重要的论点，说：“人是环...</summary>
+
+  </entry>
 
   
   <entry>
@@ -144,58 +248,6 @@ UPDATES
 背景
 
 去年 5 月曾经写了一篇文章介绍了下 Lex Fridman 大佬的日常生活安排，后续我也根据他的方法对自己的日常生活做了一系列规范和改进。这一年整体实行下来，效果还是非常显著的，本文的最后会对我的一些实践以及...</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>「笔记」《论纲》四、对认识论立场的超越</title>
-    <link href="https://blog.rainsin.cn/posts/marx3/" rel="alternate" type="text/html" title="「笔记」《论纲》四、对认识论立场的超越" />
-    <published>2024-09-22T12:32:10+08:00</published>
-  
-    <updated>2024-10-12T17:50:36+08:00</updated>
-  
-    <id>https://blog.rainsin.cn/posts/marx3/</id>
-    <content src="https://blog.rainsin.cn/posts/marx3/" />
-    <author>
-      <name>rainsin</name>
-    </author>
-
-  
-    
-    <category term="哲学" />
-    
-    <category term="马克思" />
-    
-  
-
-  <summary>实践并不只是检验真理的唯一标准，实践是真理的源泉，这是实践在社会科学的范畴中的推论，如果我们把实践的定义扩充为「行干」的活动，则可以说实践就是真理。</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>「工具」一款好用的中文排版工具</title>
-    <link href="https://blog.rainsin.cn/posts/heti/" rel="alternate" type="text/html" title="「工具」一款好用的中文排版工具" />
-    <published>2024-09-08T12:32:10+08:00</published>
-  
-    <updated>2024-10-05T14:09:07+08:00</updated>
-  
-    <id>https://blog.rainsin.cn/posts/heti/</id>
-    <content src="https://blog.rainsin.cn/posts/heti/" />
-    <author>
-      <name>rainsin</name>
-    </author>
-
-  
-    
-    <category term="工具" />
-    
-    <category term="排版" />
-    
-  
-
-  <summary>我在冲浪的时候偶然发现的一个好用中文排版工具，我自己做了一个 markdown 里的使用的指令，要在浏览器里处理，我不熟悉 ruby，后面学一下看能不能在构建的时候就转换好，这样页面速度会好一点。</summary>
 
   </entry>
 

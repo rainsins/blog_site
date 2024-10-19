@@ -256,6 +256,51 @@ if(!sessionStorage.getItem("OS")){
 
 
 
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZFSB/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZKTK/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/simkai/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/STFANGSO/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/京華老宋体2/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/汇文明朝体/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/STSONG/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/HYKB/result.css"
+/>
+<script>
+const sss = ["FZKTB","FZKTK","STSONG","simkai","京華老宋体2","汇文明朝体"];
+
+sss.forEach((el,ind)=>{
+  isAppendCDN(`https://fonts.rainsin.cn/split/${el}/result.css`);
+});
+isAppendCDN(`https://fonts.rainsin.cn/HYKB/result.css`);
+</script>
  
 
 <link
@@ -332,12 +377,58 @@ s.forEach((el,ind)=>{
   </script>
 
    
+  
+  <link
+    rel="stylesheet"
+    href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/ionicons/4.4.1/css/ionicons.min.css"
+  />
    
    
+  
+  <link
+    rel="stylesheet"
+    href="/assets/css/heti-min.css"
+  />
+
+  <script>
+    window.load_event = {
+      ...window.load_event,
+      heti_title_style: () => {
+        const OS = sessionStorage.getItem("OS");
+        if (OS == "Linux") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-weight: 400;
+    }</style>`)
+          );
+        } else if (OS == "iOS" || OS == "Mac OS") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-family: "Times New Roman",times,"Heti Kai",serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      font-weight: 600;
+    }</style>`)
+          );
+        } else if (OS == "Android") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-weight: 600;
+    }</style>`)
+          );
+        } else {
+          console.log("哇！");
+        }
+      },
+    };
+  </script>
   
 
   <link rel="stylesheet" href="/assets/css/card-profile.css" />
 
+  
+  <script
+    type="text/javascript"
+    src="https://fastly.jsdelivr.net/npm/charch@0.1.0/charch.build.js"
+  ></script>
     
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -369,7 +460,7 @@ s.forEach((el,ind)=>{
   </style>
 
   
-  <meta name="keywords" content="rainsin, blog, 网站" />
+  <meta name="keywords" content="rainsin, blog, 哲学" />
   <meta name="author" content="rainsin" />
   
 
@@ -529,26 +620,26 @@ s.forEach((el,ind)=>{
 
                 <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="「集合」好玩的网站、工具" />
+<meta property="og:title" content="「笔记」《论纲》六、社会权力论与意识形态论" />
 <meta name="author" content="Rainsin Yu" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="网站（收集中。。。）" />
-<meta property="og:description" content="网站（收集中。。。）" />
-<link rel="canonical" href="https://blog.rainsin.cn/posts/fine/" />
-<meta property="og:url" content="https://blog.rainsin.cn/posts/fine/" />
+<meta name="description" content="索引" />
+<meta property="og:description" content="索引" />
+<link rel="canonical" href="https://blog.rainsin.cn/posts/marx5/" />
+<meta property="og:url" content="https://blog.rainsin.cn/posts/marx5/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-07-08T16:32:10+08:00" />
+<meta property="article:published_time" content="2024-10-18T12:32:10+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="「集合」好玩的网站、工具" />
+<meta property="twitter:title" content="「笔记」《论纲》六、社会权力论与意识形态论" />
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-05T14:09:07+08:00","datePublished":"2024-07-08T16:32:10+08:00","description":"网站（收集中。。。）","headline":"「集合」好玩的网站、工具","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/fine/"},"url":"https://blog.rainsin.cn/posts/fine/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-18T12:32:10+08:00","datePublished":"2024-10-18T12:32:10+08:00","description":"索引","headline":"「笔记」《论纲》六、社会权力论与意识形态论","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/marx5/"},"url":"https://blog.rainsin.cn/posts/marx5/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
-  <title>「集合」好玩的网站、工具 | Rainsin • Blog
+  <title>「笔记」《论纲》六、社会权力论与意识形态论 | Rainsin • Blog
   </title>
 
   <!--
@@ -914,7 +1005,7 @@ observer.observe(targetNode, config);
         
           
             
-              <span>「集合」好玩的网站、工具</span>
+              <span>「笔记」《论纲》六、社会权力论与意识形态论</span>
             
 
           
@@ -1023,6 +1114,18 @@ observer.observe(targetNode, config);
       
 
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
 
     
 
@@ -1030,113 +1133,6 @@ observer.observe(targetNode, config);
 
   
   
-
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-
-    
 
   
 
@@ -1158,7 +1154,7 @@ observer.observe(targetNode, config);
 
 
 
-<h1 data-toc-skip>「集合」好玩的网站、工具</h1>
+<h1 data-toc-skip>「笔记」《论纲》六、社会权力论与意识形态论</h1>
 
 <style>.post-meta .post-desc{font-size: 1.1rem;font-family: var(--decs-font) !important;line-height: 1.6;color: var(--heading-color);font-weight: 100 !important;}</style>
 
@@ -1178,42 +1174,18 @@ observer.observe(targetNode, config);
 
 <em
   class=""
-  data-ts="1720427530"
+  data-ts="1729225930"
   data-df="YYYY/MM/DD"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  2024/07/08
+  2024/10/18
 </em>
 
     </span>
 
     <!-- lastmod date -->
-    
-    <span>
-      更新于
-      <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1728108547"
-  data-df="YYYY/MM/DD"
-  
-    data-bs-toggle="tooltip" data-bs-placement="bottom"
-  
->
-  2024/10/05
-</em>
-
-    </span>
     
 
   
@@ -1260,9 +1232,9 @@ observer.observe(targetNode, config);
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="859 字"
+  title="8615 字"
 >
-  <em>4 分钟</em>阅读</span>
+  <em>47 分钟</em>阅读</span>
 
     </div>
 
@@ -1270,402 +1242,55 @@ observer.observe(targetNode, config);
 
 </div> <!-- .post-meta -->
 
-<div class="post-content        " id="post-content">
-  <h2 id="网站收集中"><span class="me-2">网站（收集中。。。）</span><a href="#网站收集中" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<div class="post-content  charch charch-indent  charch-cjk-latin-space charch-bracket-replace charch-link-space charch-line-height" id="post-content">
+  <h2 id="索引"><span class="me-2">索引</span><a href="#索引" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<h3 id="资源搜索"><span class="me-2">资源搜索</span><a href="#资源搜索" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p><a href="https://blog.rainsin.cn/posts/marx/" target="_blank">一、前置的准备阶段</a><br /></p>
 
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th style="text-align: left">名称</th>
-      <th style="text-align: left">简介</th>
-      <th style="text-align: left">链接</th>
-      <th style="text-align: center">是否科学</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">电影狗</td>
-      <td style="text-align: left">集合全网影视搜索引擎</td>
-      <td style="text-align: left"><a href="http://www.dianyinggou.com/" target="_blank">电影狗</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">不死鸟</td>
-      <td style="text-align: left">分享为王，类型很多</td>
-      <td style="text-align: left"><a href="https://iui.su/" target="_blank">不死鸟</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">SPlayer</td>
-      <td style="text-align: left">音乐播放器，估计也存在不久</td>
-      <td style="text-align: left"><a href="https://github.com/imsyy/SPlayer" target="_blank">SPlayer</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">万象搜索</td>
-      <td style="text-align: left">搜索各种类型的资源</td>
-      <td style="text-align: left"><a href="https://wwl.lanzout.com/b05l3d2fa" target="_blank">万象搜索</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">影视导航</td>
-      <td style="text-align: left">集合免费看电影电视剧的网站</td>
-      <td style="text-align: left"><a href="https://www.hifast.cn/favorites/zaixianyingshi" target="_blank">影视导航</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-  </tbody>
-</table></div>
+<p><a href="https://blog.rainsin.cn/posts/marx1/" target="_blank">二、社会权力与法的权利的关系</a><br /></p>
 
-<h3 id="无版权图片"><span class="me-2">无版权图片</span><a href="#无版权图片" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p><a href="https://blog.rainsin.cn/posts/marx2/" target="_blank">三、扬弃唯物与唯心的对立</a><br /></p>
 
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th style="text-align: left">名称</th>
-      <th style="text-align: left">简介</th>
-      <th style="text-align: left">链接</th>
-      <th style="text-align: center">是否科学</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">colorhub</td>
-      <td style="text-align: left">国内的高清图片网站</td>
-      <td style="text-align: left"><a href="https://colorhub.me/" target="_blank">colorhub</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">unsplash</td>
-      <td style="text-align: left">老牌网站了，活跃度高</td>
-      <td style="text-align: left"><a href="https://unsplash.com/" target="_blank">unsplash</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">pixabay</td>
-      <td style="text-align: left">也是老牌网站了，活跃度高</td>
-      <td style="text-align: left"><a href="https://pixabay.com/" target="_blank">pixabay</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">pexels</td>
-      <td style="text-align: left">有个精选模块</td>
-      <td style="text-align: left"><a href="https://www.pexels.com/" target="_blank">pexels</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-  </tbody>
-</table></div>
+<p><a href="https://blog.rainsin.cn/posts/marx3/" target="_blank">四、对认识论立场的超越</a><br /></p>
 
-<h3 id="奇怪的网站"><span class="me-2">奇怪的网站</span><a href="#奇怪的网站" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p><a href="https://blog.rainsin.cn/posts/marx4/" target="_blank">五、马克思的历史观</a><br /></p>
 
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th style="text-align: left">名称</th>
-      <th style="text-align: left">简介</th>
-      <th style="text-align: left">链接</th>
-      <th style="text-align: center">是否科学</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">达芬奇手稿</td>
-      <td style="text-align: left">天才手稿</td>
-      <td style="text-align: left"><a href="http://www.drawingsofleonardo.org/" target="_blank">达芬奇手稿</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">访问更多无聊网站</td>
-      <td style="text-align: left">访问更多的无聊网站使自己更无聊。</td>
-      <td style="text-align: left"><a href="https://theuselessweb.com/" target="_blank">访问更多无聊网站</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">animatedknots</td>
-      <td style="text-align: left">有关绳结🪢网站</td>
-      <td style="text-align: left"><a href="https://www.animatedknots.com/" target="_blank">animatedknots</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">纪妖</td>
-      <td style="text-align: left">中国妖怪百集</td>
-      <td style="text-align: left"><a href="https://www.cbaigui.com/" target="_blank">纪妖</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Fold N Fly</td>
-      <td style="text-align: left">教你折纸飞机</td>
-      <td style="text-align: left"><a href="https://www.foldnfly.com/" target="_blank">Fold N Fly </a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-  </tbody>
-</table></div>
+<p>六、社会权力论与意识形态论☑️<br /></p>
 
-<h3 id="文档书籍搜集"><span class="me-2">文档书籍搜集</span><a href="#文档书籍搜集" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<p>…</p>
 
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th style="text-align: left">名称</th>
-      <th style="text-align: left">简介</th>
-      <th style="text-align: left">链接</th>
-      <th style="text-align: center">是否科学</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">书格</td>
-      <td style="text-align: left">自由开放的古籍图书馆</td>
-      <td style="text-align: left"><a href="https://www.shuge.org/" target="_blank">书格</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">安娜的档案</td>
-      <td style="text-align: left">集合各种馆藏数据。</td>
-      <td style="text-align: left"><a href="https://zh.annas-archive.gs/" target="_blank">安娜的档案</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">鸠摩搜书</td>
-      <td style="text-align: left">文档搜索引擎</td>
-      <td style="text-align: left"><a href="https://www.jiumodiary.com/" target="_blank">鸠摩搜书</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">心晴</td>
-      <td style="text-align: left">在线的心理学书籍阅读网站</td>
-      <td style="text-align: left"><a href="http://www.ixinqing.com/" target="_blank">心晴</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">洛奇Town</td>
-      <td style="text-align: left">自动检测并更新Sci-Hub的可用镜像链接</td>
-      <td style="text-align: left"><a href="https://ifish.fun/paper/search" target="_blank">洛奇Town</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-  </tbody>
-</table></div>
+<h2 id="社会权力论与意识形态论"><span class="me-2">社会权力论与意识形态论</span><a href="#社会权力论与意识形态论" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-<h3 id="小工具"><span class="me-2">小工具</span><a href="#小工具" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th style="text-align: left">名称</th>
-      <th style="text-align: left">简介</th>
-      <th style="text-align: left">链接</th>
-      <th style="text-align: center">是否科学</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">HEU_KMS_Activator</td>
-      <td style="text-align: left">微软系激活工具</td>
-      <td style="text-align: left"><a href="https://github.com/zbezj/HEU_KMS_Activator/releases" target="_blank">HEU_KMS_Activator</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">汉字字源</td>
-      <td style="text-align: left">一个外国人的汉字字源网站</td>
-      <td style="text-align: left"><a href="https://hanziyuan.net/" target="_blank">汉字字源</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">汉语方言字典</td>
-      <td style="text-align: left">查查方言</td>
-      <td style="text-align: left"><a href="https://zh.voicedic.com/" target="_blank">汉语方言字典</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">以观书法</td>
-      <td style="text-align: left">查查毛笔碑帖、硬笔、集字</td>
-      <td style="text-align: left"><a href="https://web.ygsf.com/#/home?VNK=a2854203" target="_blank">以观书法</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">计算题</td>
-      <td style="text-align: left">心算练习器</td>
-      <td style="text-align: left"><a href="http://jisuanti.com/" target="_blank">计算题</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">中国色</td>
-      <td style="text-align: left">好看的颜色网站</td>
-      <td style="text-align: left"><a href="https://www.zhongguose.com/" target="_blank">中国色</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">joypixels</td>
-      <td style="text-align: left">一款表情包</td>
-      <td style="text-align: left"><a href="https://joypixels.com/" target="_blank">joypixels </a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">earthworm</td>
-      <td style="text-align: left">让你上瘾的英语学习工具</td>
-      <td style="text-align: left"><a href="https://earthworm.cuixueshe.com/" target="_blank">earthworm</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">OneDrive直链获取工具</td>
-      <td style="text-align: left">OneDrive直链获取工具</td>
-      <td style="text-align: left"><a href="https://onedrive.gimhoy.com/" target="_blank">OneDrive直链获取工具</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">mahjim</td>
-      <td style="text-align: left">这是一个用来快速生成麻将图案的工具</td>
-      <td style="text-align: left"><a href="https://github.com/black-desk/mahjim" target="_blank">仓库</a>、<a href="https://mahjim.black-desk.cn/" target="_blank">工具</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-  </tbody>
-</table></div>
-
-<h3 id="博主"><span class="me-2">博主</span><a href="#博主" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th style="text-align: left">名称</th>
-      <th style="text-align: left">简介</th>
-      <th style="text-align: left">链接</th>
-      <th style="text-align: center">是否科学</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">陶哲轩博客</td>
-      <td style="text-align: left">真是一个很厉害的人</td>
-      <td style="text-align: left"><a href="https://terrytao.wordpress.com/" target="_blank">陶哲轩</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">欧拉全集</td>
-      <td style="text-align: left">一个收录欧拉论文集的网站</td>
-      <td style="text-align: left"><a href="http://eulerarchive.maa.org/" target="_blank">欧拉全集</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-  </tbody>
-</table></div>
-
-<h3 id="游戏"><span class="me-2">游戏</span><a href="#游戏" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th style="text-align: left">名称</th>
-      <th style="text-align: left">简介</th>
-      <th style="text-align: left">链接</th>
-      <th style="text-align: center">是否科学</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">nsf小站</td>
-      <td style="text-align: left">红白机音乐</td>
-      <td style="text-align: left"><a href="https://nsf.nesbbs.com/#/" target="_blank">nsf小站</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">小霸王</td>
-      <td style="text-align: left">街机、FC游戏畅玩</td>
-      <td style="text-align: left"><a href="https://www.yikm.net/" target="_blank">FC游戏畅玩</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-  </tbody>
-</table></div>
-
-<h3 id="工具"><span class="me-2">🔞工具</span><a href="#工具" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th style="text-align: left">名称</th>
-      <th style="text-align: left">简介</th>
-      <th style="text-align: left">链接</th>
-      <th style="text-align: center">是否科学</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">xslist-AI识别🔞</td>
-      <td style="text-align: left">AI识别老师的图片</td>
-      <td style="text-align: left"><a href="https://xslist.org/" target="_blank">xslist</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">subtitlecat🔞</td>
-      <td style="text-align: left">找没有字幕的学习资料的字幕文件</td>
-      <td style="text-align: left"><a href="https://subtitlecat.com/" target="_blank">找字幕</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">javfilms🔞</td>
-      <td style="text-align: left">界面没那么拥挤</td>
-      <td style="text-align: left"><a href="https://javfilms.com/" target="_blank">JAVFILMS</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">JavDB🔞</td>
-      <td style="text-align: left">种子站</td>
-      <td style="text-align: left"><a href="https://javdb.com/" target="_blank">JavDB</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">JavLibrary🔞</td>
-      <td style="text-align: left">种子站</td>
-      <td style="text-align: left"><a href="https://www.javlibrary.com/cn/" target="_blank">JavLibrary</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Javbus🔞</td>
-      <td style="text-align: left">种子站</td>
-      <td style="text-align: left"><a href="https://www.javbus.com/" target="_blank">Javbus</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">搜番</td>
-      <td style="text-align: left">磁力搜索站</td>
-      <td style="text-align: left"><a href="https://za.sefan.cc/" target="_blank">搜番</a></td>
-      <td style="text-align: center">⚡</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">qBittorrent</td>
-      <td style="text-align: left">磁力下载工具</td>
-      <td style="text-align: left"><a href="https://www.qbittorrent.org/" target="_blank">官方版</a>、<a href="https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases" target="_blank">增强版</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">无🐎合集🔞</td>
-      <td style="text-align: left">如题</td>
-      <td style="text-align: left"><a href="https://mypikpak.com/s/VO1XEas7Flm8FlezPOa7k8EKo1" target="_blank">密码: g295</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Yandex搜图</td>
-      <td style="text-align: left">如题</td>
-      <td style="text-align: left"><a href="https://yandex.com/images?" target="_blank">Yandex</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Google搜图</td>
-      <td style="text-align: left">如题</td>
-      <td style="text-align: left"><a href="https://images.google.com/" target="_blank">Google</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">luvbp🔞</td>
-      <td style="text-align: left">中日韩写真下载网站，付费</td>
-      <td style="text-align: left"><a href="https://luvbp.com/" target="_blank">luvbp</a></td>
-      <td style="text-align: center">🪜</td>
-    </tr>
-  </tbody>
-</table></div>
-
-<blockquote class="prompt-warning">
-  <p>来几句日语警告：全部俺に任せて，あたしの奥に，そんな事が话せゐか？はつかし。そこ…駄目，紧张しなぃで，力をぬぃで。気持ちいい，すごい，全部俺に任せて。</p>
+<div class="blockquote-sep-box">
+<blockquote class="blockquote-sep">
+    <p>费尔巴哈是从宗教上的自我异化，从世界被二重化为宗教世界和世俗世界这一事实出发的。他做的工作是把宗教世界归结于它的世俗基础。但是，世俗基础使自己从自身中分离出去，并在云霄中固定为一个独立王国，这只能用这个世俗基础的自我分裂和自我矛盾来说明。因此，对于这个世俗基础本身应当在自身中、从它的矛盾中去理解，并在实践中使之革命化。因此，例如，自从发现神圣家族的秘密在于世俗家庭之后，世俗家庭本身就应当在理论上和实践中被消灭。</p>
+    <cite>—— 《关于费尔巴哈的提纲》第四条</cite>
 </blockquote>
+</div>
+
+<p>我们已经讲读了费尔巴哈提纲的第一条、第二条、第三条。第一条是感性活动存在论，第二条是感性意识论，然后第三条，我们讲了马克思的历史观，环境的改变和人的活动的一致应当被理解为革命的实践。整个人类社会的演变的过程就是一个革命实践的过程。这样就走出了爱尔维修的那个循环，人是环境的产物，环境又是人所改变、所创造的。这样一个循环打破了，这是马克思哲学革命的一个非常重要的方面，一种历史观。我们借助了佛家的观念，叫“业力”的流转。佛家讲，人的活动一方面是“受业”，一方面是“造业”，“受业”与“造业”的统一。每一代人的活动与前一代人的关系，每一代人的活动跟后一代人的关系，马克思用了一个非常简明的语言，叫革命的实践。如何来理解？我们借助了佛学讲这个“受业”，就是前一代人的活动的结果成了后一代人活动的前提，同时后一代人的活动呢，又在改变着这个前一代人活动的结果，那叫造了新“业”。每一次这样的“受业”和“造业”的统一都是一次变革。实践本质上是革命性的，因为我们曾经讨论过，西方哲学中实践这个概念，它不是说光说做事情就等于实践，是吧？实践是创造或改变社会关系的活动。每一次社会关系的改变都是一次革命。然后现在我们就进入第四条，费尔巴哈论纲的第四条，我们给一个小标题，就是社会权力论与意识形态论。</p>
+
+<p>我们这课程一开始就说马克思发现了社会权力，然后我们说马克思的历史唯物主义其实就是关于社会权力的哲学，用英语表达就是philosophy of social power。那么我们特别强调了“权力”这概念跟“权利”这概念的区分。权利是法的概念，法哲学的概念right。用英语来说，就是power（权力）和right（权利）的关系。那么我们已经明确地认识到，马克思说对了，power（权力）决定right（权利），理性前的或非理性的权力决定了法的上层建筑，所谓right（权利）。那么这个箭头，决定是如何决定的？这意识形态。那么意识形态的主要形式是什么？哲学或宗教，这是意识形态的形式。费尔巴哈从批判宗教开始的，跟马克思实际上是同时代人，对德国的现状要加以突破。当时德国在现代化进程中滞后于英国和法国，德国还有许多的封建统治和容克地主的权力。所以德国思想界对德国现状的批判走了一条哲学的路。就像德国当初进入近代是由一位伟大的宗教家马丁·路德，德国人，创立新教。所以德国进入现代化进程的第一步，在意识形态领域里边就是新教的创立。那么现在批判德国的现状仍然在意识形态领域里边，在哲学的领域里边，费尔巴哈是典型的人物之一。</p>
+
+<p>所以马克思一开始就说了，这第四条，一开始就说费尔巴哈展开了一场宗教批判。费尔巴哈的宗教批判的思想基本的立足点就是说宗教是人的自我异化。人把自己的本质的东西从自身那里异化出去，交付给上帝。其实上帝的所有特性、能力，费尔巴哈说，其实是人自身的能力、自身的性质。人把属人的东西交给了在人之外、高于人的上帝了，这叫宗教上的人的自我异化。把人的本质、人的力量异化为上帝，这就是这里所说的宗教上的自我异化。谁在异化？人自我异化，人通过宗教自我异化。这实际上就是一件什么事呢？就把世界分为两种世界，世界被二重化为宗教的、想象的世界，这是一个世界，还有一个现实世界。费尔巴哈的宗教批判就从这个事实出发。</p>
+
+<p>然后费尔巴哈要做一件事情，就是把属于宗教的世界，属于上帝和天国的东西，本属于人。所以马克思说，现实世界其实是宗教世界的世俗的基础。然而费尔巴哈的宗教批判要求把宗教的、属于宗教世界的东西还给什么？现实世界，还给人自身。这一点，合的进步的思想，有价值的思想。但是马克思接着就要批判费尔巴哈。马克思这么说，看来这工作是需要做的，由费尔巴哈完成了，但这并不是主要的事情。那么什么是主要的事情呢？底下马克思说了，这件事情是费尔巴哈已经加以指出的，宗教世界的全部内容其实都来自它的世俗的基础，即现实世界。那么现实世界把自己跟自己分离了，然后让自己转入云端，成为一个独立王国。现在的主要的事情是什么？这样的一个被费尔巴哈揭示出来的事实要怎么理解呢？怎么会有这样的事情呢？人为什么会通过宗教的形式来自我异化呢？为什么把属人的本质的力量都交给了超越人的神或者说上帝呢？这件事情怎么来的？就是人的自我异化是怎么会发生的？人不会莫名其妙地想象把自己的能力交给一个超越的神，这种想象有根源的，这种宗教上的自我异化是有根源的，根源不在于人的想象，根源在于人所生活于其中的那个现实世界，自身分裂了，自身矛盾了。这叫现实世界自身的分裂和矛盾。这个自我分裂，就是这个现实世界本身有社会权力，人与人的关系在社会权力的形式中，部分人支配另一部分人。这是人自己的现实世界的分裂和矛盾。所以他（马克思）实际上说出了social power（社会权力），这是一种人与人之间的非理性的冲突、矛盾，是吗？统治、被统治。因为现实世界自身矛盾，也就是它在它的社会权力中存在，现实世界在社会权力的方式中存在。所以如何认识这个世俗基础？如何认识这个现实世界？就应当从它的矛盾中去理解。什么是现实世界的矛盾？社会权力。你费尔巴哈光揭示宗教的幻想，宗教上的自我异化，人在宗教上的自我异化，没用，他还始终在意识形态领域里。问题的实质是什么？这个世界本应当被改变，要排除这个世界的矛盾，也就是要排除这个世界的社会权力。</p>
+
+<p>社会权力不是观念，它沉默无声，就像我上次举的一个简单的例子，假如我王德峰口袋里有那么多超出我个人和家庭消费需要之外的货币都装在我口袋里，各位一个个囊中如洗，结果会怎么样？有同学回答说，结果大家一起来抢我的钱。那我说这叫无产阶级革命。但是政治权力在那里呢？军队、警察、监狱，法律的规定也在那里呢，所以我就不怕，是吧？什么叫经济基础决定上层建筑？社会权力决定什么？权利体系right，是吧？所以我这不怕的。那么在这种情况没发生的前提下，会发生另外一种情况，我走到哪里，各位跟到哪里，不断地唠唠不休地跟我讲，这个钱不能放在口袋里的，我说我喜欢放在口袋里，不行，我说为什么不行？你应该拿它来投资，或投资实体经济，或投资资本市场，叫金融，我说我这些事都不会干，你不会干，我们都会干。这意味着什么？因为你一个个囊中如洗，这意味着什么？你们却承认了我口袋里多出来的那么多货币是一种权力，什么权力？可以支配你们一部分生命时间。你们争着要求我雇佣你们，这就叫social power（社会权力）。你们必须把你们的一部分生命时间交给这个权力，它不说话的。我口袋里的货币沉默，没发表过任何意见，它沉默，它是感性的力量，不是观念。然后你们开始发表观念，发表那种雇佣劳动的观念，是吧？发表我口袋里的钱作为一种私有财产，第一不可侵犯，第二它是力量，承认了。所以这不是观念的问题，是我与你们之间的关系作为人的关系当中已经有了矛盾、分裂。它是现实的，怎么办？只有在实践中使之革命化。</p>
+
+<p>所以最后一句话，我们看到这样说，马克思讲，这是一个比喻了，现实世界人与人的关系叫世俗家庭。那个宗教所构造的人与人的关系叫神圣家族。神圣家族的秘密在哪里？在世俗家庭里，在人的现实的实际关系当中。既然这一点明白了，也就是现实世界，马克思从事这种批判，费尔巴哈只是从事宗教批判。马克思从事什么？现实世界的批判，是吧？这是马克思学说。但光是马克思学说行吗？从这个第四条当中我们看到什么？看到马克思讨论了社会权力和意识形态的关系。费尔巴哈所批判的，人在宗教上的自我异化始终还在意识形态的范围内。你怎么批判，都带来不了这个现实世界的进步。你只是说，宗教所构造的世界是人自己幻想出来的，人应该把自己幻想出来的这个上帝的本质收回来，交给人自己，那么世界就进步了。这就是费尔巴哈的想法，对宗教进行批判，并不能带来世界的进步，现实世界的进步。第一要揭示宗教的异化，根源在于现实世界的自我分裂，那叫社会权力。有怎样的社会权力，就有怎样的意识形态。所以费尔巴哈虽然从事了宗教批判，但是这个批判终究也是完成不了自己的，要揭示宗教异化的根源才行。这个根源就是现实世界，它自身如何自我分裂的。揭示了这一点，便会带来在马克思看来会带来现实世界的自我批判。这自我批判不是观念，就是社会革命。社会革命就是现实世界的自我批判。所以马克思绝对不会停留在意识形态批判的领域里边，光是批判旧哲学，光是批判宗教，不是。问题在于改变世界。你批判旧哲学，批判宗教，也是换一种方式来解释世界而已，换一种方式解释世界就是重新承认这现实的世界，而不去触动它。</p>
+
+<p>于是马克思实际上提出了与费尔巴哈不同的异化理论。费尔巴哈把人的异化看成是宗教上的自我异化，而马克思揭示了人在现实世界中的自我异化。什么叫自我异化？在费尔巴哈那里，他也提出人的自我异化这个概念，人怎么自我异化的？把自己的本质交给上帝，这叫宗教形式中的自我异化。而在马克思看来，在宗教形式中的自我异化来自人在现实世界中的感性世界中的自我异化。那么，人在感性上的自我异化是什么呢？</p>
+
+<p>我们先说明对人的自我异化的两种不同的理解。一种是费尔巴哈的，人的自我异化是人在宗教上的，在宗教形式中的自我异化，把属人的东西交给了神。上帝是全知全能的至善的，所谓全知全能至善，全属于人自己原本拥有的力量。这是类的力量，人作为一个类存在，类存在在每个人身上都存在着。比方说我们每一个人，都不是单独生活在这个世界上，我们只要生活在这个世界上，一定处在与他人的关系中。我们是社会存在物。那么人与人的交往，就形成一种超出每一个个体的社会力量。是不是同意这一点？这个社会力量在哲学上，在西方近代哲学中表达为“类”，人的类存在，类力量。先了解这个概念。我们拿生物学来说类吧，比方说马是个类，张三家里的那匹黄马是个别的马，但它属于马类。就马这个类，在这匹个别的张三家里的黄马上得到体现，然后这匹个别的马是被马类所规定的。这个类是自然界的一种现成的存在形式，生物界的一种现成的存在形式，叫一种物种，马。然后就有个别的马体现这个马类，马之类。那么个人也一样，每一个个人是人类的一个成员，但是人与人类之间的关系可不同于个别的马与马类的关系。不一样在哪里？人作为类的存在不是自然界现成规定的。如果我们是自然界现成给的，那么我们跟其他动物、物种就没差别，人就没有历史，人也没有文明的不断展开和发展。上帝并没有把人作为一种类，一种物种的类先已规定好，然后世世代代的人都一样。不一样吧？世世代代的工蜂只制造同样的蜂房，这倒没错。不同世代的人不断地在改变着自然界，创造出人自己的文明来。所以这种类力量是历史的，这种类的力量是通过人与人的交往来形成和展开的。所有的劳动都是社会性的，单个人面对自然界的活动不可能是劳动。劳动一开始就是社会的活动。这一点明白了，也就意味着人的类存在和类力量是在人与人的社会交往中形成发展的。</p>
+
+<p>那么什么叫人的自我异化呢？人把自己的类力量跟自己的个体分离开来，让类力量在个体之外，反过来支配每一个个体，这就叫人的自我异化。费尔巴哈指出，人把自己的类力量从个体区分出来，分离出来，交给了神，交给了上帝，于是人服从上帝，被上帝所支配。而马克思说，这件事情怎么会这样的呢？人为什么把自己的类的本质、类的属性、类的力量托付给一个上帝呢？它的根源在于人已经把自己的类力量与个体先分离开来了，然后支配个体。它是感性的类力量，不是观念的。我们首先要说明的是，类存在是感性的。比方说我们每一个人都需要他人，我王德峰戴的这副眼镜不是我自己制造的吧？我穿的这双皮鞋也是他人生产的吧？我穿的服装又是别人制造的吧？甚至我吃的饭，如果不是我自己烹饪的话，如果我不是自己烹饪，那么厨师烹饪给我吃。人与人之间就这样彼此创造，彼此创造。这本应该带来人与人之间的合作，人与人彼此之间在对方身上实现自己。就像贝多芬创造了交响曲，让我王德峰听了吧，那么这个交响曲我听懂了，我进去了，后来我发现，就好像这交响曲是我写的。那么贝多芬一定很高兴，我通过这部交响曲把王德峰做成了音乐家了。诗人通过他的伟大诗作把我们每一个欣赏这首诗的人做成了诗人。我们心中的那种情感自己没能力表达，你知道吧，这情感是我本来有的，结果那首诗表达了，那么这个诗的作者通过那首诗把我做成诗人了。我们人与人之间就是这样，在个体和精神两个方面彼此创造。这种创造产生的力量是类力量，同时又属于我们每一个个体，没有跟我们分离。但是，倘若我要听到贝多芬的音乐，我必须花钱的话，那就是说类力量，贝多芬为类力量的一个方面做出了贡献，他跟我疏离，反过来，我如果要达到这个类的财富，我必须要有货币，是吧？假如我不听音乐也活的下去，这倒是真的，但是不是作为人活着。假如我要生存，我需要食物，但是我口袋里没钱，你有多出来的一块面包，值一个美元，我口袋里没有一个美元，我就饿死吧，是吧？</p>
+
+<p>就货币成为这样一个，人与人的关系的一个被物化了的中介，被物化了的人与人的关系。拜金主义就这么来的呀。我们为什么崇拜货币呢？因为每个人没有货币不行。钱不是万能的，但没有钱是万万不能的，你都活不下去的。我们对钱的需要表明我们对他人的需要，同意吧？对他人的活动和他人的活动的成果的需要。我多么希望自己像鲁滨逊一样漂流到一个孤岛上去呢，当然我的前提是，《鲁滨逊漂流记》是虚构的故事。鲁滨逊漂流到一个孤岛上还能继续生活，因为他携带着什么？他先前获得的社会的力量，有那个船，有那些文明的成果，他才能继续活了。先前还是社会的力量，类的力量。那么现在每一个个体要进入类财富、类力量当中有一个中介——货币。我们对货币的需要表明人对自己的社会存在是真实的感受，对他人有不可遏制的需要，对他人的活动，他人的创造，他人的活动的成果有不可遏制的需要。但是我们实现人与人的相互需要的方式却是以人与人相对抗的方式。你口袋里钱多了，我口袋里就钱少了。在货币的关系当中，人与人之间一定是互相对抗的。在这个意义上，这个货币在今天能增殖的货币叫资本，就是对抗性的人与人的关系。所以它叫power社会权力。马克思要讨论的是这个层面上的人的自我异化。费尔巴哈讨论的是意识形态宗教层面上的自我异化。宗教层面上的自我异化根源于什么？人在感性存在上的自我异化。</p>
+
+<p>货币是人的力量，是吧？它是社会财富之一般代表。通过货币，我们彼此实现了相互需要，但是以对抗的方式产生来实现相互需要，这才是事情的真相。同样讨论异化，讨论人的自我异化，马克思进入了人的感性存在的层面。在这里我要顺带说明一下，感性存在和肉体存在不是同一个概念。我有一个胃，我要吃饭，这只是说出了我的肉体存在。但是我必须吃属人的食物，要么广东菜，要么法国大菜，或者宁波菜，这是我的感性存在。假如我只是茹毛饮血，把现成的自然物作为食物吃下去，这只能表明我的肉体存在。我穿衣服是我的感性存在，我赤身裸体这叫肉体存在。明白这意思吧？我对异性有一种不可遏制的性欲的要求，假如没有爱情呢，我的性活动，性欲的满足只是肉体存在。倘若我在爱情中跟异性交往，这就是我作为人的感性存在。好，我们区分了，再比方说，说得更粗鲁一点，假如一个人随地大小便，那叫他的肉体存在；假如我们上的是公厕，这叫他的感性存在。动物没有感性存在，动物只是肉体存在，人才有感性存在。在人的感性存在中，有他人在场吧？我穿着这件衬衫，他人就在场了，因为它不是天然的自然物，它是被人加工过的，人的感性活动的成果。现在我穿着呢，让我作为人成其为人了，否则我就是赤身裸体的肉体。要谈论异化，就要在感性存在层面上谈论类的力量如何脱离个人，反过来支配个人。</p>
+
+<p>今天当代人类文明的类的力量的异化就是资本。资本是类力量，各位，感性的类力量。资本代表着你拥有足够的资本，你可以获取足够的他人劳动的成果吧？不就是类力量吗？现在它作为资本的样态存在的话，这种类力量是不是支配每一个个体的？包括支配拥有资本的资本家，他也被这个异化了的类力量所支配。从这一点，劳动者和资本家都可怜得很。整个我们处在一个异化的时代。这异化就是资本作为类力量跟每一个个体分离，反过来统治人类个体。资本就是今天的统治力量。当然我们不是简单的批判和否定它，也不是仅仅从道德上批判它，这是恶，不，马克思对资本的讨论从来不把它作为恶来讨论，而作为人类物质生产方式必经的一个阶段。在这个阶段上，资本有伟大的文明作用。在《资本论》第三卷里边，马克思讲的非常清楚，有三个伟大的文明作用。一个是它极大地提高了劳动生产效率，因为资本增殖的方式要求什么？把技术运用到生产中去，这是第一个文明作用。人类在历史上还从来没有像今天这样以如此高的效率创造那么多物质财富，这第一个文明作用；第二个文明作用是什么？它扩大了每一个个人的社会交往的范围，把个人的社会性存在大大地扩大起来。没有资本带来世界历史，许多的人类个体都是终生在一个狭窄的地理环境中生活，就像一个人一辈子不离开山区，就社会化程度很低。现在的社会化程度高到什么程度呢？高到有了互联网了，我们在家里戴着睡帽，穿着拖鞋，在电脑面前一坐，用我们十个手指就进入了哈佛图书馆。人类文明的任何一个地方发生的创造的成果很快就成为全体人类可以共享的。在资本主义以前呢，人类狭隘的地域般的存在，地域般的存在让不同的地方同样的文明创造重复发生。现在不需要重复发生，一个地方文明冲过来了，很快成为全体人类的共享的东西。这就社会化程度。第三，资本要不断打开新的增殖的领域，增殖的空间。资本增殖空间一定是某种新的使用价值的发现。比方说，古代的皇帝可以过奢侈的生活，但他不可能看电视吧？不可能拥有冰箱吧？还有iPad，他们不可能享用这一切。这种新的使用价值的领域是资本为了不断开辟新的资本增殖领域而不断打开的。通过科技的发展，我们的使用价值，物质财富的无限多样化。以前人类的物质财富是局限在若干种最基本的生存需要之上的，一个粮食，一个布匹，丰衣足食，良田万顷就好了。现在的使用价值领域多么丰富。那么这些都是资本来到人间带给这个社会的物质文明方面的巨大进步，为将来的人类个体的全面发展准备好了物质要素。我们在某种意义上都是全面发展的，这个也行，当然不是异化的方式，也并没有达到真正的全面发展，但是它准备好了条件。就三大文明作用，我要补充说明这一点，不要误解马克思对资本主义的批判，这种批判不是道德上否定资本主义，把它判定为恶的东西，但马克思确认了这是一种人与人的对抗性的社会关系。这点毫无疑问，资本是当代人类的对抗性的生产关系。这种生产关系的对抗，对抗性的生产关系只要继续存在，人类社会的战争就不可避免。现代战争都是为资本增殖开辟道路的，国与国的，民族与民族的，或者国内的战争，国内的战争就是阶级斗争。所以这些有根源，就是现代社会权力就是资本。马克思揭示了整个人类的现实世界的基础就是这种社会权力对抗性的关系，这叫人的世界的自我分裂，自我矛盾。人类未来的进步只能是通过什么？在理论上批判这个现实世界的异化，同时在实践中使之革命化，清除、消除一切社会权力。一旦达到这一点——这是马克思后来讲的，真正的人类社会开始了。我们现在的人类社会，从古代到今天的人类社会是真正人类社会的什么？史前阶段。虽然我们向来都在社会中，但我们向来都不是在真正的人类社会中。真正的人类社会人与人的交往是非对抗性的，类力量是每一个个体可以直接进入其中的，类与个体不分离。人与人的交往，感性的交往，带来了感性的类存在。那么每一个个体应当把类存在看成是自我享受吧？作为人的自我享受。但现在不，类力量是统治我们，支配我们的。我们还没有来得及真正享受我们的类力量，我们已经为这个类力量付出我们生命的大部分时间，就是为资本增殖而奋斗。那么现在少数人悟到这一点了，那么钱，大概有一点就算了，不要在资本市场上继续奋斗了。一个梦想，现在有的人当然有，就是我一旦达到财务自由，直接享用类力量，比方说精神享用，到复旦来听哲学课，到音乐学院去听音乐课，这就是很好。这是少数人的幸运，而且也不牢靠你知道吧？财务自由什么时候真正实现了？不知道的。因为你的货币也在资本市场上上上下下呢。于是你不理财，财不理你呢。这就人类现在的尴尬。如果能达到像比尔·盖茨这样的曾经是世界首富的财富的话，他这辈子肯定钱用不完，下辈子也用不完。他完全可以提前实现马克思所说个人的全面发展，自由全面的发展。但大多数人不可能。我这是举这些例子来说明什么？我们不得不为资本这种异化了的类力量贡献我们的一生。我们过的就是异化的生活。而马克思期待的是把这个现实世界的自我分裂，第一在理论上揭示，第二在实践中改造，终于迎来一个什么？人类解放。马克思提出了人类解放的宏大话语，宏大叙事，叫解放的话语。这一点直到今天被许多人看成是乌托邦，不现实的。他们认为资本主义仿佛认为资本主义是最合理的经济关系，生产方式，它应当不朽，但这不可能。关于第四条我们就讲到这里。</p>
 
 </div>
 
@@ -1676,8 +1301,8 @@ observer.observe(targetNode, config);
   <div class="post-meta mb-3">
     <i class="far fa-folder-open fa-fw me-1"></i>
     
-      <a href='/categories/%E7%BD%91%E7%AB%99/'>网站</a>,
-      <a href='/categories/%E5%AF%BC%E8%88%AA/'>导航</a>
+      <a href='/categories/%E5%93%B2%E5%AD%A6/'>哲学</a>,
+      <a href='/categories/%E9%A9%AC%E5%85%8B%E6%80%9D/'>马克思</a>
   </div>
   
 
@@ -1686,8 +1311,8 @@ observer.observe(targetNode, config);
   <div class="post-tags">
     <i class="fa fa-tags fa-fw me-1"></i>
       
-      <a href="/tags/%E7%BD%91%E7%AB%99/"
-          class="post-tag no-text-decoration" >网站</a>
+      <a href="/tags/%E5%93%B2%E5%AD%A6/"
+          class="post-tag no-text-decoration" >哲学</a>
       
   </div>
   
@@ -1721,7 +1346,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E9%9B%86%E5%90%88%E3%80%8D%E5%A5%BD%E7%8E%A9%E7%9A%84%E7%BD%91%E7%AB%99%E3%80%81%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog&url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Ffine%2F"
+        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E7%AC%94%E8%AE%B0%E3%80%8D%E3%80%8A%E8%AE%BA%E7%BA%B2%E3%80%8B%E5%85%AD%E3%80%81%E7%A4%BE%E4%BC%9A%E6%9D%83%E5%8A%9B%E8%AE%BA%E4%B8%8E%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81%E8%AE%BA%20-%20Rainsin%20%E2%80%A2%20Blog&url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fmarx5%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Twitter"
@@ -1734,7 +1359,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E9%9B%86%E5%90%88%E3%80%8D%E5%A5%BD%E7%8E%A9%E7%9A%84%E7%BD%91%E7%AB%99%E3%80%81%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog&u=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Ffine%2F"
+        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E7%AC%94%E8%AE%B0%E3%80%8D%E3%80%8A%E8%AE%BA%E7%BA%B2%E3%80%8B%E5%85%AD%E3%80%81%E7%A4%BE%E4%BC%9A%E6%9D%83%E5%8A%9B%E8%AE%BA%E4%B8%8E%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81%E8%AE%BA%20-%20Rainsin%20%E2%80%A2%20Blog&u=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fmarx5%2F"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Facebook"
@@ -1747,7 +1372,7 @@ observer.observe(targetNode, config);
     
       
       <a
-        href="https://t.me/share/url?url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Ffine%2F&text=%E3%80%8C%E9%9B%86%E5%90%88%E3%80%8D%E5%A5%BD%E7%8E%A9%E7%9A%84%E7%BD%91%E7%AB%99%E3%80%81%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog"
+        href="https://t.me/share/url?url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fmarx5%2F&text=%E3%80%8C%E7%AC%94%E8%AE%B0%E3%80%8D%E3%80%8A%E8%AE%BA%E7%BA%B2%E3%80%8B%E5%85%AD%E3%80%81%E7%A4%BE%E4%BC%9A%E6%9D%83%E5%8A%9B%E8%AE%BA%E4%B8%8E%E6%84%8F%E8%AF%86%E5%BD%A2%E6%80%81%E8%AE%BA%20-%20Rainsin%20%E2%80%A2%20Blog"
         data-bs-toggle="tooltip"
         data-bs-placement="top"
         title="Telegram"
@@ -2830,22 +2455,21 @@ observer.observe(targetNode, config);
 <div class="post-navigation d-flex justify-content-between">
   
     <a
-      href="/posts/cube/"
+      href="/posts/marx4/"
       class="btn btn-outline-primary"
       prompt="上一篇"
     >
-      <p>「教程」魔方练习中的各种工具</p>
+      <p>「笔记」《论纲》五、马克思的历史观</p>
     </a>
   
 
   
-    <a
-      href="/posts/niannian/"
-      class="btn btn-outline-primary"
+    <div
+      class="btn btn-outline-primary disabled"
       prompt="下一篇"
     >
-      <p>「神秘」年年的高雅集</p>
-    </a>
+      <p>-</p>
+    </div>
   
 </div>
    <!--  The comments switcher -->
@@ -3883,9 +3507,22 @@ observer.observe(targetNode, config);
 </footer>
 
 
+<script src="/assets/js/heti.js"></script>
 
 
 
+  <script type="text/javascript">
+  Charch(document);
+  </script>
+
+
+
+<script src="https://s4.zstatic.net/ajax/libs/heti/0.9.4/heti-addon.min.js" integrity="sha512-GChf2qekcjrSoPicCypQLPqkaZkEnkcsJr85AmkczY0HG5SkfbxOmZY6RoFJLdoeKTGk8EZvkRBaF7BIqV1Ipw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  const heti_addon = new Heti('.heti');
+  heti_addon.autoSpacing();
+</script>
 
 
     <div id="mask"></div>
