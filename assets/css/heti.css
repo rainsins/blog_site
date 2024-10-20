@@ -1214,3 +1214,11 @@ html[data-mode="dark"] .heti blockquote {
 .heti--huiwen {
     font-family: "Huiwen-mincho" !important;
 }
+
+.heti--pad1{
+    padding: 1em;
+}
+
+.heti--borderd3{
+    border: 1px solid #d3d3d3;
+}
