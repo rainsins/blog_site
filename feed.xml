@@ -4,7 +4,7 @@
   <id>https://blog.rainsin.cn/</id>
   <title>Rainsin • Blog</title>
   <subtitle>rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）</subtitle>
-  <updated>2024-10-20T18:59:19+08:00</updated>
+  <updated>2024-10-20T21:42:06+08:00</updated>
   <author>
     <name>rainsin</name>
     <uri>https://blog.rainsin.cn/</uri>
@@ -24,7 +24,7 @@
     <link href="https://blog.rainsin.cn/posts/marx5/" rel="alternate" type="text/html" title="《费尔巴哈论》六、社会权力论与意识形态论" />
     <published>2024-10-19T12:32:10+08:00</published>
   
-    <updated>2024-10-20T18:59:00+08:00</updated>
+    <updated>2024-10-20T21:41:52+08:00</updated>
   
     <id>https://blog.rainsin.cn/posts/marx5/</id>
     <content src="https://blog.rainsin.cn/posts/marx5/" />
@@ -52,7 +52,7 @@
 
 五、马克思的历史观
 
-六、社会权力论与意识形态论☑️
+六、社会权力论与意识形态论√
 
 …
 
@@ -66,6 +66,7 @@
 }
 }}
 
+
 ...</summary>
 
   </entry>
@@ -76,7 +77,7 @@
     <link href="https://blog.rainsin.cn/posts/marx4/" rel="alternate" type="text/html" title="《费尔巴哈论》五、马克思的历史观" />
     <published>2024-10-16T12:32:10+08:00</published>
   
-    <updated>2024-10-20T18:59:00+08:00</updated>
+    <updated>2024-10-20T21:41:52+08:00</updated>
   
     <id>https://blog.rainsin.cn/posts/marx4/</id>
     <content src="https://blog.rainsin.cn/posts/marx4/" />
@@ -102,7 +103,7 @@
 
 四、对认识论立场的超越
 
-五、马克思的历史观☑️
+五、马克思的历史观√
 
 六、社会权力论与意识形态论
 
@@ -119,7 +120,7 @@
 }}
 
 
-那么下面我们就进入第三条，也就是我们这课程的第五讲。我们就用这句话来表达费尔巴哈提纲第三条的内容：切入社会制度之感性根基。这就是马克思的历...</summary>
+那么下面我们就进入第三条，也就是我们这课程的第五讲。我们就用这句话来表达费尔巴哈提纲第三条的内容：切入社会制度之感性根基。这就是马克思的历史...</summary>
 
   </entry>
 
@@ -129,7 +130,7 @@
     <link href="https://blog.rainsin.cn/posts/blue/" rel="alternate" type="text/html" title="「心情」我的心，我的心，蓝蓝的。" />
     <published>2024-10-10T13:23:00+08:00</published>
   
-    <updated>2024-10-19T19:48:01+08:00</updated>
+    <updated>2024-10-20T21:41:52+08:00</updated>
   
     <id>https://blog.rainsin.cn/posts/blue/</id>
     <content src="https://blog.rainsin.cn/posts/blue/" />

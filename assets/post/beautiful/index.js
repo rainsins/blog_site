@@ -54,6 +54,7 @@ const questions = [
         ans: "\\frac{e}{2}",
         ans1: "\\frac{1}{2}e",
         ans2: "e",
+        ans3: "e/2",
     },
 ];
 
@@ -126,7 +127,7 @@ function Question({ lat }) {
     React.useEffect(() => {
         let math3 = document.getElementsByClassName("show-ans-latex");
         MathJax.typeset(math3);
-        if (latexData === lat.ans || latexData === lat.ans1 || latexData === lat.ans2 ) {
+        if (latexData === lat.ans || latexData === lat.ans1 || latexData === lat.ans2 || latexData === lat.ans3 ) {
             setAns(true);
         }
     }, [latexData]);
@@ -213,6 +214,7 @@ function MathCom() {
     }, []);
 
     return (
+        <>
         <div className="question-boxs">
             {q_item}
             <h3 id='提示'>提示（第一题）</h3>
@@ -282,7 +284,9 @@ function MathCom() {
             <p>
             这样就可以得出答案了。上面的无穷小等价在求极限时很有用，如果你要考研的话可以记一记。
             </p>
-        </div>
+            </div>
+            
+        </>
     );
 };
 
