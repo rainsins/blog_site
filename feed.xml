@@ -4,7 +4,7 @@
   <id>https://blog.rainsin.cn/</id>
   <title>Rainsin • Blog</title>
   <subtitle>rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）</subtitle>
-  <updated>2024-10-22T14:31:11+08:00</updated>
+  <updated>2024-10-23T13:49:29+08:00</updated>
   <author>
     <name>rainsin</name>
     <uri>https://blog.rainsin.cn/</uri>
@@ -17,6 +17,61 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl</title>
+    <link href="https://blog.rainsin.cn/posts/ssl-certbot/" rel="alternate" type="text/html" title="「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl" />
+    <published>2024-10-23T13:48:10+08:00</published>
+  
+    <updated>2024-10-23T13:49:09+08:00</updated>
+  
+    <id>https://blog.rainsin.cn/posts/ssl-certbot/</id>
+    <content src="https://blog.rainsin.cn/posts/ssl-certbot/" />
+    <author>
+      <name>rainsin</name>
+    </author>
+
+  
+    
+    <category term="解决问题" />
+    
+  
+
+  <summary>以前我的树莓派的SSL一直需要我在51SSL上手动申请，然后下载证书到服务器，比较麻烦。最近借着证书到期部署了一下certbot来完成申请证书的操作，记录一下过程。
+
+1. 安装 Certbot
+
+sudo apt-get update
+
+
+sudo apt-get install certbot
+
+
+我是用aptitude安装的：
+
+sudo aptitude update
+
+
+sudo aptitude install certbot
+
+
+2. 申请证书
+
+2.1 有官方插件
+
+比如，我使用的是cloudflare：
+
+先创建包含token的ini文件：
+
+mkdir certbot &amp;amp;amp;&amp;amp;amp; cd certbot &amp;amp;amp;&amp;amp;amp; touch cloudflare.ini
+
+
+如果使用的是全局API:
+
+# Cloudflare API credentials ...</summary>
+
+  </entry>
 
   
   <entry>
@@ -199,57 +254,6 @@
 文件
 
 直接下载,夸克,OneDrive。</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>「转载」人体系统调优不完全指南</title>
-    <link href="https://blog.rainsin.cn/posts/health/" rel="alternate" type="text/html" title="「转载」人体系统调优不完全指南" />
-    <published>2024-09-30T12:32:10+08:00</published>
-  
-    <updated>2024-10-05T14:09:07+08:00</updated>
-  
-    <id>https://blog.rainsin.cn/posts/health/</id>
-    <content src="https://blog.rainsin.cn/posts/health/" />
-    <author>
-      <name>zijie0</name>
-    </author>
-
-  
-    
-    <category term="健康" />
-    
-    <category term="转载" />
-    
-  
-
-  <summary>原标题：健康学习到150岁 - 人体系统调优不完全指南
-
-原作者：zijie0、原文。
-
-以下为原文：
-
-UPDATES
-
-补充一篇 24 年初的文章，分享最近一年的一些个人实践：养生博主的 23 年总结。
-
-鉴于文章比较长，很多同学没有耐心读完，后续也分享录制了一个 视频版，基本涵盖了文章里的大部分内容。
-
-另外在健康生活实践方面，也提供一个极简版的基础列表，供大家参考：
-
-
-  保持睡眠时长与质量。
-  不要吸烟。
-  尽可能每天做点运动。
-  减少糖分的摄入。
-
-
-能做到这四点，就已经可以达到一个还不错的健康状态了。剩下的可以根据各自的身体状况再来做补充调整。
-
-背景
-
-去年 5 月曾经写了一篇文章介绍了下 Lex Fridman 大佬的日常生活安排，后续我也根据他的方法对自己的日常生活做了一系列规范和改进。这一年整体实行下来，效果还是非常显著的，本文的最后会对我的一些实践以及...</summary>
 
   </entry>
 

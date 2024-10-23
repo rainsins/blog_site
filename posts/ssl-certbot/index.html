@@ -537,19 +537,19 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
 <meta property="og:title" content="「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl" />
 <meta name="author" content="Rainsin Yu" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="以前我的树莓派的SSL一直需要我在51SSL上手动申请，然后下载证书到服务器，比较麻烦。最近借着过年部署了一下certbot来完成申请证书的操作，记录一下过程。" />
-<meta property="og:description" content="以前我的树莓派的SSL一直需要我在51SSL上手动申请，然后下载证书到服务器，比较麻烦。最近借着过年部署了一下certbot来完成申请证书的操作，记录一下过程。" />
+<meta name="description" content="以前我的树莓派的SSL一直需要我在51SSL上手动申请，然后下载证书到服务器，比较麻烦。最近借着证书到期部署了一下certbot来完成申请证书的操作，记录一下过程。" />
+<meta property="og:description" content="以前我的树莓派的SSL一直需要我在51SSL上手动申请，然后下载证书到服务器，比较麻烦。最近借着证书到期部署了一下certbot来完成申请证书的操作，记录一下过程。" />
 <link rel="canonical" href="https://blog.rainsin.cn/posts/ssl-certbot/" />
 <meta property="og:url" content="https://blog.rainsin.cn/posts/ssl-certbot/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-02-02T16:32:10+08:00" />
+<meta property="article:published_time" content="2024-10-23T13:48:10+08:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl" />
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-05T14:09:07+08:00","datePublished":"2024-02-02T16:32:10+08:00","description":"以前我的树莓派的SSL一直需要我在51SSL上手动申请，然后下载证书到服务器，比较麻烦。最近借着过年部署了一下certbot来完成申请证书的操作，记录一下过程。","headline":"「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/ssl-certbot/"},"url":"https://blog.rainsin.cn/posts/ssl-certbot/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-23T13:49:09+08:00","datePublished":"2024-10-23T13:48:10+08:00","description":"以前我的树莓派的SSL一直需要我在51SSL上手动申请，然后下载证书到服务器，比较麻烦。最近借着证书到期部署了一下certbot来完成申请证书的操作，记录一下过程。","headline":"「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/ssl-certbot/"},"url":"https://blog.rainsin.cn/posts/ssl-certbot/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -1065,14 +1065,143 @@ observer.observe(targetNode, config);
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
+
+  
 
   
   
 
   
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
+
+  
 
   
   
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
 
   
 
@@ -1104,13 +1233,13 @@ observer.observe(targetNode, config);
 
 <em
   class=""
-  data-ts="1706862730"
+  data-ts="1729662490"
   data-df="YYYY/MM/DD"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  2024/02/02
+  2024/10/23
 </em>
 
     </span>
@@ -1130,13 +1259,13 @@ observer.observe(targetNode, config);
 
 <em
   class=""
-  data-ts="1728108547"
+  data-ts="1729662549"
   data-df="YYYY/MM/DD"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  2024/10/05
+  2024/10/23
 </em>
 
     </span>
@@ -1186,9 +1315,9 @@ observer.observe(targetNode, config);
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="1016 字"
+  title="2413 字"
 >
-  <em>5 分钟</em>阅读</span>
+  <em>13 分钟</em>阅读</span>
 
     </div>
 
@@ -1197,9 +1326,15 @@ observer.observe(targetNode, config);
 </div> <!-- .post-meta -->
 
 <div class="post-content        " id="post-content">
-  <p>以前我的树莓派的SSL一直需要我在<a href="https://www.51ssl.com/">51SSL</a>上手动申请，然后下载证书到服务器，比较麻烦。最近借着过年部署了一下certbot来完成申请证书的操作，记录一下过程。</p>
+  <p>以前我的树莓派的SSL一直需要我在<a href="https://www.51ssl.com/">51SSL</a>上手动申请，然后下载证书到服务器，比较麻烦。最近借着证书到期部署了一下certbot来完成申请证书的操作，记录一下过程。</p>
 
 <h2 id="1-安装-certbot"><span class="me-2">1. 安装 Certbot</span><a href="#1-安装-certbot" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt-get update
+</pre></td></tr></tbody></table></code></div></div>
 
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
@@ -1207,14 +1342,447 @@ observer.observe(targetNode, config);
 </pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt-get <span class="nb">install </span>certbot
 </pre></td></tr></tbody></table></code></div></div>
 
-<h2 id="2-申请通配符证书"><span class="me-2">2. 申请通配符证书</span><a href="#2-申请通配符证书" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>我是用aptitude安装的：</p>
 
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>certbot <span class="nt">-d</span> domain.com <span class="nt">-d</span> <span class="s2">"*.domain.com"</span> <span class="nt">--manual</span> <span class="nt">--preferred-challenges</span> dns certonly <span class="nt">--server</span> https://acme-v02.api.letsencrypt.org/directory
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>aptitude update
 </pre></td></tr></tbody></table></code></div></div>
-<p>会得到以下输出：</p>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>aptitude <span class="nb">install </span>certbot
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="2-申请证书"><span class="me-2">2. 申请证书</span><a href="#2-申请证书" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="21-有官方插件"><span class="me-2">2.1 有官方插件</span><a href="#21-有官方插件" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>比如，我使用的是cloudflare：</p>
+
+<p>先创建包含token的ini文件：</p>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">mkdir </span>certbot <span class="o">&amp;&amp;</span> <span class="nb">cd </span>certbot <span class="o">&amp;&amp;</span> <span class="nb">touch </span>cloudflare.ini
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>如果使用的是全局API:</p>
+
+<div file="/home/(your)/certbot/cloudflare.ini" class="language-ini highlighter-rouge"><div class="code-header">
+        <span data-label-text="/home/(your)/certbot/cloudflare.ini"><i class="far fa-file-code fa-fw"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c"># Cloudflare API credentials used by Certbot
+</span><span class="py">dns_cloudflare_email</span> <span class="p">=</span> <span class="s">cloudflare@example.com</span>
+<span class="py">dns_cloudflare_api_key</span> <span class="p">=</span> <span class="s">0123456789abcdef0123456789abcdef01234</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>不是全局就删掉email，按下<kbd>Ctrl</kbd>+<kbd>X</kbd>，再<kbd>Shift</kbd>+<kbd>Y</kbd>保存。</p>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>certbot certonly <span class="se">\</span>
+  <span class="nt">--dns-cloudflare</span> <span class="se">\</span>
+  <span class="nt">--dns-cloudflare-credentials</span> /home/<span class="o">(</span>your<span class="o">)</span>/certbot/cloudflare.ini <span class="se">\</span>
+  <span class="nt">--post-hook</span><span class="o">=</span><span class="s1">'systemctl reload apache2 &amp;&amp; systemctl restart apache2'</span> <span class="se">\</span>
+  <span class="nt">-d</span> example.com
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>其他的可以看官方的<a href="https://eff-certbot.readthedocs.io/en/stable/using.html#dns-plugins">文档</a>。</p>
+
+<p>插件列表：</p>
+
+<ul>
+  <li>certbot-dns-cloudflare</li>
+  <li>certbot-dns-digitalocean</li>
+  <li>certbot-dns-dnsimple</li>
+  <li>certbot-dns-dnsmadeeasy</li>
+  <li>certbot-dns-gehirn</li>
+  <li>certbot-dns-google</li>
+  <li>certbot-dns-linode</li>
+  <li>certbot-dns-luadns</li>
+  <li>certbot-dns-nsone</li>
+  <li>certbot-dns-ovh</li>
+  <li>certbot-dns-rfc2136</li>
+  <li>certbot-dns-route53</li>
+  <li>certbot-dns-sakuracloud</li>
+</ul>
+
+<h3 id="22-没有官方插件阿里云-dns腾讯云-dns华为云-ndsgodaddy"><span class="me-2">2.2 没有官方插件（阿里云 DNS、腾讯云 DNS、华为云 NDS、GoDaddy）</span><a href="#22-没有官方插件阿里云-dns腾讯云-dns华为云-ndsgodaddy" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>我没有用cloudflare插件，而是用的自己下载的脚本，如果你的域名是其他的服务商，也可以用cloudflare的域名解析服务，将dns服务器改成cloudflare就行。</p>
+
+<p>哈，我还是用Cloudflare做示范，其他的都大同小异。</p>
+
+<h4 id="221-先创建更新dns的脚本如果有现成的直接下载下来"><span class="me-2">2.2.1 先创建更新DNS的脚本（如果有现成的直接下载下来）</span><a href="#221-先创建更新dns的脚本如果有现成的直接下载下来" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<p>我用的是Cloudflare的DNS解析，如果你用的是其他云服务商，可以在github上找找，应该都会有的，用这个脚本更新DNS解析以验证域名归属：</p>
+
+<h5 id="1-先安装python3如果没有和jq"><span class="me-2">1. 先安装python3（如果没有）和jq</span><a href="#1-先安装python3如果没有和jq" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>aptitude <span class="nb">install </span>python jq
+</pre></td></tr></tbody></table></code></div></div>
+
+<h5 id="2-创建hook脚本"><span class="me-2">2. 创建hook脚本</span><a href="#2-创建hook脚本" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">mkdir </span>certbot <span class="o">&amp;&amp;</span> <span class="nb">cd </span>certbot <span class="o">&amp;&amp;</span> <span class="nb">touch </span>cloudflare-dns-hook.py
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>上面的命令会在你的<code class="language-plaintext highlighter-rouge">~</code>路径下创建一个<code class="language-plaintext highlighter-rouge">certbot</code>的文件夹，在这个文件夹下创建<code class="language-plaintext highlighter-rouge">cloudflare-dns-hook.sh</code>脚本文件，路径为：<code class="language-plaintext highlighter-rouge">/home/&lt;你的用户名&gt;/certbot/cloudflare-dns-hook.py</code>。</p>
+
+<h5 id="3-编辑脚本"><span class="me-2">3. 编辑脚本</span><a href="#3-编辑脚本" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>nano cloudflare-dns-hook.py
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>输入以下文本，修改<code class="language-plaintext highlighter-rouge">zones</code>对象为你的域名和token：</p>
+
+<div file="/home/your/certbot/cloudflare-dns-hook.py" class="language-py highlighter-rouge"><div class="code-header">
+        <span data-label-text="/home/your/certbot/cloudflare-dns-hook.py"><i class="far fa-file-code fa-fw"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+</pre></td><td class="rouge-code"><pre><span class="c1">#!/usr/bin/env python3
+</span><span class="n">zones</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sh">"</span><span class="s">&lt;your-domain&gt;</span><span class="sh">"</span><span class="p">:</span> <span class="p">{</span><span class="sh">"</span><span class="s">token</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">&lt;your-api-token&gt;</span><span class="sh">"</span><span class="p">},</span>
+<span class="p">}</span>
+
+<span class="kn">import</span> <span class="n">os</span><span class="p">,</span> <span class="n">json</span>
+<span class="kn">from</span> <span class="n">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+<span class="kn">from</span> <span class="n">urllib.request</span> <span class="kn">import</span> <span class="n">urlopen</span><span class="p">,</span> <span class="n">Request</span>
+<span class="kn">from</span> <span class="n">urllib.error</span> <span class="kn">import</span> <span class="n">HTTPError</span><span class="p">,</span> <span class="n">URLError</span>
+
+<span class="k">def</span> <span class="nf">cfAPI</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">req</span> <span class="o">=</span> <span class="nf">urlopen</span><span class="p">(</span>
+            <span class="nc">Request</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">https://api.cloudflare.com/client/v4/</span><span class="si">{</span><span class="n">endpoint</span><span class="si">}</span><span class="sh">"</span><span class="p">,</span>
+                <span class="n">headers</span><span class="o">=</span><span class="p">{</span>
+                    <span class="sh">"</span><span class="s">Authorization</span><span class="sh">"</span><span class="p">:</span> <span class="sa">f</span><span class="sh">"</span><span class="s">Bearer </span><span class="si">{</span><span class="n">token</span><span class="si">}</span><span class="sh">"</span><span class="p">,</span>
+                    <span class="sh">"</span><span class="s">Content-Type</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">application/json; charset=utf-8</span><span class="sh">"</span>
+                <span class="p">},</span>
+                <span class="o">**</span><span class="n">kwargs</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="n">HTTPError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="n">e</span><span class="p">)[</span><span class="sh">"</span><span class="s">errors</span><span class="sh">"</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">hints</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="mi">6003</span><span class="p">:</span>  <span class="sh">"</span><span class="s">Make sure you copied the whole token</span><span class="sh">"</span><span class="p">,</span>
+            <span class="mi">10000</span><span class="p">:</span> <span class="sh">"</span><span class="s">Ensure the token and token permissions are correct</span><span class="sh">"</span>
+        <span class="p">}</span>
+
+        <span class="k">raise</span> <span class="nc">Exception</span><span class="p">(</span><span class="sh">"</span><span class="s">Cloudflare API Error: {} {}.{}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">err</span><span class="p">[</span><span class="sh">"</span><span class="s">code</span><span class="sh">"</span><span class="p">],</span> <span class="n">err</span><span class="p">[</span><span class="sh">"</span><span class="s">message</span><span class="sh">"</span><span class="p">],</span> <span class="sa">f</span><span class="sh">'</span><span class="s"> (</span><span class="si">{</span><span class="n">hints</span><span class="p">[</span><span class="n">err</span><span class="p">[</span><span class="sh">"</span><span class="s">code</span><span class="sh">"</span><span class="p">]]</span><span class="si">}</span><span class="s">)</span><span class="sh">'</span> <span class="k">if</span> <span class="n">err</span><span class="p">[</span><span class="sh">"</span><span class="s">code</span><span class="sh">"</span><span class="p">]</span> <span class="ow">in</span> <span class="n">hints</span> <span class="k">else</span> <span class="sh">""</span><span class="p">))</span> <span class="k">from</span> <span class="bp">None</span>
+    <span class="k">except</span> <span class="n">URLError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nc">Exception</span><span class="p">(</span><span class="sh">"</span><span class="s">Could not reach Cloudflare API!</span><span class="sh">"</span><span class="p">)</span> <span class="k">from</span> <span class="n">e</span>
+
+    <span class="k">return</span> <span class="n">json</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+
+<span class="n">matchZone</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">recName</span><span class="p">,</span> <span class="n">zones</span><span class="p">:</span> <span class="nf">max</span><span class="p">((</span><span class="n">z</span> <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">zones</span> <span class="k">if</span> <span class="n">recName</span> <span class="o">==</span> <span class="n">z</span> <span class="ow">or</span> <span class="n">recName</span><span class="p">.</span><span class="nf">endswith</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">.</span><span class="si">{</span><span class="n">z</span><span class="si">}</span><span class="sh">"</span><span class="p">)),</span> <span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">getZoneID</span><span class="p">(</span><span class="n">record_name</span><span class="p">,</span> <span class="n">token</span><span class="p">):</span>
+    <span class="n">zoneIDs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">zone</span><span class="p">[</span><span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">]:</span> <span class="n">zone</span><span class="p">[</span><span class="sh">"</span><span class="s">id</span><span class="sh">"</span><span class="p">]</span> <span class="k">for</span> <span class="n">zone</span> <span class="ow">in</span> <span class="nf">cfAPI</span><span class="p">(</span><span class="sh">"</span><span class="s">zones</span><span class="sh">"</span><span class="p">,</span> <span class="n">token</span><span class="p">)[</span><span class="sh">"</span><span class="s">result</span><span class="sh">"</span><span class="p">]</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">zoneIDs</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="nf">matchZone</span><span class="p">(</span><span class="n">record_name</span><span class="p">,</span> <span class="n">zoneIDs</span><span class="p">),</span> <span class="bp">False</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="sh">"</span><span class="s">CERTBOT_DOMAIN</span><span class="sh">"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="nc">SystemExit</span><span class="p">(</span><span class="sh">"</span><span class="s">It doesn</span><span class="sh">'</span><span class="s">t look like this script was called from certbot</span><span class="sh">"</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="sh">"</span><span class="s">CERTBOT_AUTH_OUTPUT</span><span class="sh">"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">:</span>
+    <span class="c1"># Do auth
+</span>
+    <span class="n">CERT_DOMAIN</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="sh">"</span><span class="s">CERTBOT_DOMAIN</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">VALIDATION_TOKEN</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="sh">"</span><span class="s">CERTBOT_VALIDATION</span><span class="sh">"</span><span class="p">]</span>
+    <span class="n">REMAINING_CHALLENGES</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="sh">"</span><span class="s">CERTBOT_REMAINING_CHALLENGES</span><span class="sh">"</span><span class="p">]</span>
+
+    <span class="c1"># Find the longest matching zone for this cert domain
+</span>    <span class="n">matched_zone</span> <span class="o">=</span> <span class="nf">matchZone</span><span class="p">(</span><span class="n">CERT_DOMAIN</span><span class="p">,</span> <span class="n">zones</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">matched_zone</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nc">SystemExit</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">The zone of </span><span class="si">{</span><span class="n">CERT_DOMAIN</span><span class="si">}</span><span class="s"> is not present in </span><span class="si">{</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="nf">abspath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)</span><span class="si">}</span><span class="s">. Please add the Cloudflare zone to the `zones` dict in that script.</span><span class="sh">"</span><span class="p">)</span>
+
+
+    <span class="c1"># Get record_name from conf for CNAME operation, or default to standard _acme-challenge
+</span>    <span class="n">record_name</span> <span class="o">=</span> <span class="n">zones</span><span class="p">[</span><span class="n">matched_zone</span><span class="p">].</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">record_name</span><span class="sh">"</span><span class="p">,</span> <span class="sa">f</span><span class="sh">"</span><span class="s">_acme-challenge.</span><span class="si">{</span><span class="n">CERT_DOMAIN</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+
+    <span class="c1"># Get zone id for record_name from Cloudflare
+</span>    <span class="n">zone_id</span> <span class="o">=</span> <span class="nf">getZoneID</span><span class="p">(</span><span class="n">record_name</span><span class="p">,</span> <span class="n">zones</span><span class="p">[</span><span class="n">matched_zone</span><span class="p">].</span><span class="nf">get</span><span class="p">(</span><span class="sh">"</span><span class="s">token</span><span class="sh">"</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">zone_id</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nc">SystemExit</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">The zone of </span><span class="si">{</span><span class="n">record_name</span><span class="si">}</span><span class="s"> doesn</span><span class="sh">'</span><span class="s">t exist in the Cloudflare account, or the API token doesn</span><span class="sh">'</span><span class="s">t have permission to access it.</span><span class="sh">"</span><span class="p">)</span>
+
+    <span class="c1"># Add record
+</span>    <span class="n">res</span> <span class="o">=</span> <span class="nf">cfAPI</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">zones/</span><span class="si">{</span><span class="n">zone_id</span><span class="si">}</span><span class="s">/dns_records</span><span class="sh">"</span><span class="p">,</span>
+        <span class="n">token</span><span class="o">=</span><span class="n">zones</span><span class="p">[</span><span class="n">matched_zone</span><span class="p">][</span><span class="sh">"</span><span class="s">token</span><span class="sh">"</span><span class="p">],</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="p">.</span><span class="nf">dumps</span><span class="p">({</span>
+            <span class="sh">"</span><span class="s">type</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">TXT</span><span class="sh">"</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">name</span><span class="sh">"</span><span class="p">:</span> <span class="n">record_name</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">content</span><span class="sh">"</span><span class="p">:</span> <span class="n">VALIDATION_TOKEN</span><span class="p">,</span>
+            <span class="sh">"</span><span class="s">ttl</span><span class="sh">"</span><span class="p">:</span> <span class="mi">60</span>
+        <span class="p">}).</span><span class="nf">encode</span><span class="p">(</span><span class="sh">"</span><span class="s">utf-8</span><span class="sh">"</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Output details for removing the record later
+</span>    <span class="nf">print</span><span class="p">(</span><span class="n">json</span><span class="p">.</span><span class="nf">dumps</span><span class="p">({</span>
+        <span class="sh">"</span><span class="s">zone_id</span><span class="sh">"</span><span class="p">:</span> <span class="n">zone_id</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">record_id</span><span class="sh">"</span><span class="p">:</span> <span class="n">res</span><span class="p">[</span><span class="sh">"</span><span class="s">result</span><span class="sh">"</span><span class="p">][</span><span class="sh">"</span><span class="s">id</span><span class="sh">"</span><span class="p">],</span>
+        <span class="sh">"</span><span class="s">matched_zone</span><span class="sh">"</span><span class="p">:</span> <span class="n">matched_zone</span>
+    <span class="p">}))</span>
+
+    <span class="c1"># Wait for propagation
+</span>    <span class="k">if</span> <span class="n">REMAINING_CHALLENGES</span> <span class="o">==</span> <span class="sh">"</span><span class="s">0</span><span class="sh">"</span><span class="p">:</span> <span class="nf">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="c1"># Do cleanup
+</span>    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Load details passed from adding the record
+</span>        <span class="n">addedRecord</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="nf">loads</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="sh">"</span><span class="s">CERTBOT_AUTH_OUTPUT</span><span class="sh">"</span><span class="p">])</span>
+
+        <span class="c1"># Remove record
+</span>        <span class="n">res</span> <span class="o">=</span> <span class="nf">cfAPI</span><span class="p">(</span><span class="sa">f</span><span class="sh">'</span><span class="s">zones/</span><span class="si">{</span><span class="n">addedRecord</span><span class="p">[</span><span class="sh">"</span><span class="s">zone_id</span><span class="sh">"</span><span class="p">]</span><span class="si">}</span><span class="s">/dns_records/</span><span class="si">{</span><span class="n">addedRecord</span><span class="p">[</span><span class="sh">"</span><span class="s">record_id</span><span class="sh">"</span><span class="p">]</span><span class="si">}</span><span class="sh">'</span><span class="p">,</span>
+            <span class="n">token</span><span class="o">=</span><span class="n">zones</span><span class="p">[</span><span class="n">addedRecord</span><span class="p">[</span><span class="sh">"</span><span class="s">matched_zone</span><span class="sh">"</span><span class="p">]][</span><span class="sh">"</span><span class="s">token</span><span class="sh">"</span><span class="p">],</span>
+            <span class="n">method</span><span class="o">=</span><span class="sh">"</span><span class="s">DELETE</span><span class="sh">"</span>
+        <span class="p">)</span>
+    <span class="nf">except </span><span class="p">(</span><span class="n">json</span><span class="p">.</span><span class="n">decoder</span><span class="p">.</span><span class="n">JSONDecodeError</span><span class="p">,</span> <span class="nb">KeyError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nc">SystemExit</span><span class="p">(</span><span class="sh">"</span><span class="s">Error preparing to remove record. Maybe adding the record wasn</span><span class="sh">'</span><span class="s">t successful.</span><span class="sh">"</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>按下<kbd>Ctrl</kbd>+<kbd>X</kbd>，再<kbd>Shift</kbd>+<kbd>Y</kbd>保存。</p>
+
+<h5 id="4-申请证书"><span class="me-2">4. 申请证书</span><a href="#4-申请证书" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h5>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>certbot certonly <span class="nt">--server</span> https://acme-v02.api.letsencrypt.org/directory <span class="nt">--manual-auth-hook</span><span class="o">=</span><span class="s2">"python3 /home/&lt;your&gt;/certbot/cloudflare-dns-hook.py"</span> <span class="nt">--manual-cleanup-hook</span><span class="o">=</span><span class="s2">"python3 /home/&lt;your&gt;/certbot/cloudflare-dns-hook.py"</span>  <span class="nt">--post-hook</span><span class="o">=</span><span class="s2">"systemctl reload apache2 &amp;&amp; systemctl restart apache2"</span> <span class="nt">--manual</span> <span class="nt">--preferred-challenges</span> dns <span class="nt">-d</span> <span class="s1">'domain.cn,*.domain.cn'</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>上面<code class="language-plaintext highlighter-rouge">--manual-auth-hook</code>在申请证书时验证域名归属时执行，而<code class="language-plaintext highlighter-rouge">--manual-cleanup-hook</code>则时验证完成之后删除对应的txt解析条目，<code class="language-plaintext highlighter-rouge">--post-hook</code>是证书部署之后要执行的命令，我的是重启apache。</p>
+
+<p>如果成功就会有以下输出：</p>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="rouge-code"><pre>Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Certificate not yet due <span class="k">for </span>renewal
+
+You have an existing certificate that has exactly the same domains or certificate name you requested and isn<span class="s1">'t close to expiry.
+(ref: /etc/letsencrypt/renewal/rainsin.cn.conf)
+
+Renewing an existing certificate for rainsin.cn and *.rainsin.cn
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/rainsin.cn/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/rainsin.cn/privkey.pem
+This certificate expires on 2025-01-21.
+These files will be updated when the certificate renews.
+Certbot has set up a scheduled task to automatically renew this certificate in the background.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+If you like Certbot, please consider supporting our work by:
+ * Donating to ISRG / Let'</span>s Encrypt:   https://letsencrypt.org/donate
+ <span class="k">*</span> Donating to EFF:                    https://eff.org/donate-le
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>证书文件放在了<code class="language-plaintext highlighter-rouge">/etc/letsencrypt/live/</code>路径下，还会生成一个<code class="language-plaintext highlighter-rouge">conf</code>文件，后面续期时用的这个文件，在<code class="language-plaintext highlighter-rouge">/etc/letsencrypt/renewal/</code>路径下，文件结构如下：</p>
+
+<div file="/etc/letsencrypt/renewal/rainsin.cn.conf" class="language-conf highlighter-rouge"><div class="code-header">
+        <span data-label-text="/etc/letsencrypt/renewal/rainsin.cn.conf"><i class="far fa-file-code fa-fw"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="c"># renew_before_expiry = 30 days
+</span><span class="n">version</span> = <span class="m">1</span>.<span class="m">21</span>.<span class="m">0</span>
+<span class="n">archive_dir</span> = /<span class="n">etc</span>/<span class="n">letsencrypt</span>/<span class="n">archive</span>/<span class="n">rainsin</span>.<span class="n">cn</span>
+<span class="n">cert</span> = /<span class="n">etc</span>/<span class="n">letsencrypt</span>/<span class="n">live</span>/<span class="n">rainsin</span>.<span class="n">cn</span>/<span class="n">cert</span>.<span class="n">pem</span>
+<span class="n">privkey</span> = /<span class="n">etc</span>/<span class="n">letsencrypt</span>/<span class="n">live</span>/<span class="n">rainsin</span>.<span class="n">cn</span>/<span class="n">privkey</span>.<span class="n">pem</span>
+<span class="n">chain</span> = /<span class="n">etc</span>/<span class="n">letsencrypt</span>/<span class="n">live</span>/<span class="n">rainsin</span>.<span class="n">cn</span>/<span class="n">chain</span>.<span class="n">pem</span>
+<span class="n">fullchain</span> = /<span class="n">etc</span>/<span class="n">letsencrypt</span>/<span class="n">live</span>/<span class="n">rainsin</span>.<span class="n">cn</span>/<span class="n">fullchain</span>.<span class="n">pem</span>
+
+<span class="c"># Options used in the renewal process
+</span>[<span class="n">renewalparams</span>]
+<span class="n">account</span> = <span class="n">xxxxxxxxxxxxxxxxxxxxx</span>
+<span class="n">authenticator</span> = <span class="n">manual</span>
+<span class="n">server</span> = <span class="n">https</span>://<span class="n">acme</span>-<span class="n">v02</span>.<span class="n">api</span>.<span class="n">letsencrypt</span>.<span class="n">org</span>/<span class="n">directory</span>
+<span class="n">pref_challs</span> = <span class="n">dns</span>-<span class="m">01</span>,
+<span class="n">post_hook</span> = <span class="n">systemctl</span> <span class="n">reload</span> <span class="n">apache2</span> &amp;&amp; <span class="n">systemctl</span> <span class="n">restart</span> <span class="n">apache2</span>
+<span class="n">manual_auth_hook</span> = <span class="n">python3</span> /<span class="n">home</span>/<span class="n">ubuntu</span>/<span class="n">certbot</span>/<span class="n">certbot</span>-<span class="n">cloudflare</span>-<span class="n">hook</span>.<span class="n">py</span>
+<span class="n">manual_cleanup_hook</span> = <span class="n">python3</span> /<span class="n">home</span>/<span class="n">ubuntu</span>/<span class="n">certbot</span>/<span class="n">certbot</span>-<span class="n">cloudflare</span>-<span class="n">hook</span>.<span class="n">py</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>后续续期使用的就是这个文件。</p>
+
+<h3 id="23-如果没有脚本"><span class="me-2">2.3 如果没有脚本</span><a href="#23-如果没有脚本" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<p>续期会失败，需要手动验证域名。</p>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>certbot certonly <span class="nt">--server</span> https://acme-v02.api.letsencrypt.org/directory <span class="nt">--post-hook</span><span class="o">=</span><span class="s2">"systemctl reload apache2 &amp;&amp; systemctl restart apache2"</span> <span class="nt">--manual</span> <span class="nt">--preferred-challenges</span> dns <span class="nt">-d</span> <span class="s1">'domain.cn,*.domain.cn'</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>如果你没有上面的脚本就会像下面这样的输出，需要手动的在域名服务商的控制台添加txt解析条目：</p>
 
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
@@ -1310,7 +1878,7 @@ IMPORTANT NOTES:
    Donating to EFF:                    https://eff.org/donate-le
 </span></pre></td></tr></tbody></table></code></div></div>
 
-<h2 id="3-更新apache2证书"><span class="me-2">3. 更新apache2证书</span><a href="#3-更新apache2证书" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="4-更新apache2证书"><span class="me-2">4. 更新apache2证书</span><a href="#4-更新apache2证书" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <p>为每个主机加上：</p>
 
@@ -1339,14 +1907,14 @@ IMPORTANT NOTES:
 21
 22
 23
-</pre></td><td class="rouge-code"><pre><span class="nt">&lt;VirtualHost</span> <span class="err">*:2000</span><span class="nt">&gt;</span>
+</pre></td><td class="rouge-code"><pre><span class="nt">&lt;VirtualHost</span> <span class="err">*:xxxx</span><span class="nt">&gt;</span>
     ServerName  xxx.domain.com
     ServerAlias xxx
 
-    SSLEngine on
-    SSLProxyEngine On
-    SSLProxyCheckPeerCN Off
-    SSLProxyVerify none
+    + SSLEngine on
+    + SSLProxyEngine On
+    + SSLProxyCheckPeerCN Off
+    + SSLProxyVerify none
     + SSLCertificateFile /etc/letsencrypt/live/domain.com/cert.pem
     + SSLCertificateKeyFile /etc/letsencrypt/live/domain.com/privkey.pem
     + SSLCertificateChainFile /etc/letsencrypt/live/domain.com/chain.pem
@@ -1374,22 +1942,22 @@ IMPORTANT NOTES:
 service apache2 restart
 </pre></td></tr></tbody></table></code></div></div>
 
-<h2 id="4-自动续期"><span class="me-2">4. 自动续期</span><a href="#4-自动续期" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<h2 id="5-自动续期"><span class="me-2">5. 自动续期</span><a href="#5-自动续期" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <p>编辑计划任务</p>
 
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>crontab <span class="nt">-e</span>
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>crontab <span class="nt">-e</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>输入下面的表达式（每天 00:00:00），让他每天都尝试一次关闭 Nginx-&gt;更新-&gt;启动 Apache2，到了最后 30 天的时候就会成功。</p>
+<p>输入下面的表达式（每天 00:00:00），让他每天都尝试一次，到了最后 30 天的时候就会成功。</p>
 
 <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>0 0 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> <span class="s2">"service nginx stop ; /bin/certbot renew --renew-by-default; service nginx start"</span>
+</pre></td><td class="rouge-code"><pre>0 0 <span class="k">*</span> <span class="k">*</span> <span class="k">*</span> certbot renew <span class="nt">--quiet</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p><strong>crontab的使用实例</strong></p>
@@ -1469,6 +2037,7 @@ service apache2 restart
 </pre></td><td class="rouge-code"><pre>An unexpected error occurred: 
 There were too many requests of a given <span class="nb">type</span> :: Error creating new order :: too many certificates already issu <span class="k">for </span>exact <span class="nb">set </span>of domains: blog.frankfeekr.cn: see https://letsencrypt.org/docs/rate-limits/
 </pre></td></tr></tbody></table></code></div></div>
+
 
 </div>
 
@@ -1609,14 +2178,14 @@ There were too many requests of a given <span class="nb">type</span> :: Error cr
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/mac/">「文件」一个<del>趋于完美</del>不完美的黑苹果引导文件</a>
+          <a href="/posts/ssl-certbot/">「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl</a>
         </li>
       
         
         
         
         <li class="text-truncate lh-lg">
-          <a href="/posts/marx/">《费尔巴哈论》一、前置的准备阶段</a>
+          <a href="/posts/mac/">「文件」一个<del>趋于完美</del>不完美的黑苹果引导文件</a>
         </li>
       
         
@@ -2632,22 +3201,21 @@ There were too many requests of a given <span class="nb">type</span> :: Error cr
 <div class="post-navigation d-flex justify-content-between">
   
     <a
-      href="/posts/cloudflare/"
+      href="/posts/marx5/"
       class="btn btn-outline-primary"
       prompt="上一篇"
     >
-      <p>「解决问题」使用 CloudFlare 导致网站「重定向的次数过多」解决方案</p>
+      <p>《费尔巴哈论》六、社会权力论与意识形态论</p>
     </a>
   
 
   
-    <a
-      href="/posts/mystery/"
-      class="btn btn-outline-primary"
+    <div
+      class="btn btn-outline-primary disabled"
       prompt="下一篇"
     >
-      <p>「神秘」奇怪的，阴谋论的</p>
-    </a>
+      <p>-</p>
+    </div>
   
 </div>
    <!--  The comments switcher -->
