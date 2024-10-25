@@ -88,7 +88,7 @@ const read_item = [
         publishtime:"2014.12.1",
         publish:"人民出版社",
         va:"48.00元",
-        pdf:"https://file.rainsin.cn/s/jxi4vs",
+        pdf:"https://pan.rainsin.cn:2000/s/jxi4vs",
         pdfmi: "",
         ye: 325
     },
@@ -220,7 +220,7 @@ const read_item = [
         publishtime:"2005.10",
         publish:"人民卫生出版社",
         va:"212.00元",
-        pdf:"https://file.rainsin.cn/s/hwqwri",
+        pdf:"https://pan.rainsin.cn:2000/s/hwqwri",
         pdfmi: "",
         ye: 584
     },
@@ -231,7 +231,7 @@ const read_item = [
         publishtime:"2004.1",
         publish:"人民出版社",
         va:"35.00元",
-        pdf:"https://file.rainsin.cn/s/hwqwri",
+        pdf:"https://pan.rainsin.cn:2000/s/hwqwri",
         pdfmi: "",
         ye: 672
     },
@@ -242,7 +242,7 @@ const read_item = [
         publishtime:"2016.1",
         publish:"清华大学出版社",
         va:"88.00元",
-        pdf:"https://file.rainsin.cn/s/hwqwri",
+        pdf:"https://pan.rainsin.cn:2000/s/hwqwri",
         pdfmi: "",
         ye: 425
     },
@@ -253,7 +253,7 @@ const read_item = [
         publishtime:"2013.10",
         publish:"世界图书出版公司",
         va:"??.00元",
-        pdf:"https://file.rainsin.cn/s/hwqwri",
+        pdf:"https://pan.rainsin.cn:2000/s/hwqwri",
         pdfmi: "",
         ye: 802
     },
@@ -264,7 +264,7 @@ const read_item = [
         publishtime:"2016.10",
         publish:"机械工业出版社",
         va:"78.00元",
-        pdf:"https://file.rainsin.cn/s/hwqwri",
+        pdf:"https://pan.rainsin.cn:2000/s/hwqwri",
         pdfmi: "",
         ye: 802
     },

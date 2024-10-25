@@ -5,7 +5,7 @@ const playdata = [
         layel: "❤❤❤❤❤"
     },
     {
-        url: "https://file.rainsin.cn/d/blog/img/healthy.png",
+        url: "https://pan.rainsin.cn:2000/d/blog/img/healthy.png",
         name: "国学",
         layel: "❤❤❤❤❤"
     },
@@ -15,7 +15,7 @@ const playdata = [
         layel: "❤❤❤❤❤"
     },
     {
-        url: "https://file.rainsin.cn/d/blog/img/tai-chi.png",
+        url: "https://pan.rainsin.cn:2000/d/blog/img/tai-chi.png",
         name: "太极拳",
         layel: "❤❤❤❤"
     },

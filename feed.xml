@@ -4,7 +4,7 @@
   <id>https://blog.rainsin.cn/</id>
   <title>Rainsin • Blog</title>
   <subtitle>rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）</subtitle>
-  <updated>2024-10-23T13:58:26+08:00</updated>
+  <updated>2024-10-25T10:47:52+08:00</updated>
   <author>
     <name>rainsin</name>
     <uri>https://blog.rainsin.cn/</uri>
@@ -24,7 +24,7 @@
     <link href="https://blog.rainsin.cn/posts/ssl-certbot/" rel="alternate" type="text/html" title="「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl" />
     <published>2024-10-23T13:58:10+08:00</published>
   
-    <updated>2024-10-23T13:58:01+08:00</updated>
+    <updated>2024-10-23T14:00:10+08:00</updated>
   
     <id>https://blog.rainsin.cn/posts/ssl-certbot/</id>
     <content src="https://blog.rainsin.cn/posts/ssl-certbot/" />
@@ -185,7 +185,7 @@ mkdir certbot &amp;amp;amp;&amp;amp;amp; cd certbot &amp;amp;amp;&amp;amp;amp; t
     <link href="https://blog.rainsin.cn/posts/blue/" rel="alternate" type="text/html" title="「心情」我的心，我的心，蓝蓝的。" />
     <published>2024-10-10T13:23:00+08:00</published>
   
-    <updated>2024-10-20T21:41:52+08:00</updated>
+    <updated>2024-10-25T10:47:46+08:00</updated>
   
     <id>https://blog.rainsin.cn/posts/blue/</id>
     <content src="https://blog.rainsin.cn/posts/blue/" />
@@ -219,7 +219,7 @@ mkdir certbot &amp;amp;amp;&amp;amp;amp; cd certbot &amp;amp;amp;&amp;amp;amp; t
     <link href="https://blog.rainsin.cn/posts/opencore-theme/" rel="alternate" type="text/html" title="「文件」我使用的Opencore的主题包" />
     <published>2024-10-09T12:23:00+08:00</published>
   
-    <updated>2024-10-19T19:48:01+08:00</updated>
+    <updated>2024-10-25T10:47:46+08:00</updated>
   
     <id>https://blog.rainsin.cn/posts/opencore-theme/</id>
     <content src="https://blog.rainsin.cn/posts/opencore-theme/" />
