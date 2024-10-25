@@ -1292,9 +1292,20 @@
     background-image: linear-gradient(to right,#9ca49c 0%,#bc8861 52%,#ecd3a9 78%,#4f2f17 100%);
 }
 
+.about-site .mask4{
+    margin: 0;
+    background-image: linear-gradient(to right,#898989 0%,#2c2826 52%,#433d33 78%,#5b5c5c 100%);
+}
+
 .bgimg-box{
     background-image: url(https://file.rainsin.cn/d/blog/img/about/%E6%98%8E%E9%87%8C.jpg),url(https://mypan.hk.cpolar.io/d/blog/img/about/%E6%98%8E%E9%87%8C.jpg);
     background-position: center;
+    background-size: cover;
+}
+
+.bgimg-content-box{
+    background-image: url(https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvcyFBb2VyMmNVNVNsT0ZpUGw0a2haZ05WNFR3SGRUUnc_ZT1kdEtOaUQ.webp);
+    background-position-y: 85%;
     background-size: cover;
 }
 
