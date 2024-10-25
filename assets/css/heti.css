@@ -137,14 +137,19 @@
 }
 
 @font-face {
+    font-family: "Heti-SimSun";
+    src: url(https://file.rainsin.cn/d/blog/font/simsunb.woff2);
+}
+
+@font-face {
     font-family: "Heti-Song";
-    src: local("Songti SC Regular"), local("Songti TC Regular"),url(https://file.rainsin.cn/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), local("Songti SC"), local("Songti TC"), local("STsong"), "STS", local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), local("SimSun");
+    src: "SimSun", "Heti-SimSun", local("Songti SC Regular"), local("Songti TC Regular"), local("Songti SC"), local("Songti TC"), local("STsong");
 }
 
 @font-face {
     font-family: "Heti-Song";
     font-weight: 200;
-    src: local("Songti SC Light"), local("Songti TC Light"), local("Songti SC"), local("Songti TC"), url(https://file.rainsin.cn/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), "STS", url(https://api.rainsin.cn/blog_data/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), "Heti-Song Light Fallback";
+    src: "SimSun", "Heti-SimSun", local("Songti SC Light"), local("Songti TC Light"), local("Songti SC"), "Heti-Song Light Fallback";
 }
 
 @font-face {
@@ -156,7 +161,7 @@
 @font-face {
     font-family: "Heti-Song";
     font-weight: 600;
-    src: local("Songti SC Bold"), local("Songti TC Bold"), local("Songti SC"), local("Songti TC"), url(https://file.rainsin.cn/d/blog/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), "STS", url(https://api.rainsin.cn/blog_data/font/heti/%E5%AE%8B%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), "Heti-Song Bold Fallback";
+    src: "SimSun", "Heti-SimSun", local("Songti SC Bold"), local("Songti TC Bold"), local("Songti SC"), local("Songti TC"), "Heti-Song Bold Fallback";
 }
 
 @font-face {
@@ -168,18 +173,23 @@
 @font-face {
     font-family: "Heti-Song Black";
     font-weight: 800;
-    src: local("Songti SC Black"), local("Songti SC"), local("Songti TC"), "STS", local("CESI_SS_GB2312"), local("Noto Serif CJK"), local("Source Han Serif"), local("SimSun");
+    src: "SimSun", "Heti-SimSun", local("Songti SC Black"), local("Songti SC"), local("Songti TC");
+}
+
+@font-face {
+    font-family: "Heti-FzKB";
+    src: url(https://file.rainsin.cn/d/blog/font/FZKTB.woff2);
 }
 
 @font-face {
     font-family: "Heti-Kai";
-    src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("Kaiti SC"), local("Kaiti TC"), local("STKaiti"), local("Kaiti"), url(https://file.rainsin.cn/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://file.rainsin.cn/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), "FZK", "FZKB", "KT", local("CESI_KT_GB18030"), local("BiauKai");
+    src: "FZKB",local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("Kaiti SC"), local("Kaiti TC"), local("STKaiti"), local("Kaiti"), "KT","Heti-FzKB", local("BiauKai");
 }
 
 @font-face {
     font-family: "Heti-Kai";
     font-weight: 600;
-    src: local("Kaiti SC Bold"), local("Kaiti TC Bold"), local("Kaiti SC"), local("Kaiti TC"), url(https://file.rainsin.cn/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://file.rainsin.cn/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), "FZK", "FZKB", "KT", local("CESI_KT_GB18030"), "Heti-Kai Bold Fallback";
+    src: "FZKB", local("Kaiti SC Bold"), local("Kaiti TC Bold"), local("Kaiti SC"), local("Kaiti TC"), "KT","Heti-FzKB", "Heti-Kai Bold Fallback";
 }
 
 @font-face {
@@ -191,7 +201,7 @@
 @font-face {
     font-family: "Heti-Kai Black";
     font-weight: 800;
-    src: local("Kaiti SC Black"), local("Kaiti TC Black"), local("Kaiti SC"), local("Kaiti TC"), url(https://file.rainsin.cn/d/blog/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://file.rainsin.cn/d/blog/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E6%A5%B7%E4%BD%93_%E5%B8%B8%E8%A7%84.woff2), url(https://api.rainsin.cn/blog_data/font/heti/%E5%8D%8E%E6%96%87%E6%A5%B7%E4%BD%93.woff2), "FZK", "FZKB", "KT", local("CESI_KT_GB18030"), local("STKaiti"), local("Kaiti");
+    src: local("Kaiti SC Black"), local("Kaiti TC Black"), "FZKB",local("Kaiti SC"), local("Kaiti TC"), "KT","Heti-FzKB", local("STKaiti"), local("Kaiti");
 }
 
 .heti {
@@ -1215,6 +1225,46 @@ html[data-mode="dark"] .heti blockquote {
     font-family: "Huiwen-mincho" !important;
 }
 
+.heti .heti-jinling {
+    font-family: "FZJinLing Light", "FZJinLing Bold" !important;
+}
+
+.heti--jinling {
+    font-family: "FZJinLing Light", "FZJinLing Bold" !important;
+}
+
+.heti .heti-x-large {
+    font-size: x-large !important;
+}
+
+.heti--x-large {
+    font-size: x-large !important;
+}
+
+.heti .heti-xx-large {
+    font-size: xx-large !important;
+}
+
+.heti--xx-large {
+    font-size: xx-large !important;
+}
+
+.heti .heti-medium {
+    font-size: medium !important;
+}
+
+.heti--medium {
+    font-size: medium !important;
+}
+
+.heti .heti-m-l-5 {
+    margin-left: .5em;
+}
+
+.heti--m-l-5 {
+    margin-left: .5em;
+}
+
 .heti--pad1{
     padding: 1em;
 }
@@ -1222,3 +1272,4 @@ html[data-mode="dark"] .heti blockquote {
 .heti--borderd3{
     border: 1px solid #d3d3d3;
 }
+

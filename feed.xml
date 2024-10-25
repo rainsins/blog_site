@@ -1,17 +1,17 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>https://blog.rainsin.cn/</id>
+  <id>http://localhost:4000/</id>
   <title>Rainsin • Blog</title>
   <subtitle>rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）</subtitle>
-  <updated>2024-10-25T10:56:20+08:00</updated>
+  <updated>2024-10-25T16:23:16+08:00</updated>
   <author>
     <name>rainsin</name>
-    <uri>https://blog.rainsin.cn/</uri>
+    <uri>http://localhost:4000/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="https://blog.rainsin.cn/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="zh-CN"
-    href="https://blog.rainsin.cn/"/>
+    href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator>
   <rights> © 2024 rainsin </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
@@ -21,13 +21,13 @@
   
   <entry>
     <title>「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl</title>
-    <link href="https://blog.rainsin.cn/posts/ssl-certbot/" rel="alternate" type="text/html" title="「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl" />
+    <link href="http://localhost:4000/posts/ssl-certbot/" rel="alternate" type="text/html" title="「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl" />
     <published>2024-10-23T13:58:10+08:00</published>
   
     <updated>2024-10-23T14:00:10+08:00</updated>
   
-    <id>https://blog.rainsin.cn/posts/ssl-certbot/</id>
-    <content src="https://blog.rainsin.cn/posts/ssl-certbot/" />
+    <id>http://localhost:4000/posts/ssl-certbot/</id>
+    <content src="http://localhost:4000/posts/ssl-certbot/" />
     <author>
       <name>rainsin</name>
     </author>
@@ -75,14 +75,14 @@ mkdir certbot &amp;amp;amp;&amp;amp;amp; cd certbot &amp;amp;amp;&amp;amp;amp; t
 
   
   <entry>
-    <title>《费尔巴哈论》六、社会权力论与意识形态论</title>
-    <link href="https://blog.rainsin.cn/posts/marx5/" rel="alternate" type="text/html" title="《费尔巴哈论》六、社会权力论与意识形态论" />
+    <title>「逐字稿」《费尔巴哈论》六、社会权力论与意识形态论</title>
+    <link href="http://localhost:4000/posts/marx5/" rel="alternate" type="text/html" title="「逐字稿」《费尔巴哈论》六、社会权力论与意识形态论" />
     <published>2024-10-19T12:32:10+08:00</published>
   
     <updated>2024-10-20T21:41:52+08:00</updated>
   
-    <id>https://blog.rainsin.cn/posts/marx5/</id>
-    <content src="https://blog.rainsin.cn/posts/marx5/" />
+    <id>http://localhost:4000/posts/marx5/</id>
+    <content src="http://localhost:4000/posts/marx5/" />
     <author>
       <name>rainsin</name>
     </author>
@@ -128,14 +128,14 @@ mkdir certbot &amp;amp;amp;&amp;amp;amp; cd certbot &amp;amp;amp;&amp;amp;amp; t
 
   
   <entry>
-    <title>《费尔巴哈论》五、马克思的历史观</title>
-    <link href="https://blog.rainsin.cn/posts/marx4/" rel="alternate" type="text/html" title="《费尔巴哈论》五、马克思的历史观" />
+    <title>「逐字稿」《费尔巴哈论》五、马克思的历史观</title>
+    <link href="http://localhost:4000/posts/marx4/" rel="alternate" type="text/html" title="「逐字稿」《费尔巴哈论》五、马克思的历史观" />
     <published>2024-10-16T12:32:10+08:00</published>
   
     <updated>2024-10-20T21:41:52+08:00</updated>
   
-    <id>https://blog.rainsin.cn/posts/marx4/</id>
-    <content src="https://blog.rainsin.cn/posts/marx4/" />
+    <id>http://localhost:4000/posts/marx4/</id>
+    <content src="http://localhost:4000/posts/marx4/" />
     <author>
       <name>rainsin</name>
     </author>
@@ -182,13 +182,13 @@ mkdir certbot &amp;amp;amp;&amp;amp;amp; cd certbot &amp;amp;amp;&amp;amp;amp; t
   
   <entry>
     <title>「心情」我的心，我的心，蓝蓝的。</title>
-    <link href="https://blog.rainsin.cn/posts/blue/" rel="alternate" type="text/html" title="「心情」我的心，我的心，蓝蓝的。" />
+    <link href="http://localhost:4000/posts/blue/" rel="alternate" type="text/html" title="「心情」我的心，我的心，蓝蓝的。" />
     <published>2024-10-10T13:23:00+08:00</published>
   
     <updated>2024-10-25T10:56:09+08:00</updated>
   
-    <id>https://blog.rainsin.cn/posts/blue/</id>
-    <content src="https://blog.rainsin.cn/posts/blue/" />
+    <id>http://localhost:4000/posts/blue/</id>
+    <content src="http://localhost:4000/posts/blue/" />
     <author>
       <name>rainsin</name>
     </author>
@@ -216,13 +216,13 @@ mkdir certbot &amp;amp;amp;&amp;amp;amp; cd certbot &amp;amp;amp;&amp;amp;amp; t
   
   <entry>
     <title>「文件」我使用的Opencore的主题包</title>
-    <link href="https://blog.rainsin.cn/posts/opencore-theme/" rel="alternate" type="text/html" title="「文件」我使用的Opencore的主题包" />
+    <link href="http://localhost:4000/posts/opencore-theme/" rel="alternate" type="text/html" title="「文件」我使用的Opencore的主题包" />
     <published>2024-10-09T12:23:00+08:00</published>
   
     <updated>2024-10-25T10:56:09+08:00</updated>
   
-    <id>https://blog.rainsin.cn/posts/opencore-theme/</id>
-    <content src="https://blog.rainsin.cn/posts/opencore-theme/" />
+    <id>http://localhost:4000/posts/opencore-theme/</id>
+    <content src="http://localhost:4000/posts/opencore-theme/" />
     <author>
       <name>rainsin</name>
     </author>
