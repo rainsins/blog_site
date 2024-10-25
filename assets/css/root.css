@@ -313,3 +313,8 @@ text-align: end;
   border-radius: .4rem;
 }
 }
+
+.code-header span[data-label-text]{
+  overflow-y: auto;
+  white-space: nowrap;
+}
