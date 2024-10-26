@@ -4,8 +4,8 @@ const audios = [
     "artist": "贠宗翰",
     "songName": "【秦腔】赵氏孤儿",
     "files": {
-      "song": sessionStorage.getItem("isOut") == "false" ? "https://file.rainsin.cn/d/blog/aobike/%E8%B5%B5%E6%B0%8F%E5%AD%A4%E5%84%BF.AAC" : "https://mypan.hk.cpolar.io/d/blog/aobike/%E8%B5%B5%E6%B0%8F%E5%AD%A4%E5%84%BF.AAC",
-      "cover": sessionStorage.getItem("isOut") == "false" ? "https://file.rainsin.cn/d/blog/aobike/%E7%A2%97.webp" : "https://mypan.hk.cpolar.io/d/blog/aobike/%E7%A2%97.webp"
+      "song": "https://file.rainsin.cn/d/blog/aobike/%E8%B5%B5%E6%B0%8F%E5%AD%A4%E5%84%BF.AAC",
+      "cover": "https://file.rainsin.cn/d/blog/aobike/%E7%A2%97.webp"
     }
   },
   {
@@ -13,8 +13,8 @@ const audios = [
     "artist": "刘随社",
     "songName": "【秦腔】放饭",
     "files": {
-      "song": sessionStorage.getItem("isOut") == "false" ? "https://file.rainsin.cn/d/blog/aobike/%E6%94%BE%E9%A5%AD.mp3" : "https://mypan.hk.cpolar.io/d/blog/aobike/%E6%94%BE%E9%A5%AD.mp3",
-      "cover": sessionStorage.getItem("isOut") == "false" ? "https://file.rainsin.cn/d/blog/aobike/%E6%94%BE%E9%A5%AD.webp" : "https://mypan.hk.cpolar.io/d/blog/aobike/%E6%94%BE%E9%A5%AD.webp"
+      "song": "https://file.rainsin.cn/d/blog/aobike/%E6%94%BE%E9%A5%AD.mp3",
+      "cover": "https://file.rainsin.cn/d/blog/aobike/%E6%94%BE%E9%A5%AD.webp"
     }
   },
   {
@@ -22,8 +22,8 @@ const audios = [
     "artist": "卫赞成",
     "songName": "【眉户】莲花落",
     "files": {
-      "song": sessionStorage.getItem("isOut") == "false" ? "https://file.rainsin.cn/d/blog/aobike/%E8%8E%B2%E8%8A%B1%E8%90%BD.AAC" : "https://mypan.hk.cpolar.io/d/blog/aobike/%E8%8E%B2%E8%8A%B1%E8%90%BD.AAC",
-      "cover": sessionStorage.getItem("isOut") == "false" ? "https://file.rainsin.cn/d/blog/aobike/%E6%9B%B2%E6%B1%9F.webp" : "https://mypan.hk.cpolar.io/d/blog/aobike/%E6%9B%B2%E6%B1%9F.webp"
+      "song": "https://file.rainsin.cn/d/blog/aobike/%E8%8E%B2%E8%8A%B1%E8%90%BD.AAC",
+      "cover": "https://file.rainsin.cn/d/blog/aobike/%E6%9B%B2%E6%B1%9F.webp"
     }
   },
     {
@@ -31,8 +31,8 @@ const audios = [
         "artist": "毛崇海",
         "songName": "【秦腔】烙碗计",
         "files": {
-            "song": sessionStorage.getItem("isOut") == "false" ? "https://file.rainsin.cn/d/blog/aobike/%E7%A2%97.aac" : "https://mypan.hk.cpolar.io/d/blog/aobike/%E7%A2%97.aac",
-            "cover": sessionStorage.getItem("isOut") == "false" ? "https://file.rainsin.cn/d/blog/aobike/%E8%AE%B0.webp" : "https://mypan.hk.cpolar.io/d/blog/aobike/%E8%AE%B0.webp"
+            "song": "https://file.rainsin.cn/d/blog/aobike/%E7%A2%97.aac",
+            "cover": "https://file.rainsin.cn/d/blog/aobike/%E8%AE%B0.webp"
         }
     },
   {
@@ -40,8 +40,8 @@ const audios = [
     "artist": "张蛇龙",
     "songName": "【秦腔】斩李广",
     "files": {
-      "song": sessionStorage.getItem("isOut") == "false" ? "https://file.rainsin.cn/d/blog/aobike/%E7%A7%A6%E8%85%94%20-%20%E5%BC%A0%E8%9B%87%E9%BE%99%E3%80%8A%E6%96%A9%E6%9D%8E%E5%B9%BF%E3%80%8B%E4%B8%83%E5%8D%81%E4%BA%8C%E4%B8%AA%E5%86%8D%E4%B8%8D%E8%83%BD.mp3" : "https://mypan.hk.cpolar.io/d/blog/aobike/%E7%A7%A6%E8%85%94%20-%20%E5%BC%A0%E8%9B%87%E9%BE%99%E3%80%8A%E6%96%A9%E6%9D%8E%E5%B9%BF%E3%80%8B%E4%B8%83%E5%8D%81%E4%BA%8C%E4%B8%AA%E5%86%8D%E4%B8%8D%E8%83%BD.mp3",
-      "cover": sessionStorage.getItem("isOut") == "false" ? "https://file.rainsin.cn/d/blog/aobike/%E6%9D%8E%E5%B9%BF.webp" : "https://mypan.hk.cpolar.io/d/blog/aobike/%E6%9D%8E%E5%B9%BF.webp"
+      "song": "https://file.rainsin.cn/d/blog/aobike/%E7%A7%A6%E8%85%94%20-%20%E5%BC%A0%E8%9B%87%E9%BE%99%E3%80%8A%E6%96%A9%E6%9D%8E%E5%B9%BF%E3%80%8B%E4%B8%83%E5%8D%81%E4%BA%8C%E4%B8%AA%E5%86%8D%E4%B8%8D%E8%83%BD.mp3",
+      "cover": "https://file.rainsin.cn/d/blog/aobike/%E6%9D%8E%E5%B9%BF.webp"
     }
   },
   {
@@ -49,8 +49,8 @@ const audios = [
     "artist": "刘随社",
     "songName": "【秦腔】杀庙",
     "files": {
-      "song": sessionStorage.getItem("isOut") == "false" ? "https://file.rainsin.cn/d/blog/aobike/%E5%88%98%E9%9A%8F%E7%A4%BE%20-%20%E3%80%90%E7%A7%A6%E8%85%94%E3%80%91%E6%9D%80%E5%BA%99_%5Bcut_41sec%5D_join.mp3": "https://mypan.hk.cpolar.io/d/blog/aobike/%E5%88%98%E9%9A%8F%E7%A4%BE%20-%20%E3%80%90%E7%A7%A6%E8%85%94%E3%80%91%E6%9D%80%E5%BA%99_%5Bcut_41sec%5D_join.mp3", 
-      "cover": sessionStorage.getItem("isOut") == "false" ? "https://file.rainsin.cn/d/blog/aobike/%E6%9D%80%E5%BA%99.jpg" : "https://mypan.hk.cpolar.io/d/blog/aobike/%E6%9D%80%E5%BA%99.jpg"
+      "song": "https://file.rainsin.cn/d/blog/aobike/%E5%88%98%E9%9A%8F%E7%A4%BE%20-%20%E3%80%90%E7%A7%A6%E8%85%94%E3%80%91%E6%9D%80%E5%BA%99_%5Bcut_41sec%5D_join.mp3", 
+      "cover": "https://file.rainsin.cn/d/blog/aobike/%E6%9D%80%E5%BA%99.jpg"
     }
   },
 
@@ -96,7 +96,7 @@ function MusicPlayers() {
             if (isLoading) {
                 $(`#a-player .player-music-card:nth-child(${i + 1})`).find('.fa-spinner').hide();
                 $(`#a-player .player-music-card:nth-child(${i + 1})`).find('.fa-play').show();
-                $(`#a-player .player-music-card:nth-child(${index + 1})`).find('.fa-pause').hide();
+                $(`#a-player .player-music-card:nth-child(${i + 1})`).find('.fa-pause').hide();
                 $(`#a-player .player-music-card:nth-child(${i + 1})`).removeClass('player-playing');
             } else {
                 if (audio_bt.paused == false) {
@@ -159,7 +159,7 @@ function MusicPlayers() {
         audio_bt.autoplay = false;
 
         audio_bt.onstalled = function (ev) {
-            swal('获取音频失败，可能网络有点问题或者我的服务有问题！');
+            new swal('获取音频失败，可能网络有点问题或者我的服务有问题！');
             $('.player-music-card').removeClass('player-playing');
             $('.fa-play').show();
             $('.fa-pause').hide();

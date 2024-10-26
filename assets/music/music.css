@@ -31,7 +31,7 @@
   width: 100%;
   aspect-ratio: 3/5;
   border-radius: 12px;
-  border: 1px solid rgb(175 174 174 / 50%);
+  /* border: 1px solid rgb(175 174 174 / 50%); */
 }
 
 .player-music-card:hover{
