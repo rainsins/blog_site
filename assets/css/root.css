@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Heti-FangSong";
-  src: "FZFSB", local("STFangsong"), local("FangSong"), url(https://file.rainsin.cn/d/blog/font/heti/FZFSB.woff2), "FS", "STFS";
+  src: local("STFangsong"), local("FangSong"), "FZFSB",url(https://file.rainsin.cn/d/blog/font/heti/FZFSB.woff2), "FS", "STFS";
 }
 
 @font-face {
