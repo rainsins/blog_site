@@ -245,10 +245,9 @@ if(!sessionStorage.getItem("OS")){
     };
 
     window.appendCSS = (content) => {
-      var styleEl = document.createElement('style'),
-            styleSheet = styleEl.sheet;
+      let styleEl = document.createElement('style');
 
-        styleSheet.insertRule(content, 0);
+        styleEl.innerHTML = content;
 
         document.head.appendChild(styleEl);  
     }
