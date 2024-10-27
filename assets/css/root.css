@@ -16,12 +16,12 @@
 
 @font-face {
   font-family: "Heti-FangSong";
-  src: local("STFangsong"), local("FangSong"),"FS", "STFS", "FZFS";
+  src: local("STFangsong"), local("FangSong");
 }
 
 @font-face {
   font-family: "Heti-Kai";
-  src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("Kaiti SC"), local("Kaiti TC"), local("STKaiti"), local("Kaiti"), "KT","FZK";
+  src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("Kaiti SC"), local("Kaiti TC"), local("STKaiti"), local("Kaiti");
 }
 
 @font-face {
@@ -34,7 +34,7 @@
 --Jay-shadow-border: 0 8px 16px -4px #2c2d300c;
 --style-border-always: var(--box-border);
 --main-font: "FZZzOM", "OMPJ";
---decs-font: "Heti-FangSong";
+--decs-font: "Heti-FangSong", "FS", "STFS";
 --pingfang-font: "Ping Fang", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
 --box-bg: #d3d3d323;
 --box-border-b: var(--box-border);

@@ -35,19 +35,19 @@
 
 @font-face {
     font-family: "Heti Kai";
-    src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("Kaiti SC"), local("Kaiti TC"), local("STKaiti"), local("Kaiti"),"FZK","FZKB","KT", local("CESI_KT_GB18030"), local("BiauKai") !important;
+    src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("Kaiti SC"), local("Kaiti TC"), local("STKaiti"), local("Kaiti"),"FZK","FZKB","KT", local("CESI_KT_GB18030"), local("BiauKai") ;
 }
 
 @font-face {
     font-family: "Heti Kai";
     font-weight: 600;
-    src: local("Kaiti SC Bold"), local("Kaiti TC Bold"), local("Kaiti SC"), local("Kaiti TC"),"FZK","FZKB","KT",local("CESI_KT_GB18030"), "Heti Kai Bold Fallback" !important;
+    src: local("Kaiti SC Bold"), local("Kaiti TC Bold"), local("Kaiti SC"), local("Kaiti TC"),"FZK","FZKB","KT",local("CESI_KT_GB18030"), "Heti Kai Bold Fallback";
 }
 
 @font-face {
     font-family: "Heti Kai Bold Fallback";
     font-weight: 600;
-    src: local("STKaiti"), local("Kaiti"), local("BiauKai") !important;
+    src: local("STKaiti"), local("Kaiti"), local("BiauKai");
 }
 
 @font-face {
