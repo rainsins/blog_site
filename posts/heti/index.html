@@ -194,7 +194,11 @@ window.addEventListener('beforeunload', (event) => {
   testPan();
 });
 </script>
- <script>
+ <script src="https://quantil.jsdelivr.net/npm/browser-tool@1.3.1/dist/browser.min.js" integrity="sha256-UPj46Hf28kziVvYS7tWGvZy9COcV7hKW+KqOyqYzkeI=" crossorigin="anonymous"></script>
+
+<script>
+window.infoOS = await browser.getInfo();
+
 function testOS(){
   var userAgent = window.navigator.userAgent,
       platform = window.navigator.platform,
@@ -242,6 +246,15 @@ if(!sessionStorage.getItem("OS")){
         head.appendChild(script);
       }
     };
+
+    window.appendCSS = (content) => {
+      var styleEl = document.createElement('style'),
+            styleSheet = styleEl.sheet;
+
+        styleSheet.insertRule(content, 0);
+
+        document.head.appendChild(styleEl);  
+    }
 
     window.isAppendCDN = (err) => {
       if (sessionStorage.getItem("isPan") == "false") {
@@ -374,7 +387,85 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
     rel="stylesheet"
     href="/assets/css/heti-min.css"
   />
+  <script>
+    var compareVersion = function(version1, version2) {
+    const v1 = version1.split('.');
+    const v2 = version2.split('.');
+    for (let i = 0; i < v1.length || i < v2.length; ++i) {
+        let x = 0, y = 0;
+        if (i < v1.length) {
+            x = parseInt(v1[i]);
+        }
+        if (i < v2.length) {
+            y = parseInt(v2[i]);
+        }
+        if (x > y) {
+            return 1;
+        }
+        if (x < y) {
+            return -1;
+        }
+    }
+    return 0;
+};
 
+const font_css= `@font-face {
+    font-family: "Heti-Song";
+    src: local("SimSun"), "Heti-SimSun", "Heti-SimSunB";
+}
+
+@font-face {
+    font-family: "Heti-Song";
+    font-weight: 200;
+    src:local("SimSun"), "Heti-SimSun", "Heti-SimSunB";
+}
+
+@font-face {
+    font-family: "Heti-Song";
+    font-weight: 600;
+    src: local("SimSun"), "Heti-SimSun", "Heti-SimSunB";
+}
+
+@font-face {
+    font-family: "Heti-Song Black";
+    font-weight: 800;
+    src: local("Songti SC Black"), local("SimSun"), "Heti-SimSun", "Heti-SimSunB";
+}
+@font-face {
+    font-family: "Heti-Kai";
+    src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("Kaiti SC"), local("Kaiti TC"), local("STKaiti"), local("Kaiti"),"Heti-FzKB", "FZKB","KT", local("BiauKai");
+}
+
+@font-face {
+    font-family: "Heti-Kai";
+    font-weight: 600;
+    src: local("Kaiti SC Bold"), local("Kaiti TC Bold"), local("Kaiti SC"), local("Kaiti TC"), "Heti-FzKB","FZKB","KT", "Heti-Kai Bold Fallback";
+}
+
+@font-face {
+    font-family: "Heti-Kai Bold Fallback";
+    font-weight: 600;
+    src: local("STKaiti"), local("Kaiti"), local("BiauKai");
+}
+
+@font-face {
+    font-family: "Heti-Kai Black";
+    font-weight: 800;
+    src: local("Kaiti SC Black"), local("Kaiti TC Black"), "Heti-FzKB", "FZKB",local("Kaiti SC"), local("Kaiti TC"), "KT",local("STKaiti"), local("Kaiti");
+}`
+
+    if(infoOS.system == "Android" || infoOS.browser == "Safari" || infoOS.engine != "Blink" || infoOS.engine != "Gecko"){
+      appendCSS(font_css);
+
+    }else{
+      if(infoOS.engine == "Blink" && compareVersion(infoOS.browserVersion, '115') <= 0){
+        appendCSS(font_css);
+      }
+      if(infoOS.engine == "Gecko" && compareVersion(infoOS.browserVersion, '119') <= 0){
+        appendCSS(font_css);
+      }
+    }
+  </script>
   <script>
     window.load_event = {
       ...window.load_event,
@@ -466,6 +557,40 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
 
   <link rel="stylesheet" href="/assets/css/comments-min.css" />
   <link rel="stylesheet" href="/assets/css/root-min.css" />
+
+  <script>
+    var compareVersion = function(version1, version2) {
+    const v1 = version1.split('.');
+    const v2 = version2.split('.');
+    for (let i = 0; i < v1.length || i < v2.length; ++i) {
+        let x = 0, y = 0;
+        if (i < v1.length) {
+            x = parseInt(v1[i]);
+        }
+        if (i < v2.length) {
+            y = parseInt(v2[i]);
+        }
+        if (x > y) {
+            return 1;
+        }
+        if (x < y) {
+            return -1;
+        }
+    }
+    return 0;
+};
+const font_fangsong = `@font-face {font-family: "Heti-FangSong";src: local("STFangsong"), local("FangSong"), url(https://file.rainsin.cn/d/blog/font/heti/FZFSB.woff2) format("woff2");}`
+    if(infoOS.system == "Android" || infoOS.browser == "Safari" || infoOS.engine != "Blink" || infoOS.engine != "Gecko"){
+      appendCSS(font_fangsong);
+    }else{
+      if(infoOS.engine == "Blink" && compareVersion(infoOS.browserVersion, '115') <= 0){
+        appendCSS(font_fangsong);
+      }
+      if(infoOS.engine == "Gecko" && compareVersion(infoOS.browserVersion, '119') <= 0){
+        appendCSS(font_fangsong);
+      }
+    }
+  </script>
 
   
   <link
@@ -618,7 +743,6 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
      
   <script src="https://s4.zstatic.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
    
-  <script src="https://file.rainsin.cn/d/blog/js/pinyin.min.js"></script>
   <script
     async
     src="https://file.rainsin.cn/d/blog/js/pinyin.min.js"

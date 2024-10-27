@@ -194,7 +194,11 @@ window.addEventListener('beforeunload', (event) => {
   testPan();
 });
 </script>
- <script>
+ <script src="https://quantil.jsdelivr.net/npm/browser-tool@1.3.1/dist/browser.min.js" integrity="sha256-UPj46Hf28kziVvYS7tWGvZy9COcV7hKW+KqOyqYzkeI=" crossorigin="anonymous"></script>
+
+<script>
+window.infoOS = await browser.getInfo();
+
 function testOS(){
   var userAgent = window.navigator.userAgent,
       platform = window.navigator.platform,
@@ -242,6 +246,15 @@ if(!sessionStorage.getItem("OS")){
         head.appendChild(script);
       }
     };
+
+    window.appendCSS = (content) => {
+      var styleEl = document.createElement('style'),
+            styleSheet = styleEl.sheet;
+
+        styleSheet.insertRule(content, 0);
+
+        document.head.appendChild(styleEl);  
+    }
 
     window.isAppendCDN = (err) => {
       if (sessionStorage.getItem("isPan") == "false") {
@@ -390,6 +403,40 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
 
   <link rel="stylesheet" href="/assets/css/comments-min.css" />
   <link rel="stylesheet" href="/assets/css/root-min.css" />
+
+  <script>
+    var compareVersion = function(version1, version2) {
+    const v1 = version1.split('.');
+    const v2 = version2.split('.');
+    for (let i = 0; i < v1.length || i < v2.length; ++i) {
+        let x = 0, y = 0;
+        if (i < v1.length) {
+            x = parseInt(v1[i]);
+        }
+        if (i < v2.length) {
+            y = parseInt(v2[i]);
+        }
+        if (x > y) {
+            return 1;
+        }
+        if (x < y) {
+            return -1;
+        }
+    }
+    return 0;
+};
+const font_fangsong = `@font-face {font-family: "Heti-FangSong";src: local("STFangsong"), local("FangSong"), url(https://file.rainsin.cn/d/blog/font/heti/FZFSB.woff2) format("woff2");}`
+    if(infoOS.system == "Android" || infoOS.browser == "Safari" || infoOS.engine != "Blink" || infoOS.engine != "Gecko"){
+      appendCSS(font_fangsong);
+    }else{
+      if(infoOS.engine == "Blink" && compareVersion(infoOS.browserVersion, '115') <= 0){
+        appendCSS(font_fangsong);
+      }
+      if(infoOS.engine == "Gecko" && compareVersion(infoOS.browserVersion, '119') <= 0){
+        appendCSS(font_fangsong);
+      }
+    }
+  </script>
 
   
   <link
