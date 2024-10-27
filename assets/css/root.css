@@ -16,17 +16,12 @@
 
 @font-face {
   font-family: "Heti-FangSong";
-  src: local("STFangsong"), local("FangSong"),url(https://file.rainsin.cn/d/blog/font/heti/%E4%BB%BF%E5%AE%8B_%E5%B8%B8%E8%A7%84.woff2) format(woff2), url(https://file.rainsin.cn/d/blog/font/heti/FZFSB.woff2) format(woff2), "FZFSB","FS", "STFS";
-}
-
-@font-face {
-  font-family: "Heti-FzKB";
-  src: url(https://file.rainsin.cn/d/blog/font/FZKTB.woff2) format(woff2),url(https://file.rainsin.cn/d/blog/font/heti/STKaiti.woff2) format(woff2);
+  src: local("STFangsong"), local("FangSong"),"FS", "STFS", "FZFS";
 }
 
 @font-face {
   font-family: "Heti-Kai";
-  src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("Kaiti SC"), local("Kaiti TC"), local("STKaiti"), local("Kaiti"),"Heti-FzKB","FZKB", "KT", local("BiauKai");
+  src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("Kaiti SC"), local("Kaiti TC"), local("STKaiti"), local("Kaiti"), "KT","FZK";
 }
 
 @font-face {
