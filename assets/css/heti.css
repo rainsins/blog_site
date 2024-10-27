@@ -171,13 +171,13 @@
 
 @font-face {
     font-family: "Heti-Kai";
-    src: "FZKB",local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("Kaiti SC"), local("Kaiti TC"), local("STKaiti"), local("Kaiti"), "KT","Heti-FzKB", local("BiauKai");
+    src: local("Kaiti SC Regular"), local("Kaiti TC Regular"), local("Kaiti SC"), local("Kaiti TC"), local("STKaiti"), local("Kaiti"), "FZKB","Heti-FzKB", "KT", local("BiauKai");
 }
 
 @font-face {
     font-family: "Heti-Kai";
     font-weight: 600;
-    src: "FZKB", local("Kaiti SC Bold"), local("Kaiti TC Bold"), local("Kaiti SC"), local("Kaiti TC"), "KT","Heti-FzKB", "Heti-Kai Bold Fallback";
+    src: local("Kaiti SC Bold"), local("Kaiti TC Bold"), local("Kaiti SC"), local("Kaiti TC"), "FZKB","Heti-FzKB", "KT","Heti-Kai Bold Fallback";
 }
 
 @font-face {
@@ -189,7 +189,7 @@
 @font-face {
     font-family: "Heti-Kai Black";
     font-weight: 800;
-    src: local("Kaiti SC Black"), local("Kaiti TC Black"), "FZKB",local("Kaiti SC"), local("Kaiti TC"), "KT","Heti-FzKB", local("STKaiti"), local("Kaiti");
+    src: local("Kaiti SC Black"), local("Kaiti TC Black"),local("Kaiti SC"), local("Kaiti TC"), "FZKB","Heti-FzKB", "KT", local("STKaiti"), local("Kaiti");
 }
 
 .heti {
