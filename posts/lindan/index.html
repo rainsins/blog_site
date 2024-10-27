@@ -391,6 +391,7 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   <link rel="stylesheet" href="/assets/css/root-min.css" />
 
   <script type="module">
+    let infoOS = await browser.getInfo();
     var compareVersion = function(version1, version2) {
     const v1 = version1.split('.');
     const v2 = version2.split('.');
