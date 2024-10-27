@@ -669,11 +669,11 @@
 }
 
 .heti--serif {
-    font-family: "Times New Roman", times, "Heti-Song","PMingLiU","Heti-SimSunB", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    font-family: "Times New Roman", times, "Heti-Song","SimSun", "STS","PMingLiU", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 }
 
 .heti--classic {
-    font-family: "Times New Roman", times, "Heti-Song","PMingLiU","Heti-SimSunB", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    font-family: "Times New Roman", times, "Heti-Song","SimSun", "STS","PMingLiU",serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 }
 
 .heti--classic h1,
@@ -703,7 +703,7 @@
 }
 
 .heti--song {
-    font-family: "Times New Roman", times, "Heti-Song","PMingLiU","Heti-SimSunB", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    font-family: "Times New Roman", times, "Heti-Song","SimSun", "STS","PMingLiU",serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 }
 
 .heti--kai {
@@ -821,7 +821,7 @@
 
 .heti--ancient,
 .heti--poetry {
-    font-family: "Times New Roman", times, "Heti-Song","PMingLiU","Heti-SimSunB", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: "Times New Roman", times, "Heti-Song","SimSun", "STS","PMingLiU", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .heti--ancient h1,
