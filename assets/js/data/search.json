@@ -341,7 +341,7 @@
   },
   
   {
-    "title": "「文件」一个<del>趋于完美</del>不完美的黑苹果引导文件",
+    "title": "「文件」一个趋于完美的黑苹果引导文件",
     "url": "/posts/mac/",
     "categories": "黑苹果",
     "tags": "EFI",
@@ -354,7 +354,7 @@
 
     
     "snippet": "前言    随着苹果推进自家CPU的发展，对Intel的CPU支持也将结束，现在的MacOS Snonma也许是最后一个支持Intel的版本，Sequoia 15还能用，且用且珍惜。      这个主机兜兜转转试过了好多的系统，除了MacOS和Windows11一直都在用之外，还试过如Deepin、优麒麟、银河麒麟、开放麒麟、Ubuntu、ChromeOS、FydeOS、Zorin，以及现在...",
-    "content": "前言    随着苹果推进自家CPU的发展，对Intel的CPU支持也将结束，现在的MacOS Snonma也许是最后一个支持Intel的版本，Sequoia 15还能用，且用且珍惜。      这个主机兜兜转转试过了好多的系统，除了MacOS和Windows11一直都在用之外，还试过如Deepin、优麒麟、银河麒麟、开放麒麟、Ubuntu、ChromeOS、FydeOS、Zorin，以及现在正在用的统信UOS。      如何使用Opencore引导MacOS、Windows11、Linux三个系统，请看这篇使用Opencore引导多个系统。  配置            项目      名称      备注                  处理器      Intel Core I5-9600KF      420              主板      微星 Z390M-S01      220              显卡      蓝宝石 RX570 4G      200              内存      芝奇幻光戟 3600C18 16G✖️2      320              Mac主硬盘      致钛 TiPlus5000 500G      327              Mac副硬盘      日立 1T      ??              Win硬盘      致钛 TiPlus5000 1T      420              OpenKylin硬盘      三星 860evo 256GB      ??              声卡      螃蟹 ALC892 Codec      无              无线模块      Intel AX200      70              网卡      螃蟹 8111H      无              机箱      小喆C2P白色      80              电源      TT SFX钢影450W      300              屏幕      熊猫 2k 75Hz      500              -      -      2857        主板、CPU、显卡这些虽然已经有点过时，但是应付日常使用没有问题，买的时候看看E类PCIE口是否支持NGFF，两千五百块钱（只有一块硬盘）的机子，普通人应该不会有那么多硬盘，2TB的致态需要854元（2024.3.15），内存其实骇客神条就行，所以不会超过三千块钱。不玩游戏的可以试试。引导  Opencore 0.9.3  如果你只有一个Mac系统，可以禁用以下三项：系统  Sequoia 15  Windows 11  UOS 22 (家庭版)正常的功能  CPU  显卡  声卡  USB  有线网卡  变频  睡眠  Wifi（Sequoia 15又不行了，等驱动作者更新）  蓝牙（无法隔空投送等操作）（Sequoia 15又不行了，等驱动作者更新）  博通的网卡被炒的太高了，后面又换了AX200模块，使用的PCI-E短口。  自己自行注入三码，三码重复会封你的Apple号，怎么注入Google搜一下就有。文件    下载链接：EFI      如果下载链接有问题，请联系我mail@rainsin.cn，务必注明来意。  效果"
+    "content": "前言    随着苹果推进自家CPU的发展，对Intel的CPU支持也将结束，现在的MacOS Snonma也许是最后一个支持Intel的版本，Sequoia 15还能用，且用且珍惜。      这个主机兜兜转转试过了好多的系统，除了MacOS和Windows11一直都在用之外，还试过如Deepin、优麒麟、银河麒麟、开放麒麟、Ubuntu、ChromeOS、FydeOS、Zorin，以及现在正在用的统信UOS。      如何使用Opencore引导MacOS、Windows11、Linux三个系统，请看这篇使用Opencore引导多个系统。  配置            项目      名称      备注                  处理器      Intel Core I5-9600KF      420              主板      微星 Z390M-S01      220              显卡      蓝宝石 RX570 4G      200              内存      芝奇幻光戟 3600C18 16G✖️2      320              Mac主硬盘      致钛 TiPlus5000 500G      327              Mac副硬盘      日立 1T      ??              Win硬盘      致钛 TiPlus5000 1T      420              OpenKylin硬盘      三星 860evo 256GB      ??              声卡      螃蟹 ALC892 Codec      无              无线模块      BCM94360CD      123.17              网卡      螃蟹 8111H      无              机箱      小喆C2P白色      80              电源      TT SFX钢影450W      300              屏幕      熊猫 2k 75Hz      500              -      -      2910.17        主板、CPU、显卡这些虽然已经有点过时，但是应付日常使用没有问题，2TB的致态需要854元（2024.3.15），内存其实骇客神条就行，所以不会超过三千块钱，于我而言足够了。引导  Opencore 0.9.3  如果你只有一个Mac系统，可以禁用以下三项：系统  Sequoia 15  Windows 11  UOS 22 (家庭版)正常的功能  CPU  显卡  声卡  USB  有线网卡  变频  睡眠  Wifi  蓝牙（隔空投送等都正常）  自己自行注入三码，三码重复会封你的Apple号，怎么注入Google搜一下就有。  网卡需要OCLP注入驱动。文件    下载链接：EFI      如果下载链接有问题，请联系我mail@rainsin.cn，务必注明来意。  效果"
   },
   
   {
