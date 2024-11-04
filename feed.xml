@@ -4,7 +4,7 @@
   <id>https://blog.rainsin.cn/</id>
   <title>Rainsin • Blog</title>
   <subtitle>rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）</subtitle>
-  <updated>2024-11-04T09:27:12+08:00</updated>
+  <updated>2024-11-04T09:31:31+08:00</updated>
   <author>
     <name>rainsin</name>
     <uri>https://blog.rainsin.cn/</uri>
@@ -25,42 +25,6 @@
     <published>2024-11-02T23:30:00+08:00</published>
   
     <updated>2024-11-04T09:08:38+08:00</updated>
-  
-    <id>https://blog.rainsin.cn/posts/blue/</id>
-    <content src="https://blog.rainsin.cn/posts/blue/" />
-    <author>
-      <name>rainsin</name>
-    </author>
-
-  
-    
-    <category term="音乐" />
-    
-  
-
-  <summary>我的心，蓝蓝的。
-
-
-
-
-
-
-
-
-
-文件
-
-陶吉吉合集，孙燕姿合集，莫文蔚合集，周杰伦合集，凤凰传奇合集。下载下来放在网易云的云盘里。</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>「神秘」我的心，我的心，蓝蓝的。</title>
-    <link href="https://blog.rainsin.cn/posts/blue/" rel="alternate" type="text/html" title="「神秘」我的心，我的心，蓝蓝的。" />
-    <published>2024-11-02T23:30:00+08:00</published>
-  
-    <updated>2024-11-04T09:15:35+08:00</updated>
   
     <id>https://blog.rainsin.cn/posts/blue/</id>
     <content src="https://blog.rainsin.cn/posts/blue/" />
@@ -248,6 +212,50 @@ mkdir certbot &amp;amp;amp;&amp;amp;amp; cd certbot &amp;amp;amp;&amp;amp;amp; t
 
 
 那么下面我们就进入第三条，也就是我们这课程的第五讲。我们就用这句话来表达费尔巴哈提纲第三条的内容：切入社会制度之感性根基。这就是马克思的历史...</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>「文件」我使用的Opencore的主题包</title>
+    <link href="https://blog.rainsin.cn/posts/opencore-theme/" rel="alternate" type="text/html" title="「文件」我使用的Opencore的主题包" />
+    <published>2024-10-09T12:23:00+08:00</published>
+  
+    <updated>2024-10-25T10:56:09+08:00</updated>
+  
+    <id>https://blog.rainsin.cn/posts/opencore-theme/</id>
+    <content src="https://blog.rainsin.cn/posts/opencore-theme/" />
+    <author>
+      <name>rainsin</name>
+    </author>
+
+  
+    
+    <category term="黑苹果" />
+    
+  
+
+  <summary>使用
+
+先添加OpenCanopy.efi到EFI/OC/Drivers,将压缩包解压，将android12文件加移动到EFI-&amp;amp;gt;OC-&amp;amp;gt;Resources-&amp;amp;gt;Image下：
+
+
+
+打开OC的配置文件，修改启动界面主题为android12/android12，就是主题的相对与Image/的路径，我的压缩包解压出来好像有三层，如果是三层就是android12/android12/android12，你可以自己看看：
+
+
+
+如果有缩放的问题，可以更改设置UIScale，一般为1，我的是2k小屏，如果是4k等大屏可以设为2：
+
+
+
+效果
+
+
+
+文件
+
+直接下载,夸克,OneDrive。</summary>
 
   </entry>
 
