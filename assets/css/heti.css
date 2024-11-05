@@ -1122,6 +1122,14 @@ em.charch,
     font-weight: 800;
 }
 
+.heti--kai{
+    font-family: "Times New Roman", times, "Heti-Kai", var(--main-font) !important;
+}
+
+.heti-kai{
+    font-family: "Times New Roman", times, "Heti-Kai", var(--main-font) !important;
+}
+
 .heti mark {
     background-color: #f0ada053;
     color: var(--text-color);
