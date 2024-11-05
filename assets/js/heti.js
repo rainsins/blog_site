@@ -218,6 +218,9 @@ function creactObject(text) {
             case "bq":
                 result += `<blockquote>`;
                 break;
+            case "strong":
+                result += `<strong>`;
+                break;
             default:
                 console.log(`Sorry, we are out of.`);
                 break;
@@ -334,6 +337,9 @@ function creactObject(text) {
                 break;
             case "bq":
                 result += `</blockquote>`;
+                break;
+            case "strong":
+                result += `</strong>`;
                 break;
             default:
                 console.log(`Sorry, we are out of.`);
