@@ -4,7 +4,7 @@
   <id>https://blog.rainsin.cn/</id>
   <title>Rainsin • Blog</title>
   <subtitle>rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）</subtitle>
-  <updated>2024-11-05T14:34:54+08:00</updated>
+  <updated>2024-11-06T13:08:22+08:00</updated>
   <author>
     <name>rainsin</name>
     <uri>https://blog.rainsin.cn/</uri>
@@ -16,6 +16,64 @@
   <rights> © 2024 rainsin </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+
+  
+  <entry>
+    <title>「爱好」我做了一个练习魔方的公式显示工具</title>
+    <link href="https://blog.rainsin.cn/posts/cube/" rel="alternate" type="text/html" title="「爱好」我做了一个练习魔方的公式显示工具" />
+    <published>2024-11-06T12:32:10+08:00</published>
+  
+    <updated>2024-11-06T12:32:10+08:00</updated>
+  
+    <id>https://blog.rainsin.cn/posts/cube/</id>
+    <content src="https://blog.rainsin.cn/posts/cube/" />
+    <author>
+      <name>rainsin</name>
+    </author>
+
+  
+    
+    <category term="魔方" />
+    
+    <category term="OLL" />
+    
+    <category term="F2L" />
+    
+    <category term="PLL" />
+    
+  
+
+  <summary>公式显示器
+
+
+
+  公式来源speedcubedb。这个小工具是我一时兴起做的，数据是从网站上扒下来的，会有很多错误，容我慢慢改，后续会对公式进行分类并且增加公式步进。
+
+
+
+
+
+  具体的OLL手法参见：【经典重制】 菲神OLL 全网唯一4K60帧版本 挑战画质巅峰 CubeSkills 
+具体的PLL手法参见：【经典重制】 菲神PLL 全网唯一4K60帧版本 挑战画质巅峰 CubeSkills 
+F2L技巧：【经典重制】菲神牛逼的F2L 全网唯一4K60帧版本 挑战画质巅峰 CubeSkills
+
+
+🎯 魔方练习好工具
+
+1.csTimer魔方计时器
+
+这是魔方圈最著名的工具了，它不只是一个计时器，它可以单独的练习你在学习过程中每一个步骤的公式，比如PLL，OLL，F2L，ZBLL等等，是各个阶段的魔友都适用的工具。
+
+链接：csTimer
+
+2.Speed Cube DB
+
+...</summary>
+
+  </entry>
+
 
 
   
@@ -74,6 +132,8 @@
 
   </entry>
 
+
+
   
   <entry>
     <title>「神秘」我的心，我的心，蓝蓝的。</title>
@@ -111,6 +171,8 @@
 陶吉吉合集，孙燕姿合集，莫文蔚合集，周杰伦合集，凤凰传奇合集。下载下来放在网易云的云盘里。</summary>
 
   </entry>
+
+
 
   
   <entry>
@@ -167,6 +229,8 @@ mkdir certbot &amp;amp;amp;&amp;amp;amp; cd certbot &amp;amp;amp;&amp;amp;amp; t
 
   </entry>
 
+
+
   
   <entry>
     <title>「逐字稿」《费尔巴哈论》六、社会权力论与意识形态论</title>
@@ -217,60 +281,6 @@ mkdir certbot &amp;amp;amp;&amp;amp;amp; cd certbot &amp;amp;amp;&amp;amp;amp; t
 
   </entry>
 
-  
-  <entry>
-    <title>「逐字稿」《费尔巴哈论》五、马克思的历史观</title>
-    <link href="https://blog.rainsin.cn/posts/marx4/" rel="alternate" type="text/html" title="「逐字稿」《费尔巴哈论》五、马克思的历史观" />
-    <published>2024-10-16T12:32:10+08:00</published>
-  
-    <updated>2024-11-05T12:06:07+08:00</updated>
-  
-    <id>https://blog.rainsin.cn/posts/marx4/</id>
-    <content src="https://blog.rainsin.cn/posts/marx4/" />
-    <author>
-      <name>rainsin</name>
-    </author>
-
-  
-    
-    <category term="哲学" />
-    
-    <category term="马克思" />
-    
-  
-
-  <summary>索引
-
-一、前置的准备阶段
-
-二、社会权力与法的权利的关系
-
-三、扬弃唯物与唯心的对立
-
-四、对认识论立场的超越
-
-五、马克思的历史观√
-
-六、社会权力论与意识形态论
-
-七、人的“类存在”的历史性
-
-…
-
-切入社会制度之感性根基：马克思的历史观
-
-
-@Hdiv(classic){
-@Hbq(){
-@Hsp(){
-@Hp(intent){关于环境和教育起改变作用的唯物主义学说忘记了：环境是由人来改变的，而教育者本人一定是受教育的。因此，这种学说一定把社会分成两部分，其中一部分凌驾于社会之上。}@Hp(intent){环境的改变和人的活动或自我改变的一致，只能被看作是并合理地理解为革命的实践。}@Hp(end,fangsong){——《关于费尔巴哈的提纲》三}
-}
-}}
-
-
-那么下面我们就进入第三条，也就是我们这课程的第五讲。我们就用这句话来表达费尔巴哈提纲第三条的内容：切入社会制度之感...</summary>
-
-  </entry>
 
 </feed>
 
