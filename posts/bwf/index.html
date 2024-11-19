@@ -1282,7 +1282,7 @@ observer.observe(targetNode, config);
   class="readtime"
   data-bs-toggle="tooltip"
   data-bs-placement="bottom"
-  title="162 字"
+  title="168 字"
 >
   <em>1 分钟</em>阅读</span>
 
@@ -1344,10 +1344,10 @@ observer.observe(targetNode, config);
   </tbody>
 </table></div>
 
-<h3 id="upbadminutiae"><span class="me-2">（UP：Badminutiae）</span><a href="#upbadminutiae" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="up阿斑ttt"><span class="me-2">（UP：阿斑TTT）</span><a href="#up阿斑ttt" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <blockquote class="prompt-tip">
-  <p>强强对抗，赏心悦目。</p>
+  <p>强强对抗，赏心悦目，侵删。</p>
 </blockquote>
 
 <div id="mse" style="width: 100%; aspect-ratio: 1920/1080;"></div>
@@ -1359,7 +1359,7 @@ window.load_event = {
 
     let mseplayer = new Artplayer({
       container: '#mse',
-      url: 'https://file.rainsin.cn/d/blog/video/%E6%9E%97%E4%B8%B9/%5B4K50FPS%5D%20-%20Lin%20Dan%20vs%20Taufik%20Hidayat%20-%202012%20All%20England%20Open%20-%20%5BRemastered%5D.mp4',
+      url: 'https://file.rainsin.cn/d/blog/video/%E6%9E%97%E4%B8%B9/%E3%80%90%E8%87%BB%E4%BA%AB50%E5%B8%A7%C2%B7%E5%A4%8D%E7%9B%98%E3%80%912011%E5%B9%B4%E7%9A%84%E6%9E%97%E4%B8%B9%E5%88%B0%E5%BA%95%E6%9C%89%E5%A4%9A%E5%BC%BA%EF%BC%9F%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91%E5%91%8A%E8%AF%89%E4%BD%A0%E7%AD%94%E6%A1%88.mp4',
       theme: "#2c9678",
         autoMini: true,
         flip: true,
@@ -1374,6 +1374,48 @@ window.load_event = {
         playsInline: true,
         setting: true,
         autoOrientation: true,
+        plugins: [
+        artplayerPluginDanmuku({
+            danmuku: 'https://file.rainsin.cn/d/blog/video/%E6%9E%97%E4%B8%B9/%E3%80%90%E8%87%BB%E4%BA%AB50%E5%B8%A7%C2%B7%E5%A4%8D%E7%9B%98%E3%80%912011%E5%B9%B4%E7%9A%84%E6%9E%97%E4%B8%B9%E5%88%B0%E5%BA%95%E6%9C%89%E5%A4%9A%E5%BC%BA%EF%BC%9F%E4%B8%80%E4%B8%AA%E8%A7%86%E9%A2%91%E5%91%8A%E8%AF%89%E4%BD%A0%E7%AD%94%E6%A1%88.xml',
+
+            // 以下为非必填
+            speed: 5, // 弹幕持续时间，范围在[1 ~ 10]
+            margin: [10, '25%'], // 弹幕上下边距，支持像素数字和百分比
+            opacity: 1, // 弹幕透明度，范围在[0 ~ 1]
+            color: '#FFFFFF', // 默认弹幕颜色，可以被单独弹幕项覆盖
+            mode: 0, // 默认弹幕模式: 0: 滚动，1: 顶部，2: 底部
+            modes: [0, 1, 2], // 弹幕可见的模式
+            fontSize: 25, // 弹幕字体大小，支持像素数字和百分比
+            antiOverlap: true, // 弹幕是否防重叠
+            synchronousPlayback: false, // 是否同步播放速度
+            mount: undefined, // 弹幕发射器挂载点, 默认为播放器控制栏中部
+            heatmap: true, // 是否开启热力图
+            width: 512, // 当播放器宽度小于此值时，弹幕发射器置于播放器底部
+            points: [], // 热力图数据
+            filter: (danmu) => danmu.text.length <= 100, // 弹幕载入前的过滤器
+            beforeVisible: () => true, // 弹幕显示前的过滤器，返回 true 则可以发送
+            visible: true, // 弹幕层是否可见
+            emitter: true, // 是否开启弹幕发射器
+            maxLength: 200, // 弹幕输入框最大长度, 范围在[1 ~ 1000]
+            lockTime: 5, // 输入框锁定时间，范围在[1 ~ 60]
+            theme: 'dark', // 弹幕主题，支持 dark 和 light，只在自定义挂载时生效
+            OPACITY: {}, // 不透明度配置项
+            FONT_SIZE: {}, // 弹幕字号配置项
+            MARGIN: {}, // 显示区域配置项
+            SPEED: {}, // 弹幕速度配置项
+            COLOR: [], // 颜色列表配置项
+
+            // 手动发送弹幕前的过滤器，返回 true 则可以发送，可以做存库处理
+            beforeEmit(danmu) {
+               return new Promise((resolve) => {
+                    console.log(danmu);
+                    setTimeout(() => {
+                        resolve(true);
+                    }, 1000);
+               });
+            },
+        }),
+    ],
     });
     }
 }
@@ -1519,6 +1561,13 @@ window.load_event = {
         
         
         <li class="text-truncate lh-lg">
+          <a href="/posts/marx/">「逐字稿」《费尔巴哈论》一、前置的准备阶段</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
           <a href="/posts/cube/">「爱好」一个练习魔方的公式显示工具</a>
         </li>
       
@@ -1527,13 +1576,6 @@ window.load_event = {
         
         <li class="text-truncate lh-lg">
           <a href="/posts/marx6/">「逐字稿」《费尔巴哈论》七、人的“类存在”的历史性</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/marx/">「逐字稿」《费尔巴哈论》一、前置的准备阶段</a>
         </li>
       
         
