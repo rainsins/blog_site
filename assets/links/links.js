@@ -31,6 +31,14 @@ const links_data = [
     emil: "",
     index: -1
   },
+  {
+    name: "酷小呵",
+    url: "https://t.kuhehe.top/",
+    img: "https://bu.dusays.com/2024/06/19/6672f2c43c9b0.gif",
+    dec: "资源大佬",
+    emil: "",
+    index: -1
+  },
 ];
 
 const dcolor = ["#f7dfe5", "#c2cfd0", "#eadfb5", "#dae9ef", "#d6d4e2", "#bcbea9", "#697291", "#a5898c", "#aec2c8", "#e9d0b1", "#8890a4", "#d1c0c6"];
