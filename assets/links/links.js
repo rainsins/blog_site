@@ -33,8 +33,8 @@ const links_data = [
   },
   {
     name: "酷小呵",
-    url: "https://t.kuhehe.top/",
-    img: "https://bu.dusays.com/2024/06/19/6672f2c43c9b0.gif",
+    url: "https://www.kuhehe.top/",
+    img: "https://q1.qlogo.cn/g?b=qq&nk=3111349763&s=100",
     dec: "资源大佬",
     emil: "",
     index: -1
