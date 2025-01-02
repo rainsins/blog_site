@@ -293,18 +293,6 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   
    
   
-  
-  <script src="https://s4.zstatic.net/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
-
-  <script>
-    window.load_event = {
-      ...window.load_event,
-      autoSpacing: () => {
-        pangu.spacingElementByClassName("post-content");
-        pangu.autoSpacingPage();
-      },
-    };
-  </script>
    
   
 
@@ -328,7 +316,16 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
 
   <link rel="stylesheet" href="/assets/css/card-profile.css" />
 
-    
+   
+  <script
+    src="https://s4.zstatic.net/ajax/libs/babel-standalone/7.25.6/babel.min.js"
+    integrity="sha512-8M1WWEzuftS49rfh63fHz354qx+Pzvp3kcQVVTOxIdFSzjYC3I3vk5zgN0guAook97MQIZTfEdl9pUQTov9V6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+   
+  <script src="https://cdn.jsdmirror.com/npm/animejs@3.2.2/lib/anime.min.js"></script>
+  
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta
@@ -359,8 +356,8 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   </style>
 
   
-  <meta name="keywords" content="wanshuo, blog, 课程, 文字稿" />
-  <meta name="author" content="wanshuo" />
+  <meta name="keywords" content="rainsin, links" />
+  <meta name="author" content="rainsin" />
   
 
   <script>
@@ -382,117 +379,6 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   <link rel="stylesheet" href="/assets/css/root-min.css" />
 
   
-  <link
-    rel="stylesheet"
-    href="https://s4.zstatic.net/ajax/libs/waline/3.3.0/waline.min.css"
-  />
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/waline/3.3.0/waline-meta.css"
-  />
-
-  <style>
-    .wl-cards .wl-user .wl-user-avatar{
-      border: 1px solid #a4a4a4ab;
-    }
-    [data-waline] p{
-      margin-bottom: 0;
-    }
-  </style>
-
-  <script src="https://s4.zstatic.net/ajax/libs/waline/3.3.0/waline.umd.min.js"></script>
-
-  <script>
-    window.load_event = {
-      ...window.load_event,
-      comments: () => {
-          Waline.init({
-            el: "#tcomment",
-            serverURL: "https://waline.rainsin.cn/",
-            emoji: [
-              "//file.rainsin.cn/d/blog/em/小黑子",
-              "//file.rainsin.cn/d/blog/em/Sticker-100",
-              "//file.rainsin.cn/d/blog/em/小电视",
-              "//file.rainsin.cn/d/blog/em/Tieba",
-              "//file.rainsin.cn/d/blog/em/alus",
-              "//file.rainsin.cn/d/blog/em/商业头盔",
-              "//file.rainsin.cn/d/blog/em/小人",
-              "//file.rainsin.cn/d/blog/em/小坏坏",
-              "//file.rainsin.cn/d/blog/em/抽象",
-              "//file.rainsin.cn/d/blog/em/搜索引擎",
-              "//file.rainsin.cn/d/blog/em/机场",
-              "//file.rainsin.cn/d/blog/em/猥琐萌",
-              "//file.rainsin.cn/d/blog/em/猫狗",
-              "//file.rainsin.cn/d/blog/em/白白",
-              "//file.rainsin.cn/d/blog/em/突然",
-              "//file.rainsin.cn/d/blog/em/胡桃",
-              "//file.rainsin.cn/d/blog/em/被子",
-              "//file.rainsin.cn/d/blog/em/酷安",
-              "//file.rainsin.cn/d/blog/em/tw",
-              "//file.rainsin.cn/d/blog/em/qq",
-              "//file.rainsin.cn/d/blog/em/weibo",
-            ],
-            pageview: true,
-            locale: {
-              placeholder:
-                "唠唠嗑（登录和上面信息都不是必需的，评论审核后可见，添加邮箱可在被回复时邮件提醒，按🔍进行预览）",
-              admin: "站长",
-              level0: "素人",
-              level1: "企划",
-              level2: "企划专属",
-              level3: "专属",
-              level4: "双专属",
-              level5: "三社共有",
-              nick: "名称",
-              sofa: "来一起击剑🤺吧",
-            },
-            dark: 'html[data-mode="dark"]',
-            imageUploader: false,
-            search: false,
-          });
-
-        window.time_comment = 0;
-        let set_comment_time = setInterval(()=>{
-          const get_anno_img = Array.from(document.querySelectorAll(".wl-cards .wl-user .wl-user-avatar[src='https://seccdn.libravatar.org/avatar/d41d8cd98f00b204e9800998ecf8427e']"));
-          if(time_comment < 500){
-            get_anno_img.forEach((el,index)=>{
-          el.src = "https://file.rainsin.cn/d/blog/img/comment/act.gif";
-        });
-        time_comment++;
-          }else{
-            clearInterval(set_comment_time);
-            return;
-          }
-        },200)
-      },
-    };
-  </script>
-
-  <style>
-    .wl-emoji-popup .wl-tab-wrapper button {
-      width: 4em;
-    }
-    .wl-emoji-popup .wl-tab-wrapper button img {
-      max-height: 3.5em;
-      max-width: 3.5em;
-    }
-    .wl-meta>span::before{
-      margin-top: 2px;
-    }
-
-    .wl-editor, .wl-input{
-      background-image: url(https://file.rainsin.cn/d/blog/img/comment/waline-bg.gif),url(https://api.rainsin.cn/blog_data/img/comment/waline-bg.gif);
-      background-position: center right;
-      background-repeat: no-repeat;
-      background-size: auto 100%;
-    }
-    :root{
-      --waline-theme-color: #d4c4b7;
-      --waline-active-color: #d4c4b7aa;
-    }
-  </style>
-  
 
   <script>
     const style = document.createElement("style");
@@ -510,30 +396,36 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
 
 
 
+  
+  <script src="https://unpkg.zhimg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.zhimg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="/assets/js/swr.min.js" async></script>
    
   
-              <!-- Begin Jekyll SEO tag v2.8.0 -->
+   
+  <script src="https://s4.zstatic.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+             <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="「转载」「课程资源」王德峰坛经十品文字稿" />
-<meta name="author" content="wanshuo" />
+<meta property="og:title" content="Links" />
+<meta name="author" content="Rainsin Yu" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="王德峰坛经十品" />
-<meta property="og:description" content="王德峰坛经十品" />
-<link rel="canonical" href="https://blog.rainsin.cn/posts/tan1/" />
-<meta property="og:url" content="https://blog.rainsin.cn/posts/tan1/" />
+<meta name="description" content="友情链接页" />
+<meta property="og:description" content="友情链接页" />
+<link rel="canonical" href="https://blog.rainsin.cn/links/" />
+<meta property="og:url" content="https://blog.rainsin.cn/links/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-06-15T12:32:10+08:00" />
+<meta property="article:published_time" content="2025-01-02T23:26:30+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="「转载」「课程资源」王德峰坛经十品文字稿" />
+<meta property="twitter:title" content="Links" />
 <meta name="twitter:site" content="@2000_python" />
-<meta name="twitter:creator" content="@wanshuo" />
+<meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"wanshuo","url":"https://github.com/wanshuo/"},"dateModified":"2024-10-25T10:56:09+08:00","datePublished":"2024-06-15T12:32:10+08:00","description":"王德峰坛经十品","headline":"「转载」「课程资源」王德峰坛经十品文字稿","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/tan1/"},"url":"https://blog.rainsin.cn/posts/tan1/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2025-01-02T23:26:30+08:00","datePublished":"2025-01-02T23:26:30+08:00","description":"友情链接页","headline":"Links","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/links/"},"url":"https://blog.rainsin.cn/links/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
-  <title>「转载」「课程资源」王德峰坛经十品文字稿 | Rainsin • Blog
+  <title>Links | Rainsin • Blog
   </title>
 
   <!--
@@ -573,6 +465,9 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
     href="https://fonts.font.im/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
   />
    
+  <script src="https://fastly.jsdelivr.net/npm/md5-js-tools@1.0.2/lib/md5.min.js"></script>
+
+  
 
   <!-- Bootstrap -->
   <link
@@ -588,18 +483,7 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
 
   <link rel="stylesheet" href="/assets/css/style.css" />
 
-  
-  <link
-    rel="stylesheet"
-    href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/tocbot/4.28.2/tocbot.min.css"
-  />
    
-  <!-- Manific Popup -->
-  <link
-    rel="stylesheet"
-    href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css"
-  />
-  
 
   <script defer src="/assets/js/umami.js" data-website-id="202ceef1-7698-45d5-a10e-fc97f6a046c0"></script>
 
@@ -724,7 +608,7 @@ observer.observe(targetNode, config);
       </li>
       <!-- .nav-item -->
     
-      <li class="nav-item">
+      <li class="nav-item active">
         <a href="/links/" class="nav-link">
           <i class="fa-fw fas fa-paperclip"></i>
           
@@ -886,10 +770,8 @@ observer.observe(targetNode, config);
           
         
           
-        
-          
             
-              <span>「转载」「课程资源」王德峰坛经十品文字稿</span>
+              <span>友链</span>
             
 
           
@@ -901,7 +783,7 @@ observer.observe(targetNode, config);
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
 
     <div id="topbar-title">
-      文字
+      友链
     </div>
 
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
@@ -929,7 +811,7 @@ observer.observe(targetNode, config);
 
 
 
- 
+
 
 <div class="row">
   <!-- core -->
@@ -937,1440 +819,60 @@ observer.observe(targetNode, config);
     
 
     <div class="post px-1 px-md-2">
-         
-      <!-- Refactor the HTML structure -->
-
-
-
-<!--
-  In order to allow a wide table to scroll horizontally,
-  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
--->
-
-
-
-<!--
-  Fixed kramdown code highlight rendering:
-  https://github.com/penibelst/jekyll-compress-html/issues/101
-  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
--->
-
-
-
-<!-- Change the icon of checkbox -->
-
-
-<!-- images -->
-
-
-
-
-<!-- Add header for code snippets -->
-
-
-
-<!-- Create heading anchors -->
-
-
-
-
-
-  
-  
-
-  
-    
-    
-
-    
-      
-        
         
       
+      <h1 class="dynamic-title">友链</h1>
+      <div class="post-content"> 
+      <link rel="stylesheet" href="/assets/links/links-min.css" />
 
-      
-      
+<main id="shrink-card">
+  <div class="c-glitch" style="border-radius: 12px;;aspect-ratio: 1 / .6;background-image: url('https://file.rainsin.cn/d/blog/img/friend/friend.png'),url('https://mypan.hk.cpolar.io/d/blog/img/friend/friend.png');">
+    <div class="c-glitch__img" style="background-image: url('https://file.rainsin.cn/d/blog/img/friend/friend.png'),url('https://mypan.hk.cpolar.io/d/blog/img/friend/friend.png');"></div>
+    <div class="c-glitch__img" style="background-image: url('https://file.rainsin.cn/d/blog/img/friend/friend.png'),url('https://mypan.hk.cpolar.io/d/blog/img/friend/friend.png');"></div>
+    <div class="c-glitch__img" style="background-image: url('https://file.rainsin.cn/d/blog/img/friend/friend.png'),url('https://mypan.hk.cpolar.io/d/blog/img/friend/friend.png');"></div>
+    <div class="c-glitch__img" style="background-image: url('https://file.rainsin.cn/d/blog/img/friend/friend.png'),url('https://mypan.hk.cpolar.io/d/blog/img/friend/friend.png');"></div>
+    <div class="c-glitch__img" style="background-image: url('https://file.rainsin.cn/d/blog/img/friend/friend.png'),url('https://mypan.hk.cpolar.io/d/blog/img/friend/friend.png');"></div>
+  </div>
+  <div style="text-align: center;color: var(--text-color);">
+    海内存知已，天涯若比邻
+  </div>
+</main>
 
-      
-      
-      
+<h2 id="友">🫂友</h2>
 
-      
+<div id="links-box"></div>
 
-    
+<h2 id="须知">💣须知</h2>
 
-    
-
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-
-
-
-
-<!-- return -->
-
-
-
-
-<h1 data-toc-skip>「转载」「课程资源」王德峰坛经十品文字稿</h1>
-
-<style>.post-meta .post-desc{font-size: 1.1rem;font-family: var(--decs-font) !important;line-height: 1.6;color: var(--heading-color);font-weight: 100 !important;}</style>
-
-<div class="post-meta text-muted">
-    
-    <!-- published date -->
-    <span>
-      发表于
-      <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1718425930"
-  data-df="YYYY/MM/DD"
-  
-    data-bs-toggle="tooltip" data-bs-placement="bottom"
-  
->
-  2024/06/15
-</em>
-
-    </span>
-
-    <!-- lastmod date -->
-    
-    <span>
-      更新于
-      <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em
-  class=""
-  data-ts="1729824969"
-  data-df="YYYY/MM/DD"
-  
-    data-bs-toggle="tooltip" data-bs-placement="bottom"
-  
->
-  2024/10/25
-</em>
-
-    </span>
-    
-
-  
-
-  <div class="d-flex justify-content-between">
-    <!-- author(s) -->
-    <span>
-      
-
-      作者
-
-      <em>
-      
-        
-          <a href="https://github.com/wanshuo/">wanshuo</a>
-          
-        
-      
-      </em>
-    </span>
-
-    <div>
-      <!-- page views -->
-      
-
-      <!-- read time -->
-      <!-- Calculate the post's reading time, and display the word count in tooltip -->
-
-
-
-<!-- words per minute -->
-
-
-
-
-
-
-
-
-
-
-<!-- return element -->
-<span
-  class="readtime"
-  data-bs-toggle="tooltip"
-  data-bs-placement="bottom"
-  title="129 字"
->
-  <em>1 分钟</em>阅读</span>
-
-    </div>
-
-  </div> <!-- .d-flex -->
-
-</div> <!-- .post-meta -->
-
-<div class="post-content        " id="post-content">
-  <h1 id="王德峰坛经十品">王德峰坛经十品</h1>
-
-<h2 id="资源"><span class="me-2">资源</span><a href="#资源" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>王德峰老师坛经十品的录音稿，经 word 版本整理成 markdown 版本，<a href="https://github.com/wansho/altar-sutra-wdf?tab=readme-ov-file">原仓库</a>，贴在这供大家学习。</p>
-
-<p>文章下载列表：</p>
-
-<ul>
-  <li><a href="https://file.rainsin.cn/d/blog/altar-sutra-wdf-main/altar-sutra-wdf-perface.md">序言</a></li>
-  <li><a href="https://file.rainsin.cn/d/blog/altar-sutra-wdf-main/altar-sutra-wdf-01.md">行由品</a></li>
-  <li><a href="https://file.rainsin.cn/d/blog/altar-sutra-wdf-main/altar-sutra-wdf-02.md">般若品</a></li>
-  <li><a href="https://file.rainsin.cn/d/blog/altar-sutra-wdf-main/altar-sutra-wdf-03.md">疑问品</a></li>
-  <li><a href="https://file.rainsin.cn/d/blog/altar-sutra-wdf-main/altar-sutra-wdf-04.md">定慧品</a></li>
-  <li><a href="https://file.rainsin.cn/d/blog/altar-sutra-wdf-main/altar-sutra-wdf-05.md">坐禅品</a></li>
-  <li><a href="https://file.rainsin.cn/d/blog/altar-sutra-wdf-main/altar-sutra-wdf-06.md">忏悔品</a></li>
-  <li><a href="https://file.rainsin.cn/d/blog/altar-sutra-wdf-main/altar-sutra-wdf-07.md">机缘品</a></li>
-  <li><a href="https://file.rainsin.cn/d/blog/altar-sutra-wdf-main/altar-sutra-wdf-08.md">顿悟品</a></li>
-  <li><a href="https://file.rainsin.cn/d/blog/altar-sutra-wdf-main/altar-sutra-wdf-09.md">护法品</a></li>
-  <li><a href="https://file.rainsin.cn/d/blog/altar-sutra-wdf-main/altar-sutra-wdf-10.md">付嘱品</a></li>
-  <li><a href="https://file.rainsin.cn/d/blog/altar-sutra-wdf-main/altar-sutra-wdf-finish.md">结束语</a></li>
-</ul>
-
-<blockquote class="prompt-info">
-  <p>B站视频 <a href="https://www.bilibili.com/video/BV1uZ4y1D787">复旦大学教授王德峰解读《坛经》横屏4K精修</a></p>
+<blockquote class="prompt-warning">
+  <p>可以击剑🤺之后再添加友链（吾剑也未尝不利）。我的邮箱：mail[at]rainsin.cn</p>
 </blockquote>
 
-<blockquote class="prompt-info">
-  <p>《六祖坛经》原文下载 <a href="https://1drv.ms/b/s!Aoer2cU5SlOFiPdvSTIHEoTLm2bgZg?e=PKjJFr">onedrive</a>、<a href="https://file.rainsin.cn/d/blog/altar-sutra-wdf-main/%E5%85%AD%E7%A5%96%E5%9D%9B%E7%BB%8F.pdf">我的alist盘（IPv6）</a></p>
+<h2 id="感谢">🫶🏻感谢</h2>
+
+<blockquote class="prompt-tip">
+  <p>白天模式的小背景来自<a href="https://abenben.zcool.com.cn/">站酷: 亮点漫画</a>的<a href="https://www.zcool.com.cn/work/ZNjA0MDg3Ng==.html">十二梦</a>。<br />
+黑夜模式的小背景来自<a href="https://www.zcool.com.cn/u/18496248">站酷: 那小先art</a>。侵删。</p>
 </blockquote>
 
-</div>
+<!-- 
+## <svg t="1730904458415" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9128" width="32" height="32"><path d="M572.27 118H97.15C78.92 118 64 132.91 64 151.13v472.04c0 18.22 14.92 33.13 33.15 33.13h95.28c9.3 0 18.16 3.9 24.44 10.75l66.94 100.14c6.57 7.17 17.87 7.17 24.44 0l116.67-100.14a33.162 33.162 0 0 1 24.44-10.75h343.9c18.23 0 33.15-14.91 33.15-33.13V151.13c0-18.22-14.92-33.13-33.15-33.13h-74.58M258.75 440.97c-27.46 0-49.72-22.25-49.72-49.69 0-27.44 22.26-49.69 49.72-49.69s49.72 22.25 49.72 49.69c0 27.45-22.26 49.69-49.72 49.69z m186.46 0c-27.46 0-49.72-22.25-49.72-49.69 0-27.44 22.26-49.69 49.72-49.69 27.46 0 49.72 22.25 49.72 49.69 0 27.45-22.26 49.69-49.72 49.69z m186.46 0c-27.46 0-49.72-22.25-49.72-49.69 0-27.44 22.26-49.69 49.72-49.69 27.46 0 49.72 22.25 49.72 49.69 0 27.45-22.26 49.69-49.72 49.69z" fill="#FFBB88" p-id="9129"></path><path d="M926.85 251.45h-49.72V673.8c0 18.22-14.92 33.13-33.15 33.13H483.51c-9.29 0-18.16 3.9-24.44 10.75l-83.96 72.06h199.52c9.29 0 18.16 3.9 24.44 10.75l116.67 100.14c6.57 7.17 17.87 7.17 24.44 0l66.94-100.14a33.162 33.162 0 0 1 24.44-10.75h95.28c18.23 0 33.15-14.91 33.15-33.13V284.58c0.01-18.22-14.91-33.13-33.14-33.13z" fill="#FF9852" p-id="9130"></path></svg> 你是故意找茬儿是不是啊？
 
-<div class="post-tail-wrapper text-muted">
-
-  <!-- categories -->
-  
-  <div class="post-meta mb-3">
-    <i class="far fa-folder-open fa-fw me-1"></i>
-    
-      <a href='/categories/%E8%AF%BE%E7%A8%8B/'>课程</a>,
-      <a href='/categories/%E6%96%87%E5%AD%97%E7%A8%BF/'>文字稿</a>
+<script type="text/babel"  data-type="module" src="/assets/links/links.js"></script>
+-->
   </div>
-  
-
-  <!-- tags -->
-  
-  <div class="post-tags">
-    <i class="fa fa-tags fa-fw me-1"></i>
-      
-      <a href="/tags/%E8%AF%BE%E7%A8%8B/"
-          class="post-tag no-text-decoration" >课程</a>
-      
-  </div>
-  
-
-  <div class="post-tail-bottom
-    d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
-    <div class="license-wrapper">
-
-      
-
-        
-
-        本文由作者按照 
-        <a href="https://creativecommons.org/licenses/by/4.0/">
-          CC BY 4.0
-        </a>
-         进行授权
-
       
     </div>
-
-    <!-- Post sharing snippet -->
-
-<div class="share-wrapper">
-  <span class="share-label text-muted me-1">分享</span>
-  <span class="share-icons">
-    
-    
-    
-
-    
-      
-      <a
-        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E3%80%8C%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%BA%90%E3%80%8D%E7%8E%8B%E5%BE%B7%E5%B3%B0%E5%9D%9B%E7%BB%8F%E5%8D%81%E5%93%81%E6%96%87%E5%AD%97%E7%A8%BF%20-%20Rainsin%20%E2%80%A2%20Blog&url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Ftan1%2F"
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="Twitter"
-        target="_blank"
-        rel="noopener"
-        aria-label="Twitter"
-      >
-        <i class="fa-fw fab fa-twitter"></i>
-      </a>
-    
-      
-      <a
-        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E3%80%8C%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%BA%90%E3%80%8D%E7%8E%8B%E5%BE%B7%E5%B3%B0%E5%9D%9B%E7%BB%8F%E5%8D%81%E5%93%81%E6%96%87%E5%AD%97%E7%A8%BF%20-%20Rainsin%20%E2%80%A2%20Blog&u=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Ftan1%2F"
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="Facebook"
-        target="_blank"
-        rel="noopener"
-        aria-label="Facebook"
-      >
-        <i class="fa-fw fab fa-facebook-square"></i>
-      </a>
-    
-      
-      <a
-        href="https://t.me/share/url?url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Ftan1%2F&text=%E3%80%8C%E8%BD%AC%E8%BD%BD%E3%80%8D%E3%80%8C%E8%AF%BE%E7%A8%8B%E8%B5%84%E6%BA%90%E3%80%8D%E7%8E%8B%E5%BE%B7%E5%B3%B0%E5%9D%9B%E7%BB%8F%E5%8D%81%E5%93%81%E6%96%87%E5%AD%97%E7%A8%BF%20-%20Rainsin%20%E2%80%A2%20Blog"
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="Telegram"
-        target="_blank"
-        rel="noopener"
-        aria-label="Telegram"
-      >
-        <i class="fa-fw fab fa-telegram"></i>
-      </a>
-    
-
-    <i
-      id="copy-link"
-      class="fa-fw fas fa-link small"
-      data-bs-toggle="tooltip"
-      data-bs-placement="top"
-      title="分享链接"
-      data-title-succeed="链接已复制！"
-    >
-    </i>
-  </span>
-</div>
-
-
-  </div><!-- .post-tail-bottom -->
-
-</div><!-- div.post-tail-wrapper -->
-   
-    </div>
+    <div id="tcomment"></div>
   </div>
-  
-  <!-- #core-wrapper -->
-
-  <!-- panel -->
-  <div id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
-    <div class="access">
-      <!-- Get the last 5 posts from lastmod list. -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div id="access-lastmod" class="post">
-    <div class="panel-heading">最近更新</div>
-    <ul class="post-content list-unstyled ps-0 pb-1 ms-1 mt-2">
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/marx/">「逐字稿」《费尔巴哈论》一、前置的准备阶段</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/theme/">「笔记」心经的主题：破我执</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/bwf/">「爱好」比较喜欢的五场球</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/cube/">「爱好」一个练习魔方的公式显示工具</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/marx6/">「逐字稿」《费尔巴哈论》七、人的“类存在”的历史性</a>
-        </li>
-      
-    </ul>
-  </div>
-  <!-- #access-lastmod -->
-
- <!-- The trending tags list -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-
-
-  <div id="access-tags">
-    <div class="panel-heading">热门标签</div>
-    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%86%99%E7%9C%9F/">写真</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/">解决问题</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">黑苹果</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/efi/">EFI</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%81%A5%E5%BA%B7/">健康</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/">羽毛球</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/apache/">Apache</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/bot/">Bot</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/bt/">Bt</a>
-      
-    </div>
-  </div>
-
-
-    </div>
-
-      
-
-
-
-  <div id="toc-wrapper" class="ps-0 pe-4 mb-5">
-    <div class="panel-heading ps-3 pt-2 mb-2">文章内容</div>
-    <nav id="toc"></nav>
-  </div>
-
- 
-  </div>
-</div>
-
-<!-- tail -->
-
-<div class="row">
-  <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-3 pe-xl-4 mt-5">
-      <!-- Navigation buttons at the bottom of the post. -->
-
-<div class="post-navigation d-flex justify-content-between">
-  
-    <a
-      href="/posts/bwf/"
-      class="btn btn-outline-primary"
-      prompt="上一篇"
-    >
-      <p>「爱好」比较喜欢的五场球</p>
-    </a>
-  
-
-  
-    <a
-      href="/posts/fine/"
-      class="btn btn-outline-primary"
-      prompt="下一篇"
-    >
-      <p>好玩的网站、工具</p>
-    </a>
+  <style>
+    #main-wrapper{
+      flex-direction: column;
+    }
+  </style>
+  <!-- tail -->
   
 </div>
-   <!--  The comments switcher -->
-
-
- 
-
-    <div id="tcomment" class="no-show-comment"></div>
-  </div>
-</div>
-
 
         <!-- The Search results -->
 
@@ -3455,13 +1957,6 @@ observer.observe(targetNode, config);
 <!-- layout specified -->
 
 
-  
-
-  
-    <!-- image lazy-loading & popup & clipboard -->
-    
-  
-
 
 
 
@@ -3489,34 +1984,6 @@ observer.observe(targetNode, config);
   
 
   
-    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
-  
-
-  
-    <script src="https://s4.zstatic.net/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"></script>
-  
-
-  
-    <script src="https://npm.elemecdn.com/clipboard@2.0.11/dist/clipboard.min.js"></script>
-  
-
-  
-    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/dayjs.min.js"></script>
-  
-
-  
-    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/locale/zh.min.js"></script>
-  
-
-  
-    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/plugin/relativeTime.js"></script>
-  
-
-  
-    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/plugin/localizedFormat.js"></script>
-  
-
-  
     <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/tocbot/4.28.2/tocbot.min.js"></script>
   
 
@@ -3527,7 +1994,7 @@ observer.observe(targetNode, config);
 
 
 
-<script defer src="/assets/js/dist/post.min.js"></script>
+<script defer src="/assets/js/dist/commons.min.js"></script>
 
 
 
