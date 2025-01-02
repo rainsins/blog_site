@@ -86,4 +86,4 @@ document.oncontextmenu = function() {
       alert("Console is closed!!!!!");
     };
     ConsoleManager.init();
-  }
+}
