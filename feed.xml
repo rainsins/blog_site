@@ -4,7 +4,7 @@
   <id>https://blog.rainsin.cn/</id>
   <title>Rainsin • Blog</title>
   <subtitle>rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）</subtitle>
-  <updated>2025-01-01T21:17:08+08:00</updated>
+  <updated>2025-01-02T22:21:49+08:00</updated>
   <author>
     <name>rainsin</name>
     <uri>https://blog.rainsin.cn/</uri>
@@ -16,6 +16,9 @@
   <rights> © 2025 rainsin </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+
 
 
 
@@ -172,58 +175,6 @@ mkdir certbot &amp;amp;amp;&amp;amp;amp; cd certbot &amp;amp;amp;&amp;amp;amp; t
 如果使用的是全局API:
 
 # Cloudflare API credentials ...</summary>
-
-  </entry>
-
-
-
-  
-  <entry>
-    <title>「逐字稿」《费尔巴哈论》六、社会权力论与意识形态论</title>
-    <link href="https://blog.rainsin.cn/posts/marx5/" rel="alternate" type="text/html" title="「逐字稿」《费尔巴哈论》六、社会权力论与意识形态论" />
-    <published>2024-10-19T12:32:10+08:00</published>
-  
-    <updated>2024-11-05T12:06:07+08:00</updated>
-  
-    <id>https://blog.rainsin.cn/posts/marx5/</id>
-    <content src="https://blog.rainsin.cn/posts/marx5/" />
-    <author>
-      <name>rainsin</name>
-    </author>
-
-  
-    
-    <category term="哲学" />
-    
-    <category term="马克思" />
-    
-  
-
-  <summary>索引
-
-一、前置的准备阶段
-
-二、社会权力与法的权利的关系
-
-三、扬弃唯物与唯心的对立
-
-四、对认识论立场的超越
-
-五、马克思的历史观
-
-六、社会权力论与意识形态论√
-
-七、人的“类存在”的历史性
-
-…
-
-社会权力论与意识形态论
-
-
-@Hdiv(classic){
-@Hbq(){
-@Hsp(){
-@Hp(intent){费尔巴哈是从宗教上的自我异化，从世界被二重化为宗教世界和世俗世界这一事实出发的。他做的工作是把宗教世界归结于它的世俗基础。但是，世俗基础使自己从自身中分离出去，并在云霄中固定为一个独立王国，这只能用这个世俗基础的自我分裂和自我矛盾来说明。因此，对于这个世俗基础本身应当在自身中、从它的矛盾中去理解，并在实践中使之革命化。因此，例如，自从发现神圣家族的秘密在于世俗家庭之后，世俗家庭本身就应当在理论上和实践中被消灭。}@Hp(end,fangsong){——《关于费尔巴哈的...</summary>
 
   </entry>
 
