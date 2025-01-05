@@ -30,8 +30,8 @@
 
 
     
-    "snippet": "材料  VideoSubFinder下载  Umi-OCR下载  豆包、Kimi。具体过程  打开VideoSubFinder，导入视频。  调整要提取字幕的位置。  点击Run Search，生成RGBImages。  换到OCR选项，点击Create Cleared Text Images(RGBImages-&gt;TXTImages)，生成TXTImages。  生成的TXTImag...",
-    "content": "材料  VideoSubFinder下载  Umi-OCR下载  豆包、Kimi。具体过程  打开VideoSubFinder，导入视频。  调整要提取字幕的位置。  点击Run Search，生成RGBImages。  换到OCR选项，点击Create Cleared Text Images(RGBImages-&gt;TXTImages)，生成TXTImages。  生成的TXTImages在这个软件的根目录，可以转移到你知道的位置，这个路径后面OCR时会用到，我们假定路径为/home/TXTImages。  安装Umi-OCR，这个工具有个命令行工具，使用命令：umi-ocr --path \"/home/TXTImages\" --output_append \"识别文本输出文件路径\"会产生一个文本文件。  最后使用豆包进行标点的添加和自动分段。"
+    "snippet": "材料  VideoSubFinder下载  Umi-OCR下载  豆包、Kimi。具体过程      打开VideoSubFinder，导入视频。        调整要提取字幕的位置。        点击Run Search，生成RGBImages。        换到OCR选项，点击Create Cleared Text Images(RGBImages-&gt;TXTImages)，生成...",
+    "content": "材料  VideoSubFinder下载  Umi-OCR下载  豆包、Kimi。具体过程      打开VideoSubFinder，导入视频。        调整要提取字幕的位置。        点击Run Search，生成RGBImages。        换到OCR选项，点击Create Cleared Text Images(RGBImages-&gt;TXTImages)，生成TXTImages。        生成的TXTImages在这个软件的根目录，可以转移到你知道的位置，这个路径后面OCR时会用到，我们假定路径为/home/TXTImages。    安装Umi-OCR，这个工具有个命令行工具，使用命令：    umi-ocr --path \"/home/TXTImages\" --output_append \"识别文本输出文件路径\"        会产生一个文本文件。    最后使用豆包进行标点的添加和自动分段。"
   },
   
   {
