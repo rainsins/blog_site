@@ -17,6 +17,8 @@ const resource = [
     
         '/about/',
     
+        '/comment/',
+    
         '/archives/',
     
 

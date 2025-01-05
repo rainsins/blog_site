@@ -293,6 +293,18 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   
    
   
+  
+  <script src="https://s4.zstatic.net/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+
+  <script>
+    window.load_event = {
+      ...window.load_event,
+      autoSpacing: () => {
+        pangu.spacingElementByClassName("post-content");
+        pangu.autoSpacingPage();
+      },
+    };
+  </script>
    
   
 
@@ -347,7 +359,7 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   </style>
 
   
-  <meta name="keywords" content="rainsin, raisin, rainsins , raisins ,  blog, rainsin's blog, 技术, 分享, 前端, 后端, AI" />
+  <meta name="keywords" content="rainsin, categories" />
   <meta name="author" content="rainsin" />
   
 
@@ -370,6 +382,117 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   <link rel="stylesheet" href="/assets/css/root-min.css" />
 
   
+  <link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/waline/3.3.0/waline.min.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/waline/3.3.0/waline-meta.css"
+  />
+
+  <style>
+    .wl-cards .wl-user .wl-user-avatar{
+      border: 1px solid #a4a4a4ab;
+    }
+    [data-waline] p{
+      margin-bottom: 0;
+    }
+  </style>
+
+  <script src="https://s4.zstatic.net/ajax/libs/waline/3.3.0/waline.umd.min.js"></script>
+
+  <script>
+    window.load_event = {
+      ...window.load_event,
+      comments: () => {
+          Waline.init({
+            el: "#tcomment",
+            serverURL: "https://waline.rainsin.cn/",
+            emoji: [
+              "//file.rainsin.cn/d/blog/em/小黑子",
+              "//file.rainsin.cn/d/blog/em/Sticker-100",
+              "//file.rainsin.cn/d/blog/em/小电视",
+              "//file.rainsin.cn/d/blog/em/Tieba",
+              "//file.rainsin.cn/d/blog/em/alus",
+              "//file.rainsin.cn/d/blog/em/商业头盔",
+              "//file.rainsin.cn/d/blog/em/小人",
+              "//file.rainsin.cn/d/blog/em/小坏坏",
+              "//file.rainsin.cn/d/blog/em/抽象",
+              "//file.rainsin.cn/d/blog/em/搜索引擎",
+              "//file.rainsin.cn/d/blog/em/机场",
+              "//file.rainsin.cn/d/blog/em/猥琐萌",
+              "//file.rainsin.cn/d/blog/em/猫狗",
+              "//file.rainsin.cn/d/blog/em/白白",
+              "//file.rainsin.cn/d/blog/em/突然",
+              "//file.rainsin.cn/d/blog/em/胡桃",
+              "//file.rainsin.cn/d/blog/em/被子",
+              "//file.rainsin.cn/d/blog/em/酷安",
+              "//file.rainsin.cn/d/blog/em/tw",
+              "//file.rainsin.cn/d/blog/em/qq",
+              "//file.rainsin.cn/d/blog/em/weibo",
+            ],
+            pageview: true,
+            locale: {
+              placeholder:
+                "唠唠嗑（登录和上面信息都不是必需的，评论审核后可见，添加邮箱可在被回复时邮件提醒，按🔍进行预览）",
+              admin: "站长",
+              level0: "素人",
+              level1: "企划",
+              level2: "企划专属",
+              level3: "专属",
+              level4: "双专属",
+              level5: "三社共有",
+              nick: "名称",
+              sofa: "来一起击剑🤺吧",
+            },
+            dark: 'html[data-mode="dark"]',
+            imageUploader: false,
+            search: false,
+          });
+
+        window.time_comment = 0;
+        let set_comment_time = setInterval(()=>{
+          const get_anno_img = Array.from(document.querySelectorAll(".wl-cards .wl-user .wl-user-avatar[src='https://seccdn.libravatar.org/avatar/d41d8cd98f00b204e9800998ecf8427e']"));
+          if(time_comment < 500){
+            get_anno_img.forEach((el,index)=>{
+          el.src = "https://file.rainsin.cn/d/blog/img/comment/act.gif";
+        });
+        time_comment++;
+          }else{
+            clearInterval(set_comment_time);
+            return;
+          }
+        },200)
+      },
+    };
+  </script>
+
+  <style>
+    .wl-emoji-popup .wl-tab-wrapper button {
+      width: 4em;
+    }
+    .wl-emoji-popup .wl-tab-wrapper button img {
+      max-height: 3.5em;
+      max-width: 3.5em;
+    }
+    .wl-meta>span::before{
+      margin-top: 2px;
+    }
+
+    .wl-editor, .wl-input{
+      background-image: url(https://file.rainsin.cn/d/blog/img/comment/waline-bg.gif),url(https://api.rainsin.cn/blog_data/img/comment/waline-bg.gif);
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+    }
+    :root{
+      --waline-theme-color: #d4c4b7;
+      --waline-active-color: #d4c4b7aa;
+    }
+  </style>
+  
 
   <script>
     const style = document.createElement("style");
@@ -391,25 +514,26 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   
               <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="未解之谜" />
+<meta property="og:title" content="Comment" />
 <meta name="author" content="Rainsin Yu" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）" />
-<meta property="og:description" content="rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）" />
-<link rel="canonical" href="https://blog.rainsin.cn/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/" />
-<meta property="og:url" content="https://blog.rainsin.cn/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/" />
+<meta name="description" content="留言页" />
+<meta property="og:description" content="留言页" />
+<link rel="canonical" href="https://blog.rainsin.cn/comment/" />
+<meta property="og:url" content="https://blog.rainsin.cn/comment/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-05T17:52:24+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="未解之谜" />
+<meta property="twitter:title" content="Comment" />
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"description":"rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）","headline":"未解之谜","url":"https://blog.rainsin.cn/categories/%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%B0%9C/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2025-01-05T17:52:24+08:00","datePublished":"2025-01-05T17:52:24+08:00","description":"留言页","headline":"Comment","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/comment/"},"url":"https://blog.rainsin.cn/comment/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
-  <title>未解之谜 | Rainsin • Blog
+  <title>Comment | Rainsin • Blog
   </title>
 
   <!--
@@ -609,6 +733,16 @@ observer.observe(targetNode, config);
       </li>
       <!-- .nav-item -->
     
+      <li class="nav-item active">
+        <a href="/comment/" class="nav-link">
+          <i class="fa-fw fas fa-message"></i>
+          
+
+          <span>留言</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
+    
       <li class="nav-item">
         <a href="/archives/" class="nav-link">
           <i class="fa-fw fas fa-archive"></i>
@@ -751,16 +885,8 @@ observer.observe(targetNode, config);
           
         
           
-            <span>
-              <a href="/categories">
-                分类
-              </a>
-            </span>
-          
-        
-          
             
-              <span>未解之谜</span>
+              <span>留言</span>
             
 
           
@@ -772,7 +898,7 @@ observer.observe(targetNode, config);
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
 
     <div id="topbar-title">
-      分类
+      留言
     </div>
 
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
@@ -808,46 +934,33 @@ observer.observe(targetNode, config);
     
 
     <div class="post px-1 px-md-2">
-         
+        
+      
+      <h1 class="dynamic-title">留言</h1>
+      <div class="post-content"> 
       
 
 
+<h2 id="-你是故意找茬儿是不是啊"><svg t="1730904458415" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9128" width="32" height="32"><path d="M572.27 118H97.15C78.92 118 64 132.91 64 151.13v472.04c0 18.22 14.92 33.13 33.15 33.13h95.28c9.3 0 18.16 3.9 24.44 10.75l66.94 100.14c6.57 7.17 17.87 7.17 24.44 0l116.67-100.14a33.162 33.162 0 0 1 24.44-10.75h343.9c18.23 0 33.15-14.91 33.15-33.13V151.13c0-18.22-14.92-33.13-33.15-33.13h-74.58M258.75 440.97c-27.46 0-49.72-22.25-49.72-49.69 0-27.44 22.26-49.69 49.72-49.69s49.72 22.25 49.72 49.69c0 27.45-22.26 49.69-49.72 49.69z m186.46 0c-27.46 0-49.72-22.25-49.72-49.69 0-27.44 22.26-49.69 49.72-49.69 27.46 0 49.72 22.25 49.72 49.69 0 27.45-22.26 49.69-49.72 49.69z m186.46 0c-27.46 0-49.72-22.25-49.72-49.69 0-27.44 22.26-49.69 49.72-49.69 27.46 0 49.72 22.25 49.72 49.69 0 27.45-22.26 49.69-49.72 49.69z" fill="#FFBB88" p-id="9129"></path><path d="M926.85 251.45h-49.72V673.8c0 18.22-14.92 33.13-33.15 33.13H483.51c-9.29 0-18.16 3.9-24.44 10.75l-83.96 72.06h199.52c9.29 0 18.16 3.9 24.44 10.75l116.67 100.14c6.57 7.17 17.87 7.17 24.44 0l66.94-100.14a33.162 33.162 0 0 1 24.44-10.75h95.28c18.23 0 33.15-14.91 33.15-33.13V284.58c0.01-18.22-14.91-33.13-33.14-33.13z" fill="#FF9852" p-id="9130"></path></svg> 你是故意找茬儿是不是啊？</h2>
 
-<div id="page-category">
-  <h1 class="ps-lg-2">
-    <i class="far fa-folder-open fa-fw text-muted"></i>
-    未解之谜
-    <span class="lead text-muted ps-2">1</span>
-  </h1>
+<link rel="stylesheet" href="/assets/comment/main-min.css" />
 
-  <ul class="post-content ps-0">
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/mystery/">「神秘」奇怪的，阴谋论的</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
+<main id="shrink-card">
+  <div class="c-glitch" style="border-radius: 12px;margin-bottom: 1rem;aspect-ratio: 1 / 1.6;background-image: url('https://file.rainsin.cn/d/blog/img/1660018987.jpg');">
+    <div class="c-glitch__img" style="background-image: url('https://file.rainsin.cn/d/blog/img/1660018987.jpg');"></div>
+    <div class="c-glitch__img" style="background-image: url('https://file.rainsin.cn/d/blog/img/1660018987.jpg');"></div>
+    <div class="c-glitch__img" style="background-image: url('https://file.rainsin.cn/d/blog/img/1660018987.jpg');"></div>
+    <div class="c-glitch__img" style="background-image: url('https://file.rainsin.cn/d/blog/img/1660018987.jpg');"></div>
+    <div class="c-glitch__img" style="background-image: url('https://file.rainsin.cn/d/blog/img/1660018987.jpg');"></div>
+  </div>
+</main>
 
+<blockquote class="prompt-warning">
+  <p>把留言统一放在这里了，有什么跟我聊的可以在这里留言，留言审核后可见。也可以使用邮箱与我联系，我的邮箱：mail[at]rainsin.cn</p>
+</blockquote>
 
-
-
-
-<span
-  class="text-muted small"
-  data-ts="1708763530"
-  data-df="YYYY/MM/DD"
-  
->
-  2024/02/24
-</span>
-
-      </li>
-    
-  </ul>
-</div>
-   
+<div id="tcomment" class="no-show-comment"></div>  </div>
+      
     </div>
   </div>
   
@@ -1468,11 +1581,6 @@ observer.observe(targetNode, config);
     
     
       
-    
-  
-    
-    
-    
     
   
     
@@ -2508,11 +2616,6 @@ observer.observe(targetNode, config);
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -3038,19 +3141,7 @@ observer.observe(targetNode, config);
   
 
   
-    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/dayjs.min.js"></script>
-  
-
-  
-    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/locale/zh.min.js"></script>
-  
-
-  
-    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/plugin/relativeTime.js"></script>
-  
-
-  
-    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/plugin/localizedFormat.js"></script>
+    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/tocbot/4.28.2/tocbot.min.js"></script>
   
 
 
@@ -3060,7 +3151,7 @@ observer.observe(targetNode, config);
 
 
 
-<script defer src="/assets/js/dist/misc.min.js"></script>
+<script defer src="/assets/js/dist/commons.min.js"></script>
 
 
 

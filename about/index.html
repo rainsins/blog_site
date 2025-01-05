@@ -384,117 +384,6 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   <link rel="stylesheet" href="/assets/css/root-min.css" />
 
   
-  <link
-    rel="stylesheet"
-    href="https://s4.zstatic.net/ajax/libs/waline/3.3.0/waline.min.css"
-  />
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/waline/3.3.0/waline-meta.css"
-  />
-
-  <style>
-    .wl-cards .wl-user .wl-user-avatar{
-      border: 1px solid #a4a4a4ab;
-    }
-    [data-waline] p{
-      margin-bottom: 0;
-    }
-  </style>
-
-  <script src="https://s4.zstatic.net/ajax/libs/waline/3.3.0/waline.umd.min.js"></script>
-
-  <script>
-    window.load_event = {
-      ...window.load_event,
-      comments: () => {
-          Waline.init({
-            el: "#tcomment",
-            serverURL: "https://waline.rainsin.cn/",
-            emoji: [
-              "//file.rainsin.cn/d/blog/em/小黑子",
-              "//file.rainsin.cn/d/blog/em/Sticker-100",
-              "//file.rainsin.cn/d/blog/em/小电视",
-              "//file.rainsin.cn/d/blog/em/Tieba",
-              "//file.rainsin.cn/d/blog/em/alus",
-              "//file.rainsin.cn/d/blog/em/商业头盔",
-              "//file.rainsin.cn/d/blog/em/小人",
-              "//file.rainsin.cn/d/blog/em/小坏坏",
-              "//file.rainsin.cn/d/blog/em/抽象",
-              "//file.rainsin.cn/d/blog/em/搜索引擎",
-              "//file.rainsin.cn/d/blog/em/机场",
-              "//file.rainsin.cn/d/blog/em/猥琐萌",
-              "//file.rainsin.cn/d/blog/em/猫狗",
-              "//file.rainsin.cn/d/blog/em/白白",
-              "//file.rainsin.cn/d/blog/em/突然",
-              "//file.rainsin.cn/d/blog/em/胡桃",
-              "//file.rainsin.cn/d/blog/em/被子",
-              "//file.rainsin.cn/d/blog/em/酷安",
-              "//file.rainsin.cn/d/blog/em/tw",
-              "//file.rainsin.cn/d/blog/em/qq",
-              "//file.rainsin.cn/d/blog/em/weibo",
-            ],
-            pageview: true,
-            locale: {
-              placeholder:
-                "唠唠嗑（登录和上面信息都不是必需的，评论审核后可见，添加邮箱可在被回复时邮件提醒，按🔍进行预览）",
-              admin: "站长",
-              level0: "素人",
-              level1: "企划",
-              level2: "企划专属",
-              level3: "专属",
-              level4: "双专属",
-              level5: "三社共有",
-              nick: "名称",
-              sofa: "来一起击剑🤺吧",
-            },
-            dark: 'html[data-mode="dark"]',
-            imageUploader: false,
-            search: false,
-          });
-
-        window.time_comment = 0;
-        let set_comment_time = setInterval(()=>{
-          const get_anno_img = Array.from(document.querySelectorAll(".wl-cards .wl-user .wl-user-avatar[src='https://seccdn.libravatar.org/avatar/d41d8cd98f00b204e9800998ecf8427e']"));
-          if(time_comment < 500){
-            get_anno_img.forEach((el,index)=>{
-          el.src = "https://file.rainsin.cn/d/blog/img/comment/act.gif";
-        });
-        time_comment++;
-          }else{
-            clearInterval(set_comment_time);
-            return;
-          }
-        },200)
-      },
-    };
-  </script>
-
-  <style>
-    .wl-emoji-popup .wl-tab-wrapper button {
-      width: 4em;
-    }
-    .wl-emoji-popup .wl-tab-wrapper button img {
-      max-height: 3.5em;
-      max-width: 3.5em;
-    }
-    .wl-meta>span::before{
-      margin-top: 2px;
-    }
-
-    .wl-editor, .wl-input{
-      background-image: url(https://file.rainsin.cn/d/blog/img/comment/waline-bg.gif),url(https://api.rainsin.cn/blog_data/img/comment/waline-bg.gif);
-      background-position: center right;
-      background-repeat: no-repeat;
-      background-size: auto 100%;
-    }
-    :root{
-      --waline-theme-color: #d4c4b7;
-      --waline-active-color: #d4c4b7aa;
-    }
-  </style>
-  
 
   <script>
     const style = document.createElement("style");
@@ -532,13 +421,13 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
 <meta property="og:url" content="https://blog.rainsin.cn/about/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-01-05T22:49:46+08:00" />
+<meta property="article:published_time" content="2025-01-05T17:52:24+08:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="About" />
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2025-01-05T22:49:46+08:00","datePublished":"2025-01-05T22:49:46+08:00","description":"关于rainsin的博客和网站的详情","headline":"About","name":"rainsin","sameAs":["https://twitter.com/2000_python","https://github.com/rainsins","https://www.facebook.com/wang.bill.79827","https://t.me/rainsins"],"url":"https://blog.rainsin.cn/about/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2025-01-05T17:52:24+08:00","datePublished":"2025-01-05T17:52:24+08:00","description":"关于rainsin的博客和网站的详情","headline":"About","name":"rainsin","sameAs":["https://twitter.com/2000_python","https://github.com/rainsins","https://www.facebook.com/wang.bill.79827","https://t.me/rainsins"],"url":"https://blog.rainsin.cn/about/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
@@ -738,6 +627,16 @@ observer.observe(targetNode, config);
           
 
           <span>关于</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
+    
+      <li class="nav-item">
+        <a href="/comment/" class="nav-link">
+          <i class="fa-fw fas fa-message"></i>
+          
+
+          <span>留言</span>
         </a>
       </li>
       <!-- .nav-item -->
@@ -1071,8 +970,6 @@ observer.observe(targetNode, config);
   内容如有侵权请联系<span>mail[at]rainsin.cn</span>。
   </div>
 </div>
-
-<h2 id="-你是故意找茬儿是不是啊"><svg t="1730904458415" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9128" width="32" height="32"><path d="M572.27 118H97.15C78.92 118 64 132.91 64 151.13v472.04c0 18.22 14.92 33.13 33.15 33.13h95.28c9.3 0 18.16 3.9 24.44 10.75l66.94 100.14c6.57 7.17 17.87 7.17 24.44 0l116.67-100.14a33.162 33.162 0 0 1 24.44-10.75h343.9c18.23 0 33.15-14.91 33.15-33.13V151.13c0-18.22-14.92-33.13-33.15-33.13h-74.58M258.75 440.97c-27.46 0-49.72-22.25-49.72-49.69 0-27.44 22.26-49.69 49.72-49.69s49.72 22.25 49.72 49.69c0 27.45-22.26 49.69-49.72 49.69z m186.46 0c-27.46 0-49.72-22.25-49.72-49.69 0-27.44 22.26-49.69 49.72-49.69 27.46 0 49.72 22.25 49.72 49.69 0 27.45-22.26 49.69-49.72 49.69z m186.46 0c-27.46 0-49.72-22.25-49.72-49.69 0-27.44 22.26-49.69 49.72-49.69 27.46 0 49.72 22.25 49.72 49.69 0 27.45-22.26 49.69-49.72 49.69z" fill="#FFBB88" p-id="9129"></path><path d="M926.85 251.45h-49.72V673.8c0 18.22-14.92 33.13-33.15 33.13H483.51c-9.29 0-18.16 3.9-24.44 10.75l-83.96 72.06h199.52c9.29 0 18.16 3.9 24.44 10.75l116.67 100.14c6.57 7.17 17.87 7.17 24.44 0l66.94-100.14a33.162 33.162 0 0 1 24.44-10.75h95.28c18.23 0 33.15-14.91 33.15-33.13V284.58c0.01-18.22-14.91-33.13-33.14-33.13z" fill="#FF9852" p-id="9130"></path></svg> 你是故意找茬儿是不是啊？</h2>
 
 <link rel="stylesheet" href="/assets/about/about-min.css" />
 
@@ -1655,11 +1552,6 @@ observer.observe(targetNode, config);
     
     
       
-    
-  
-    
-    
-    
     
   
     
