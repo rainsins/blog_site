@@ -257,6 +257,63 @@ if(!sessionStorage.getItem("OS")){
 
 
 
+
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZFSB/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZKTK/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/simkai/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/STFANGSO/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/京華老宋体2/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/汇文明朝体/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/STSONG/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/HYKB/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/HYKB/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZJinL-B_GBJF/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/FZJinL-L_GBJF/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/split/simsunb/result.css"
+/>
+<link
+rel="stylesheet"
+href="https://file.rainsin.cn/d/blog/font/heti/PMingLiu/result.css"
+/>
  
 
 <link
@@ -293,6 +350,18 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   
    
   
+  
+  <script src="https://s4.zstatic.net/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+
+  <script>
+    window.load_event = {
+      ...window.load_event,
+      autoSpacing: () => {
+        pangu.spacingElementByClassName("post-content");
+        pangu.autoSpacingPage();
+      },
+    };
+  </script>
    
   
 
@@ -310,12 +379,57 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   </script>
 
    
+  
+  <link
+    rel="stylesheet"
+    href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/ionicons/4.4.1/css/ionicons.min.css"
+  />
    
    
+  
+  <link
+    rel="stylesheet"
+    href="/assets/css/heti-min.css"
+  />
+  <script>
+    window.load_event = {
+      ...window.load_event,
+      heti_title_style: () => {
+        const OS = sessionStorage.getItem("OS");
+        if (OS == "Linux") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-weight: 400;
+    }</style>`)
+          );
+        } else if (OS == "iOS" || OS == "Mac OS") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-family: "Times New Roman",times,"Heti-Kai","KT","FZK",serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      font-weight: 400;
+    }</style>`)
+          );
+        } else if (OS == "Android") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-weight: 600;
+    }</style>`)
+          );
+        } else {
+          console.log("哇！");
+        }
+      },
+    };
+  </script>
   
 
   <link rel="stylesheet" href="/assets/css/card-profile.css" />
 
+  
+  <script
+    type="text/javascript"
+    src="https://fastly.jsdelivr.net/npm/charch@0.1.0/charch.build.js"
+  ></script>
     
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -347,7 +461,7 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   </style>
 
   
-  <meta name="keywords" content="rainsin, raisin, rainsins , raisins ,  blog, rainsin's blog, 技术, 分享, 前端, 后端, AI" />
+  <meta name="keywords" content="rainsin, blog, 教程" />
   <meta name="author" content="rainsin" />
   
 
@@ -370,6 +484,117 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   <link rel="stylesheet" href="/assets/css/root-min.css" />
 
   
+  <link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/waline/3.3.0/waline.min.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/waline/3.3.0/waline-meta.css"
+  />
+
+  <style>
+    .wl-cards .wl-user .wl-user-avatar{
+      border: 1px solid #a4a4a4ab;
+    }
+    [data-waline] p{
+      margin-bottom: 0;
+    }
+  </style>
+
+  <script src="https://s4.zstatic.net/ajax/libs/waline/3.3.0/waline.umd.min.js"></script>
+
+  <script>
+    window.load_event = {
+      ...window.load_event,
+      comments: () => {
+          Waline.init({
+            el: "#tcomment",
+            serverURL: "https://waline.rainsin.cn/",
+            emoji: [
+              "//file.rainsin.cn/d/blog/em/小黑子",
+              "//file.rainsin.cn/d/blog/em/Sticker-100",
+              "//file.rainsin.cn/d/blog/em/小电视",
+              "//file.rainsin.cn/d/blog/em/Tieba",
+              "//file.rainsin.cn/d/blog/em/alus",
+              "//file.rainsin.cn/d/blog/em/商业头盔",
+              "//file.rainsin.cn/d/blog/em/小人",
+              "//file.rainsin.cn/d/blog/em/小坏坏",
+              "//file.rainsin.cn/d/blog/em/抽象",
+              "//file.rainsin.cn/d/blog/em/搜索引擎",
+              "//file.rainsin.cn/d/blog/em/机场",
+              "//file.rainsin.cn/d/blog/em/猥琐萌",
+              "//file.rainsin.cn/d/blog/em/猫狗",
+              "//file.rainsin.cn/d/blog/em/白白",
+              "//file.rainsin.cn/d/blog/em/突然",
+              "//file.rainsin.cn/d/blog/em/胡桃",
+              "//file.rainsin.cn/d/blog/em/被子",
+              "//file.rainsin.cn/d/blog/em/酷安",
+              "//file.rainsin.cn/d/blog/em/tw",
+              "//file.rainsin.cn/d/blog/em/qq",
+              "//file.rainsin.cn/d/blog/em/weibo",
+            ],
+            pageview: true,
+            locale: {
+              placeholder:
+                "唠唠嗑（登录和上面信息都不是必需的，评论审核后可见，添加邮箱可在被回复时邮件提醒，按🔍进行预览）",
+              admin: "站长",
+              level0: "素人",
+              level1: "企划",
+              level2: "企划专属",
+              level3: "专属",
+              level4: "双专属",
+              level5: "三社共有",
+              nick: "名称",
+              sofa: "来一起击剑🤺吧",
+            },
+            dark: 'html[data-mode="dark"]',
+            imageUploader: false,
+            search: false,
+          });
+
+        window.time_comment = 0;
+        let set_comment_time = setInterval(()=>{
+          const get_anno_img = Array.from(document.querySelectorAll(".wl-cards .wl-user .wl-user-avatar[src='https://seccdn.libravatar.org/avatar/d41d8cd98f00b204e9800998ecf8427e']"));
+          if(time_comment < 500){
+            get_anno_img.forEach((el,index)=>{
+          el.src = "https://file.rainsin.cn/d/blog/img/comment/act.gif";
+        });
+        time_comment++;
+          }else{
+            clearInterval(set_comment_time);
+            return;
+          }
+        },200)
+      },
+    };
+  </script>
+
+  <style>
+    .wl-emoji-popup .wl-tab-wrapper button {
+      width: 4em;
+    }
+    .wl-emoji-popup .wl-tab-wrapper button img {
+      max-height: 3.5em;
+      max-width: 3.5em;
+    }
+    .wl-meta>span::before{
+      margin-top: 2px;
+    }
+
+    .wl-editor, .wl-input{
+      background-image: url(https://file.rainsin.cn/d/blog/img/comment/waline-bg.gif),url(https://api.rainsin.cn/blog_data/img/comment/waline-bg.gif);
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+    }
+    :root{
+      --waline-theme-color: #d4c4b7;
+      --waline-active-color: #d4c4b7aa;
+    }
+  </style>
+  
 
   <script>
     const style = document.createElement("style");
@@ -389,27 +614,30 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
 
    
   
-              <!-- Begin Jekyll SEO tag v2.8.0 -->
+   
+  <script src="https://s4.zstatic.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+             <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="分形几何" />
+<meta property="og:title" content="「教程」提取课程的逐字稿" />
 <meta name="author" content="Rainsin Yu" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）" />
-<meta property="og:description" content="rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）" />
-<link rel="canonical" href="https://blog.rainsin.cn/categories/%E5%88%86%E5%BD%A2%E5%87%A0%E4%BD%95/" />
-<meta property="og:url" content="https://blog.rainsin.cn/categories/%E5%88%86%E5%BD%A2%E5%87%A0%E4%BD%95/" />
+<meta name="description" content="材料" />
+<meta property="og:description" content="材料" />
+<link rel="canonical" href="https://blog.rainsin.cn/posts/method/" />
+<meta property="og:url" content="https://blog.rainsin.cn/posts/method/" />
 <meta property="og:site_name" content="Rainsin • Blog" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-04T19:40:10+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="分形几何" />
+<meta property="twitter:title" content="「教程」提取课程的逐字稿" />
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"description":"rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）","headline":"分形几何","url":"https://blog.rainsin.cn/categories/%E5%88%86%E5%BD%A2%E5%87%A0%E4%BD%95/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2025-01-05T08:03:13+08:00","datePublished":"2025-01-04T19:40:10+08:00","description":"材料","headline":"「教程」提取课程的逐字稿","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/method/"},"url":"https://blog.rainsin.cn/posts/method/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
-  <title>分形几何 | Rainsin • Blog
+  <title>「教程」提取课程的逐字稿 | Rainsin • Blog
   </title>
 
   <!--
@@ -420,15 +648,15 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
 
 
 
-<link rel="apple-touch-icon" sizes="180x180" href=" https://api.rainsin.cn/favicon/main/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href=" https://api.rainsin.cn/favicon/main/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href=" https://api.rainsin.cn/favicon/main/favicon-16x16.png">
-<link rel="manifest" href=" https://api.rainsin.cn/favicon/main/site.webmanifest">
-<link rel="shortcut icon" href=" https://api.rainsin.cn/favicon/main/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href=" https://api.rainsin.cn/favicon/heart/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=" https://api.rainsin.cn/favicon/heart/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=" https://api.rainsin.cn/favicon/heart/favicon-16x16.png">
+<link rel="manifest" href=" https://api.rainsin.cn/favicon/heart/site.webmanifest">
+<link rel="shortcut icon" href=" https://api.rainsin.cn/favicon/heart/favicon.ico">
 <meta name="apple-mobile-web-app-title" content="Rainsin • Blog">
 <meta name="application-name" content="Rainsin • Blog">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content=" https://api.rainsin.cn/favicon/main/browserconfig.xml">
+<meta name="msapplication-config" content=" https://api.rainsin.cn/favicon/heart/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
   
   <link rel="preconnect" href="https://fonts.font.im"  />
@@ -464,7 +692,18 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
 
   <link rel="stylesheet" href="/assets/css/style.css" />
 
+  
+  <link
+    rel="stylesheet"
+    href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/tocbot/4.28.2/tocbot.min.css"
+  />
    
+  <!-- Manific Popup -->
+  <link
+    rel="stylesheet"
+    href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css"
+  />
+  
 
   <script defer src="/assets/js/umami.js" data-website-id="202ceef1-7698-45d5-a10e-fc97f6a046c0"></script>
 
@@ -751,16 +990,10 @@ observer.observe(targetNode, config);
           
         
           
-            <span>
-              <a href="/categories">
-                分类
-              </a>
-            </span>
-          
         
           
             
-              <span>分形几何</span>
+              <span>「教程」提取课程的逐字稿</span>
             
 
           
@@ -772,7 +1005,7 @@ observer.observe(targetNode, config);
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
 
     <div id="topbar-title">
-      分类
+      文字
     </div>
 
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
@@ -802,30 +1035,480 @@ observer.observe(targetNode, config);
 
  
 
-<div class="row mb-5">
+<div class="row">
   <!-- core -->
   <div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pe-xl-4">
     
 
     <div class="post px-1 px-md-2">
          
+      <!-- Refactor the HTML structure -->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+<!-- images -->
+
+
+
+  
+  
+
+  <!-- CDN URL -->
+  
+
+  <!-- Add image path -->
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
       
 
+      
+      
+      
 
-
-<div id="page-category">
-  <h1 class="ps-lg-2">
-    <i class="far fa-folder-open fa-fw text-muted"></i>
-    分形几何
-    <span class="lead text-muted ps-2">1</span>
-  </h1>
-
-  <ul class="post-content ps-0">
+      
     
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/mandelbrot/">「爱好」分形的一个项目（曼德布罗集和朱莉娅集）</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+      
+    
+
+    <!-- combine -->
+    
+
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+      
+    
+
+    <!-- combine -->
+    
+
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+      
+    
+
+    <!-- combine -->
+    
+
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+      
+    
+
+    <!-- combine -->
+    
+
+  
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+      
+    
+
+    <!-- combine -->
+    
+
+  
+
+  
+
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- return -->
+
+
+
+
+<h1 data-toc-skip>「教程」提取课程的逐字稿</h1>
+
+<style>.post-meta .post-desc{font-size: 1.1rem;font-family: var(--decs-font) !important;line-height: 1.6;color: var(--heading-color);font-weight: 100 !important;}</style>
+
+<div class="post-meta text-muted">
+    
+    <!-- published date -->
+    <span>
+      发表于
+      <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -834,19 +1517,265 @@ observer.observe(targetNode, config);
 
 
 
-<span
-  class="text-muted small"
-  data-ts="1709541130"
+<em
+  class=""
+  data-ts="1735990810"
   data-df="YYYY/MM/DD"
   
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
 >
-  2024/03/04
-</span>
+  2025/01/04
+</em>
 
-      </li>
+    </span>
+
+    <!-- lastmod date -->
     
-  </ul>
+    <span>
+      更新于
+      <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1736035393"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2025/01/05
+</em>
+
+    </span>
+    
+
+  
+
+  <div class="d-flex justify-content-between">
+    <!-- author(s) -->
+    <span>
+      
+
+      作者
+
+      <em>
+      
+        
+          <a href="https://github.com/rainsins/">Rainsin Yu</a>
+          
+        
+      
+      </em>
+    </span>
+
+    <div>
+      <!-- page views -->
+      
+
+      <!-- read time -->
+      <!-- Calculate the post's reading time, and display the word count in tooltip -->
+
+
+
+<!-- words per minute -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="168 字"
+>
+  <em>1 分钟</em>阅读</span>
+
+    </div>
+
+  </div> <!-- .d-flex -->
+
+</div> <!-- .post-meta -->
+
+<div class="post-content  charch charch-indent  charch-cjk-latin-space charch-bracket-replace charch-link-space charch-line-height" id="post-content">
+  <h2 id="材料"><span class="me-2">材料</span><a href="#材料" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<ol>
+  <li><a href="https://sourceforge.net/projects/videosubfinder/">VideoSubFinder</a>下载</li>
+  <li><a href="https://github.com/hiroi-sora/Umi-OCR">Umi-OCR</a>下载</li>
+  <li><a href="https://www.doubao.com/chat">豆包</a>、<a href="https://kimi.moonshot.cn/">Kimi</a>。</li>
+</ol>
+
+<h2 id="具体过程"><span class="me-2">具体过程</span><a href="#具体过程" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<ol>
+  <li>打开VideoSubFinder，导入视频。</li>
+</ol>
+
+<p><a href="https://file.rainsin.cn/d/blog/img/post/method/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-05%20072829.png" class="popup img-link "><img data-src="https://file.rainsin.cn/d/blog/img/post/method/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-05%20072829.png" alt="1" class="lazyload" data-proofer-ignore></a></p>
+
+<ol>
+  <li>调整要提取字幕的位置。</li>
+</ol>
+
+<p><a href="https://file.rainsin.cn/d/blog/img/post/method/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-05%20072929.png" class="popup img-link "><img data-src="https://file.rainsin.cn/d/blog/img/post/method/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-05%20072929.png" alt="2" class="lazyload" data-proofer-ignore></a></p>
+
+<ol>
+  <li>点击<kbd>Run Search</kbd>，生成RGBImages。</li>
+</ol>
+
+<p><a href="https://file.rainsin.cn/d/blog/img/post/method/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-05%20072941.png" class="popup img-link "><img data-src="https://file.rainsin.cn/d/blog/img/post/method/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-05%20072941.png" alt="3" class="lazyload" data-proofer-ignore></a></p>
+
+<ol>
+  <li>换到OCR选项，点击<kbd>Create Cleared Text Images(RGBImages-&gt;TXTImages)</kbd>，生成TXTImages。</li>
+</ol>
+
+<p><a href="https://file.rainsin.cn/d/blog/img/post/method/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-05%20072958.png" class="popup img-link "><img data-src="https://file.rainsin.cn/d/blog/img/post/method/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-05%20072958.png" alt="4" class="lazyload" data-proofer-ignore></a></p>
+
+<ol>
+  <li>生成的TXTImages在这个软件的根目录，可以转移到你知道的位置，这个路径后面OCR时会用到，我们假定路径为<code class="language-plaintext highlighter-rouge">/home/TXTImages</code>。</li>
+</ol>
+
+<p><a href="https://file.rainsin.cn/d/blog/img/post/method/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-05%20073019.png" class="popup img-link "><img data-src="https://file.rainsin.cn/d/blog/img/post/method/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-01-05%20073019.png" alt="5" class="lazyload" data-proofer-ignore></a></p>
+
+<ol>
+  <li>安装Umi-OCR，这个工具有个命令行工具，使用命令：</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>umi-ocr <span class="nt">--path</span> <span class="s2">"/home/TXTImages"</span> <span class="nt">--output_append</span> <span class="s2">"识别文本输出文件路径"</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>会产生一个文本文件。</p>
+
+<ol>
+  <li>最后使用豆包进行标点的添加和自动分段。</li>
+</ol>
+
 </div>
+
+<div class="post-tail-wrapper text-muted">
+
+  <!-- categories -->
+  
+  <div class="post-meta mb-3">
+    <i class="far fa-folder-open fa-fw me-1"></i>
+    
+      <a href='/categories/%E6%95%99%E7%A8%8B/'>教程</a>,
+      <a href='/categories/%E9%80%90%E5%AD%97%E7%A8%BF/'>逐字稿</a>
+  </div>
+  
+
+  <!-- tags -->
+  
+  <div class="post-tags">
+    <i class="fa fa-tags fa-fw me-1"></i>
+      
+      <a href="/tags/%E6%95%99%E7%A8%8B/"
+          class="post-tag no-text-decoration" >教程</a>
+      
+  </div>
+  
+
+  <div class="post-tail-bottom
+    d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+    <div class="license-wrapper">
+
+      
+
+        
+
+        本文由作者按照 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         进行授权
+
+      
+    </div>
+
+    <!-- Post sharing snippet -->
+
+<div class="share-wrapper">
+  <span class="share-label text-muted me-1">分享</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+      
+      <a
+        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E6%95%99%E7%A8%8B%E3%80%8D%E6%8F%90%E5%8F%96%E8%AF%BE%E7%A8%8B%E7%9A%84%E9%80%90%E5%AD%97%E7%A8%BF%20-%20Rainsin%20%E2%80%A2%20Blog&url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fmethod%2F"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Twitter"
+        target="_blank"
+        rel="noopener"
+        aria-label="Twitter"
+      >
+        <i class="fa-fw fab fa-twitter"></i>
+      </a>
+    
+      
+      <a
+        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E6%95%99%E7%A8%8B%E3%80%8D%E6%8F%90%E5%8F%96%E8%AF%BE%E7%A8%8B%E7%9A%84%E9%80%90%E5%AD%97%E7%A8%BF%20-%20Rainsin%20%E2%80%A2%20Blog&u=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fmethod%2F"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Facebook"
+        target="_blank"
+        rel="noopener"
+        aria-label="Facebook"
+      >
+        <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+    
+      
+      <a
+        href="https://t.me/share/url?url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fmethod%2F&text=%E3%80%8C%E6%95%99%E7%A8%8B%E3%80%8D%E6%8F%90%E5%8F%96%E8%AF%BE%E7%A8%8B%E7%9A%84%E9%80%90%E5%AD%97%E7%A8%BF%20-%20Rainsin%20%E2%80%A2%20Blog"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Telegram"
+        target="_blank"
+        rel="noopener"
+        aria-label="Telegram"
+      >
+        <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+    <i
+      id="copy-link"
+      class="fa-fw fas fa-link small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="分享链接"
+      data-title-succeed="链接已复制！"
+    >
+    </i>
+  </span>
+</div>
+
+
+  </div><!-- .post-tail-bottom -->
+
+</div><!-- div.post-tail-wrapper -->
    
     </div>
   </div>
@@ -1906,11 +2835,54 @@ observer.observe(targetNode, config);
 
     </div>
 
-    
+      
+
+
+
+  <div id="toc-wrapper" class="ps-0 pe-4 mb-5">
+    <div class="panel-heading ps-3 pt-2 mb-2">文章内容</div>
+    <nav id="toc"></nav>
+  </div>
+
+ 
   </div>
 </div>
 
 <!-- tail -->
+
+<div class="row">
+  <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-3 pe-xl-4 mt-5">
+      <!-- Navigation buttons at the bottom of the post. -->
+
+<div class="post-navigation d-flex justify-content-between">
+  
+    <a
+      href="/posts/marx11/"
+      class="btn btn-outline-primary"
+      prompt="上一篇"
+    >
+      <p>「逐字稿」《费尔巴哈论》十二、人类解放的话语</p>
+    </a>
+  
+
+  
+    <a
+      href="/posts/marx12/"
+      class="btn btn-outline-primary"
+      prompt="下一篇"
+    >
+      <p>「逐字稿」《费尔巴哈论》十三、革命的科学的开姶</p>
+    </a>
+  
+</div>
+   <!--  The comments switcher -->
+
+
+ 
+
+    <div id="tcomment" class="no-show-comment"></div>
+  </div>
+</div>
 
 
         <!-- The Search results -->
@@ -2964,9 +3936,22 @@ observer.observe(targetNode, config);
 </footer>
 
 
+<script src="/assets/js/heti.js"></script>
 
 
 
+  <script type="text/javascript">
+  Charch(document);
+  </script>
+
+
+
+<script src="https://s4.zstatic.net/ajax/libs/heti/0.9.4/heti-addon.min.js" integrity="sha512-GChf2qekcjrSoPicCypQLPqkaZkEnkcsJr85AmkczY0HG5SkfbxOmZY6RoFJLdoeKTGk8EZvkRBaF7BIqV1Ipw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  const heti_addon = new Heti('.heti');
+  heti_addon.autoSpacing();
+</script>
 
 
     <div id="mask"></div>
@@ -3011,6 +3996,13 @@ observer.observe(targetNode, config);
 <!-- layout specified -->
 
 
+  
+
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
+
 
 
 
@@ -3038,6 +4030,18 @@ observer.observe(targetNode, config);
   
 
   
+    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+  
+
+  
+    <script src="https://s4.zstatic.net/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"></script>
+  
+
+  
+    <script src="https://npm.elemecdn.com/clipboard@2.0.11/dist/clipboard.min.js"></script>
+  
+
+  
     <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/dayjs.min.js"></script>
   
 
@@ -3053,6 +4057,9 @@ observer.observe(targetNode, config);
     <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/plugin/localizedFormat.js"></script>
   
 
+  
+    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/tocbot/4.28.2/tocbot.min.js"></script>
+  
 
 
 
@@ -3060,7 +4067,8 @@ observer.observe(targetNode, config);
 
 
 
-<script defer src="/assets/js/dist/misc.min.js"></script>
+
+<script defer src="/assets/js/dist/post.min.js"></script>
 
 
 
