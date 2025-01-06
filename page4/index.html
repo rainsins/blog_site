@@ -787,41 +787,135 @@ observer.observe(targetNode, config);
 
         
 
+ 
 
 
 
 
 
 
+ 
 
-<!-- Get pinned posts on current page -->
+<div class="row mb-5">
+  <!-- core -->
+  <div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pe-xl-4">
+    
 
-
-
-
-
-
-<!-- Get normal posts on current page -->
-
-
-
+    <div class="post  px-md-2">
+         
+      <!-- Refactor the HTML structure -->
 
 
-<div id="post-list" class="flex-grow-1 px-xl-1">
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+<!-- images -->
+
+
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
   
-    <article class="card-wrapper card">
-      <a href="/posts/mandelbrot/" class="post-preview row g-0 flex-md-row-reverse">
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- return -->
+
+
+
+
+
+
+
+
+
+<!-- Get pinned posts -->
+
+
+
+
+
+
+<!-- Get default posts -->
+
+
+
+
+
+
+
+
+
+
+<div id="post-list">
+  
+    <a href="/posts/mandelbrot/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
         
 
-        
+        <div class="card-body d-flex flex-column">
+          <div class="card-title my-2 mt-md-0">
+            「爱好」分形的一个项目（曼德布罗集和朱莉娅集）
+          </div>
 
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">「爱好」分形的一个项目（曼德布罗集和朱莉娅集）</h1>
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+              
 
-            <div class="card-text content mt-0 mb-3">
-              <p>
-              分形
+
+
+
+
+              
+
+
+
+分形
 
 
 
@@ -841,14 +935,20 @@ observer.observe(targetNode, config);
 
 
   如果想知道这两个分形相关的知识可以参看教程。
-              </p>
-            </div>
 
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
+
+
+
+
+              
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -867,39 +967,46 @@ observer.observe(targetNode, config);
 </em>
 
 
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      混沌,
-                      分形几何
-                  </span>
-                
-              </div>
-
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    混沌,
+                    分形几何
+                </span>
               
             </div>
-            <!-- .post-meta -->
+
+            
           </div>
-          <!-- .card-body -->
+          <!-- .post-meta -->
         </div>
-      </a>
-    </article>
+        <!-- .card-body -->
+      </div>
+    </a>
   
-    <article class="card-wrapper card">
-      <a href="/posts/24jq/" class="post-preview row g-0 flex-md-row-reverse">
+    <a href="/posts/24jq/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
         
 
-        
+        <div class="card-body d-flex flex-column">
+          <div class="card-title my-2 mt-md-0">
+            「文件」二十四节气壁纸
+          </div>
 
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">「文件」二十四节气壁纸</h1>
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+              
 
-            <div class="card-text content mt-0 mb-3">
-              <p>
-              预览
+
+
+
+
+              
+
+预览
 
 
 
@@ -911,14 +1018,20 @@ observer.observe(targetNode, config);
 
 
   内容如有侵权，请联系我mail[at]rainsin.cn删除。
-              </p>
-            </div>
 
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
+
+
+
+
+              
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -937,48 +1050,57 @@ observer.observe(targetNode, config);
 </em>
 
 
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      壁纸
-                  </span>
-                
-              </div>
-
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    壁纸
+                </span>
               
             </div>
-            <!-- .post-meta -->
+
+            
           </div>
-          <!-- .card-body -->
+          <!-- .post-meta -->
         </div>
-      </a>
-    </article>
+        <!-- .card-body -->
+      </div>
+    </a>
   
-    <article class="card-wrapper card">
-      <a href="/posts/cloudflare/" class="post-preview row g-0 flex-md-row-reverse">
+    <a href="/posts/cloudflare/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
         
 
-        
+        <div class="card-body d-flex flex-column">
+          <div class="card-title my-2 mt-md-0">
+            「解决问题」使用 CloudFlare 导致网站「重定向的次数过多」解决方案
+          </div>
 
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">「解决问题」使用 CloudFlare 导致网站「重定向的次数过多」解决方案</h1>
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+              
 
-            <div class="card-text content mt-0 mb-3">
-              <p>
+
+
+
+
               一句话解决
 
 在 CloudFlare 的 SSL/TLS 菜单里将「SSL/TLS 加密模式」设置为完全（Strict）即可。
-              </p>
-            </div>
 
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
+
+
+              
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -997,47 +1119,63 @@ observer.observe(targetNode, config);
 </em>
 
 
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      解决问题
-                  </span>
-                
-              </div>
-
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    解决问题
+                </span>
               
             </div>
-            <!-- .post-meta -->
+
+            
           </div>
-          <!-- .card-body -->
+          <!-- .post-meta -->
         </div>
-      </a>
-    </article>
+        <!-- .card-body -->
+      </div>
+    </a>
   
-    <article class="card-wrapper card">
-      <a href="/posts/majiang/" class="post-preview row g-0 flex-md-row-reverse">
+    <a href="/posts/majiang/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
         
 
-        
+        <div class="card-body d-flex flex-column">
+          <div class="card-title my-2 mt-md-0">
+            「玩」麻将听牌类型
+          </div>
 
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">「玩」麻将听牌类型</h1>
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
+              
 
-            <div class="card-text content mt-0 mb-3">
-              <p>
-              服务器里跑着一个麻将图片生成器，不过在那落灰，今天想起来了，总是要让它有点用，于是就有了这篇文字，也算是为了这点醋包的这顿饺。
+
+
+
+
+              
+  服务器里跑着一个麻将图片生成器，不过在那落灰，今天想起来了，总是要让它有点用，于是就有了这篇文字，也算是为了这点醋包的这顿饺。
 本人并不常打麻将，这篇文可能会帮到那些牌看半天也不知道自己胡哪些牌的初学者（me）。
-              </p>
-            </div>
 
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
+
+
+
+
+
+
+
+
+              
+            </p>
+          </div>
+
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -1056,46 +1194,46 @@ observer.observe(targetNode, config);
 </em>
 
 
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      麻将
-                  </span>
-                
-              </div>
-
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    麻将
+                </span>
               
             </div>
-            <!-- .post-meta -->
+
+            
           </div>
-          <!-- .card-body -->
+          <!-- .post-meta -->
         </div>
-      </a>
-    </article>
+        <!-- .card-body -->
+      </div>
+    </a>
   
-    <article class="card-wrapper card">
-      <a href="/posts/more-system-opencore/" class="post-preview row g-0 flex-md-row-reverse">
+    <a href="/posts/more-system-opencore/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
         
 
-        
+        <div class="card-body d-flex flex-column">
+          <div class="card-title my-2 mt-md-0">
+            「教程」使用Opencore引导多个系统
+          </div>
 
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">「教程」使用Opencore引导多个系统</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
               通过OpenCore（OC）引导Windows、Linux和macOS等多个系统的步骤。
-              </p>
-            </div>
+              
+            </p>
+          </div>
 
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -1114,47 +1252,47 @@ observer.observe(targetNode, config);
 </em>
 
 
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      黑苹果,
-                      EFI
-                  </span>
-                
-              </div>
-
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    黑苹果,
+                    EFI
+                </span>
               
             </div>
-            <!-- .post-meta -->
+
+            
           </div>
-          <!-- .card-body -->
+          <!-- .post-meta -->
         </div>
-      </a>
-    </article>
+        <!-- .card-body -->
+      </div>
+    </a>
   
-    <article class="card-wrapper card">
-      <a href="/posts/ax200-bluetooth/" class="post-preview row g-0 flex-md-row-reverse">
+    <a href="/posts/ax200-bluetooth/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
         
 
-        
+        <div class="card-body d-flex flex-column">
+          <div class="card-title my-2 mt-md-0">
+            「解决问题」黑苹果Venture 13.4 Intel无线网卡(AX200,AX201,AX210,AX203)蓝牙问题排查
+          </div>
 
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">「解决问题」黑苹果Venture 13.4 Intel无线网卡(AX200,AX201,AX210,AX203)蓝牙问题排查</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
               黑苹果Venture 13.4 Intel无线网卡(AX200,AX201,AX210,AX203)蓝牙问题排查
-              </p>
-            </div>
+              
+            </p>
+          </div>
 
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -1173,47 +1311,47 @@ observer.observe(targetNode, config);
 </em>
 
 
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      黑苹果,
-                      解决问题
-                  </span>
-                
-              </div>
-
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    黑苹果,
+                    解决问题
+                </span>
               
             </div>
-            <!-- .post-meta -->
+
+            
           </div>
-          <!-- .card-body -->
+          <!-- .post-meta -->
         </div>
-      </a>
-    </article>
+        <!-- .card-body -->
+      </div>
+    </a>
   
-    <article class="card-wrapper card">
-      <a href="/posts/server-config/" class="post-preview row g-0 flex-md-row-reverse">
+    <a href="/posts/server-config/" class="card-wrapper">
+      <div class="card post-preview flex-md-row-reverse">
         
 
-        
+        <div class="card-body d-flex flex-column">
+          <div class="card-title my-2 mt-md-0">
+            「教程」创建自己的影视库和各种服务
+          </div>
 
-        <div class="col-md-12">
-          <div class="card-body d-flex flex-column">
-            <h1 class="card-title my-2 mt-md-0">「教程」创建自己的影视库和各种服务</h1>
-
-            <div class="card-text content mt-0 mb-3">
-              <p>
+          <div class="card-text post-content mt-0 mb-2">
+            <p>
+              
               在我的一块小树莓派上创建自己的影视库和各种服务，坏了之后可以按这个步骤再重新弄。
-              </p>
-            </div>
+              
+            </p>
+          </div>
 
-            <div class="post-meta flex-grow-1 d-flex align-items-end">
-              <div class="me-auto">
-                <!-- posted date -->
-                <i class="far fa-calendar fa-fw me-1"></i>
-                <!--
+          <div class="post-meta flex-grow-1 d-flex align-items-end">
+            <div class="me-auto">
+              <!-- posted date -->
+              <i class="far fa-calendar fa-fw me-1"></i>
+              <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -1232,25 +1370,24 @@ observer.observe(targetNode, config);
 </em>
 
 
-                <!-- categories -->
-                
-                  <i class="far fa-folder-open fa-fw me-1"></i>
-                  <span class="categories">
-                    
-                      Server,
-                      音视频
-                  </span>
-                
-              </div>
-
+              <!-- categories -->
+              
+                <i class="far fa-folder-open fa-fw me-1"></i>
+                <span class="categories">
+                  
+                    Server,
+                    音视频
+                </span>
               
             </div>
-            <!-- .post-meta -->
+
+            
           </div>
-          <!-- .card-body -->
+          <!-- .post-meta -->
         </div>
-      </a>
-    </article>
+        <!-- .card-body -->
+      </div>
+    </a>
   
 </div>
 <!-- #post-list -->
@@ -1362,6 +1499,1068 @@ observer.observe(targetNode, config);
   </li>
 </ul>
 <!-- .pagination -->
+
+
+
+   
+    </div>
+  </div>
+  
+  <!-- #core-wrapper -->
+
+  <!-- panel -->
+  <div id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
+    <div class="access">
+      <!-- Get the last 5 posts from lastmod list. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="access-lastmod" class="post">
+    <div class="panel-heading">最近更新</div>
+    <ul class="post-content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/mac/">「文件」一个趋于完美的黑苹果引导文件</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/niannian/">「神秘」年年的高雅集</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/marx/">「逐字稿」《费尔巴哈论》一、前置的准备阶段</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/theme/">「笔记」心经的主题：破我执</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/marx7/">「逐字稿」《费尔巴哈论》八、马克思关于人的本质的定义</a>
+        </li>
+      
+    </ul>
+  </div>
+  <!-- #access-lastmod -->
+
+ <!-- The trending tags list -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <div id="access-tags">
+    <div class="panel-heading">热门标签</div>
+    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%86%99%E7%9C%9F/">写真</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/">解决问题</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">黑苹果</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/efi/">EFI</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%81%A5%E5%BA%B7/">健康</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/">羽毛球</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/apache/">Apache</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/bot/">Bot</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/bt/">Bt</a>
+      
+    </div>
+  </div>
+
+
+    </div>
+
+    
+  </div>
+</div>
+
+<!-- tail -->
 
 
         <!-- The Search results -->
