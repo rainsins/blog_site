@@ -787,234 +787,49 @@ observer.observe(targetNode, config);
 
         
 
- 
 
 
 
 
 
 
- 
 
-<div class="row mb-5">
-  <!-- core -->
-  <div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pe-xl-4">
-    
-
-    <div class="post  px-md-2">
-         
-      <!-- Refactor the HTML structure -->
+<!-- Get pinned posts on current page -->
 
 
 
-<!--
-  In order to allow a wide table to scroll horizontally,
-  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
--->
 
 
 
-<!--
-  Fixed kramdown code highlight rendering:
-  https://github.com/penibelst/jekyll-compress-html/issues/101
-  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
--->
+<!-- Get normal posts on current page -->
 
 
 
-<!-- Change the icon of checkbox -->
 
 
-<!-- images -->
-
-
-
+<div id="post-list" class="flex-grow-1 px-xl-1">
   
-  
-
-  <!-- CDN URL -->
-  
-
-  <!-- Add image path -->
-  
-
-  
-    
-      
-      
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-    
-    
-    
-
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-      
-
-      
-      
-      
-
-      
-    
-
-    <!-- take out classes -->
-    
-
-    
-
-    
-
-    
-
-    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
-    
-    
-
-    <!-- add image placeholder -->
-    
-      
-        <!-- add SVG placehoder -->
-        
-      
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    
-      <!-- create the image wrapper -->
-      
-
-    
-
-    <!-- combine -->
-    
-
-  
-
-  
-
-
-
-<!-- Add header for code snippets -->
-
-
-
-<!-- Create heading anchors -->
-
-
-
-
-
-  
-  
-
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-
-
-
-
-<!-- return -->
-
-
-
-
-
-
-
-
-
-<!-- Get pinned posts -->
-
-
-
-
-
-
-<!-- Get default posts -->
-
-
-
-
-
-
-
-
-
-
-<div id="post-list">
-  
-    <a href="/posts/marx/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
+    <article class="card-wrapper card">
+      <a href="/posts/marx/" class="post-preview row g-0 flex-md-row-reverse">
         
 
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「逐字稿」《费尔巴哈论》一、前置的准备阶段
-          </h1>
+        
 
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-              这是王德峰老师的马克思视频课，我整理出来文字稿，供大家思考学习。社会权力的发现在后续的学习中具有深刻的意义，务必要理解。这次课程重点阐述了 “社会权力” 这一概念，回顾马克思经历，从莱茵报主编时就物质利益问题与莱茵省议会辩论，到前往巴黎留下《巴黎手稿》，指出社会权力区别于政治权力，是人与人的关系，是非理性、感性的力量，如商品交换中体现的支配关系，还提到马克思对经济学的批判是澄清前提、划清界限，以及政治权力由社会权力派生而来等内容。
-              
-            </p>
-          </div>
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">「逐字稿」《费尔巴哈论》一、前置的准备阶段</h1>
 
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
+            <div class="card-text content mt-0 mb-3">
+              <p>
+              这是王德峰老师的马克思视频课，我整理出来文字稿，供大家思考学习。社会权力的发现在后续的学习中具有深刻的意义，务必要理解。这次课程重点阐述了 “社会权力” 这一概念，回顾马克思经历，从莱茵报主编时就物质利益问题与莱茵省议会辩论，到前往巴黎留下《巴黎手稿》，指出社会权力区别于政治权力，是人与人的关系，是非理性、感性的力量，如商品交换中体现的支配关系，还提到马克思对经济学的批判是澄清前提、划清界限...
+              </p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -1033,53 +848,44 @@ observer.observe(targetNode, config);
 </em>
 
 
-              <!-- categories -->
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      哲学,
+                      马克思
+                  </span>
+                
+              </div>
+
               
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    哲学,
-                    马克思
-                </span>
+                <div class="pin ms-1">
+                  <i class="fas fa-thumbtack fa-fw"></i>
+                  <span></span>
+                </div>
               
             </div>
-
-            
-              <div class="pin ms-1">
-                <i class="fas fa-thumbtack fa-fw"></i>
-                <span></span>
-              </div>
-            
+            <!-- .post-meta -->
           </div>
-          <!-- .post-meta -->
+          <!-- .card-body -->
         </div>
-        <!-- .card-body -->
-      </div>
-    </a>
+      </a>
+    </article>
   
-    <a href="/posts/mac/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
+    <article class="card-wrapper card">
+      <a href="/posts/mac/" class="post-preview row g-0 flex-md-row-reverse">
         
 
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「文件」一个趋于完美的黑苹果引导文件
-          </h1>
+        
 
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-              
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">「文件」一个趋于完美的黑苹果引导文件</h1>
 
-
-
-
-
-              
-
-
-
-前言
+            <div class="card-text content mt-0 mb-3">
+              <p>
+              前言
 
 
 
@@ -1087,16 +893,15 @@ observer.observe(targetNode, config);
   随着苹果推进自家CPU的发展，对Intel的CPU支持也将结束，现在的MacOS Snonma也许是最后一个支持Intel的版本，Sequoia 15还能用，且用且珍惜。
   
   
-  这个主机兜兜转转试过了好多的系统，除了MacOS和Windows11一直都在用之外，还试过如Deepin、优麒麟、银河麒麟、开放麒麟、Ubuntu、ChromeOS、FydeO...
-              
-            </p>
-          </div>
+  这个主机兜兜转转试过了好多的系统，除了MacOS和Windows11一直都在用之外，还试过如Deepin、优麒麟、银河麒麟、开放麒麟、Ubuntu、ChromeOS、FydeOS、Zo...
+              </p>
+            </div>
 
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -1115,51 +920,51 @@ observer.observe(targetNode, config);
 </em>
 
 
-              <!-- categories -->
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      黑苹果
+                  </span>
+                
+              </div>
+
               
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    黑苹果
-                </span>
+                <div class="pin ms-1">
+                  <i class="fas fa-thumbtack fa-fw"></i>
+                  <span></span>
+                </div>
               
             </div>
-
-            
-              <div class="pin ms-1">
-                <i class="fas fa-thumbtack fa-fw"></i>
-                <span></span>
-              </div>
-            
+            <!-- .post-meta -->
           </div>
-          <!-- .post-meta -->
+          <!-- .card-body -->
         </div>
-        <!-- .card-body -->
-      </div>
-    </a>
+      </a>
+    </article>
   
-    <a href="/posts/marx12/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
+    <article class="card-wrapper card">
+      <a href="/posts/marx12/" class="post-preview row g-0 flex-md-row-reverse">
         
 
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「逐字稿」《费尔巴哈论》十三、革命的科学的开姶
-          </h1>
+        
 
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-              这次课程指出《关于费尔巴哈的提纲》体现马克思新唯物主义立足 “人类社会”，打开未来向度，其第十一条终结西方柏拉图主义传统，“改变世界” 强调基于社会生活自我批判的实践，理论要理解阐释这一过程。马克思主张从世界本身原理阐发新原理，海德格尔也有与之相通的哲学观。课程中以空想社会主义为例批判旧哲学，指出《资本论》是革命科学。现今社会科学多基于西方近代理性形而上学，无法参与历史运动，中国社会科学研究应重视历史唯物主义，关注自身实践。
-              
-            </p>
-          </div>
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">「逐字稿」《费尔巴哈论》十三、革命的科学的开姶</h1>
 
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
+            <div class="card-text content mt-0 mb-3">
+              <p>
+              这次课程指出《关于费尔巴哈的提纲》体现马克思新唯物主义立足 “人类社会”，打开未来向度，其第十一条终结西方柏拉图主义传统，“改变世界” 强调基于社会生活自我批判的实践，理论要理解阐释这一过程。马克思主张从世界本身原理阐发新原理，海德格尔也有与之相通的哲学观。课程中以空想社会主义为例批判旧哲学，指出《资本论》是革命科学。现今社会科学多基于西方近代理性形而上学，无法参与历史运动，中国社会科学研究...
+              </p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -1178,43 +983,38 @@ observer.observe(targetNode, config);
 </em>
 
 
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    哲学,
-                    马克思
-                </span>
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      哲学,
+                      马克思
+                  </span>
+                
+              </div>
+
               
             </div>
-
-            
+            <!-- .post-meta -->
           </div>
-          <!-- .post-meta -->
+          <!-- .card-body -->
         </div>
-        <!-- .card-body -->
-      </div>
-    </a>
+      </a>
+    </article>
   
-    <a href="/posts/method/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
+    <article class="card-wrapper card">
+      <a href="/posts/method/" class="post-preview row g-0 flex-md-row-reverse">
         
 
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「教程」提取课程的逐字稿
-          </h1>
+        
 
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-              
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">「教程」提取课程的逐字稿</h1>
 
-
-
-
-
+            <div class="card-text content mt-0 mb-3">
+              <p>
               材料
 
 
@@ -1245,15 +1045,14 @@ observer.observe(targetNode, config);
 
 
   换到OCR选项，点击Create Cleared Text Images(RGBImages-&amp;gt;TXTIma...
-              
-            </p>
-          </div>
+              </p>
+            </div>
 
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -1272,47 +1071,47 @@ observer.observe(targetNode, config);
 </em>
 
 
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    教程,
-                    逐字稿
-                </span>
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      教程,
+                      逐字稿
+                  </span>
+                
+              </div>
+
               
             </div>
-
-            
+            <!-- .post-meta -->
           </div>
-          <!-- .post-meta -->
+          <!-- .card-body -->
         </div>
-        <!-- .card-body -->
-      </div>
-    </a>
+      </a>
+    </article>
   
-    <a href="/posts/marx11/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
+    <article class="card-wrapper card">
+      <a href="/posts/marx11/" class="post-preview row g-0 flex-md-row-reverse">
         
 
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「逐字稿」《费尔巴哈论》十二、人类解放的话语
-          </h1>
+        
 
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">「逐字稿」《费尔巴哈论》十二、人类解放的话语</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>
               围绕课程提纲第十条，阐述马克思新唯物主义哲学。指出旧唯物主义立足市民社会，新唯物主义立足未来的人类社会，谈人类解放。马克思认为共产主义在历史中经验诞生，资本主义生产力发展将终结私有制。当下个人社会生活存在对抗，马克思哲学革命旨在实现人类解放，无产阶级肩负重要使命，不过很多人对此存疑。
-              
-            </p>
-          </div>
+              </p>
+            </div>
 
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -1331,47 +1130,47 @@ observer.observe(targetNode, config);
 </em>
 
 
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    哲学,
-                    马克思
-                </span>
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      哲学,
+                      马克思
+                  </span>
+                
+              </div>
+
               
             </div>
-
-            
+            <!-- .post-meta -->
           </div>
-          <!-- .post-meta -->
+          <!-- .card-body -->
         </div>
-        <!-- .card-body -->
-      </div>
-    </a>
+      </a>
+    </article>
   
-    <a href="/posts/marx10/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
+    <article class="card-wrapper card">
+      <a href="/posts/marx10/" class="post-preview row g-0 flex-md-row-reverse">
         
 
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「逐字稿」《费尔巴哈论》十一、近代唯物主义的时代根源
-          </h1>
+        
 
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-              《关于费尔巴哈的提纲》第九条指出，费尔巴哈的唯物主义是从感性直观出发，区别于此前纯粹物质思辨的唯物主义，它源于资产阶级社会阶段，只能对市民社会单个人直观。任何哲学、宗教学说都是时代产儿，受所处时代社会生活性质规定，如伽利略力学命题不会在古希腊出现，费尔巴哈身处资产阶级社会才有其直观唯物主义。马克思学说同样如此，由资本主义发展、阶级分化对抗催生，他改造黑格尔辩证法，揭示社会感性对抗。费尔巴哈唯物主义有阶级、时代局限，未批判资本主义生产关系，黑格尔哲学面向过去、无未来向度，在其终止处，马克思哲学革命开启。当下欧洲发达国家二次分配虽高，但资本主义生产关系对抗未消，这引发对马克思哲学能否突破局限、立足点是否异于费尔巴哈哲学（二者立足点皆与市民社会相关）的探讨，进而引入第十条讨论。
-              
-            </p>
-          </div>
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">「逐字稿」《费尔巴哈论》十一、近代唯物主义的时代根源</h1>
 
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
+            <div class="card-text content mt-0 mb-3">
+              <p>
+              《关于费尔巴哈的提纲》第九条指出，费尔巴哈的唯物主义是从感性直观出发，区别于此前纯粹物质思辨的唯物主义，它源于资产阶级社会阶段，只能对市民社会单个人直观。任何哲学、宗教学说都是时代产儿，受所处时代社会生活性质规定，如伽利略力学命题不会在古希腊出现，费尔巴哈身处资产阶级社会才有其直观唯物主义。马克思学说同样如此，由资本主义发展、阶级分化对抗催生，他改造黑格尔辩证法，揭示社会感性对抗。费尔巴哈唯...
+              </p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -1390,47 +1189,47 @@ observer.observe(targetNode, config);
 </em>
 
 
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    哲学,
-                    马克思
-                </span>
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      哲学,
+                      马克思
+                  </span>
+                
+              </div>
+
               
             </div>
-
-            
+            <!-- .post-meta -->
           </div>
-          <!-- .post-meta -->
+          <!-- .card-body -->
         </div>
-        <!-- .card-body -->
-      </div>
-    </a>
+      </a>
+    </article>
   
-    <a href="/posts/marx9/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
+    <article class="card-wrapper card">
+      <a href="/posts/marx9/" class="post-preview row g-0 flex-md-row-reverse">
         
 
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「逐字稿」《费尔巴哈论》十、马克思的历史科学论
-          </h1>
+        
 
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">「逐字稿」《费尔巴哈论》十、马克思的历史科学论</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>
               《关于费尔巴哈的提纲》第八条体现马克思哲学革命对社会科学革命的指向。当下社会科学存在局限，用理性范畴构建事实，具神秘主义倾向，遮蔽了真实关系与冲突。马克思认为社会生活本质是实践、自我批判的，社会科学理论神秘源于实践中的异化。解决需依靠实践及马克思的历史科学，《资本论》是其范例，其方法含清洗范畴、运用感性辩证法，借此区分经济关系和生产关系，马克思的历史科学研究领域广泛，意在推动知识变革。
-              
-            </p>
-          </div>
+              </p>
+            </div>
 
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -1449,47 +1248,47 @@ observer.observe(targetNode, config);
 </em>
 
 
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    哲学,
-                    马克思
-                </span>
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      哲学,
+                      马克思
+                  </span>
+                
+              </div>
+
               
             </div>
-
-            
+            <!-- .post-meta -->
           </div>
-          <!-- .post-meta -->
+          <!-- .card-body -->
         </div>
-        <!-- .card-body -->
-      </div>
-    </a>
+      </a>
+    </article>
   
-    <a href="/posts/marx8/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
+    <article class="card-wrapper card">
+      <a href="/posts/marx8/" class="post-preview row g-0 flex-md-row-reverse">
         
 
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「逐字稿」《费尔巴哈论》九、近代个人主义原理的来历
-          </h1>
+        
 
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">「逐字稿」《费尔巴哈论》九、近代个人主义原理的来历</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>
               《关于费尔巴哈的提纲》第七条指出，费尔巴哈未认识到宗教感情是社会产物，他分析的抽象个人属特定社会形式。近代西方哲学虚构的历史起点有误，人类历史起点并非从抽象个人出发。新教宗教情感推动形成个人主义原理，打破权威原理时代。马克思批判费尔巴哈宗教观，阐述原理与时代的关系，介绍人类社会三种类型及资本主义生产关系下个人主义原理的形成，还解释了抽象个人概念。
-              
-            </p>
-          </div>
+              </p>
+            </div>
 
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -1508,47 +1307,47 @@ observer.observe(targetNode, config);
 </em>
 
 
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    哲学,
-                    马克思
-                </span>
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      哲学,
+                      马克思
+                  </span>
+                
+              </div>
+
               
             </div>
-
-            
+            <!-- .post-meta -->
           </div>
-          <!-- .post-meta -->
+          <!-- .card-body -->
         </div>
-        <!-- .card-body -->
-      </div>
-    </a>
+      </a>
+    </article>
   
-    <a href="/posts/marx7/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
+    <article class="card-wrapper card">
+      <a href="/posts/marx7/" class="post-preview row g-0 flex-md-row-reverse">
         
 
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「逐字稿」《费尔巴哈论》八、马克思关于人的本质的定义
-          </h1>
+        
 
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
+        <div class="col-md-12">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">「逐字稿」《费尔巴哈论》八、马克思关于人的本质的定义</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>
               马克思在《关于费尔巴哈的提纲》中，第五条指出费尔巴哈确认人是感性对象的突破及缺乏历史性的局限。第六条批判费尔巴哈对人本质的观点，提出人的本质是一切社会关系总和，指出费尔巴哈撇开历史性、错认社会性的两大缺陷。同时阐述人的自我意识源于对他人和他物联系的感知，在社会化过程中自我意识与生存场不断丰富，人的本质在社会交往实践里得以发展。
-              
-            </p>
-          </div>
+              </p>
+            </div>
 
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -1567,56 +1366,62 @@ observer.observe(targetNode, config);
 </em>
 
 
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    哲学,
-                    马克思
-                </span>
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      哲学,
+                      马克思
+                  </span>
+                
+              </div>
+
               
             </div>
-
-            
+            <!-- .post-meta -->
           </div>
-          <!-- .post-meta -->
+          <!-- .card-body -->
         </div>
-        <!-- .card-body -->
-      </div>
-    </a>
+      </a>
+    </article>
   
-    <a href="/posts/theme/" class="card-wrapper">
-      <div class="card post-preview flex-md-row-reverse">
-        
-          
-
-          
-          
-
-          
-
-          <div class="preview-img shimmer"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 8'%3E%3C/svg%3E" data-src="https://file.rainsin.cn/d/blog/img/post/01c2b45997fd2fa801215603b19339.webp" width="15" height="8" alt="心经"  class="lazyload" data-proofer-ignore></div>
+    <article class="card-wrapper card">
+      <a href="/posts/theme/" class="post-preview row g-0 flex-md-row-reverse">
         
 
-        <div class="card-body d-flex flex-column">
-          <h1 class="card-title my-2 mt-md-0">
-            「笔记」心经的主题：破我执
-          </h1>
+        
+          
+          
 
-          <div class="card-text post-content mt-0 mb-2">
-            <p>
-              
-              《心经》主题围绕 “空小我，息业识，开示菩萨境界，导修甚深般若波罗蜜多” 展开，借由观自在菩萨讲菩萨境界。小我由五蕴构成，五蕴涵盖感知、感受、欲求、意志、分别等方面，人们因执着五蕴形成我执。《心经》从破五蕴、我执切入，意在度苦厄，在佛教诸多活动、仪式中作用重大，能助人超脱轮回、抚慰心灵，于面对生死之事时可给人精神安慰。
-              
-            </p>
+          
+
+          
+
+          
+
+          <div class="col-md-5">
+            <img src="https://file.rainsin.cn/d/blog/img/post/01c2b45997fd2fa801215603b19339.webp" alt="心经" >
           </div>
 
-          <div class="post-meta flex-grow-1 d-flex align-items-end">
-            <div class="me-auto">
-              <!-- posted date -->
-              <i class="far fa-calendar fa-fw me-1"></i>
-              <!--
+          
+        
+
+        <div class="col-md-7">
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title my-2 mt-md-0">「笔记」心经的主题：破我执</h1>
+
+            <div class="card-text content mt-0 mb-3">
+              <p>
+              《心经》主题围绕 “空小我，息业识，开示菩萨境界，导修甚深般若波罗蜜多” 展开，借由观自在菩萨讲菩萨境界。小我由五蕴构成，五蕴涵盖感知、感受、欲求、意志、分别等方面，人们因执着五蕴形成我执。《心经》从破五蕴、我执切入，意在度苦厄，在佛教诸多活动、仪式中作用重大，能助人超脱轮回、抚慰心灵，于面对生死之事时可给人精神安慰。
+              </p>
+            </div>
+
+            <div class="post-meta flex-grow-1 d-flex align-items-end">
+              <div class="me-auto">
+                <!-- posted date -->
+                <i class="far fa-calendar fa-fw me-1"></i>
+                <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -1635,24 +1440,25 @@ observer.observe(targetNode, config);
 </em>
 
 
-              <!-- categories -->
-              
-                <i class="far fa-folder-open fa-fw me-1"></i>
-                <span class="categories">
-                  
-                    国学,
-                    佛学
-                </span>
+                <!-- categories -->
+                
+                  <i class="far fa-folder-open fa-fw me-1"></i>
+                  <span class="categories">
+                    
+                      国学,
+                      佛学
+                  </span>
+                
+              </div>
+
               
             </div>
-
-            
+            <!-- .post-meta -->
           </div>
-          <!-- .post-meta -->
+          <!-- .card-body -->
         </div>
-        <!-- .card-body -->
-      </div>
-    </a>
+      </a>
+    </article>
   
 </div>
 <!-- #post-list -->
@@ -1764,1068 +1570,6 @@ observer.observe(targetNode, config);
   </li>
 </ul>
 <!-- .pagination -->
-
-
-
-   
-    </div>
-  </div>
-  
-  <!-- #core-wrapper -->
-
-  <!-- panel -->
-  <div id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
-    <div class="access">
-      <!-- Get the last 5 posts from lastmod list. -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div id="access-lastmod" class="post">
-    <div class="panel-heading">最近更新</div>
-    <ul class="post-content list-unstyled ps-0 pb-1 ms-1 mt-2">
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/mac/">「文件」一个趋于完美的黑苹果引导文件</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/niannian/">「神秘」年年的高雅集</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/marx/">「逐字稿」《费尔巴哈论》一、前置的准备阶段</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/theme/">「笔记」心经的主题：破我执</a>
-        </li>
-      
-        
-        
-        
-        <li class="text-truncate lh-lg">
-          <a href="/posts/marx7/">「逐字稿」《费尔巴哈论》八、马克思关于人的本质的定义</a>
-        </li>
-      
-    </ul>
-  </div>
-  <!-- #access-lastmod -->
-
- <!-- The trending tags list -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-
-
-  <div id="access-tags">
-    <div class="panel-heading">热门标签</div>
-    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%86%99%E7%9C%9F/">写真</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/">解决问题</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">黑苹果</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/efi/">EFI</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%81%A5%E5%BA%B7/">健康</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/">羽毛球</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/apache/">Apache</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/bot/">Bot</a>
-      
-        
-        <a class="post-tag btn btn-outline-primary" href="/tags/bt/">Bt</a>
-      
-    </div>
-  </div>
-
-
-    </div>
-
-    
-  </div>
-</div>
-
-<!-- tail -->
 
 
         <!-- The Search results -->
