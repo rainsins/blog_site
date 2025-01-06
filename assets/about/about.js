@@ -16,7 +16,6 @@
   // })
 
 
-
 window.load_event = {
   ...window.load_event,
 

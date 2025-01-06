@@ -1278,7 +1278,11 @@
     color: #12aa9c;
 }
 .about-site div.ah-box span:nth-child(3){
-    color: #fa7e23;
+    color: #c4d7d6;
+}
+
+#profile-music-control{
+    cursor: pointer;
 }
 
 .about-site div.ah-title{
@@ -1289,7 +1293,7 @@
 
 .about-site .mask3{
     margin: 0;
-    background-image: linear-gradient(to right,#9ca49c 0%,#bc8861 52%,#ecd3a9 78%,#4f2f17 100%);
+    background-image: linear-gradient(to right,#848d95 0%,#847d74 52%,#62645f 78%,#847d74 100%);
 }
 
 .about-site .mask4{
@@ -1298,7 +1302,7 @@
 }
 
 .bgimg-box{
-    background-image: url(https://file.rainsin.cn/d/blog/img/about/%E6%98%8E%E9%87%8C.jpg),url(https://mypan.hk.cpolar.io/d/blog/img/about/%E6%98%8E%E9%87%8C.jpg);
+    background-image: url(https://file.rainsin.cn/d/blog/img/about/1736134812890.jpg);
     background-position: center;
     background-size: cover;
 }
