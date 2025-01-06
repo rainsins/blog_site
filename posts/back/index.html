@@ -293,6 +293,18 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   
    
   
+  
+  <script src="https://s4.zstatic.net/ajax/libs/pangu/4.0.7/pangu.min.js"></script>
+
+  <script>
+    window.load_event = {
+      ...window.load_event,
+      autoSpacing: () => {
+        pangu.spacingElementByClassName("post-content");
+        pangu.autoSpacingPage();
+      },
+    };
+  </script>
    
   
 
@@ -316,7 +328,14 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
 
   <link rel="stylesheet" href="/assets/css/card-profile.css" />
 
-    
+   
+  <script
+    src="https://s4.zstatic.net/ajax/libs/babel-standalone/7.25.6/babel.min.js"
+    integrity="sha512-8M1WWEzuftS49rfh63fHz354qx+Pzvp3kcQVVTOxIdFSzjYC3I3vk5zgN0guAook97MQIZTfEdl9pUQTov9V6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+   
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta
@@ -347,7 +366,7 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   </style>
 
   
-  <meta name="keywords" content="rainsin, raisin, rainsins , raisins ,  blog, rainsin's blog, 技术, 分享, 前端, 后端, AI" />
+  <meta name="keywords" content="rainsin, blog, 羽毛球" />
   <meta name="author" content="rainsin" />
   
 
@@ -370,6 +389,117 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
   <link rel="stylesheet" href="/assets/css/root-min.css" />
 
   
+  <link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/waline/3.4.2/waline.min.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/waline/3.4.2/waline-meta.css"
+  />
+
+  <style>
+    .wl-cards .wl-user .wl-user-avatar{
+      border: 1px solid #a4a4a4ab;
+    }
+    [data-waline] p{
+      margin-bottom: 0;
+    }
+  </style>
+
+  <script src="https://s4.zstatic.net/ajax/libs/waline/3.4.2/waline.umd.min.js"></script>
+
+  <script>
+    window.load_event = {
+      ...window.load_event,
+      comments: () => {
+          Waline.init({
+            el: "#tcomment",
+            serverURL: "https://waline.rainsin.cn/",
+            emoji: [
+              "//file.rainsin.cn/d/blog/em/小黑子",
+              "//file.rainsin.cn/d/blog/em/Sticker-100",
+              "//file.rainsin.cn/d/blog/em/小电视",
+              "//file.rainsin.cn/d/blog/em/Tieba",
+              "//file.rainsin.cn/d/blog/em/alus",
+              "//file.rainsin.cn/d/blog/em/商业头盔",
+              "//file.rainsin.cn/d/blog/em/小人",
+              "//file.rainsin.cn/d/blog/em/小坏坏",
+              "//file.rainsin.cn/d/blog/em/抽象",
+              "//file.rainsin.cn/d/blog/em/搜索引擎",
+              "//file.rainsin.cn/d/blog/em/机场",
+              "//file.rainsin.cn/d/blog/em/猥琐萌",
+              "//file.rainsin.cn/d/blog/em/猫狗",
+              "//file.rainsin.cn/d/blog/em/白白",
+              "//file.rainsin.cn/d/blog/em/突然",
+              "//file.rainsin.cn/d/blog/em/胡桃",
+              "//file.rainsin.cn/d/blog/em/被子",
+              "//file.rainsin.cn/d/blog/em/酷安",
+              "//file.rainsin.cn/d/blog/em/tw",
+              "//file.rainsin.cn/d/blog/em/qq",
+              "//file.rainsin.cn/d/blog/em/weibo",
+            ],
+            pageview: true,
+            locale: {
+              placeholder:
+                "唠唠嗑（登录和上面信息都不是必需的，评论审核后可见，添加邮箱可在被回复时邮件提醒，按🔍进行预览）",
+              admin: "站长",
+              level0: "素人",
+              level1: "企划",
+              level2: "企划专属",
+              level3: "专属",
+              level4: "双专属",
+              level5: "三社共有",
+              nick: "名称",
+              sofa: "来一起击剑🤺吧",
+            },
+            dark: 'html[data-mode="dark"]',
+            imageUploader: false,
+            search: false,
+          });
+
+        window.time_comment = 0;
+        let set_comment_time = setInterval(()=>{
+          const get_anno_img = Array.from(document.querySelectorAll(".wl-cards .wl-user .wl-user-avatar[src='https://seccdn.libravatar.org/avatar/d41d8cd98f00b204e9800998ecf8427e']"));
+          if(time_comment < 500){
+            get_anno_img.forEach((el,index)=>{
+          el.src = "https://file.rainsin.cn/d/blog/img/comment/act.gif";
+        });
+        time_comment++;
+          }else{
+            clearInterval(set_comment_time);
+            return;
+          }
+        },200)
+      },
+    };
+  </script>
+
+  <style>
+    .wl-emoji-popup .wl-tab-wrapper button {
+      width: 4em;
+    }
+    .wl-emoji-popup .wl-tab-wrapper button img {
+      max-height: 3.5em;
+      max-width: 3.5em;
+    }
+    .wl-meta>span::before{
+      margin-top: 2px;
+    }
+
+    .wl-editor, .wl-input{
+      background-image: url(https://file.rainsin.cn/d/blog/img/comment/waline-bg.gif),url(https://api.rainsin.cn/blog_data/img/comment/waline-bg.gif);
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+    }
+    :root{
+      --waline-theme-color: #d4c4b7;
+      --waline-active-color: #d4c4b7aa;
+    }
+  </style>
+  
 
   <script>
     const style = document.createElement("style");
@@ -387,29 +517,44 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
 
 
 
-   
   
-              <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <script src="https://unpkg.zhimg.com/react@18.3.1/umd/react.production.min.js"></script>
+  <script src="https://unpkg.zhimg.com/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+  <script src="/assets/js/swr.min.js" async></script>
+   
+  <script src="https://file.rainsin.cn/d/blog/js/artplayer/index.min.js"></script>
+  <script src="https://s4.zstatic.net/npm/artplayer-plugin-danmuku@5.1.4/dist/artplayer-plugin-danmuku.legacy.js"></script>
+  
+  
+     
+  <script src="https://s4.zstatic.net/npm/chart.js@4.4.3/dist/chart.umd.js"></script>
+           
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="解决问题" />
+<meta property="og:title" content="「爱好」好的反手是怎样的？" />
 <meta name="author" content="Rainsin Yu" />
 <meta property="og:locale" content="zh_CN" />
-<meta name="description" content="rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）" />
-<meta property="og:description" content="rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）" />
-<link rel="canonical" href="https://blog.rainsin.cn/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/" />
-<meta property="og:url" content="https://blog.rainsin.cn/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/" />
+<meta name="description" content="反手怪" />
+<meta property="og:description" content="反手怪" />
+<link rel="canonical" href="https://blog.rainsin.cn/posts/back/" />
+<meta property="og:url" content="https://blog.rainsin.cn/posts/back/" />
 <meta property="og:site_name" content="Rainsin • Blog｜一个粗糙的小博客，分享乐趣。" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="解决问题" />
+<meta property="og:image" content="https://file.rainsin.cn/d/blog/img/post/%E9%99%B6%E8%8F%B2%E5%85%8B.jpg" />
+<meta property="og:image:alt" content="陶菲克" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-01-06T16:32:10+08:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://file.rainsin.cn/d/blog/img/post/%E9%99%B6%E8%8F%B2%E5%85%8B.jpg" />
+<meta name="twitter:image:alt" content="陶菲克" />
+<meta property="twitter:title" content="「爱好」好的反手是怎样的？" />
 <meta name="twitter:site" content="@2000_python" />
 <meta name="twitter:creator" content="@2000_python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"description":"rainsin，一个简约的个人博客，jekyll驱动，除了写一点没什么营养的东西外，这里还是一个试验场，我会在里面写一些前端的东西，比如React和Vue。（blog）","headline":"解决问题","url":"https://blog.rainsin.cn/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2025-01-06T16:32:10+08:00","datePublished":"2025-01-06T16:32:10+08:00","description":"反手怪","headline":"「爱好」好的反手是怎样的？","image":{"alt":"陶菲克","url":"https://file.rainsin.cn/d/blog/img/post/%E9%99%B6%E8%8F%B2%E5%85%8B.jpg","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/back/"},"url":"https://blog.rainsin.cn/posts/back/"}</script>
 <!-- End Jekyll SEO tag -->
  
 
-  <title>解决问题 | Rainsin • Blog｜一个粗糙的小博客，分享乐趣。
+  <title>「爱好」好的反手是怎样的？ | Rainsin • Blog｜一个粗糙的小博客，分享乐趣。
   </title>
 
   <!--
@@ -420,15 +565,15 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
 
 
 
-<link rel="apple-touch-icon" sizes="180x180" href=" https://api.rainsin.cn/favicon/main/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href=" https://api.rainsin.cn/favicon/main/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href=" https://api.rainsin.cn/favicon/main/favicon-16x16.png">
-<link rel="manifest" href=" https://api.rainsin.cn/favicon/main/site.webmanifest">
-<link rel="shortcut icon" href=" https://api.rainsin.cn/favicon/main/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href=" https://api.rainsin.cn/favicon/heart/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=" https://api.rainsin.cn/favicon/heart/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=" https://api.rainsin.cn/favicon/heart/favicon-16x16.png">
+<link rel="manifest" href=" https://api.rainsin.cn/favicon/heart/site.webmanifest">
+<link rel="shortcut icon" href=" https://api.rainsin.cn/favicon/heart/favicon.ico">
 <meta name="apple-mobile-web-app-title" content="Rainsin • Blog｜一个粗糙的小博客，分享乐趣。">
 <meta name="application-name" content="Rainsin • Blog｜一个粗糙的小博客，分享乐趣。">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content=" https://api.rainsin.cn/favicon/main/browserconfig.xml">
+<meta name="msapplication-config" content=" https://api.rainsin.cn/favicon/heart/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
   
   <link rel="preconnect" href="https://fonts.font.im"  />
@@ -464,7 +609,18 @@ href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
 
   <link rel="stylesheet" href="/assets/css/style.css" />
 
+  
+  <link
+    rel="stylesheet"
+    href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/tocbot/4.28.2/tocbot.min.css"
+  />
    
+  <!-- Manific Popup -->
+  <link
+    rel="stylesheet"
+    href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css"
+  />
+  
 
   <script defer src="/assets/js/umami.js" data-website-id="202ceef1-7698-45d5-a10e-fc97f6a046c0"></script>
 
@@ -774,16 +930,10 @@ observer.observe(targetNode, config);
           
         
           
-            <span>
-              <a href="/tags">
-                标签
-              </a>
-            </span>
-          
         
           
             
-              <span>解决问题</span>
+              <span>「爱好」好的反手是怎样的？</span>
             
 
           
@@ -795,7 +945,7 @@ observer.observe(targetNode, config);
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
 
     <div id="topbar-title">
-      标签
+      文字
     </div>
 
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
@@ -825,31 +975,223 @@ observer.observe(targetNode, config);
 
  
 
-<div class="row mb-5">
+<div class="row">
   <!-- core -->
   <div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pe-xl-4">
     
 
     <div class="post px-1 px-md-2">
          
+      <!-- Refactor the HTML structure -->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+<!-- images -->
+
+
+
+  
+  
+
+  <!-- CDN URL -->
+  
+
+  <!-- Add image path -->
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
       
 
+      
+      
+      
 
-
-<link rel="stylesheet" href="/assets/css/comments.css"/>
-
-<div id="page-tag">
-  <h1 class="ps-lg-2">
-    <i class="fa fa-tag fa-fw text-muted"></i>
-    解决问题
-    <span class="lead text-muted ps-2">3</span>
-  </h1>
-  <ul class="post-content ps-0">
+      
     
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/ssl-certbot/">「解决问题」使用certbot和Let’s Encrypt为本地服务器部署ssl</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+      
+
+      
+      
+      
+
+      
+    
+
+    <!-- take out classes -->
+    
+
+    
+
+    
+
+    
+
+    <!-- lazy-load images <https://github.com/aFarkas/lazysizes#readme> -->
+    
+    
+
+    <!-- add image placeholder -->
+    
+      
+        <!-- add SVG placehoder -->
+        
+      
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+      <!-- make sure the `<img>` is wrapped by `<a>` -->
+      
+
+      
+        <!-- create the image wrapper -->
+        
+      
+    
+
+    <!-- combine -->
+    
+
+  
+
+  
+
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- return -->
+
+
+
+
+<h1 data-toc-skip>「爱好」好的反手是怎样的？</h1>
+
+<style>.post-meta .post-desc{font-size: 1.1rem;font-family: var(--decs-font) !important;line-height: 1.6;color: var(--heading-color);font-weight: 100 !important;}</style>
+
+<div class="post-meta text-muted">
+    
+    <!-- published date -->
+    <span>
+      发表于
+      <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -858,65 +1200,236 @@ observer.observe(targetNode, config);
 
 
 
-<span
-  class="text-muted small"
-  data-ts="1729663090"
+<em
+  class=""
+  data-ts="1736152330"
   data-df="YYYY/MM/DD"
   
->
-  2024/10/23
-</span>
-
-      </li>
-    
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/cloudflare/">「解决问题」使用 CloudFlare 导致网站「重定向的次数过多」解决方案</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<span
-  class="text-muted small"
-  data-ts="1706761330"
-  data-df="YYYY/MM/DD"
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  2024/02/01
-</span>
+  2025/01/06
+</em>
 
-      </li>
+    </span>
+
+    <!-- lastmod date -->
     
-      <li class="d-flex justify-content-between px-md-3">
-        <a href="/posts/ax200-bluetooth/">「解决问题」黑苹果Venture 13.4 Intel无线网卡(AX200,AX201,AX210,AX203)蓝牙问题排查</a>
-        <span class="dash flex-grow-1"></span>
-        <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
 
-
-
-
-
-<span
-  class="text-muted small"
-  data-ts="1688271780"
-  data-df="YYYY/MM/DD"
   
->
-  2023/07/02
-</span>
-
-      </li>
     
-  </ul>
+    
+    
+
+    
+
+    <div class="mt-3 mb-3">
+      <a href="https://file.rainsin.cn/d/blog/img/post/%E9%99%B6%E8%8F%B2%E5%85%8B.jpg" class="popup img-link preview-img shimmer"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3C/svg%3E" data-src="https://file.rainsin.cn/d/blog/img/post/%E9%99%B6%E8%8F%B2%E5%85%8B.jpg"  alt="陶菲克" width="1200" height="630"  class="lazyload" data-proofer-ignore></a><figcaption class="text-center pt-2 pb-2">陶菲克</figcaption></div>
+  
+
+  <div class="d-flex justify-content-between">
+    <!-- author(s) -->
+    <span>
+      
+
+      作者
+
+      <em>
+      
+        
+          <a href="https://github.com/rainsins/">Rainsin Yu</a>
+          
+        
+      
+      </em>
+    </span>
+
+    <div>
+      <!-- page views -->
+      
+
+      <!-- read time -->
+      <!-- Calculate the post's reading time, and display the word count in tooltip -->
+
+
+
+<!-- words per minute -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="3 字"
+>
+  <em>1 分钟</em>阅读</span>
+
+    </div>
+
+  </div> <!-- .d-flex -->
+
+</div> <!-- .post-meta -->
+
+<div class="post-content        " id="post-content">
+  <h2 id="反手怪"><span class="me-2">反手怪</span><a href="#反手怪" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<div id="mse" style="width: 100%; aspect-ratio: 1920/1080;"></div>
+
+<script>
+window.load_event = {
+    ...window.load_event,
+    player_video: () => {
+
+    let mseplayer = new Artplayer({
+      container: '#mse',
+      url: 'https://file.rainsin.cn/d/blog/video/%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E8%BF%99%E4%B8%AA%E5%8F%8D%E6%89%8B.1623906260.mp4',
+      theme: "#2c9678",
+        autoMini: true,
+        flip: true,
+        playbackRate: true,
+        screenshot: true,
+        hotkey: true,
+        pip: true,
+        mutex: true,
+        fullscreen: true,
+        fullscreenWeb: true,
+        miniProgressBar: true,
+        playsInline: true,
+        setting: true,
+        autoOrientation: true,
+        plugins: [
+        artplayerPluginChapter({
+            chapters: [
+                { start: 0, end: 3, title: '反手转中路近网' },
+                { start: 3, end: 5, title: '反手过渡' },
+                { start: 5, end: 6, title: '反手平抽' },
+                { start: 6, end: 8, title: '反手高远' },
+                { start: 8, end: Infinity, title: '反手接杀对角' },
+            ]
+        }),
+    ],
+    });
+    }
+}
+</script>
+
+
 </div>
+
+<div class="post-tail-wrapper text-muted">
+
+  <!-- categories -->
+  
+  <div class="post-meta mb-3">
+    <i class="far fa-folder-open fa-fw me-1"></i>
+    
+      <a href='/categories/%E7%BE%BD%E6%AF%9B%E7%90%83/'>羽毛球</a>
+  </div>
+  
+
+  <!-- tags -->
+  
+  <div class="post-tags">
+    <i class="fa fa-tags fa-fw me-1"></i>
+      
+      <a href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/"
+          class="post-tag no-text-decoration" >羽毛球</a>
+      
+  </div>
+  
+
+  <div class="post-tail-bottom
+    d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+    <div class="license-wrapper">
+
+      
+
+        
+
+        本文由作者按照 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         进行授权
+
+      
+    </div>
+
+    <!-- Post sharing snippet -->
+
+<div class="share-wrapper">
+  <span class="share-label text-muted me-1">分享</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+      
+      <a
+        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E7%88%B1%E5%A5%BD%E3%80%8D%E5%A5%BD%E7%9A%84%E5%8F%8D%E6%89%8B%E6%98%AF%E6%80%8E%E6%A0%B7%E7%9A%84%EF%BC%9F%20-%20Rainsin%20%E2%80%A2%20Blog%EF%BD%9C%E4%B8%80%E4%B8%AA%E7%B2%97%E7%B3%99%E7%9A%84%E5%B0%8F%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%88%86%E4%BA%AB%E4%B9%90%E8%B6%A3%E3%80%82&url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fback%2F"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Twitter"
+        target="_blank"
+        rel="noopener"
+        aria-label="Twitter"
+      >
+        <i class="fa-fw fab fa-twitter"></i>
+      </a>
+    
+      
+      <a
+        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E7%88%B1%E5%A5%BD%E3%80%8D%E5%A5%BD%E7%9A%84%E5%8F%8D%E6%89%8B%E6%98%AF%E6%80%8E%E6%A0%B7%E7%9A%84%EF%BC%9F%20-%20Rainsin%20%E2%80%A2%20Blog%EF%BD%9C%E4%B8%80%E4%B8%AA%E7%B2%97%E7%B3%99%E7%9A%84%E5%B0%8F%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%88%86%E4%BA%AB%E4%B9%90%E8%B6%A3%E3%80%82&u=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fback%2F"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Facebook"
+        target="_blank"
+        rel="noopener"
+        aria-label="Facebook"
+      >
+        <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+    
+      
+      <a
+        href="https://t.me/share/url?url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fback%2F&text=%E3%80%8C%E7%88%B1%E5%A5%BD%E3%80%8D%E5%A5%BD%E7%9A%84%E5%8F%8D%E6%89%8B%E6%98%AF%E6%80%8E%E6%A0%B7%E7%9A%84%EF%BC%9F%20-%20Rainsin%20%E2%80%A2%20Blog%EF%BD%9C%E4%B8%80%E4%B8%AA%E7%B2%97%E7%B3%99%E7%9A%84%E5%B0%8F%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%88%86%E4%BA%AB%E4%B9%90%E8%B6%A3%E3%80%82"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Telegram"
+        target="_blank"
+        rel="noopener"
+        aria-label="Telegram"
+      >
+        <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+    <i
+      id="copy-link"
+      class="fa-fw fas fa-link small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="分享链接"
+      data-title-succeed="链接已复制！"
+    >
+    </i>
+  </span>
+</div>
+
+
+  </div><!-- .post-tail-bottom -->
+
+</div><!-- div.post-tail-wrapper -->
    
     </div>
   </div>
@@ -1971,11 +2484,53 @@ observer.observe(targetNode, config);
 
     </div>
 
-    
+      
+
+
+
+  <div id="toc-wrapper" class="ps-0 pe-4 mb-5">
+    <div class="panel-heading ps-3 pt-2 mb-2">文章内容</div>
+    <nav id="toc"></nav>
+  </div>
+
+ 
   </div>
 </div>
 
 <!-- tail -->
+
+<div class="row">
+  <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-3 pe-xl-4 mt-5">
+      <!-- Navigation buttons at the bottom of the post. -->
+
+<div class="post-navigation d-flex justify-content-between">
+  
+    <a
+      href="/posts/marx12/"
+      class="btn btn-outline-primary"
+      prompt="上一篇"
+    >
+      <p>「逐字稿」《费尔巴哈论》十三、革命的科学的开姶</p>
+    </a>
+  
+
+  
+    <div
+      class="btn btn-outline-primary disabled"
+      prompt="下一篇"
+    >
+      <p>-</p>
+    </div>
+  
+</div>
+   <!--  The comments switcher -->
+
+
+ 
+
+    <div id="tcomment" class="no-show-comment"></div>
+  </div>
+</div>
 
 
         <!-- The Search results -->
@@ -3071,6 +3626,13 @@ observer.observe(targetNode, config);
 <!-- layout specified -->
 
 
+  
+
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
+
 
 
 
@@ -3098,6 +3660,18 @@ observer.observe(targetNode, config);
   
 
   
+    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+  
+
+  
+    <script src="https://s4.zstatic.net/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"></script>
+  
+
+  
+    <script src="https://npm.elemecdn.com/clipboard@2.0.11/dist/clipboard.min.js"></script>
+  
+
+  
     <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/dayjs.min.js"></script>
   
 
@@ -3113,6 +3687,9 @@ observer.observe(targetNode, config);
     <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/plugin/localizedFormat.js"></script>
   
 
+  
+    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/tocbot/4.28.2/tocbot.min.js"></script>
+  
 
 
 
@@ -3120,7 +3697,8 @@ observer.observe(targetNode, config);
 
 
 
-<script defer src="/assets/js/dist/misc.min.js"></script>
+
+<script defer src="/assets/js/dist/post.min.js"></script>
 
 
 
