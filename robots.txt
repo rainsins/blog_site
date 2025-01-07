@@ -1,5 +1,10 @@
 User-agent: *
 
 Disallow: /norobots/
+Disallow: /tags/
+Disallow: /categories/
+Disallow: /assets/
+Disallow: /emoticon/
+Disallow: /src/
 
 Sitemap: https://blog.rainsin.cn/sitemap.xml
