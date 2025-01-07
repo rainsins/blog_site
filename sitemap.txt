@@ -1,6 +1,7 @@
 https://blog.rainsin.cn/posts/server-config/
 https://blog.rainsin.cn/posts/ax200-bluetooth/
 https://blog.rainsin.cn/posts/more-system-opencore/
+https://blog.rainsin.cn/posts/gzip/
 https://blog.rainsin.cn/posts/majiang/
 https://blog.rainsin.cn/posts/cloudflare/
 https://blog.rainsin.cn/posts/24jq/
