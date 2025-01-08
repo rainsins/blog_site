@@ -6,14 +6,14 @@
 
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url(https://file.rainsin.cn/d/blog/font/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf),url(https://mypan.hk.cpolar.io/d/blog/font/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf),url(https://api.rainsin.cn/blog_data/font/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf);
+  src: url(https://file.rainsin.cn/d/blog/font/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf),url(https://mypan.cpolar.io/d/blog/font/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf),url(https://api.rainsin.cn/blog_data/font/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf);
   font-style: italic;
   font-weight: 500;
 }
 
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url(https://file.rainsin.cn/d/blog/font/Cormorant_Garamond/CormorantGaramond-Bold.ttf),url(https://mypan.hk.cpolar.io/d/blog/font/Cormorant_Garamond/CormorantGaramond-Bold.ttf),url(https://api.rainsin.cn/blog_data/font/Cormorant_Garamond/CormorantGaramond-Bold.ttf);
+  src: url(https://file.rainsin.cn/d/blog/font/Cormorant_Garamond/CormorantGaramond-Bold.ttf),url(https://mypan.cpolar.io/d/blog/font/Cormorant_Garamond/CormorantGaramond-Bold.ttf),url(https://api.rainsin.cn/blog_data/font/Cormorant_Garamond/CormorantGaramond-Bold.ttf);
 }
 
 @font-face {
@@ -28,7 +28,7 @@
 
 @font-face {
   font-family: "ManbowLines-Regular";
-  src: url("https://file.rainsin.cn/d/blog/font/ManbowLines-Regular.woff?sign=4TvTEtxmA39bE2mKh8uwEkoj3mzCHwZcTnZNZlGajuY=:0"),url("https://mypan.hk.cpolar.io/d/blog/font/ManbowLines-Regular.woff?sign=4TvTEtxmA39bE2mKh8uwEkoj3mzCHwZcTnZNZlGajuY=:0");
+  src: url("https://file.rainsin.cn/d/blog/font/ManbowLines-Regular.woff?sign=4TvTEtxmA39bE2mKh8uwEkoj3mzCHwZcTnZNZlGajuY=:0"),url("https://mypan.cpolar.io/d/blog/font/ManbowLines-Regular.woff?sign=4TvTEtxmA39bE2mKh8uwEkoj3mzCHwZcTnZNZlGajuY=:0");
 }
 
 @font-face {
