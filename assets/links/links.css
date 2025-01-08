@@ -3,7 +3,7 @@
     src: url("https://rainsin-1305486451.file.myqcloud.com/rainsin-blog/fonts/links/%E8%87%AA%E7%95%99%E5%AE%8B.woff");
 }
 
-/* #core-wrapper,
+#core-wrapper,
 #tail-wrapper {
     width: 100%;
     padding-right: 0 !important;
@@ -13,7 +13,7 @@
 #access-tags,
 #access-lastmod {
     display: none;
-} */
+}
 
 #links-box{
     width: 100%;
