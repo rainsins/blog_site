@@ -1,0 +1,14 @@
+systemctl：
+    clash: 启动clash
+    clashupdate：更新clash订阅
+    blog-cpolar：blog的waline的cpolar映射
+    cpolar：cpolar主程序
+    blog-server：blog的http-server服务
+    blog：blog的cpolar映射
+
+构建命令（使用gzip）：
+    JEKYLL_ENV=production bundle exec jekyll build
+
+生成sitmap.txt
+    cd assets/links && bun sitemap.js
+
