@@ -63,9 +63,6 @@ const threeav = [
         mfactlogo: "https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL2kvcyFBb2VyMmNVNVNsT0ZpUG9CVF9SWjhNVDNSVG92ZVE_ZT15MUY5NGs.webp",
         url: "https://xslist.org/zh/model/159548.html"
     },
-];
-
-const twoav = [
     {
         name: "太阳しずく",
         age: "2000.05.09.",
@@ -107,17 +104,6 @@ function Three() {
     });
     return (
         <div class="three-av">
-            {aitem}
-        </div>
-    );
-};
-
-function Two() {
-    const aitem = twoav.map(i => {
-        return (<AvItem avs={i} />)
-    });
-    return (
-        <div class="Two-av">
             {aitem}
         </div>
     );
@@ -203,7 +189,6 @@ function Av(){
 
         return (<div className="container-av">
             <Three />
-            <Two />
         </div>);
 };
 
