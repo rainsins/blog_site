@@ -44,7 +44,7 @@ const threeav = [
         img: "https://file.rainsin.cn/d/blog/img/comment/%E7%B4%97%E5%80%89%E3%81%BE%E3%81%AA%E5%A4%B4.jpg",
         bgimg: "https://file.rainsin.cn/d/blog/img/comment/%E7%B4%97%E5%80%89%E3%81%BE%E3%81%AA.webp",
         mfact: "SOD",
-        mfactlogo: "https://file.rainsin.cn/d/blog/img/comment/SOD_cropped.webp",
+        mfactlogo: "https://file.rainsin.cn/d/blog/img/comment/SOD.webp",
         url: "https://xslist.org/zh/model/172.html"
     },
     {
@@ -60,7 +60,7 @@ const threeav = [
         img: "https://file.rainsin.cn/d/blog/img/comment/%E4%B8%BD%E5%A4%B4.webp",
         bgimg: "https://file.rainsin.cn/d/blog/img/comment/%E4%B8%BD.jpg",
         mfact: "SOD",
-        mfactlogo: "https://file.rainsin.cn/d/blog/img/comment/SOD_cropped.webp",
+        mfactlogo: "https://file.rainsin.cn/d/blog/img/comment/SOD.webp",
         url: "https://xslist.org/zh/model/159548.html"
     },
     {
@@ -76,7 +76,7 @@ const threeav = [
         img: "https://file.rainsin.cn/d/blog/img/comment/mi%E5%A4%B4.jpg",
         bgimg: "https://file.rainsin.cn/d/blog/img/comment/mi.webp",
         mfact: "SOD",
-        mfactlogo: "https://file.rainsin.cn/d/blog/img/comment/SOD_cropped.webp",
+        mfactlogo: "https://file.rainsin.cn/d/blog/img/comment/SOD.webp",
         url: "https://xslist.org/zh/model/134598.html"
     },
     {
