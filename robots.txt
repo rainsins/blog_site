@@ -6,5 +6,10 @@ Disallow: /categories/
 Disallow: /assets/
 Disallow: /emoticon/
 Disallow: /src/
+Disallow: /comment/
+Disallow: /links/
+Disallow: /categories/
+Disallow: /archives/
+Disallow: /about/
 
 Sitemap: https://blog.rainsin.cn/sitemap.xml
