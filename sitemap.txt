@@ -37,6 +37,7 @@ https://blog.rainsin.cn/posts/method/
 https://blog.rainsin.cn/posts/marx12/
 https://blog.rainsin.cn/posts/back/
 https://blog.rainsin.cn/posts/gzip/
+https://blog.rainsin.cn/posts/video/
 https://blog.rainsin.cn/categories/
 https://blog.rainsin.cn/links/
 https://blog.rainsin.cn/about/
@@ -83,6 +84,7 @@ https://blog.rainsin.cn/tags/%E8%B4%B0%E5%8A%A0%E5%85%AD/
 https://blog.rainsin.cn/tags/%E9%AD%94%E6%96%B9/
 https://blog.rainsin.cn/tags/%E5%9B%BD%E5%AD%A6/
 https://blog.rainsin.cn/tags/%E6%95%99%E7%A8%8B/
+https://blog.rainsin.cn/tags/%E8%B5%84%E6%BA%90/
 https://blog.rainsin.cn/categories/server/
 https://blog.rainsin.cn/categories/%E9%9F%B3%E8%A7%86%E9%A2%91/
 https://blog.rainsin.cn/categories/%E9%BB%91%E8%8B%B9%E6%9E%9C/
@@ -115,6 +117,7 @@ https://blog.rainsin.cn/categories/%E5%9B%BD%E5%AD%A6/
 https://blog.rainsin.cn/categories/%E4%BD%9B%E5%AD%A6/
 https://blog.rainsin.cn/categories/%E6%95%99%E7%A8%8B/
 https://blog.rainsin.cn/categories/%E9%80%90%E5%AD%97%E7%A8%BF/
+https://blog.rainsin.cn/categories/%E8%B5%84%E6%BA%90/
 https://blog.rainsin.cn/page2/
 https://blog.rainsin.cn/page3/
 https://blog.rainsin.cn/page4/
