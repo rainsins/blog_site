@@ -5,6 +5,11 @@
 @import url('https://fonts.font.im/css?family=Radley');
 
 @font-face {
+  font-family: "Number Box";
+  src: url(/assets/English-box.woff2);
+}
+
+@font-face {
   font-family: "Cormorant Garamond";
   src: url(https://file.rainsin.cn/d/blog/font/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf),url(https://mypan.cpolar.io/d/blog/font/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf),url(https://api.rainsin.cn/blog_data/font/Cormorant_Garamond/CormorantGaramond-MediumItalic.ttf);
   font-style: italic;
@@ -40,7 +45,7 @@
 --box-border: 1px solid rgba(143, 155, 168, 0.15);
 --Jay-shadow-border: 0 8px 16px -4px #2c2d300c;
 --style-border-always: var(--box-border);
---main-font: "MacondoSwashCaps","Radley", "FZZzOM", "OMPJ";
+--main-font: "Number Box", "Radley", "FZZzOM", "OMPJ";
 --decs-font: "Heti-FangSong", "FS", "STFS";
 --pingfang-font: "Ping Fang", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei";
 --box-bg: #d3d3d323;
