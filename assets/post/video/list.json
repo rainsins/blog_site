@@ -1,0 +1,15 @@
+[
+    {
+        "url": "/assets/post/video/video.json",
+        "lock": false
+    },
+    {
+        "lock": true,
+        "list": [
+            {
+                "name": "喔喔结",
+                "md5": "775e49938a04053b7acfadfa18091372"
+            }
+        ]
+    }
+]
