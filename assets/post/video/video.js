@@ -115,7 +115,7 @@ fetch("https://myapi.rainsin.cn:2000/blog/video")
                     i == 11 ? text += `<li class="selected" data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>` : text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                 });
                 let el = `<details><summary>${element[0]}</summary><ul>${text}</ul></details>`;
-                $("#video-list-box").append(el);
+                $("#video-list-unlock-box").append(el);
             } else {
                 let text = "";
                 let list_el = element[1].forEach((e, i) => {
