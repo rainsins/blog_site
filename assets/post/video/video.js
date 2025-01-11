@@ -5,12 +5,6 @@ function getExtension(name) {
 window.load_event = {
     ...window.load_event,
     player_video: () => {
-        $('#email-field').click(function () {
-            $(this).addClass("active");
-            $(this).attr('placeholder', '密码');
-            $('#subscribe-button').addClass("show");
-        });
-
         function playM3u8(video, url, art) {
             if (Hls.isSupported()) {
                 if (art.hls) art.hls.destroy();
@@ -63,6 +57,12 @@ window.load_event = {
         });
     }
 }
+
+$('#email-field').click(function () {
+    $(this).addClass("active");
+    $(this).attr('placeholder', '密码');
+    $('#subscribe-button').addClass("show");
+});
 
 function send_message() {
     const password = $("#email-field").val();
