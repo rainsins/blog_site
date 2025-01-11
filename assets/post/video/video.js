@@ -2,15 +2,15 @@ function getExtension(name) {
     return name.substring(name.lastIndexOf(".") + 1)
 }
 
-String.prototype.gblen = function() {  
-    var len = 0;  
-    for (var i=0; i<this.length; i++) {  
-        if (this.charCodeAt(i)>127 || this.charCodeAt(i)==94) {  
-             len += 2;  
-         } else {  
-             len ++;  
-         }  
-     }  
+String.prototype.gblen = function () {
+    var len = 0;
+    for (var i = 0; i < this.length; i++) {
+        if (this.charCodeAt(i) > 127 || this.charCodeAt(i) == 94) {
+            len += 2;
+        } else {
+            len++;
+        }
+    }
     return len;
 }
 
@@ -97,8 +97,8 @@ function send_message() {
                 data.forEach((element, index) => {
                     let text = "";
                     let list_el = element[1].forEach((e, i) => {
-                        let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2; 
-                        dbl = dbl >= self_dbl ? dbl : self_dbl;
+                        let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2;
+                        dbl = dbl >= self_dbl ? dbl + 2 : self_dbl + 2;
 
                         text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                     });
@@ -130,8 +130,8 @@ fetch("https://myapi.rainsin.cn:2000/blog/video")
             if (index == 0) {
                 let list_el = element[1].forEach((e, i) => {
 
-                    let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2; 
-                    dbl = dbl >= self_dbl ? dbl : self_dbl;
+                    let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2;
+                    dbl = dbl >= self_dbl ? dbl + 2 : self_dbl + 2;
 
                     i == 11 ? text += `<li class="selected" data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>` : text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                 });
@@ -140,8 +140,8 @@ fetch("https://myapi.rainsin.cn:2000/blog/video")
                 $("#video-list-unlock-box").append(el);
             } else {
                 let list_el = element[1].forEach((e, i) => {
-                    let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2; 
-                    dbl = dbl >= self_dbl ? dbl : self_dbl;
+                    let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2;
+                    dbl = dbl >= self_dbl ? dbl + 2 : self_dbl + 2;
 
                     text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                 });
@@ -150,8 +150,6 @@ fetch("https://myapi.rainsin.cn:2000/blog/video")
             }
 
         });
-
-
 
         $('#video-list-unlock-box li, #video-list-lock-box li').click(function () {
             const clickedElement = $(this);
