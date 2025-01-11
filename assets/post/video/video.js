@@ -66,11 +66,11 @@ window.load_event = {
                 m3u8: playM3u8,
                 flv: playFlv,
             },
-            
+
         },
-        function onReady(art) {
-            this.pause()
-        },);
+            function onReady(art) {
+                this.pause()
+            },);
     }
 }
 
@@ -104,7 +104,7 @@ function send_message() {
                         let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2;
                         dbl = dbl >= self_dbl ? dbl : self_dbl;
 
-                        let img = element[3] ? `data-imgurl=${element[3][i]}` : "" ; 
+                        let img = element[3] ? `data-imgurl=${element[3][i]}` : "";
 
                         text += `<li ${img} data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                     });
@@ -138,9 +138,9 @@ fetch("https://myapi.rainsin.cn:2000/blog/video")
                 let list_el = element[1].forEach((e, i) => {
 
                     let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2;
-                    dbl = dbl >= self_dbl ? dbl: self_dbl;
+                    dbl = dbl >= self_dbl ? dbl : self_dbl;
 
-                    let img = element[3] ? `data-imgurl=${element[3][i]}` : "" ; 
+                    let img = element[3] ? `data-imgurl=${element[3][i]}` : "";
 
                     i == 11 ? text += `<li class="selected" ${img} data-url="${e}">${element[2][i] ? element[2][i] : i + 1}</li>` : text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                 });
@@ -151,7 +151,7 @@ fetch("https://myapi.rainsin.cn:2000/blog/video")
                 let list_el = element[1].forEach((e, i) => {
                     let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2;
                     dbl = dbl >= self_dbl ? dbl : self_dbl;
-                    let img = element[3] ? `data-imgurl=${element[3][i]}` : "" ; 
+                    let img = element[3] ? `data-imgurl=${element[3][i]}` : "";
                     text += `<li ${img} data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                 });
                 let el = `<details><summary>${element[0]}</summary><ul style="grid-template-columns: repeat(auto-fit,minmax(${dbl + 2}em,1fr));">${text}</ul></details>`;
@@ -177,7 +177,7 @@ fetch("https://myapi.rainsin.cn:2000/blog/video")
             }
         });
 
-        $('#subscribe-button').click(() => {
+        $('#subscribe-button').on("mousedown",() => {
             send_message();
         })
     });
