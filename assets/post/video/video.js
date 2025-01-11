@@ -95,11 +95,11 @@ function send_message() {
                 let dbl = 0;
 
                 data.forEach((element, index) => {
-                    let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2; 
-                    dbl = dbl >= self_dbl ? dbl : self_dbl;
-
                     let text = "";
                     let list_el = element[1].forEach((e, i) => {
+                        let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2; 
+                        dbl = dbl >= self_dbl ? dbl : self_dbl;
+
                         text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                     });
                     let el = `<details><summary>${element[0]}</summary><ul style="grid-template-columns: repeat(auto-fit,minmax(${dbl}em,1fr));">${text}</ul></details>`;
@@ -127,16 +127,22 @@ fetch("https://myapi.rainsin.cn:2000/blog/video")
         let dbl = 0;
         data.forEach((element, index) => {
             let text = "";
-            let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2; 
-            dbl = dbl >= self_dbl ? dbl : self_dbl;
             if (index == 0) {
                 let list_el = element[1].forEach((e, i) => {
+
+                    let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2; 
+                    dbl = dbl >= self_dbl ? dbl : self_dbl;
+
                     i == 11 ? text += `<li class="selected" data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>` : text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                 });
+
                 let el = `<details><summary>${element[0]}</summary><ul style="grid-template-columns: repeat(auto-fit,minmax(${dbl}em,1fr));">${text}</ul></details>`;
                 $("#video-list-unlock-box").append(el);
             } else {
                 let list_el = element[1].forEach((e, i) => {
+                    let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2; 
+                    dbl = dbl >= self_dbl ? dbl : self_dbl;
+
                     text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                 });
                 let el = `<details><summary>${element[0]}</summary><ul style="grid-template-columns: repeat(auto-fit,minmax(${dbl}em,1fr));">${text}</ul></details>`;
