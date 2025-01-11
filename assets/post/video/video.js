@@ -66,7 +66,11 @@ window.load_event = {
                 m3u8: playM3u8,
                 flv: playFlv,
             },
-        });
+            
+        },
+        function onReady(art) {
+            this.pause()
+        },);
     }
 }
 
@@ -100,7 +104,9 @@ function send_message() {
                         let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2;
                         dbl = dbl >= self_dbl ? dbl : self_dbl;
 
-                        text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
+                        let img = element[3] ? `data-imgurl=${element[3][i]}` : "" ; 
+
+                        text += `<li ${img} data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                     });
                     let el = `<details><summary>${element[0]}</summary><ul style="grid-template-columns: repeat(auto-fit,minmax(${dbl + 2}em,1fr));">${text}</ul></details>`;
                     $("#video-list-lock-box").append(el);
@@ -115,6 +121,7 @@ function send_message() {
                     clickedElement.addClass("selected")
                     art.type = type_ex;
                     art.switch = clickedElement.data("url");
+                    art.poster = clickedElement.data("imgurl") ? clickedElement.data("imgurl") : "";
                     art.currentTime = 0;
                 });
             }
@@ -133,7 +140,9 @@ fetch("https://myapi.rainsin.cn:2000/blog/video")
                     let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2;
                     dbl = dbl >= self_dbl ? dbl: self_dbl;
 
-                    i == 11 ? text += `<li class="selected" data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>` : text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
+                    let img = element[3] ? `data-imgurl=${element[3][i]}` : "" ; 
+
+                    i == 11 ? text += `<li class="selected" ${img} data-url="${e}">${element[2][i] ? element[2][i] : i + 1}</li>` : text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                 });
 
                 let el = `<details><summary>${element[0]}</summary><ul style="grid-template-columns: repeat(auto-fit,minmax(${dbl + 2}em,1fr));">${text}</ul></details>`;
@@ -142,8 +151,8 @@ fetch("https://myapi.rainsin.cn:2000/blog/video")
                 let list_el = element[1].forEach((e, i) => {
                     let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2;
                     dbl = dbl >= self_dbl ? dbl : self_dbl;
-
-                    text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
+                    let img = element[3] ? `data-imgurl=${element[3][i]}` : "" ; 
+                    text += `<li ${img} data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                 });
                 let el = `<details><summary>${element[0]}</summary><ul style="grid-template-columns: repeat(auto-fit,minmax(${dbl + 2}em,1fr));">${text}</ul></details>`;
                 $("#video-list-unlock-box").append(el);
@@ -158,6 +167,7 @@ fetch("https://myapi.rainsin.cn:2000/blog/video")
             clickedElement.addClass("selected")
             art.type = type_ex;
             art.switch = clickedElement.data("url");
+            art.poster = clickedElement.data("imgurl") ? clickedElement.data("imgurl") : "";
             art.currentTime = 0;
         });
 
