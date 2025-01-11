@@ -58,12 +58,6 @@ window.load_event = {
     }
 }
 
-$('#email-field').click(function () {
-    $(this).addClass("active");
-    $(this).attr('placeholder', '密码');
-    $('#subscribe-button').addClass("show");
-});
-
 function send_message() {
     const password = $("#email-field").val();
 
@@ -93,12 +87,12 @@ function send_message() {
                         text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                     });
                     let el = `<details><summary>${element[0]}</summary><ul>${text}</ul></details>`;
-                    $("#video-list-box").append(el);
+                    $("#video-list-lock-box").append(el);
                 });
 
                 $("#middle").hide();
 
-                $('#video-list-box li').click(function () {
+                $('#video-list-unlock-box li, #video-list-lock-box li').click(function () {
                     const clickedElement = $(this);
                     const type_ex = getExtension(clickedElement.data("url"));
                     $('#video-list-box li').removeClass("selected")
@@ -128,18 +122,12 @@ fetch("https://myapi.rainsin.cn:2000/blog/video")
                     text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                 });
                 let el = `<details><summary>${element[0]}</summary><ul>${text}</ul></details>`;
-                $("#video-list-box").append(el);
+                $("#video-list-unlock-box").append(el);
             }
 
         });
 
-        let el = `<h2>嘿嘿嘿</h2><div class="middle" id="middle">
-    <input type="password" value="" name="EMAIL" class="email-field" id="email-field" placeholder="输入密码">
-    <input type="submit" value="Subscribe" name="subscribe" id="subscribe-button" class=""></div>`;
-
-        $("#video-list-box").append(el);
-
-        $('#video-list-box li').click(function () {
+        $('#video-list-unlock-box li, #video-list-lock-box li').click(function () {
             const clickedElement = $(this);
             const type_ex = getExtension(clickedElement.data("url"));
             $('#video-list-box li').removeClass("selected")
