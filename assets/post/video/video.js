@@ -2,6 +2,18 @@ function getExtension(name) {
     return name.substring(name.lastIndexOf(".") + 1)
 }
 
+String.prototype.gblen = function() {  
+    var len = 0;  
+    for (var i=0; i<this.length; i++) {  
+        if (this.charCodeAt(i)>127 || this.charCodeAt(i)==94) {  
+             len += 2;  
+         } else {  
+             len ++;  
+         }  
+     }  
+    return len;
+}
+
 window.load_event = {
     ...window.load_event,
     player_video: () => {
@@ -80,13 +92,17 @@ function send_message() {
             }
         }).then((data) => {
             if (data) {
+                let dbl = 0;
+
                 data.forEach((element, index) => {
+                    let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2; 
+                    dbl = dbl >= self_dbl ? dbl : self_dbl;
 
                     let text = "";
                     let list_el = element[1].forEach((e, i) => {
                         text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                     });
-                    let el = `<details><summary>${element[0]}</summary><ul>${text}</ul></details>`;
+                    let el = `<details><summary>${element[0]}</summary><ul style="grid-template-columns: repeat(auto-fit,minmax(${dbl}em,1fr));">${text}</ul></details>`;
                     $("#video-list-lock-box").append(el);
                 });
 
@@ -108,24 +124,28 @@ function send_message() {
 fetch("https://myapi.rainsin.cn:2000/blog/video")
     .then((response) => response.json())
     .then((data) => {
+        let dbl = 0;
         data.forEach((element, index) => {
+            let text = "";
+            let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2; 
+            dbl = dbl >= self_dbl ? dbl : self_dbl;
             if (index == 0) {
-                let text = "";
                 let list_el = element[1].forEach((e, i) => {
                     i == 11 ? text += `<li class="selected" data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>` : text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                 });
-                let el = `<details><summary>${element[0]}</summary><ul>${text}</ul></details>`;
+                let el = `<details><summary>${element[0]}</summary><ul style="grid-template-columns: repeat(auto-fit,minmax(${dbl}em,1fr));">${text}</ul></details>`;
                 $("#video-list-unlock-box").append(el);
             } else {
-                let text = "";
                 let list_el = element[1].forEach((e, i) => {
                     text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
                 });
-                let el = `<details><summary>${element[0]}</summary><ul>${text}</ul></details>`;
+                let el = `<details><summary>${element[0]}</summary><ul style="grid-template-columns: repeat(auto-fit,minmax(${dbl}em,1fr));">${text}</ul></details>`;
                 $("#video-list-unlock-box").append(el);
             }
 
         });
+
+
 
         $('#video-list-unlock-box li, #video-list-lock-box li').click(function () {
             const clickedElement = $(this);
