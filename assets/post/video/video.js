@@ -64,6 +64,53 @@ window.load_event = {
     }
 }
 
+function send_message() {
+    const password = $("#email-field").val();
+
+    const key = CryptoJS.enc.Utf8.parse('qfqf0kqcajzoa04h');
+    const iv = CryptoJS.enc.Utf8.parse('4517229305703582');
+
+    const query = CryptoJS.AES.encrypt(password, key, {
+        iv: iv,
+        mode: CryptoJS.mode.CBC,
+        padding: CryptoJS.pad.Pkcs7
+    }).toString();
+
+    fetch(`https://myapi.rainsin.cn:2000/blog/envideo/${query}`)
+        .then((response) => {
+            if (response.status == "404") {
+                Qmsg.error("哎呀，密码不对！🤡")
+                return false;
+            } else {
+                return response.json()
+            }
+        }).then((data) => {
+            if (data) {
+                data.forEach((element, index) => {
+
+                    let text = "";
+                    let list_el = element[1].forEach((e, i) => {
+                        text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
+                    });
+                    let el = `<details><summary>${element[0]}</summary><ul>${text}</ul></details>`;
+                    $("#video-list-box").append(el);
+                });
+
+                $("#middle").hide();
+
+                $('#video-list-box li').click(function () {
+                    const clickedElement = $(this);
+                    const type_ex = getExtension(clickedElement.data("url"));
+                    $('#video-list-box li').removeClass("selected")
+                    clickedElement.addClass("selected")
+                    art.type = type_ex;
+                    art.switch = clickedElement.data("url");
+                    art.currentTime = 0;
+                });
+            }
+        });
+}
+
 fetch("https://myapi.rainsin.cn:2000/blog/video")
     .then((response) => response.json())
     .then((data) => {
@@ -102,50 +149,13 @@ fetch("https://myapi.rainsin.cn:2000/blog/video")
             art.currentTime = 0;
         });
 
+        $("#email-field").keypress(function (event) {
+            if (event.which === 13) {
+                send_message();
+            }
+        });
+
         $('#subscribe-button').click(() => {
-            const password = $("#email-field").val();
-
-            const key = CryptoJS.enc.Utf8.parse('qfqf0kqcajzoa04h');
-            const iv = CryptoJS.enc.Utf8.parse('4517229305703582'); 
-
-            const query = CryptoJS.AES.encrypt(password, key, {
-                iv: iv,
-                mode: CryptoJS.mode.CBC,
-                padding: CryptoJS.pad.Pkcs7
-            }).toString();
-
-            fetch(`https://myapi.rainsin.cn:2000/blog/envideo/${query}`)
-                .then((response) => {
-                    if (response.status == "404") {
-                        Qmsg.error("哎呀，密码不对！🤡")
-                        return false;
-                    } else {
-                        return response.json()
-                    }
-                }).then((data) => {
-                    if (data) {
-                        data.forEach((element, index) => {
-
-                            let text = "";
-                            let list_el = element[1].forEach((e, i) => {
-                                text += `<li data-url=${e}>${element[2][i] ? element[2][i] : i + 1}</li>`;
-                            });
-                            let el = `<details><summary>${element[0]}</summary><ul>${text}</ul></details>`;
-                            $("#video-list-box").append(el);
-                        });
-
-                        $("#middle").hide();
-
-                        $('#video-list-box li').click(function () {
-                            const clickedElement = $(this);
-                            const type_ex = getExtension(clickedElement.data("url"));
-                            $('#video-list-box li').removeClass("selected")
-                            clickedElement.addClass("selected")
-                            art.type = type_ex;
-                            art.switch = clickedElement.data("url");
-                            art.currentTime = 0;
-                        });
-                    }
-                });
+            send_message();
         })
     });
