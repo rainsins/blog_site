@@ -92,7 +92,7 @@ function send_message() {
 
                 $("#middle").hide();
 
-                $('#video-list-unlock-box li, #video-list-lock-box li').click(function () {
+                $('#video-list-lock-box li').click(function () {
                     const clickedElement = $(this);
                     const type_ex = getExtension(clickedElement.data("url"));
                     $('#video-list-box li').removeClass("selected")
@@ -127,7 +127,7 @@ fetch("https://myapi.rainsin.cn:2000/blog/video")
 
         });
 
-        $('#video-list-unlock-box li, #video-list-lock-box li').click(function () {
+        $('#video-list-unlock-box li').click(function () {
             const clickedElement = $(this);
             const type_ex = getExtension(clickedElement.data("url"));
             $('#video-list-box li').removeClass("selected")
