@@ -96,9 +96,9 @@ function send_message() {
             }
         }).then((data) => {
             if (data) {
-                let dbl = 0;
 
                 data.forEach((element, index) => {
+                    let dbl = 0;
                     let text = "";
                     let list_el = element[1].forEach((e, i) => {
                         let self_dbl = element[2][i] ? element[2][i].gblen() / 2 : ((i + 1).toString().gblen()) / 2;
@@ -131,8 +131,9 @@ function send_message() {
 fetch("https://myapi.rainsin.cn:2000/blog/video")
     .then((response) => response.json())
     .then((data) => {
-        let dbl = 0;
+        
         data.forEach((element, index) => {
+            let dbl = 0;
             let text = "";
             if (index == 0) {
                 let list_el = element[1].forEach((e, i) => {
