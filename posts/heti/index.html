@@ -1,18 +1,1755 @@
-<!doctype html><html lang="zh-CN" class='han-la'><head> <script src="https://quantil.jsdelivr.net/npm/browser-tool@1.3.1/dist/browser.min.js" integrity="sha256-UPj46Hf28kziVvYS7tWGvZy9COcV7hKW+KqOyqYzkeI=" crossorigin="anonymous"></script> <script type="text/javascript"> class ModeToggle { static get MODE_KEY() { return 'mode'; } static get MODE_ATTR() { return 'data-mode'; } static get DARK_MODE() { return 'dark'; } static get LIGHT_MODE() { return 'light'; } static get ID() { return 'mode-toggle'; } constructor() { let self = this; this.sysDarkPrefers.addEventListener('change', () => { if (self.hasMode) { self.clearMode(); } self.notify(); }); if (!this.hasMode) { return; } if (this.isDarkMode) { this.setDark(); } else { this.setLight(); } } get sysDarkPrefers() { return window.matchMedia('(prefers-color-scheme: dark)'); } get isPreferDark() { return this.sysDarkPrefers.matches; } get isDarkMode() { return this.mode === ModeToggle.DARK_MODE; } get hasMode() { return this.mode != null; } get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); } get modeStatus() { if (this.hasMode) { return this.mode; } else { return this.isPreferDark ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE; } } setDark() { document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE); } setLight() { document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE); sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE); } clearMode() { document.documentElement.removeAttribute(ModeToggle.MODE_ATTR); sessionStorage.removeItem(ModeToggle.MODE_KEY); } notify() { window.postMessage( { direction: ModeToggle.ID, message: this.modeStatus }, '*' ); } flipMode() { if (this.hasMode) { this.clearMode(); } else { if (this.isPreferDark) { this.setLight(); } else { this.setDark(); } } this.notify(); } } const modeToggle = new ModeToggle(); </script> <script> function isO() { var endpoint = 'https://ipapi.co/json'; var xhr = new XMLHttpRequest(); xhr.onreadystatechange = function() { if (this.readyState == 4 && this.status == 200) { var response = JSON.parse(this.responseText); if(response.country == "CN") { sessionStorage.setItem("isOut",false); }else{ sessionStorage.setItem("isOut",true); } } }; xhr.open('GET', endpoint, true); xhr.send(); } isO(); </script> <script> const testPan = () => new Promise((resolve, reject) => { let url = "https://rainsinpan.vip.cpolar.cn/d/blog/js/data.json"; let xhr = new XMLHttpRequest(); xhr.open("GET", url, true); xhr.onload = function () { if (xhr.status === 200) { try { let response = JSON.parse(xhr.responseText); console.log(response); let data = response[0].data; if (data == "ok!") { resolve(true); } else { resolve(false); } } catch (error) { resolve(false); } } else { resolve(false); } }; xhr.onerror = function () { resolve(false); }; xhr.send(); }).then(function (supported) { if (supported) { sessionStorage.setItem("isPan", 'true'); } else { sessionStorage.setItem("isPan", 'false'); } }); testPan(); window.addEventListener('beforeunload', (event) => { testPan(); }); </script> <script> function testOS(){ var userAgent = window.navigator.userAgent, platform = window.navigator.platform, macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'], windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'], iosPlatforms = ['iPhone', 'iPad', 'iPod'], os = null; if (macosPlatforms.indexOf(platform) !== -1) { os = 'Mac OS'; } else if (iosPlatforms.indexOf(platform) !== -1) { os = 'iOS'; } else if (windowsPlatforms.indexOf(platform) !== -1) { os = 'Windows'; } else if (/Android/.test(userAgent)) { os = 'Android'; } else if (!os && /Linux/.test(platform)) { os = 'Linux'; } return os; } if(!sessionStorage.getItem("OS")){ sessionStorage.setItem("OS",testOS()); } </script><meta name="msvalidate.01" content="6FB18D3E0FC9068EDA29796251B1E253" /><link href="https://fonts.font.im/css?family=Radley" rel="stylesheet"> <script> window.appendJQCDN = (src) => { var head = document.head || document.getElementsByTagName("head")[0]; if (src.endsWith(".css")) { var style = document.createElement("LINK"); style.setAttribute("type", "text/css"); style.setAttribute("rel", "stylesheet"); style.setAttribute("href", src); head.appendChild(style); } else if (src.endsWith(".js")) { var script = document.createElement("script"); script.type = "text/javascript"; script.setAttribute("src", src); head.appendChild(script); } }; window.isAppendCDN = (err) => { if (sessionStorage.getItem("isPan") == "false") { appendJQCDN(err); } }; </script><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/FZFSB/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/FZKTK/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/simkai/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/STFANGSO/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/京華老宋体2/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/汇文明朝体/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/STSONG/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/HYKB/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/HYKB/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/FZJinL-B_GBJF/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/FZJinL-L_GBJF/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/simsunb/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/PMingLiu/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/FZZzOM/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/FZFSB/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/STFANGSO/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css" /><link rel="stylesheet" href="https://file.rainsin.cn/d/blog/font/heti/split/FOT-TsukuAOldMinPr6/result.css" /><link rel="stylesheet" href="/assets/message/message.min.css" /> <script src="/assets/message/message.min.js"></script> <script src="https://npm.elemecdn.com/instant.page@5.2.0/instantpage.js" type="module"></script> <script src="https://fastly.jsdelivr.net/npm/sweetalert2@11"></script> <script> let box = document.documentElement; if (!box.getAttribute("data-mode")) { if (modeToggle.modeStatus == "dark") { box.setAttribute("data-mode", "dark"); } else { box.setAttribute("data-mode", "light"); } } </script><link rel="stylesheet" href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/ionicons/4.4.1/css/ionicons.min.css" /><link rel="stylesheet" href="/assets/css/heti-min.css" /> <script> window.load_event = { ...window.load_event, heti_title_style: () => { const OS = sessionStorage.getItem("OS"); if (OS == "Linux") { $("body").append( $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{ font-weight: 400; }</style>`) ); } else if (OS == "iOS" || OS == "Mac OS") { $("body").append( $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{ font-family: "Times New Roman",times,"Heti-Kai","KT","FZK",serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; font-weight: 400; }</style>`) ); } else if (OS == "Android") { $("body").append( $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{ font-weight: 600; }</style>`) ); } else { console.log("哇！"); } }, }; </script><link rel="stylesheet" href="/assets/css/card-profile.css" /> <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/charch@0.1.0/charch.build.js" ></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7" /><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e" /><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /><meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover" /><style> .footnotes > ol > li > p, .charch-indent blockquote p { text-indent: 0; }</style><meta name="keywords" content="rainsin, blog, 工具" /><meta name="author" content="rainsin" /> <script> window.load_event = { ...window.load_event, load_anime: () => { const loads = document.getElementById("loading-gif-box"); loads.style.opacity = "0"; loads.style.zIndex = "-999999"; }, }; </script><link rel="stylesheet" href="/assets/css/comments-min.css" /><link rel="stylesheet" href="/assets/css/root-min.css" /><link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/3.4.2/waline.min.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/waline/3.4.2/waline-meta.css" /><style> .wl-cards .wl-user .wl-user-avatar{ border: 1px solid #a4a4a4ab; } [data-waline] p{ margin-bottom: 0; }</style><script src="https://s4.zstatic.net/ajax/libs/waline/3.4.2/waline.umd.min.js"></script> <script> window.load_event = { ...window.load_event, comments: () => { Waline.init({ el: "#tcomment", serverURL: "https://waline.vip.cpolar.cn/", emoji: [ "//file.rainsin.cn/d/blog/em/小黑子", "//file.rainsin.cn/d/blog/em/Sticker-100", "//file.rainsin.cn/d/blog/em/小电视", "//file.rainsin.cn/d/blog/em/Tieba", "//file.rainsin.cn/d/blog/em/alus", "//file.rainsin.cn/d/blog/em/商业头盔", "//file.rainsin.cn/d/blog/em/小人", "//file.rainsin.cn/d/blog/em/小坏坏", "//file.rainsin.cn/d/blog/em/抽象", "//file.rainsin.cn/d/blog/em/搜索引擎", "//file.rainsin.cn/d/blog/em/机场", "//file.rainsin.cn/d/blog/em/猥琐萌", "//file.rainsin.cn/d/blog/em/猫狗", "//file.rainsin.cn/d/blog/em/白白", "//file.rainsin.cn/d/blog/em/突然", "//file.rainsin.cn/d/blog/em/胡桃", "//file.rainsin.cn/d/blog/em/被子", "//file.rainsin.cn/d/blog/em/酷安", "//file.rainsin.cn/d/blog/em/tw", "//file.rainsin.cn/d/blog/em/qq", "//file.rainsin.cn/d/blog/em/weibo", ], pageview: true, locale: { placeholder: "唠唠嗑（登录和上面信息都不是必需的，评论审核后可见，添加邮箱可在被回复时邮件提醒，按🔍进行预览）", admin: "站长", level0: "素人", level1: "企划", level2: "企划专属", level3: "专属", level4: "双专属", level5: "三社共有", nick: "名称", sofa: "来一起击剑🤺吧", }, dark: 'html[data-mode="dark"]', imageUploader: false, search: false, }); window.time_comment = 0; let set_comment_time = setInterval(()=>{ const get_anno_img = $(".wl-cards .wl-user .wl-user-avatar[src^='https://seccdn.libravatar.org/avatar']"); if(time_comment < 500){ get_anno_img.attr("src", "https://file.rainsin.cn/d/blog/img/comment/act.gif"); time_comment++; }else{ clearInterval(set_comment_time); return; } },200) }, }; </script><style> .wl-emoji-popup .wl-tab-wrapper button { width: 4em; } .wl-emoji-popup .wl-tab-wrapper button img { max-height: 3.5em; max-width: 3.5em; } .wl-meta>span::before{ margin-top: 2px; } .wl-editor, .wl-input{ background-image: url(https://file.rainsin.cn/d/blog/img/comment/waline-bg.gif),url(https://api.rainsin.cn/blog_data/img/comment/waline-bg.gif); background-position: center right; background-repeat: no-repeat; background-size: auto 100%; } :root{ --waline-theme-color: #d4c4b7; --waline-active-color: #d4c4b7aa; }</style><script> const style = document.createElement("style"); style.type = "text/css"; if (modeToggle.modeStatus == "dark") { style.innerHTML = "#loading-gif-box{background-color: #000;} .loading-boxs-imgs{background-image: url(https://file.rainsin.cn/d/blog/img/darkload.gif?sign=HSMBFJIuwRnWabf8E1WJKYaTOneSVDmMdmfOphPDbdw=:0);}"; } else { style.innerHTML = "#loading-gif-box{background-color: #fff;} .loading-boxs-imgs{background-image: url(https://file.rainsin.cn/d/blog/img/loadlight.gif?sign=FJgpddP5fi4a60y3yWNyJ6chvzOREupwOfPWk03U_ik=:0);}"; } document.getElementsByTagName("head")[0].appendChild(style); </script> <script src="/assets/gzip/js/pinyin.min.js"></script><meta name="generator" content="Jekyll v4.3.4" /><meta property="og:title" content="「分享」一款好用的中文排版工具" /><meta name="author" content="Rainsin Yu" /><meta property="og:locale" content="zh_CN" /><meta name="description" content="我在冲浪的时候偶然发现的一个好用中文排版工具，我自己做了一个 markdown 里的使用的指令，要在浏览器里处理，我不熟悉 ruby，后面学一下看能不能在构建的时候就转换好，这样页面速度会好一点。" /><meta property="og:description" content="我在冲浪的时候偶然发现的一个好用中文排版工具，我自己做了一个 markdown 里的使用的指令，要在浏览器里处理，我不熟悉 ruby，后面学一下看能不能在构建的时候就转换好，这样页面速度会好一点。" /><link rel="canonical" href="https://blog.rainsin.cn/posts/heti/" /><meta property="og:url" content="https://blog.rainsin.cn/posts/heti/" /><meta property="og:site_name" content="Rainsin • Blog｜一个粗糙的简单的小博客，分享乐趣。" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2024-09-08T12:32:10+08:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="「分享」一款好用的中文排版工具" /><meta name="twitter:site" content="@2000_python" /><meta name="twitter:creator" content="@2000_python" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-27T21:43:41+08:00","datePublished":"2024-09-08T12:32:10+08:00","description":"我在冲浪的时候偶然发现的一个好用中文排版工具，我自己做了一个 markdown 里的使用的指令，要在浏览器里处理，我不熟悉 ruby，后面学一下看能不能在构建的时候就转换好，这样页面速度会好一点。","headline":"「分享」一款好用的中文排版工具","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/heti/"},"url":"https://blog.rainsin.cn/posts/heti/"}</script><title>「分享」一款好用的中文排版工具 | Rainsin • Blog｜一个粗糙的简单的小博客，分享乐趣。</title><link rel="apple-touch-icon" sizes="180x180" href=" https://api.rainsin.cn/favicon/heart/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href=" https://api.rainsin.cn/favicon/heart/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href=" https://api.rainsin.cn/favicon/heart/favicon-16x16.png"><link rel="manifest" href=" https://api.rainsin.cn/favicon/heart/site.webmanifest"><link rel="shortcut icon" href=" https://api.rainsin.cn/favicon/heart/favicon.ico"><meta name="apple-mobile-web-app-title" content="Rainsin • Blog｜一个粗糙的简单的小博客，分享乐趣。"><meta name="application-name" content="Rainsin • Blog｜一个粗糙的简单的小博客，分享乐趣。"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-config" content=" https://api.rainsin.cn/favicon/heart/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.font.im" /><link rel="dns-prefetch" href="https://fonts.font.im" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="dns-prefetch" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://gcore.jsdelivr.net" /><link rel="dns-prefetch" href="https://gcore.jsdelivr.net" /><link rel="stylesheet" href="https://fonts.font.im/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap" /><link rel="stylesheet" href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" /><link rel="stylesheet" href="https://mynpm.rainsin.cn/font-awesome-6-pro/font-awesome-6-pro/css/all.min.css" /><link rel="stylesheet" href="/assets/css/style.css" /><link rel="stylesheet" href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/tocbot/4.28.2/tocbot.min.css" /><link rel="stylesheet" href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css" /><link href="/assets/css/font.css" rel="stylesheet" /><link href="/assets/css/em.css" rel="stylesheet" /> <script src="/assets/js/ms.js"></script> <script src="https://cdn.jsdmirror.com/npm/jquery@3.7.1/dist/jquery.min.js"></script> <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script> <script src="https://cdn.jsdmirror.com/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script> <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script> <script src="https://s4.zstatic.net/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"></script> <script src="https://npm.elemecdn.com/clipboard@2.0.11/dist/clipboard.min.js"></script> <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/dayjs.min.js"></script> <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/locale/zh.min.js"></script> <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/plugin/relativeTime.js"></script> <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/plugin/localizedFormat.js"></script> <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/tocbot/4.28.2/tocbot.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script defer src="/app.js"></script> <script type="module"> const targetNode = document.documentElement; const config = { attributes:true,characterData: false}; const callback = function (mutationsList, observer) { for (let mutation of mutationsList) { if (mutation.type === "attributes" && mutation.attributeName === "data-mode") { if(!targetNode.getAttribute('data-mode')){ if(modeToggle.modeStatus === 'dark') targetNode.setAttribute('data-mode','dark'); else{ targetNode.setAttribute('data-mode','light'); } } } } }; const observer = new MutationObserver(callback); observer.observe(targetNode, config); </script><body> <script> document.addEventListener("DOMContentLoaded", () => { window.load_event["load_anime"](); }); </script><div id="loading-gif-box" style=" position: fixed; top: 0; left: 0; bottom: 0; right: 0; width: 100vw; height: 100vh; z-index: 9999999999; "><div class="loading-boxs-imgs" style=" background-size: cover; background-position: center; width: 250px; aspect-ratio: 1; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); "></div></div><div id="sidebar" class="d-flex flex-column align-items-end"><div class="profile-wrapper"> <a href="/" id="avatar" class="rounded-circle"> <img src="/assets/img/avatar.webp" width="112" height="112" alt="avatar" onerror="this.style.display='none'"> </a><div class="site-title"> <a href="/">RAINSIN</a></div><div class="site-subtitle">如人饮水，冷暖自知。</div></div><ul class="nav flex-column flex-grow-1 w-100 ps-0"><li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home"></i> <span>文字</span> </a><li class="nav-item"> <a href="/categories/" class="nav-link"> <i class="fa-fw fas fa-stream"></i> <span>分类</span> </a><li class="nav-item"> <a href="/links/" class="nav-link"> <i class="fa-fw fas fa-paperclip"></i> <span>友链</span> </a><li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-infinity"></i> <span>关于</span> </a><li class="nav-item"> <a href="/comment/" class="nav-link"> <i class="fa-fw fas fa-message"></i> <span>留言</span> </a><li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive"></i> <span>归档</span> </a></ul><div class="sidebar-bottom d-flex flex-wrap align-items-center w-100"> <button class="mode-toggle btn" aria-label="Switch Mode"> <i class="fas fa-adjust"></i> </button> <span class="icon-border"></span> <a href="https://github.com/rainsins" aria-label="github" target="_blank" rel="noopener noreferrer" > <i class="fab fa-github"></i> </a> <a href="/feed.xml" aria-label="rss" target="_blank" rel="noopener noreferrer" > <i class="fas fa-rss"></i> </a> <a href="https://blog.rainsin.cn/sitemap.xml" aria-label="sitemap" target="_blank" rel="noopener noreferrer" > <i class="fas fa-map-location-dot"></i> </a> <a href="https://www.travellings.cn/go-by-clouds.html" aria-label="mastodon" target="_blank" rel="noopener noreferrer me" > <i class="fas fa-train-subway"></i> </a></div></div><div id="main-wrapper" class="d-flex justify-content-center"><div id="main" class="container px-xxl-5"><div id="topbar-wrapper"><div id="topbar" class="container d-flex align-items-center justify-content-between h-100" > <span id="breadcrumb"> <span> <a href="/"> 文字 </a> </span> <span>「分享」一款好用的中文排版工具</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> 文字</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="搜索..." > </span> <span id="search-cancel">取消</span></div></div><div class="row"><div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pe-xl-4"><div class="post px-1 px-md-2"><h1 data-toc-skip>「分享」一款好用的中文排版工具</h1><style>.post-meta .post-desc{font-size: 1.1rem;font-family: var(--decs-font) !important;line-height: 1.6;color: var(--heading-color);font-weight: 100 !important;}</style><div class="post-meta text-muted"><p class="post-desc fw-light mb-4">我在冲浪的时候偶然发现的一个好用中文排版工具，我自己做了一个 markdown 里的使用的指令，要在浏览器里处理，我不熟悉 ruby，后面学一下看能不能在构建的时候就转换好，这样页面速度会好一点。</p><span> 发表于 <em class="" data-ts="1725769930" data-df="YYYY/MM/DD" data-bs-toggle="tooltip" data-bs-placement="bottom" > 2024/09/08 </em> </span> <span> 更新于 <em class="" data-ts="1730036621" data-df="YYYY/MM/DD" data-bs-toggle="tooltip" data-bs-placement="bottom" > 2024/10/27 </em> </span><div class="d-flex justify-content-between"> <span> 作者 <em> <a href="https://github.com/rainsins/">Rainsin Yu</a> </em> </span><div> <span class="readtime" data-bs-toggle="tooltip" data-bs-placement="bottom" title="5252 字" > <em>29 分钟</em>阅读</span></div></div></div><div class="post-content charch charch-cjk-latin-space charch-bracket-replace charch-link-space charch-line-height" id="post-content"><blockquote class="prompt-tip"><p>发现了一个古文排版工具，我自己做了很奇怪的指令用来自用，这个工具做出来的东西还挺好看的。后续我可能会有这方面的内容，现在做好为以后作准备。<a href="https://github.com/sivan/heti">工具仓库-赫蹏</a>。</p></blockquote><blockquote class="prompt-tip"><p>我还使用了<a href="https://chinese-font.netlify.app/cdn/">中文网字计划</a>，一个免费的中文字体公益 CDN 服务, 致力于为国内外全球 CJK 开发者提供高质量网络字体服务，让中文字体在互联网世界起飞。还使用了<a href="https://www.mfonts.cn/1324.html">京华老宋体v2.0</a>，一款不错的开源字体。感谢这些开源工作者，为中国文化的传播所做的贡献。</p></blockquote><blockquote class="prompt-danger"><p>字体需要较新的浏览器，老旧的有可能无法正常引入。Linux可以使用火狐或者Chromium浏览器，在我的统信UOS上其他的浏览器的Chromium内核都很老旧，不知道其他的发行版是什么情况。</p></blockquote><h2 id="介绍"><span class="me-2">介绍</span><a href="#介绍" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><div class="heti-box"> @Hdiv(classic){@Hp(){@Hem(){@Hpy(){赫蹏}}是专为中文网页内容设计的排版样式增强。它基于通行的中文排版规范，可为网站的读者带来更好的内容阅读体验。}}</div><h2 id="如何使用"><span class="me-2">如何使用</span><a href="#如何使用" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><blockquote class="prompt-tip"><p>在<code class="language-plaintext highlighter-rouge">head</code>中引入</p></blockquote><div class="language-html highlighter-rouge"><div class="code-header"> <span data-label-text="HTML"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- `site.alt_lang` can specify a language different from the UI -->
+<html lang="zh-CN" 
+  
+ class='han-la'>
+  <!-- The Head -->
+
+<head>
+  <script
+    src="https://quantil.jsdelivr.net/npm/browser-tool@1.3.1/dist/browser.min.js"
+    integrity="sha256-UPj46Hf28kziVvYS7tWGvZy9COcV7hKW+KqOyqYzkeI="
+    crossorigin="anonymous"
+  ></script>
+   <!-- Switch the mode between dark and light. -->
+
+<script type="text/javascript">
+  class ModeToggle {
+    static get MODE_KEY() {
+      return 'mode';
+    }
+    static get MODE_ATTR() {
+      return 'data-mode';
+    }
+    static get DARK_MODE() {
+      return 'dark';
+    }
+    static get LIGHT_MODE() {
+      return 'light';
+    }
+    static get ID() {
+      return 'mode-toggle';
+    }
+
+    constructor() {
+      let self = this;
+
+      this.sysDarkPrefers.addEventListener('change', () => {
+        if (self.hasMode) {
+          self.clearMode();
+        }
+        self.notify();
+      });
+
+      if (!this.hasMode) {
+        return;
+      }
+
+      if (this.isDarkMode) {
+        this.setDark();
+      } else {
+        this.setLight();
+      }
+    }
+
+    get sysDarkPrefers() {
+      return window.matchMedia('(prefers-color-scheme: dark)');
+    }
+
+    get isPreferDark() {
+      return this.sysDarkPrefers.matches;
+    }
+
+    get isDarkMode() {
+      return this.mode === ModeToggle.DARK_MODE;
+    }
+
+    get hasMode() {
+      return this.mode != null;
+    }
+
+    get mode() {
+      return sessionStorage.getItem(ModeToggle.MODE_KEY);
+    }
+
+    get modeStatus() {
+      if (this.hasMode) {
+        return this.mode;
+      } else {
+        return this.isPreferDark ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE;
+      }
+    }
+
+    setDark() {
+      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
+    }
+
+    setLight() {
+      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
+    }
+
+    clearMode() {
+      document.documentElement.removeAttribute(ModeToggle.MODE_ATTR);
+      sessionStorage.removeItem(ModeToggle.MODE_KEY);
+    }
+
+    notify() {
+      window.postMessage(
+        {
+          direction: ModeToggle.ID,
+          message: this.modeStatus
+        },
+        '*'
+      );
+    }
+
+    flipMode() {
+      if (this.hasMode) {
+        this.clearMode();
+      } else {
+        if (this.isPreferDark) {
+          this.setLight();
+        } else {
+          this.setDark();
+        }
+      }
+
+      this.notify();
+    }
+  }
+
+  const modeToggle = new ModeToggle();
+</script>
+  <script>
+function isO() {
+    var endpoint = 'https://ipapi.co/json';
+
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+	if (this.readyState == 4 && this.status == 200) {
+		var response = JSON.parse(this.responseText);
+		
+		if(response.country == "CN") {
+			sessionStorage.setItem("isOut",false);
+		}else{
+            sessionStorage.setItem("isOut",true);
+        }
+	}
+};
+xhr.open('GET', endpoint, true);
+xhr.send();   
+}
+
+isO();
+</script> <script>
+    const testPan = () =>
+      new Promise((resolve, reject) => {
+        let url = "https://rainsinpan.vip.cpolar.cn/d/blog/js/data.json";
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            try {
+              let response = JSON.parse(xhr.responseText);
+              console.log(response);
+              let data = response[0].data;
+              if (data == "ok!") {
+                resolve(true);
+              } else {
+                resolve(false);
+              }
+            } catch (error) {
+              resolve(false);
+            }
+          } else {
+            resolve(false);
+          }
+        };
+        xhr.onerror = function () {
+          resolve(false);
+        };
+        xhr.send();
+      }).then(function (supported) {
+      if (supported) {
+        sessionStorage.setItem("isPan", 'true');
+      } else {
+        sessionStorage.setItem("isPan", 'false');
+      }
+    });
+    testPan();
+window.addEventListener('beforeunload', (event) => {
+  testPan();
+});
+</script>
+ <script>
+function testOS(){
+  var userAgent = window.navigator.userAgent,
+      platform = window.navigator.platform,
+      macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+      windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+      iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+      os = null;
+
+  if (macosPlatforms.indexOf(platform) !== -1) {
+    os = 'Mac OS';
+  } else if (iosPlatforms.indexOf(platform) !== -1) {
+    os = 'iOS';
+  } else if (windowsPlatforms.indexOf(platform) !== -1) {
+    os = 'Windows';
+  } else if (/Android/.test(userAgent)) {
+    os = 'Android';
+  } else if (!os && /Linux/.test(platform)) {
+    os = 'Linux';
+  }
+
+  return os;
+}
+
+if(!sessionStorage.getItem("OS")){
+    sessionStorage.setItem("OS",testOS());
+}
+</script>
+
+  <script async>
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(await browser.getInfo()),
+    };
+
+    fetch('https://exapi.vip.cpolar.cn/blog/userinfo', options)
+      .then(data => {
+          if (!data.ok) {
+            throw Error(data.status);
+           }
+           return data;
+          }).then(update => {
+          console.log(update);
+          }).catch(e => {
+          console.log(e);
+      });
+  </script>
+
+  <meta name="msvalidate.01" content="6FB18D3E0FC9068EDA29796251B1E253" />
+
+  <link href="https://fonts.font.im/css?family=Radley" rel="stylesheet" />
+
+  <script>
+    window.appendJQCDN = (src) => {
+      var head = document.head || document.getElementsByTagName("head")[0];
+      if (src.endsWith(".css")) {
+        var style = document.createElement("LINK");
+        style.setAttribute("type", "text/css");
+        style.setAttribute("rel", "stylesheet");
+        style.setAttribute("href", src);
+        head.appendChild(style);
+      } else if (src.endsWith(".js")) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.setAttribute("src", src);
+        head.appendChild(script);
+      }
+    };
+
+    window.isAppendCDN = (err) => {
+      if (sessionStorage.getItem("isPan") == "false") {
+        appendJQCDN(err);
+      }
+    };
+  </script>
+
+     
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/FZFSB/result.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/FZKTK/result.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/simkai/result.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/STFANGSO/result.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/京華老宋体2/result.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/汇文明朝体/result.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/STSONG/result.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/HYKB/result.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/HYKB/result.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/FZJinL-B_GBJF/result.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/FZJinL-L_GBJF/result.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/simsunb/result.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/PMingLiu/result.css"
+  />
+  
+
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/FZZzOM/result.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/FZFSB/result.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/STFANGSO/result.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/simfang/result.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://file.rainsin.cn/d/blog/font/heti/split/FOT-TsukuAOldMinPr6/result.css"
+  />
+
+  <link rel="stylesheet" href="/assets/message/message.min.css" />
+  <script src="/assets/message/message.min.js"></script>
+
+  <script
+    src="https://npm.elemecdn.com/instant.page@5.2.0/instantpage.js"
+    type="module"
+  ></script>
+
+      
+
+  <script src="https://fastly.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    let box = document.documentElement;
+    if (!box.getAttribute("data-mode")) {
+      if (modeToggle.modeStatus == "dark") {
+        box.setAttribute("data-mode", "dark");
+      } else {
+        box.setAttribute("data-mode", "light");
+      }
+    }
+  </script>
+
+   
+  <link
+    rel="stylesheet"
+    href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/ionicons/4.4.1/css/ionicons.min.css"
+  />
+    
+  <link rel="stylesheet" href="/assets/css/heti-min.css" />
+  <script>
+    window.load_event = {
+      ...window.load_event,
+      heti_title_style: () => {
+        const OS = sessionStorage.getItem("OS");
+        if (OS == "Linux") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-weight: 400;
+    }</style>`)
+          );
+        } else if (OS == "iOS" || OS == "Mac OS") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-family: "Times New Roman",times,"Heti-Kai","KT","FZK",serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      font-weight: 400;
+    }</style>`)
+          );
+        } else if (OS == "Android") {
+          $("body").append(
+            $(`<style>.heti--ancient h1, .heti--ancient h2, .heti--ancient h3, .heti--ancient h4, .heti--ancient h5, .heti--ancient h6, .heti--poetry h1, .heti--poetry h2, .heti--poetry h3, .heti--poetry h4, .heti--poetry h5, .heti--poetry h6{
+      font-weight: 600;
+    }</style>`)
+          );
+        } else {
+          console.log("哇！");
+        }
+      },
+    };
+  </script>
+  
+
+  <link rel="stylesheet" href="/assets/css/card-profile.css" />
+
+  
+  <script
+    type="text/javascript"
+    src="https://fastly.jsdelivr.net/npm/charch@0.1.0/charch.build.js"
+  ></script>
+    
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta
+    name="theme-color"
+    media="(prefers-color-scheme: light)"
+    content="#f7f7f7"
+  />
+  <meta
+    name="theme-color"
+    media="(prefers-color-scheme: dark)"
+    content="#1b1b1e"
+  />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+  />
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+  />
+
+  <style>
+    .footnotes > ol > li > p,
+    .charch-indent blockquote p {
+      text-indent: 0;
+    }
+  </style>
+
+  
+  <meta name="keywords" content="rainsin, blog, 工具" />
+  <meta name="author" content="rainsin" />
+  
+
+  <script>
+    window.load_event = {
+      ...window.load_event,
+      load_anime: () => {
+        const loads = document.getElementById("loading-gif-box");
+        loads.style.opacity = "0";
+        loads.style.zIndex = "-999999";
+      },
+    };
+  </script>
+
+  
+
+  <!-- <script src="/assets/js/dev.js"></script> -->
+
+  <link rel="stylesheet" href="/assets/css/comments-min.css" />
+  <link rel="stylesheet" href="/assets/css/root-min.css" />
+
+  
+  <link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/waline/3.4.2/waline.min.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/waline/3.4.2/waline-meta.css"
+  />
+
+  <style>
+    .wl-cards .wl-user .wl-user-avatar {
+      border: 1px solid #a4a4a4ab;
+    }
+    [data-waline] p {
+      margin-bottom: 0;
+    }
+  </style>
+
+  <script src="https://s4.zstatic.net/ajax/libs/waline/3.4.2/waline.umd.min.js"></script>
+
+  <script>
+    window.load_event = {
+      ...window.load_event,
+      comments: () => {
+        Waline.init({
+          el: "#tcomment",
+          serverURL: "https://waline.vip.cpolar.cn/",
+          emoji: [
+            "//file.rainsin.cn/d/blog/em/小黑子",
+            "//file.rainsin.cn/d/blog/em/Sticker-100",
+            "//file.rainsin.cn/d/blog/em/小电视",
+            "//file.rainsin.cn/d/blog/em/Tieba",
+            "//file.rainsin.cn/d/blog/em/alus",
+            "//file.rainsin.cn/d/blog/em/商业头盔",
+            "//file.rainsin.cn/d/blog/em/小人",
+            "//file.rainsin.cn/d/blog/em/小坏坏",
+            "//file.rainsin.cn/d/blog/em/抽象",
+            "//file.rainsin.cn/d/blog/em/搜索引擎",
+            "//file.rainsin.cn/d/blog/em/机场",
+            "//file.rainsin.cn/d/blog/em/猥琐萌",
+            "//file.rainsin.cn/d/blog/em/猫狗",
+            "//file.rainsin.cn/d/blog/em/白白",
+            "//file.rainsin.cn/d/blog/em/突然",
+            "//file.rainsin.cn/d/blog/em/胡桃",
+            "//file.rainsin.cn/d/blog/em/被子",
+            "//file.rainsin.cn/d/blog/em/酷安",
+            "//file.rainsin.cn/d/blog/em/tw",
+            "//file.rainsin.cn/d/blog/em/qq",
+            "//file.rainsin.cn/d/blog/em/weibo",
+          ],
+          pageview: true,
+          locale: {
+            placeholder:
+              "唠唠嗑（登录和上面信息都不是必需的，评论审核后可见，添加邮箱可在被回复时邮件提醒，按🔍进行预览）",
+            admin: "站长",
+            level0: "素人",
+            level1: "企划",
+            level2: "企划专属",
+            level3: "专属",
+            level4: "双专属",
+            level5: "三社共有",
+            nick: "名称",
+            sofa: "来一起击剑🤺吧",
+          },
+          dark: 'html[data-mode="dark"]',
+          imageUploader: false,
+          search: false,
+        });
+
+        window.time_comment = 0;
+        let set_comment_time = setInterval(() => {
+          const get_anno_img = $(
+            ".wl-cards .wl-user .wl-user-avatar[src^='https://seccdn.libravatar.org/avatar']"
+          );
+          if (time_comment < 500) {
+            get_anno_img.attr(
+              "src",
+              "https://file.rainsin.cn/d/blog/img/comment/act.gif"
+            );
+            time_comment++;
+          } else {
+            clearInterval(set_comment_time);
+            return;
+          }
+        }, 200);
+      },
+    };
+  </script>
+
+  <style>
+    .wl-emoji-popup .wl-tab-wrapper button {
+      width: 4em;
+    }
+    .wl-emoji-popup .wl-tab-wrapper button img {
+      max-height: 3.5em;
+      max-width: 3.5em;
+    }
+    .wl-meta > span::before {
+      margin-top: 2px;
+    }
+
+    .wl-editor,
+    .wl-input {
+      background-image: url(https://file.rainsin.cn/d/blog/img/comment/waline-bg.gif),
+        url(https://api.rainsin.cn/blog_data/img/comment/waline-bg.gif);
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+    }
+    :root {
+      --waline-theme-color: #d4c4b7;
+      --waline-active-color: #d4c4b7aa;
+    }
+  </style>
+  
+
+  <script>
+    const style = document.createElement("style");
+    style.type = "text/css";
+
+    if (modeToggle.modeStatus == "dark") {
+      style.innerHTML =
+        "#loading-gif-box{background-color: #000;} .loading-boxs-imgs{background-image: url(https://file.rainsin.cn/d/blog/img/darkload.gif?sign=HSMBFJIuwRnWabf8E1WJKYaTOneSVDmMdmfOphPDbdw=:0);}";
+    } else {
+      style.innerHTML =
+        "#loading-gif-box{background-color: #fff;} .loading-boxs-imgs{background-image: url(https://file.rainsin.cn/d/blog/img/loadlight.gif?sign=FJgpddP5fi4a60y3yWNyJ6chvzOREupwOfPWk03U_ik=:0);}";
+    }
+    document.getElementsByTagName("head")[0].appendChild(style);
+  </script>
+
+           
+  <script src="/assets/gzip/js/pinyin.min.js"></script>
+            <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="「分享」一款好用的中文排版工具" />
+<meta name="author" content="Rainsin Yu" />
+<meta property="og:locale" content="zh_CN" />
+<meta name="description" content="我在冲浪的时候偶然发现的一个好用中文排版工具，我自己做了一个 markdown 里的使用的指令，要在浏览器里处理，我不熟悉 ruby，后面学一下看能不能在构建的时候就转换好，这样页面速度会好一点。" />
+<meta property="og:description" content="我在冲浪的时候偶然发现的一个好用中文排版工具，我自己做了一个 markdown 里的使用的指令，要在浏览器里处理，我不熟悉 ruby，后面学一下看能不能在构建的时候就转换好，这样页面速度会好一点。" />
+<link rel="canonical" href="https://blog.rainsin.cn/posts/heti/" />
+<meta property="og:url" content="https://blog.rainsin.cn/posts/heti/" />
+<meta property="og:site_name" content="Rainsin • Blog｜一个粗糙的简单的小博客，分享乐趣。" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-09-08T12:32:10+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="「分享」一款好用的中文排版工具" />
+<meta name="twitter:site" content="@2000_python" />
+<meta name="twitter:creator" content="@2000_python" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Rainsin Yu","url":"https://github.com/rainsins/"},"dateModified":"2024-10-27T21:43:41+08:00","datePublished":"2024-09-08T12:32:10+08:00","description":"我在冲浪的时候偶然发现的一个好用中文排版工具，我自己做了一个 markdown 里的使用的指令，要在浏览器里处理，我不熟悉 ruby，后面学一下看能不能在构建的时候就转换好，这样页面速度会好一点。","headline":"「分享」一款好用的中文排版工具","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.rainsin.cn/posts/heti/"},"url":"https://blog.rainsin.cn/posts/heti/"}</script>
+<!-- End Jekyll SEO tag -->
+ 
+
+  <title>「分享」一款好用的中文排版工具 | Rainsin • Blog｜一个粗糙的简单的小博客，分享乐趣。
+  </title>
+
+  <!--
+  The Favicons for Web, Android, Microsoft, and iOS (iPhone and iPad) Apps
+  Generated by: https://realfavicongenerator.net/
+-->
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href=" https://api.rainsin.cn/favicon/heart/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href=" https://api.rainsin.cn/favicon/heart/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href=" https://api.rainsin.cn/favicon/heart/favicon-16x16.png">
+<link rel="manifest" href=" https://api.rainsin.cn/favicon/heart/site.webmanifest">
+<link rel="shortcut icon" href=" https://api.rainsin.cn/favicon/heart/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="Rainsin • Blog｜一个粗糙的简单的小博客，分享乐趣。">
+<meta name="application-name" content="Rainsin • Blog｜一个粗糙的简单的小博客，分享乐趣。">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content=" https://api.rainsin.cn/favicon/heart/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+  
+  <link rel="preconnect" href="https://fonts.font.im"  />
+  <link rel="dns-prefetch" href="https://fonts.font.im"  />
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"  />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com"  />
+  
+  <link rel="preconnect" href="https://gcore.jsdelivr.net"  />
+  <link rel="dns-prefetch" href="https://gcore.jsdelivr.net"  />
+  
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.font.im/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+  />
+   
+
+  <!-- Bootstrap -->
+  <link
+    rel="stylesheet"
+    href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://mynpm.rainsin.cn/font-awesome-6-pro/font-awesome-6-pro/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  
+  <link
+    rel="stylesheet"
+    href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/tocbot/4.28.2/tocbot.min.css"
+  />
+   
+  <!-- Manific Popup -->
+  <link
+    rel="stylesheet"
+    href="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.min.css"
+  />
+  
+
+  <link href="/assets/css/font.css" rel="stylesheet" />
+  <link href="/assets/css/em.css" rel="stylesheet" />
+
+  <script src="/assets/js/ms.js"></script>
+  <!-- JS selector for site. -->
+
+<!-- commons -->
+
+
+
+<!-- layout specified -->
+
+
+  
+
+  
+    <!-- image lazy-loading & popup & clipboard -->
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script src="https://cdn.jsdmirror.com/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  
+
+  
+    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+  
+
+  
+    <script src="https://cdn.jsdmirror.com/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
+  
+
+  
+    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+  
+
+  
+    <script src="https://s4.zstatic.net/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js"></script>
+  
+
+  
+    <script src="https://npm.elemecdn.com/clipboard@2.0.11/dist/clipboard.min.js"></script>
+  
+
+  
+    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/dayjs.min.js"></script>
+  
+
+  
+    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/locale/zh.min.js"></script>
+  
+
+  
+    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/plugin/relativeTime.js"></script>
+  
+
+  
+    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/dayjs/1.11.11/plugin/localizedFormat.js"></script>
+  
+
+  
+    <script src="https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/tocbot/4.28.2/tocbot.min.js"></script>
+  
+
+
+
+
+
+
+
+
+<script defer src="/assets/js/dist/post.min.js"></script>
+
+
+ <script type="module">
+const targetNode = document.documentElement;
+
+const config = { attributes:true,characterData: false};
+
+const callback = function (mutationsList, observer) {
+  for (let mutation of mutationsList) {
+    if (mutation.type === "attributes" && mutation.attributeName === "data-mode") {
+        if(!targetNode.getAttribute('data-mode')){
+            if(modeToggle.modeStatus === 'dark')
+                targetNode.setAttribute('data-mode','dark');
+            else{
+                targetNode.setAttribute('data-mode','light');
+            }
+        }
+    }
+  }
+};
+
+const observer = new MutationObserver(callback);
+
+observer.observe(targetNode, config);
+
+</script> <!-- A placeholder to allow defining custom metadata -->
+
+</head>
+
+  <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        window.load_event["load_anime"]();
+      });
+    </script>
+    <div id="loading-gif-box" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999999999;
+    ">
+    <div class="loading-boxs-imgs" style="
+      background-size: cover;
+      background-position: center;
+      width: 250px;
+      aspect-ratio: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    ">
+    </div>
+  </div>
+    
+    <!-- The Side Bar -->
+
+<div id="sidebar" class="d-flex flex-column align-items-end">
+  <div class="profile-wrapper">
+    <a href="/" id="avatar" class="rounded-circle">
+      
+        
+        <img src="/assets/img/avatar.webp" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
+      
+    </a>
+
+    <div class="site-title">
+      <a href="/">RAINSIN</a>
+    </div>
+    <div class="site-subtitle">如人饮水，冷暖自知。</div>
+  </div>
+  <!-- .profile-wrapper -->
+
+  <ul class="nav flex-column flex-grow-1 w-100 ps-0">
+    <!-- home -->
+    <li class="nav-item">
+      <a href="/" class="nav-link">
+        <i class="fa-fw fas fa-home"></i>
+        <span>文字</span>
+      </a>
+    </li>
+    <!-- the real tabs -->
+    
+      <li class="nav-item">
+        <a href="/categories/" class="nav-link">
+          <i class="fa-fw fas fa-stream"></i>
+          
+
+          <span>分类</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
+    
+      <li class="nav-item">
+        <a href="/links/" class="nav-link">
+          <i class="fa-fw fas fa-paperclip"></i>
+          
+
+          <span>友链</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
+    
+      <li class="nav-item">
+        <a href="/about/" class="nav-link">
+          <i class="fa-fw fas fa-infinity"></i>
+          
+
+          <span>关于</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
+    
+      <li class="nav-item">
+        <a href="/comment/" class="nav-link">
+          <i class="fa-fw fas fa-message"></i>
+          
+
+          <span>留言</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
+    
+      <li class="nav-item">
+        <a href="/archives/" class="nav-link">
+          <i class="fa-fw fas fa-archive"></i>
+          
+
+          <span>归档</span>
+        </a>
+      </li>
+      <!-- .nav-item -->
+    
+  </ul>
+  <!-- ul.nav.flex-column -->
+
+  <div class="sidebar-bottom d-flex flex-wrap  align-items-center w-100">
+    
+      <button class="mode-toggle btn" aria-label="Switch Mode">
+        <i class="fas fa-adjust"></i>
+      </button>
+
+      
+        <span class="icon-border"></span>
+      
+    
+
+    
+      
+
+      
+        <a
+          href="https://github.com/rainsins"
+          aria-label="github"
+          
+
+          
+            target="_blank"
+            
+          
+
+          
+
+          
+            rel="noopener noreferrer"
+          
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+
+      
+        <a
+          href="/feed.xml"
+          aria-label="rss"
+          
+
+          
+            target="_blank"
+            
+          
+
+          
+
+          
+            rel="noopener noreferrer"
+          
+        >
+          <i class="fas fa-rss"></i>
+        </a>
+      
+    
+      
+
+      
+        <a
+          href="https://blog.rainsin.cn/sitemap.xml"
+          aria-label="sitemap"
+          
+
+          
+            target="_blank"
+            
+          
+
+          
+
+          
+            rel="noopener noreferrer"
+          
+        >
+          <i class="fas fa-map-location-dot"></i>
+        </a>
+      
+    
+      
+
+      
+        <a
+          href="https://www.travellings.cn/go-by-clouds.html"
+          aria-label="mastodon"
+          
+
+          
+            target="_blank"
+            
+          
+
+          
+
+          
+            rel="noopener noreferrer me"
+          
+        >
+          <i class="fas fa-train-subway"></i>
+        </a>
+      
+    
+  </div>
+  <!-- .sidebar-bottom -->
+</div>
+<!-- #sidebar -->
+
+
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div id="main" class="container px-xxl-5">
+        <!-- The Top Bar -->
+
+<div id="topbar-wrapper">
+  <div
+    id="topbar"
+    class="container d-flex align-items-center justify-content-between h-100"
+  >
+    <span id="breadcrumb">
+      
+
+      
+        
+          
+            <span>
+              <a href="/">
+                文字
+              </a>
+            </span>
+
+          
+        
+          
+        
+          
+            
+              <span>「分享」一款好用的中文排版工具</span>
+            
+
+          
+        
+      
+    </span>
+    <!-- endof #breadcrumb -->
+
+    <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
+
+    <div id="topbar-title">
+      文字
+    </div>
+
+    <i id="search-trigger" class="fas fa-search fa-fw"></i>
+    <span id="search-wrapper" class="align-items-center">
+      <i class="fas fa-search fa-fw"></i>
+      <input
+        class="form-control"
+        id="search-input"
+        type="search"
+        aria-label="search"
+        autocomplete="off"
+        placeholder="搜索..."
+      >
+    </span>
+    <span id="search-cancel">取消</span>
+  </div>
+</div>
+
+        
+
+ 
+
+
+
+
+
+
+ 
+
+<div class="row">
+  <!-- core -->
+  <div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pe-xl-4">
+    
+
+    <div class="post px-1 px-md-2">
+         
+      <!-- Refactor the HTML structure -->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Change the icon of checkbox -->
+
+
+<!-- images -->
+
+
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
+
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
+
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
+
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- return -->
+
+
+
+
+<h1 data-toc-skip>「分享」一款好用的中文排版工具</h1>
+
+<style>.post-meta .post-desc{font-size: 1.1rem;font-family: var(--decs-font) !important;line-height: 1.6;color: var(--heading-color);font-weight: 100 !important;}</style>
+
+<div class="post-meta text-muted">
+    
+    <p class="post-desc fw-light mb-4">我在冲浪的时候偶然发现的一个好用中文排版工具，我自己做了一个 markdown 里的使用的指令，要在浏览器里处理，我不熟悉 ruby，后面学一下看能不能在构建的时候就转换好，这样页面速度会好一点。</p>
+    
+    <!-- published date -->
+    <span>
+      发表于
+      <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1725769930"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2024/09/08
+</em>
+
+    </span>
+
+    <!-- lastmod date -->
+    
+    <span>
+      更新于
+      <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em
+  class=""
+  data-ts="1730036621"
+  data-df="YYYY/MM/DD"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  2024/10/27
+</em>
+
+    </span>
+    
+
+  
+
+  <div class="d-flex justify-content-between">
+    <!-- author(s) -->
+    <span>
+      
+
+      作者
+
+      <em>
+      
+        
+          <a href="https://github.com/rainsins/">Rainsin Yu</a>
+          
+        
+      
+      </em>
+    </span>
+
+    <div>
+      <!-- page views -->
+      
+
+      <!-- read time -->
+      <!-- Calculate the post's reading time, and display the word count in tooltip -->
+
+
+
+<!-- words per minute -->
+
+
+
+
+
+
+
+
+
+
+<!-- return element -->
+<span
+  class="readtime"
+  data-bs-toggle="tooltip"
+  data-bs-placement="bottom"
+  title="5252 字"
+>
+  <em>29 分钟</em>阅读</span>
+
+    </div>
+
+  </div> <!-- .d-flex -->
+
+</div> <!-- .post-meta -->
+
+<div class="post-content  charch   charch-cjk-latin-space charch-bracket-replace charch-link-space charch-line-height" id="post-content">
+  <blockquote class="prompt-tip">
+  <p>发现了一个古文排版工具，我自己做了很奇怪的指令用来自用，这个工具做出来的东西还挺好看的。后续我可能会有这方面的内容，现在做好为以后作准备。<a href="https://github.com/sivan/heti">工具仓库-赫蹏</a>。</p>
+</blockquote>
+
+<blockquote class="prompt-tip">
+  <p>我还使用了<a href="https://chinese-font.netlify.app/cdn/">中文网字计划</a>，一个免费的中文字体公益 CDN 服务, 致力于为国内外全球 CJK 开发者提供高质量网络字体服务，让中文字体在互联网世界起飞。还使用了<a href="https://www.mfonts.cn/1324.html">京华老宋体v2.0</a>，一款不错的开源字体。感谢这些开源工作者，为中国文化的传播所做的贡献。</p>
+</blockquote>
+
+<blockquote class="prompt-danger">
+  <p>字体需要较新的浏览器，老旧的有可能无法正常引入。Linux可以使用火狐或者Chromium浏览器，在我的统信UOS上其他的浏览器的Chromium内核都很老旧，不知道其他的发行版是什么情况。</p>
+</blockquote>
+
+<h2 id="介绍"><span class="me-2">介绍</span><a href="#介绍" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<div class="heti-box">
+@Hdiv(classic){@Hp(){@Hem(){@Hpy(){赫蹏}}是专为中文网页内容设计的排版样式增强。它基于通行的中文排版规范，可为网站的读者带来更好的内容阅读体验。}}
+</div>
+
+<h2 id="如何使用"><span class="me-2">如何使用</span><a href="#如何使用" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<blockquote class="prompt-tip">
+  <p>在<code class="language-plaintext highlighter-rouge">head</code>中引入</p>
+</blockquote>
+
+<div class="language-html highlighter-rouge"><div class="code-header">
+        <span data-label-text="HTML"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre><td class="rouge-code"><pre><span class="c">&lt;!-- 工具主体 --&gt;</span>
+</pre></td><td class="rouge-code"><pre><span class="c">&lt;!-- 工具主体 --&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdmirror.com/npm/heti@0.9.4/umd/heti.min.css"</span><span class="nt">&gt;</span>
-</pre></table></code></div></div><blockquote class="prompt-tip"><p>可选以下工具，具体使用详见该库的npm页面</p></blockquote><div class="language-html highlighter-rouge"><div class="code-header"> <span data-label-text="HTML"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></div></div>
+
+<blockquote class="prompt-tip">
+  <p>可选以下工具，具体使用详见该库的npm页面</p>
+</blockquote>
+
+<div class="language-html highlighter-rouge"><div class="code-header">
+        <span data-label-text="HTML"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-</pre><td class="rouge-code"><pre><span class="c">&lt;!-- 优化中文排版的小问题，如首行缩进2字符 --&gt;</span>
+</pre></td><td class="rouge-code"><pre><span class="c">&lt;!-- 优化中文排版的小问题，如首行缩进2字符 --&gt;</span>
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"https://cdn.jsdmirror.com/npm/charch@0.1.0/charch.build.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 
 <span class="c">&lt;!-- 符号挤压 --&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdmirror.com/npm/heti@0.9.4/umd/heti-addon.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></table></code></div></div><h2 id="指令详情"><span class="me-2">指令详情</span><a href="#指令详情" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><blockquote class="prompt-danger"><p>指令是我自己定义的，该工具只是一个css库。当然你也可以定义你自己的指令或者直接写html。</p></blockquote><div class="heti heti--ancient"> <details> <summary>查看标签示例表</summary><section class="section"><div class="table-wrapper"><table><caption>常用标签样式示例表<tr><th style="width: 72px;text-align: center;">类型<th style="width: 320px;text-align: center;">标签<th style="width: 240px;text-align: center;">效果<tr><td style="text-align: center">标题<td><code>@Hh5(){标题1-5级}</code><td><h5>标题1-5级</h5><tr><td style="text-align: center">缩写<td><code>@Habbr(Cascading Style Sheets){CSS}</code><td><abbr title="Cascading Style Sheets">CSS</abbr><tr><td style="text-align: center">专名号<td><code>@Hp(){此时来自@Hu(位于山东省聊城市阳谷县城东){景阳冈}的@Hu(){武松}大喝一声：@Hq(){纳命来！}}</code><td>此时来自<u title="位于山东省聊城市阳谷县城东">景阳冈</u>的<u>武松</u>大喝一声：<q>纳命来！</q><tr><td style="text-align: center">文本更新<td><code>因为谁也不认识，所以最后我们决定念@Hs(){dí}tí。</code><td>因为谁也不认识，所以最后我们决定念<s>dí</s>tí。<tr><td style="text-align: center">引号<td><code>窃·格瓦拉曾经说过：@Hq(){打工是不可能打工的。}</code><td>窃·格瓦拉曾经说过：<q>打工是不可能打工的。</q><tr><td style="text-align: center">术语<td><code>@Hdfn(){窃·格瓦拉}，中国大陆网络红人、罪犯。被奉为百度「戒赌吧」400万会员的「精神领袖」。</code><td><dfn>窃·格瓦拉</dfn>，中国大陆网络红人、罪犯。被奉为百度「戒赌吧」400万会员的「精神领袖」。<tr><td style="text-align: center">标记<td><code>这道题@Hmr(){必考}，你们爱记不记。</code><td>这道题<mark>必考</mark>，你们爱记不记。<tr><td style="text-align: center">强调<td><code>稳住，@Hem(){我们能赢}！</code><td>稳住，<em>我们能赢</em>！<tr><td style="text-align: center">着重号<td><code>我们@Htem(){必将}战胜这场疫情。</code><td>我们<span class="heti-em">必将</span>战胜这场疫情。</table></div></section></details></div><h2 id="使用示例"><span class="me-2">使用示例</span><a href="#使用示例" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h3 id="竖排诗词我自己加的"><span class="me-2">竖排诗词（我自己加的）</span><a href="#竖排诗词我自己加的" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><div class="heti-box"> @Hdiv(poetry,vertical,huiwen){ @Hp(start,h1-self){沁园春·长沙} @Hp(start){独立寒秋，湘江北去，橘子洲头。<br /> 看万山红遍，层林尽染；<br />漫江碧透，百舸争流。<br /> 鹰击长空，鱼翔浅底，万类霜天竞自由。<br /> 怅寥廓，问苍茫大地，谁主沉浮？} @Hp(start){携来百侣曾游。忆往昔峥嵘岁月稠。<br /> 恰同学少年，风华正茂；<br />书生意气，挥斥方遒。<br /> 指点江山，激扬文字，粪土当年万户侯。<br /> 曾记否，到中流击水，浪遏飞舟？<br />} @Hp(end){@Hsp(red){毛泽东}} }</div><h3 id="竖排诗词指令"><span class="me-2">竖排诗词指令</span><a href="#竖排诗词指令" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></div></div>
+
+<h2 id="指令详情"><span class="me-2">指令详情</span><a href="#指令详情" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<blockquote class="prompt-danger">
+  <p>指令是我自己定义的，该工具只是一个css库。当然你也可以定义你自己的指令或者直接写html。</p>
+</blockquote>
+
+<div class="heti heti--ancient">
+
+  <details>
+          <summary>查看标签示例表</summary>
+          <section class="section">
+            <div class="table-wrapper"><table>
+              <caption>常用标签样式示例表</caption>
+              <tr>
+                <th style="width: 72px;text-align: center;">类型</th>
+                <th style="width: 320px;text-align: center;">标签</th>
+                <th style="width: 240px;text-align: center;">效果</th>
+              </tr>
+              <tr>
+                <td style="text-align: center">标题</td>
+                <td><code>@Hh5(){标题1-5级}</code></td>
+                <td><h5>标题1-5级</h5></td>
+              </tr>
+              <tr>
+                <td style="text-align: center">缩写</td>
+                <td><code>@Habbr(Cascading Style Sheets){CSS}</code></td>
+                <td><abbr title="Cascading Style Sheets">CSS</abbr></td>
+              </tr>
+              <tr>
+                <td style="text-align: center">专名号</td>
+                <td><code>@Hp(){此时来自@Hu(位于山东省聊城市阳谷县城东){景阳冈}的@Hu(){武松}大喝一声：@Hq(){纳命来！}}</code></td>
+                <td>此时来自<u title="位于山东省聊城市阳谷县城东">景阳冈</u>的<u>武松</u>大喝一声：<q>纳命来！</q></td>
+              </tr>
+              <tr>
+                <td style="text-align: center">文本更新</td>
+                <td><code>因为谁也不认识，所以最后我们决定念@Hs(){dí}tí。</code></td>
+                <td>因为谁也不认识，所以最后我们决定念<s>dí</s>tí。</td>
+              </tr>
+              <tr>
+                <td style="text-align: center">引号</td>
+                <td><code>窃·格瓦拉曾经说过：@Hq(){打工是不可能打工的。}</code></td>
+                <td>窃·格瓦拉曾经说过：<q>打工是不可能打工的。</q></td>
+              </tr>
+              <tr>
+                <td style="text-align: center">术语</td>
+                <td><code>@Hdfn(){窃·格瓦拉}，中国大陆网络红人、罪犯。被奉为百度「戒赌吧」400万会员的「精神领袖」。</code></td>
+                <td><dfn>窃·格瓦拉</dfn>，中国大陆网络红人、罪犯。被奉为百度「戒赌吧」400万会员的「精神领袖」。</td>
+              </tr>
+              <tr>
+                <td style="text-align: center">标记</td>
+                <td><code>这道题@Hmr(){必考}，你们爱记不记。</code></td>
+                <td>这道题<mark>必考</mark>，你们爱记不记。</td>
+              </tr>
+              <tr>
+                <td style="text-align: center">强调</td>
+                <td><code>稳住，@Hem(){我们能赢}！</code></td>
+                <td>稳住，<em>我们能赢</em>！</td>
+              </tr>
+              <tr>
+                <td style="text-align: center">着重号</td>
+                <td><code>我们@Htem(){必将}战胜这场疫情。</code></td>
+                <td>我们<span class="heti-em">必将</span>战胜这场疫情。</td>
+              </tr>
+              
+            </table></div>
+          </section>
+        </details>
+  </div>
+
+<h2 id="使用示例"><span class="me-2">使用示例</span><a href="#使用示例" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h3 id="竖排诗词我自己加的"><span class="me-2">竖排诗词（我自己加的）</span><a href="#竖排诗词我自己加的" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<div class="heti-box">
+@Hdiv(poetry,vertical,huiwen){
+  @Hp(start,h1-self){沁园春·长沙}
+  @Hp(start){独立寒秋，湘江北去，橘子洲头。<br />
+看万山红遍，层林尽染；<br />漫江碧透，百舸争流。<br />
+鹰击长空，鱼翔浅底，万类霜天竞自由。<br />
+怅寥廓，问苍茫大地，谁主沉浮？}
+@Hp(start){携来百侣曾游。忆往昔峥嵘岁月稠。<br />
+恰同学少年，风华正茂；<br />书生意气，挥斥方遒。<br />
+指点江山，激扬文字，粪土当年万户侯。<br />
+曾记否，到中流击水，浪遏飞舟？<br />}
+@Hp(end){@Hsp(red){毛泽东}}
+}
+</div>
+
+<h3 id="竖排诗词指令"><span class="me-2">竖排诗词指令</span><a href="#竖排诗词指令" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -26,7 +1763,7 @@
 12
 13
 14
-</pre><td class="rouge-code"><pre>&lt;div class="heti-box"&gt;
+</pre></td><td class="rouge-code"><pre>&lt;div class="heti-box"&gt;
 @Hdiv(poetry,vertical,huiwen){
 @Hp(start,h1-self){沁园春·长沙}
 @Hp(start){独立寒秋，湘江北去，橘子洲头。&lt;br&gt;
@@ -40,21 +1777,12 @@
 @Hp(end){@Hsp(red){毛泽东}}
 }
 &lt;/div&gt;
-</pre></table></code></div></div><h3 id="横排古文"><span class="me-2">横排古文</span><a href="#横排古文" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><div class="heti-box"> @Hdiv(ancient,annotation){ @Hh1(){庖丁解牛} @Hp(meta,small){作者：@Habbr(庄子){庄周}（公元前369～公元前286年）} @Hp(){@Hem(){吾生也有涯}，@Hem(){而知也无涯}。以有涯随无涯，殆已！已而为知者，殆而已矣！为善无近名，为恶无近刑。@Hmr(){缘督以为经，可以保身，可以全生，可以养亲，可以尽年。}} @Hp(){@Hu(名丁的厨工。先秦古书往往以职业放在人名前){@Hpy(){庖}丁}为文惠君解牛，手之所触，肩之所倚，足之所履，膝之所@Hu(支撑，接触){@Hpy(){踦}}，@Hu(砉然：砉，又读xū，象声词。砉然，皮骨相离的声音){@Hpy(){砉}然@Hpy(xiǎng){向}然}，奏刀@Hu(騞然：象声词，形容比砉然更大的进刀解牛声){@Hpy(){騞}然}，莫不中音。合于《桑林》之舞，乃中《经首》之会。} @Hp(){文惠君曰：「嘻，善哉！技@Hu(通「盍」，何，怎样){@Hpy(hé){盖}}至此乎？」} @Hp(){庖丁释刀对曰：「臣之所好者，道也，进乎技矣。始臣之解牛之时，所见无非牛者。三年之后，未尝见全牛也。方今之时，臣以神遇而不以目视，官知止而@Hu(指精神活动){神欲}行。依乎@Hu(指牛的生理上的天然结构){天理}，@Hu(击入大的缝隙){批大@Hpy(){郤}}，@Hu(){导大@Hpy(){窾}}，@Hu(依){因}其@Hu(指牛体本来的结构){固然}，技经肯@Hpy(){綮}之未尝，而况大@Hpy(){軱}乎！良庖岁更刀，割也；族庖月更刀，折也。今臣之刀十九年矣，所解数千牛矣，而刀刃若新发于@Hpy(){硎}。彼节者有间，而刀刃者无厚；以无厚入有间，恢恢乎其于@Hem(){游刃必有余地}矣，是以十九年而刀刃若新发于硎。虽然，每至于族，吾见其难为，@Hpy(){怵}然为戒，视为止，行为迟。动刀甚微，@Hpy(){謋}然已解，如土委地。提刀而立，为之四顾，为之@Hpy(){踌躇}满志，善刀而藏之。」} @Hp(){文惠君曰：「@Hpy(){善哉}！吾闻庖丁之言，得养生焉。」}}</div><h4 id="横排古文指令"><span class="me-2">横排古文指令</span><a href="#横排古文指令" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-</pre><td class="rouge-code"><pre>@Hdiv(ancient,annotation){
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="横排古文"><span class="me-2">横排古文</span><a href="#横排古文" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<div class="heti-box">
+@Hdiv(ancient,annotation){
 @Hh1(){庖丁解牛}
 
 @Hp(meta,small){作者：@Habbr(庄子){庄周}（公元前369～公元前286年）}
@@ -68,13 +1796,13 @@
 @Hp(){庖丁释刀对曰：「臣之所好者，道也，进乎技矣。始臣之解牛之时，所见无非牛者。三年之后，未尝见全牛也。方今之时，臣以神遇而不以目视，官知止而@Hu(指精神活动){神欲}行。依乎@Hu(指牛的生理上的天然结构){天理}，@Hu(击入大的缝隙){批大@Hpy(){郤}}，@Hu(){导大@Hpy(){窾}}，@Hu(依){因}其@Hu(指牛体本来的结构){固然}，技经肯@Hpy(){綮}之未尝，而况大@Hpy(){軱}乎！良庖岁更刀，割也；族庖月更刀，折也。今臣之刀十九年矣，所解数千牛矣，而刀刃若新发于@Hpy(){硎}。彼节者有间，而刀刃者无厚；以无厚入有间，恢恢乎其于@Hem(){游刃必有余地}矣，是以十九年而刀刃若新发于硎。虽然，每至于族，吾见其难为，@Hpy(){怵}然为戒，视为止，行为迟。动刀甚微，@Hpy(){謋}然已解，如土委地。提刀而立，为之四顾，为之@Hpy(){踌躇}满志，善刀而藏之。」}
 
 @Hp(){文惠君曰：「@Hpy(){善哉}！吾闻庖丁之言，得养生焉。」}}
-</pre></table></code></div></div><h3 id="竖排古文"><span class="me-2">竖排古文</span><a href="#竖排古文" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><div class="heti-box"> @Hdiv(ancient,vertical){ @Hh1(){般若波罗蜜多心经} @Hp(meta,small){译者：@Habbr(陈祎){玄奘}（602年～664年）} @Hp(){观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。} @Hp(){舍利子，@Htem(){色不异空，空不异色。色即是空，空即是色。受想行识，亦复如是。}} @Hp(){舍利子，是诸法空相，不生不灭。不垢不净，不增不减。@Hmr(){是故空中无色，无受想行识。无眼耳鼻舌身意，无色声香味触法。无眼界，乃至无意识界。无无明，亦无无明尽。乃至无老死，亦无老死尽。无苦集灭道，无智亦无得，以无所得故。}} @Hp(){菩提萨@Hpy(){埵}，依般若波罗蜜多故。心无挂碍，无挂碍故，无有恐怖。远离颠倒梦想，究竟涅槃。} @Hp(){三世诸佛，依般若波罗蜜多故。得阿@Hpy(){耨}多罗三藐三菩提。} @Hp(){故知般若波罗蜜多。是大神咒，是大明咒，是无上咒。是无等等咒，能除一切苦，真实不虚。} @Hp(){故说般若波罗蜜多咒。即说咒曰，揭谛揭谛，波罗揭谛。波罗僧揭谛，菩提萨婆诃。}}</div><h4 id="竖排古文指令"><span class="me-2">竖排古文指令</span><a href="#竖排古文指令" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre><td class="rouge-code"><pre>@Hdiv(ancient,vertical){
-    ······
-}
-</pre></table></code></div></div><h3 id="金陵古文"><span class="me-2">金陵古文</span><a href="#金陵古文" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><div class="heti-box"> @Hdiv(ancient){ @Hh1(){道德经@Hsp(medium,m-l-5){德经·第四十二章}} @Hp(meta,small){作者：@Habbr(姓李名耳，字聃，字伯阳（或曰谥伯阳），春秋时期人。){老子}（约公元前571年—约公元前470年）} @Hp(jinling,x-large){道生一，一生二，二生三，三生万物。万物负阴而抱阳，冲气以为和。人之所恶，唯孤、寡、不@Hpy(){穀}，而王公以为称。故物或损之而益，或益之而损。人之所教，我亦教之。强梁者不得其死，吾将以为教父。} }</div><h4 id="金陵古文指令"><span class="me-2">金陵古文指令</span><a href="#金陵古文指令" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</div>
+
+<h4 id="横排古文指令"><span class="me-2">横排古文指令</span><a href="#横排古文指令" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -83,7 +1811,88 @@
 7
 8
 9
-</pre><td class="rouge-code"><pre>&lt;div class="heti-box"&gt;
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre>@Hdiv(ancient,annotation){
+@Hh1(){庖丁解牛}
+
+@Hp(meta,small){作者：@Habbr(庄子){庄周}（公元前369～公元前286年）}
+
+@Hp(){@Hem(){吾生也有涯}，@Hem(){而知也无涯}。以有涯随无涯，殆已！已而为知者，殆而已矣！为善无近名，为恶无近刑。@Hmr(){缘督以为经，可以保身，可以全生，可以养亲，可以尽年。}}
+
+@Hp(){@Hu(名丁的厨工。先秦古书往往以职业放在人名前){@Hpy(){庖}丁}为文惠君解牛，手之所触，肩之所倚，足之所履，膝之所@Hu(支撑，接触){@Hpy(){踦}}，@Hu(砉然：砉，又读xū，象声词。砉然，皮骨相离的声音){@Hpy(){砉}然@Hpy(xiǎng){向}然}，奏刀@Hu(騞然：象声词，形容比砉然更大的进刀解牛声){@Hpy(){騞}然}，莫不中音。合于《桑林》之舞，乃中《经首》之会。}
+
+@Hp(){文惠君曰：「嘻，善哉！技@Hu(通「盍」，何，怎样){@Hpy(hé){盖}}至此乎？」}
+
+@Hp(){庖丁释刀对曰：「臣之所好者，道也，进乎技矣。始臣之解牛之时，所见无非牛者。三年之后，未尝见全牛也。方今之时，臣以神遇而不以目视，官知止而@Hu(指精神活动){神欲}行。依乎@Hu(指牛的生理上的天然结构){天理}，@Hu(击入大的缝隙){批大@Hpy(){郤}}，@Hu(){导大@Hpy(){窾}}，@Hu(依){因}其@Hu(指牛体本来的结构){固然}，技经肯@Hpy(){綮}之未尝，而况大@Hpy(){軱}乎！良庖岁更刀，割也；族庖月更刀，折也。今臣之刀十九年矣，所解数千牛矣，而刀刃若新发于@Hpy(){硎}。彼节者有间，而刀刃者无厚；以无厚入有间，恢恢乎其于@Hem(){游刃必有余地}矣，是以十九年而刀刃若新发于硎。虽然，每至于族，吾见其难为，@Hpy(){怵}然为戒，视为止，行为迟。动刀甚微，@Hpy(){謋}然已解，如土委地。提刀而立，为之四顾，为之@Hpy(){踌躇}满志，善刀而藏之。」}
+
+@Hp(){文惠君曰：「@Hpy(){善哉}！吾闻庖丁之言，得养生焉。」}}
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="竖排古文"><span class="me-2">竖排古文</span><a href="#竖排古文" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<div class="heti-box">
+@Hdiv(ancient,vertical){
+@Hh1(){般若波罗蜜多心经}
+
+@Hp(meta,small){译者：@Habbr(陈祎){玄奘}（602年～664年）}
+
+@Hp(){观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。}
+
+@Hp(){舍利子，@Htem(){色不异空，空不异色。色即是空，空即是色。受想行识，亦复如是。}}
+
+@Hp(){舍利子，是诸法空相，不生不灭。不垢不净，不增不减。@Hmr(){是故空中无色，无受想行识。无眼耳鼻舌身意，无色声香味触法。无眼界，乃至无意识界。无无明，亦无无明尽。乃至无老死，亦无老死尽。无苦集灭道，无智亦无得，以无所得故。}}
+
+@Hp(){菩提萨@Hpy(){埵}，依般若波罗蜜多故。心无挂碍，无挂碍故，无有恐怖。远离颠倒梦想，究竟涅槃。}
+
+@Hp(){三世诸佛，依般若波罗蜜多故。得阿@Hpy(){耨}多罗三藐三菩提。}
+
+@Hp(){故知般若波罗蜜多。是大神咒，是大明咒，是无上咒。是无等等咒，能除一切苦，真实不虚。}
+
+@Hp(){故说般若波罗蜜多咒。即说咒曰，揭谛揭谛，波罗揭谛。波罗僧揭谛，菩提萨婆诃。}}
+</div>
+
+<h4 id="竖排古文指令"><span class="me-2">竖排古文指令</span><a href="#竖排古文指令" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>@Hdiv(ancient,vertical){
+    ······
+}
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="金陵古文"><span class="me-2">金陵古文</span><a href="#金陵古文" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<div class="heti-box">
+@Hdiv(ancient){
+@Hh1(){道德经@Hsp(medium,m-l-5){德经·第四十二章}}
+
+@Hp(meta,small){作者：@Habbr(姓李名耳，字聃，字伯阳（或曰谥伯阳），春秋时期人。){老子}（约公元前571年—约公元前470年）}
+
+@Hp(jinling,x-large){道生一，一生二，二生三，三生万物。万物负阴而抱阳，冲气以为和。人之所恶，唯孤、寡、不@Hpy(){穀}，而王公以为称。故物或损之而益，或益之而损。人之所教，我亦教之。强梁者不得其死，吾将以为教父。}
+}
+</div>
+
+<h4 id="金陵古文指令"><span class="me-2">金陵古文指令</span><a href="#金陵古文指令" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>&lt;div class="heti-box"&gt;
 @Hdiv(ancient){
 @Hh1(){道德经@Hsp(medium,m-l-5){德经第四十二章}}
 
@@ -92,34 +1901,2611 @@
 @Hp(jinling,x-large){道生一，一生二，二生三，三生万物。万物负阴而抱阳，冲气以为和。人之所恶，唯孤、寡、不@Hpy(){穀}，而王公以为称。故物或损之而益，或益之而损。人之所教，我亦教之。强梁者不得其死，吾将以为教父。}
 }
 &lt;/div&gt;
-</pre></table></code></div></div><h3 id="诗词横排"><span class="me-2">诗词横排</span><a href="#诗词横排" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><div class="heti-box"> @Hdiv(poetry,nowarp){ @Hh1(){一剪梅·红藕香残玉簟秋@Hsp(meta,small){[宋]@Habbr(号易安居士){李清照}}} @Hp(verse,x-large,huiwen){红藕香残玉簟秋。轻解罗裳，独上兰舟。<br />云中谁寄锦书来，雁字回时，月满西楼。<br />花自飘零水自流。一种相思，两处闲愁。<br />此情无计可消除，才下眉头，却上心头。} }</div><h4 id="诗词横排指令"><span class="me-2">诗词横排指令</span><a href="#诗词横排指令" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="诗词横排"><span class="me-2">诗词横排</span><a href="#诗词横排" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<div class="heti-box">
+@Hdiv(poetry,nowarp){
+
+@Hh1(){一剪梅·红藕香残玉簟秋@Hsp(meta,small){[宋]@Habbr(号易安居士){李清照}}}
+
+@Hp(verse,x-large,huiwen){红藕香残玉簟秋。轻解罗裳，独上兰舟。<br />云中谁寄锦书来，雁字回时，月满西楼。<br />花自飘零水自流。一种相思，两处闲愁。<br />此情无计可消除，才下眉头，却上心头。}
+}
+</div>
+
+<h4 id="诗词横排指令"><span class="me-2">诗词横排指令</span><a href="#诗词横排指令" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-</pre><td class="rouge-code"><pre>@Hdiv(poetry,nowarp){
+</pre></td><td class="rouge-code"><pre>@Hdiv(poetry,nowarp){
 
 @Hh1(){一剪梅·红藕香残玉簟秋@Hsp(meta,small){[宋]@Habbr(号易安居士){李清照}}}
 
 @Hp(verse,x-large,huiwen){红藕香残玉簟秋。轻解罗裳，独上兰舟。&lt;br&gt;云中谁寄锦书来，雁字回时，月满西楼。&lt;br&gt;花自飘零水自流。一种相思，两处闲愁。&lt;br&gt;此情无计可消除，才下眉头，却上心头。}
 }
-</pre></table></code></div></div><h3 id="仿宋"><span class="me-2">仿宋</span><a href="#仿宋" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><blockquote class="prompt-tip"><p>我自己加的。</p></blockquote><div class="heti-box"> @Hdiv(ancient){ @Hh1(){出师表} @Hp(meta,small,fangsong){作者：@Habbr(字孔明){諸葛亮}（181年～234年10月8日）} @Hp(fangsong,fangsong-regular){先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。然侍卫之臣不懈于内，忠志之士忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气，不宜妄自菲薄，引喻失义，以塞忠谏之路也。} @Hp(fangsong,fangsong-regular){宫中府中，俱为一体；陟罚臧否，不宜异同。若有作奸犯科及为忠善者，宜付有司论其刑赏，以昭陛下平明之理；不宜偏私，使内外异法也。} @Hp(fangsong,fangsong-regular){侍中、侍郎郭攸之、费祎、董允等，此皆良实，志虑忠纯，是以先帝简拔以遗陛下：愚以为宫中之事，事无大小，悉以咨之，然后施行，必能裨补阙漏，有所广益。} @Hp(fangsong,fangsong-regular){将军向宠，性行淑均，晓畅军事，试用于昔日，先帝称之曰能，是以众议举宠为督。愚以为营中之事，悉以咨之，必能使行阵和睦，优劣得所。} @Hp(fangsong,fangsong-regular){亲贤臣，远小人，此先汉所以兴隆也；亲小人，远贤臣，此后汉所以倾颓也。先帝在时，每与臣论此事，未尝不叹息痛恨于桓、灵也。侍中、尚书、长史、参军，此悉贞良死节之臣，愿陛下亲之信之，则汉室之隆，可计日而待也。} @Hp(fangsong,fangsong-regular){臣本布衣，躬耕于南阳，苟全性命于乱世，不求闻达于诸侯。先帝不以臣卑鄙，猥自枉屈，三顾臣于草庐之中，咨臣以当世之事，由是感激，遂许先帝以驱驰。后值倾覆，受任于败军之际，奉命于危难之间，尔来二十有一年矣。} @Hp(fangsong,fangsong-regular){先帝知臣谨慎，故临崩寄臣以大事也。受命以来，夙夜忧叹，恐托付不效，以伤先帝之明；故五月渡泸，深入不毛。今南方已定，兵甲已足，当奖率三军，北定中原，庶竭驽钝，攘除奸凶，兴复汉室，还于旧都。此臣所以报先帝而忠陛下之职分也。至于斟酌损益，进尽忠言，则攸之、祎、允之任也。} @Hp(fangsong,fangsong-regular){愿陛下托臣以讨贼兴复之效，不效，则治臣之罪，以告先帝之灵。若无兴德之言，则责攸之、祎、允等之慢，以彰其咎；陛下亦宜自谋，以咨诹善道，察纳雅言，深追先帝遗诏。臣不胜受恩感激。} @Hp(fangsong,fangsong-regular){今当远离，临表涕零，不知所言。} }</div><h4 id="仿宋指令"><span class="me-2">仿宋指令</span><a href="#仿宋指令" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="仿宋"><span class="me-2">仿宋</span><a href="#仿宋" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<blockquote class="prompt-tip">
+  <p>我自己加的。</p>
+</blockquote>
+
+<div class="heti-box">
+@Hdiv(ancient){
+@Hh1(){出师表}
+@Hp(meta,small,fangsong){作者：@Habbr(字孔明){諸葛亮}（181年～234年10月8日）}
+@Hp(fangsong,fangsong-regular){先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。然侍卫之臣不懈于内，忠志之士忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气，不宜妄自菲薄，引喻失义，以塞忠谏之路也。}
+@Hp(fangsong,fangsong-regular){宫中府中，俱为一体；陟罚臧否，不宜异同。若有作奸犯科及为忠善者，宜付有司论其刑赏，以昭陛下平明之理；不宜偏私，使内外异法也。}
+@Hp(fangsong,fangsong-regular){侍中、侍郎郭攸之、费祎、董允等，此皆良实，志虑忠纯，是以先帝简拔以遗陛下：愚以为宫中之事，事无大小，悉以咨之，然后施行，必能裨补阙漏，有所广益。}
+@Hp(fangsong,fangsong-regular){将军向宠，性行淑均，晓畅军事，试用于昔日，先帝称之曰能，是以众议举宠为督。愚以为营中之事，悉以咨之，必能使行阵和睦，优劣得所。}
+@Hp(fangsong,fangsong-regular){亲贤臣，远小人，此先汉所以兴隆也；亲小人，远贤臣，此后汉所以倾颓也。先帝在时，每与臣论此事，未尝不叹息痛恨于桓、灵也。侍中、尚书、长史、参军，此悉贞良死节之臣，愿陛下亲之信之，则汉室之隆，可计日而待也。}
+@Hp(fangsong,fangsong-regular){臣本布衣，躬耕于南阳，苟全性命于乱世，不求闻达于诸侯。先帝不以臣卑鄙，猥自枉屈，三顾臣于草庐之中，咨臣以当世之事，由是感激，遂许先帝以驱驰。后值倾覆，受任于败军之际，奉命于危难之间，尔来二十有一年矣。}
+@Hp(fangsong,fangsong-regular){先帝知臣谨慎，故临崩寄臣以大事也。受命以来，夙夜忧叹，恐托付不效，以伤先帝之明；故五月渡泸，深入不毛。今南方已定，兵甲已足，当奖率三军，北定中原，庶竭驽钝，攘除奸凶，兴复汉室，还于旧都。此臣所以报先帝而忠陛下之职分也。至于斟酌损益，进尽忠言，则攸之、祎、允之任也。}
+@Hp(fangsong,fangsong-regular){愿陛下托臣以讨贼兴复之效，不效，则治臣之罪，以告先帝之灵。若无兴德之言，则责攸之、祎、允等之慢，以彰其咎；陛下亦宜自谋，以咨诹善道，察纳雅言，深追先帝遗诏。臣不胜受恩感激。}
+@Hp(fangsong,fangsong-regular){今当远离，临表涕零，不知所言。}
+}
+</div>
+
+<h4 id="仿宋指令"><span class="me-2">仿宋指令</span><a href="#仿宋指令" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="code-header">
+        <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre><td class="rouge-code"><pre>@Hdiv(ancient,fangsong){
+</pre></td><td class="rouge-code"><pre>@Hdiv(ancient,fangsong){
     ······
 }
-</pre></table></code></div></div><h3 id="繁体"><span class="me-2">繁体</span><a href="#繁体" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><div class="heti-box"> @Hdiv(poetry,nowarp){ @Hh1(){春江花月夜@Hsp(meta,small){[唐]@Habbr(吴中四士之一){张若虚}}} @Hp(verse,x-large,huiwen){ 春江潮水連海平，海上明月共潮生。<br /> 灩灩隨波韆萬裏，何處春江無月明！<br /> 江流宛轉繞芳甸，月照花林皆似霰。<br /> 空裏流霜不覺飛，汀上白沙看不見。<br /> 江天一色無縴塵，皎皎空中孤月輪。<br /> 江畔何人初見月，江月何秊初照人？<br /> 人生代代無窮已，江月秊秊朢相似。<br /> 不知江月待何人，但見長江送流水。<br /> 白雲一片去悠悠，青楓浦上不勝愁。<br /> 誰傢今夜扁舟子，何處相思明月樓？<br /> 可憐樓上月裴廻，應照離人粧鏡臺。<br /> 玉戶簾中捲不去，搗衣砧上拂還來。<br /> 此時相朢不相聞，願逐月華流照君。<br /> 鴻鴈長飛光不度，魚龍潛躍水成文。<br /> 昨夜閑潭夢落花，可憐春半不還傢。<br /> 江水流春去慾盡，江潭落月複西斜。<br /> 斜月沉沉藏海霧，碣石瀟湘無限路。<br /> 不知乗月幾人歸，落月搖情滿江樹。<br /> } }</div><h3 id="注释"><span class="me-2">注释</span><a href="#注释" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><h4 id="楷体"><span class="me-2">楷体</span><a href="#楷体" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4><div class="heti-box"> @Hdiv(classic){ @Hbq(){ @Hsp(inline-block){注释：}<br /> @Hsp(intent,inline-block){选自《全唐诗》卷二十一（中华书局1999年版）。春江花月夜，乐府旧题。张若虚（约660—约720），扬州（今属江苏）人，唐代诗人。与贺知章、张旭、包融并称“吴中四士”。}<br /> @Hsp(intent,inline-block){〔滟滟〕形容波光荡漾。}<br /> @Hsp(intent,inline-block){〔月明〕月光。}<br /> @Hsp(intent,inline-block){〔芳甸〕花草茂盛的原野。}<br /> @Hsp(intent,inline-block){〔@Hpy(){霰}〕白色不透明的小冰粒。}<br /> @Hsp(intent,inline-block){〔流霜〕飞霜，比喻从空中洒落的月光。}<br /> @Hsp(intent,inline-block){〔青枫浦〕即双枫浦，在湖南浏阳南。}<br /> @Hsp(intent,inline-block){〔扁舟子〕指飘荡江湖的游子。}<br /> @Hsp(intent,inline-block){〔明月楼〕明月映照下的楼阁。这里指楼上的思妇。}<br /> @Hsp(intent,inline-block){〔裴回〕同“徘徊”。}<br /> @Hsp(intent,inline-block){〔离人〕指守候在家的思妇。}<br /> @Hsp(intent,inline-block){〔玉户帘中卷不去〕意思是，月光洒在玉门帘上，欲卷而去之而不得。玉户，用玉装饰的门，也用作门的美称。}<br /> @Hsp(intent,inline-block){〔月华〕月光。}<br /> @Hsp(intent,inline-block){〔流照〕照射。}<br /> @Hsp(intent,inline-block){〔鸿雁长飞光不度〕大雁远飞却不能飞出月光。暗示鸿雁不能传书。}<br /> @Hsp(intent,inline-block){〔鱼龙潜跃水成文〕鱼儿出没只能使水面泛出波纹。暗示鱼儿不能传书。古人有鱼儿传书一说。乐府诗《饮马长城窟行》：“呼儿烹鲤鱼，中有尺素书。”鱼龙，这里指鱼。}<br /> @Hsp(intent,inline-block){〔潇湘〕潇水和湘江，均流入洞庭湖。}<br /> } }</div><h4 id="仿宋-1"><span class="me-2">仿宋</span><a href="#仿宋-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4><div class="heti-box"> @Hdiv(classic,fangsong){ @Hbq(){ @Hsp(inline-block){注释：}<br /> @Hsp(intent,inline-block){选自《全唐诗》卷二十一（中华书局1999年版）。春江花月夜，乐府旧题。张若虚（约660—约720），扬州（今属江苏）人，唐代诗人。与贺知章、张旭、包融并称“吴中四士”。}<br /> @Hsp(intent,inline-block){〔滟滟〕形容波光荡漾。}<br /> @Hsp(intent,inline-block){〔月明〕月光。}<br /> @Hsp(intent,inline-block){〔芳甸〕花草茂盛的原野。}<br /> @Hsp(intent,inline-block){〔@Hpy(){霰}〕白色不透明的小冰粒。}<br /> @Hsp(intent,inline-block){〔流霜〕飞霜，比喻从空中洒落的月光。}<br /> @Hsp(intent,inline-block){〔青枫浦〕即双枫浦，在湖南浏阳南。}<br /> @Hsp(intent,inline-block){〔扁舟子〕指飘荡江湖的游子。}<br /> @Hsp(intent,inline-block){〔明月楼〕明月映照下的楼阁。这里指楼上的思妇。}<br /> @Hsp(intent,inline-block){〔裴回〕同“徘徊”。}<br /> @Hsp(intent,inline-block){〔离人〕指守候在家的思妇。}<br /> @Hsp(intent,inline-block){〔玉户帘中卷不去〕意思是，月光洒在玉门帘上，欲卷而去之而不得。玉户，用玉装饰的门，也用作门的美称。}<br /> @Hsp(intent,inline-block){〔月华〕月光。}<br /> @Hsp(intent,inline-block){〔流照〕照射。}<br /> @Hsp(intent,inline-block){〔鸿雁长飞光不度〕大雁远飞却不能飞出月光。暗示鸿雁不能传书。}<br /> @Hsp(intent,inline-block){〔鱼龙潜跃水成文〕鱼儿出没只能使水面泛出波纹。暗示鱼儿不能传书。古人有鱼儿传书一说。乐府诗《饮马长城窟行》：“呼儿烹鲤鱼，中有尺素书。”鱼龙，这里指鱼。}<br /> @Hsp(intent,inline-block){〔潇湘〕潇水和湘江，均流入洞庭湖。}<br /> } }</div><h2 id="代码"><span class="me-2">代码</span><a href="#代码" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><h4 id="需要的库"><span class="me-2">需要的库</span><a href="#需要的库" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4><div class="language-html highlighter-rouge"><div class="code-header"> <span data-label-text="HTML"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="繁体"><span class="me-2">繁体</span><a href="#繁体" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<div class="heti-box">
+@Hdiv(poetry,nowarp){
+
+@Hh1(){春江花月夜@Hsp(meta,small){[唐]@Habbr(吴中四士之一){张若虚}}}
+
+@Hp(verse,x-large,huiwen){
+春江潮水連海平，海上明月共潮生。<br />
+
+灩灩隨波韆萬裏，何處春江無月明！<br />
+
+江流宛轉繞芳甸，月照花林皆似霰。<br />
+
+空裏流霜不覺飛，汀上白沙看不見。<br />
+
+江天一色無縴塵，皎皎空中孤月輪。<br />
+
+江畔何人初見月，江月何秊初照人？<br />
+
+人生代代無窮已，江月秊秊朢相似。<br />
+
+不知江月待何人，但見長江送流水。<br />
+
+白雲一片去悠悠，青楓浦上不勝愁。<br />
+
+誰傢今夜扁舟子，何處相思明月樓？<br />
+
+可憐樓上月裴廻，應照離人粧鏡臺。<br />
+
+玉戶簾中捲不去，搗衣砧上拂還來。<br />
+
+此時相朢不相聞，願逐月華流照君。<br />
+
+鴻鴈長飛光不度，魚龍潛躍水成文。<br />
+
+昨夜閑潭夢落花，可憐春半不還傢。<br />
+
+江水流春去慾盡，江潭落月複西斜。<br />
+
+斜月沉沉藏海霧，碣石瀟湘無限路。<br />
+
+不知乗月幾人歸，落月搖情滿江樹。<br />
+}
+}
+</div>
+
+<h3 id="注释"><span class="me-2">注释</span><a href="#注释" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<h4 id="楷体"><span class="me-2">楷体</span><a href="#楷体" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<div class="heti-box">
+@Hdiv(classic){
+@Hbq(){
+@Hsp(inline-block){注释：}<br />
+@Hsp(intent,inline-block){选自《全唐诗》卷二十一（中华书局1999年版）。春江花月夜，乐府旧题。张若虚（约660—约720），扬州（今属江苏）人，唐代诗人。与贺知章、张旭、包融并称“吴中四士”。}<br />
+@Hsp(intent,inline-block){〔滟滟〕形容波光荡漾。}<br />
+@Hsp(intent,inline-block){〔月明〕月光。}<br />
+@Hsp(intent,inline-block){〔芳甸〕花草茂盛的原野。}<br />
+@Hsp(intent,inline-block){〔@Hpy(){霰}〕白色不透明的小冰粒。}<br />
+@Hsp(intent,inline-block){〔流霜〕飞霜，比喻从空中洒落的月光。}<br />
+@Hsp(intent,inline-block){〔青枫浦〕即双枫浦，在湖南浏阳南。}<br />
+@Hsp(intent,inline-block){〔扁舟子〕指飘荡江湖的游子。}<br />
+@Hsp(intent,inline-block){〔明月楼〕明月映照下的楼阁。这里指楼上的思妇。}<br />
+@Hsp(intent,inline-block){〔裴回〕同“徘徊”。}<br />
+@Hsp(intent,inline-block){〔离人〕指守候在家的思妇。}<br />
+@Hsp(intent,inline-block){〔玉户帘中卷不去〕意思是，月光洒在玉门帘上，欲卷而去之而不得。玉户，用玉装饰的门，也用作门的美称。}<br />
+@Hsp(intent,inline-block){〔月华〕月光。}<br />
+@Hsp(intent,inline-block){〔流照〕照射。}<br />
+@Hsp(intent,inline-block){〔鸿雁长飞光不度〕大雁远飞却不能飞出月光。暗示鸿雁不能传书。}<br />
+@Hsp(intent,inline-block){〔鱼龙潜跃水成文〕鱼儿出没只能使水面泛出波纹。暗示鱼儿不能传书。古人有鱼儿传书一说。乐府诗《饮马长城窟行》：“呼儿烹鲤鱼，中有尺素书。”鱼龙，这里指鱼。}<br />
+@Hsp(intent,inline-block){〔潇湘〕潇水和湘江，均流入洞庭湖。}<br />
+}
+}
+</div>
+
+<h4 id="仿宋-1"><span class="me-2">仿宋</span><a href="#仿宋-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<div class="heti-box">
+@Hdiv(classic,fangsong){
+@Hbq(){
+@Hsp(inline-block){注释：}<br />
+@Hsp(intent,inline-block){选自《全唐诗》卷二十一（中华书局1999年版）。春江花月夜，乐府旧题。张若虚（约660—约720），扬州（今属江苏）人，唐代诗人。与贺知章、张旭、包融并称“吴中四士”。}<br />
+@Hsp(intent,inline-block){〔滟滟〕形容波光荡漾。}<br />
+@Hsp(intent,inline-block){〔月明〕月光。}<br />
+@Hsp(intent,inline-block){〔芳甸〕花草茂盛的原野。}<br />
+@Hsp(intent,inline-block){〔@Hpy(){霰}〕白色不透明的小冰粒。}<br />
+@Hsp(intent,inline-block){〔流霜〕飞霜，比喻从空中洒落的月光。}<br />
+@Hsp(intent,inline-block){〔青枫浦〕即双枫浦，在湖南浏阳南。}<br />
+@Hsp(intent,inline-block){〔扁舟子〕指飘荡江湖的游子。}<br />
+@Hsp(intent,inline-block){〔明月楼〕明月映照下的楼阁。这里指楼上的思妇。}<br />
+@Hsp(intent,inline-block){〔裴回〕同“徘徊”。}<br />
+@Hsp(intent,inline-block){〔离人〕指守候在家的思妇。}<br />
+@Hsp(intent,inline-block){〔玉户帘中卷不去〕意思是，月光洒在玉门帘上，欲卷而去之而不得。玉户，用玉装饰的门，也用作门的美称。}<br />
+@Hsp(intent,inline-block){〔月华〕月光。}<br />
+@Hsp(intent,inline-block){〔流照〕照射。}<br />
+@Hsp(intent,inline-block){〔鸿雁长飞光不度〕大雁远飞却不能飞出月光。暗示鸿雁不能传书。}<br />
+@Hsp(intent,inline-block){〔鱼龙潜跃水成文〕鱼儿出没只能使水面泛出波纹。暗示鱼儿不能传书。古人有鱼儿传书一说。乐府诗《饮马长城窟行》：“呼儿烹鲤鱼，中有尺素书。”鱼龙，这里指鱼。}<br />
+@Hsp(intent,inline-block){〔潇湘〕潇水和湘江，均流入洞庭湖。}<br />
+}
+}
+</div>
+
+<h2 id="代码"><span class="me-2">代码</span><a href="#代码" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<h4 id="需要的库"><span class="me-2">需要的库</span><a href="#需要的库" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<div class="language-html highlighter-rouge"><div class="code-header">
+        <span data-label-text="HTML"><i class="fas fa-code fa-fw small"></i></span>
+      <button aria-label="copy" data-title-succeed="已复制！"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-</pre><td class="rouge-code"><pre><span class="c">&lt;!-- Jquery --&gt;</span>
+</pre></td><td class="rouge-code"><pre><span class="c">&lt;!-- Jquery --&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://s4.zstatic.net/npm/jquery@3.7.1/dist/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 
 <span class="c">&lt;!-- 一个生成拼音的库 --&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/pinyin-pro@3.18.2/dist/index.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 
-</pre></table></code></div></div><h4 id="具体实现"><span class="me-2">具体实现</span><a href="#具体实现" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4><blockquote class="prompt-tip"><p>烂代码没啥鲁棒性，你可以自己实现一下，实现完了留言告诉我，我可以用一用，具体代码详见<a href="https://github.com/rainsins/rainsins.github.io/blob/379f2da2103b51ecab9280bacea3c688f2fc8237/assets/js/heti.js" target="_blank">github</a>。</p></blockquote></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw me-1"></i> <a href='/categories/%E5%B7%A5%E5%85%B7/'>工具</a>, <a href='/categories/%E6%8E%92%E7%89%88/'>排版</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw me-1"></i> <a href="/tags/%E5%B7%A5%E5%85%B7/" class="post-tag no-text-decoration" >工具</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> 本文由作者按照 <a href="https://creativecommons.org/licenses/by/4.0/"> CC BY 4.0 </a> 进行授权</div><div class="share-wrapper"> <span class="share-label text-muted me-1">分享</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=%E3%80%8C%E5%88%86%E4%BA%AB%E3%80%8D%E4%B8%80%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84%E4%B8%AD%E6%96%87%E6%8E%92%E7%89%88%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog%EF%BD%9C%E4%B8%80%E4%B8%AA%E7%B2%97%E7%B3%99%E7%9A%84%E7%AE%80%E5%8D%95%E7%9A%84%E5%B0%8F%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%88%86%E4%BA%AB%E4%B9%90%E8%B6%A3%E3%80%82&url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fheti%2F" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter" > <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E5%88%86%E4%BA%AB%E3%80%8D%E4%B8%80%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84%E4%B8%AD%E6%96%87%E6%8E%92%E7%89%88%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog%EF%BD%9C%E4%B8%80%E4%B8%AA%E7%B2%97%E7%B3%99%E7%9A%84%E7%AE%80%E5%8D%95%E7%9A%84%E5%B0%8F%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%88%86%E4%BA%AB%E4%B9%90%E8%B6%A3%E3%80%82&u=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fheti%2F" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook" > <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://t.me/share/url?url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fheti%2F&text=%E3%80%8C%E5%88%86%E4%BA%AB%E3%80%8D%E4%B8%80%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84%E4%B8%AD%E6%96%87%E6%8E%92%E7%89%88%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog%EF%BD%9C%E4%B8%80%E4%B8%AA%E7%B2%97%E7%B3%99%E7%9A%84%E7%AE%80%E5%8D%95%E7%9A%84%E5%B0%8F%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%88%86%E4%BA%AB%E4%B9%90%E8%B6%A3%E3%80%82" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" target="_blank" rel="noopener" aria-label="Telegram" > <i class="fa-fw fab fa-telegram"></i> </a> <i id="copy-link" class="fa-fw fas fa-link small" data-bs-toggle="tooltip" data-bs-placement="top" title="分享链接" data-title-succeed="链接已复制！" > </i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 ps-2 text-muted"><div class="access"><div id="access-lastmod" class="post"><div class="panel-heading">最近更新</div><ul class="post-content list-unstyled ps-0 pb-1 ms-1 mt-2"><li class="text-truncate lh-lg"> <a href="/posts/video/">「视频」我的影视房，放些我找的资源</a><li class="text-truncate lh-lg"> <a href="/posts/niannian/">「神秘」年年的高雅集</a><li class="text-truncate lh-lg"> <a href="/posts/mac/">「文件」一个趋于完美的黑苹果引导文件</a><li class="text-truncate lh-lg"> <a href="/posts/gzip/">「解决问题」jekyll开启gzip和brotli</a><li class="text-truncate lh-lg"> <a href="/posts/marx8/">「逐字稿」《费尔巴哈论》九、近代个人主义原理的来历</a></ul></div><div id="access-tags"><div class="panel-heading">热门标签</div><div class="d-flex flex-wrap mt-3 mb-1 me-3"> <a class="post-tag btn btn-outline-primary" href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a> <a class="post-tag btn btn-outline-primary" href="/tags/%E5%86%99%E7%9C%9F/">写真</a> <a class="post-tag btn btn-outline-primary" href="/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/">解决问题</a> <a class="post-tag btn btn-outline-primary" href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/">羽毛球</a> <a class="post-tag btn btn-outline-primary" href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">黑苹果</a> <a class="post-tag btn btn-outline-primary" href="/tags/efi/">EFI</a> <a class="post-tag btn btn-outline-primary" href="/tags/%E5%81%A5%E5%BA%B7/">健康</a> <a class="post-tag btn btn-outline-primary" href="/tags/apache/">Apache</a> <a class="post-tag btn btn-outline-primary" href="/tags/bot/">Bot</a> <a class="post-tag btn btn-outline-primary" href="/tags/bt/">Bt</a></div></div></div><div id="toc-wrapper" class="ps-0 pe-4 mb-5"><div class="panel-heading ps-3 pt-2 mb-2">文章内容</div><nav id="toc"></nav></div></div></div><div class="row"><div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-3 pe-xl-4 mt-5"><div class="post-navigation d-flex justify-content-between"> <a href="/posts/marx2/" class="btn btn-outline-primary" prompt="上一篇" ><p>「逐字稿」《费尔巴哈论》三、扬弃唯物与唯心的对立</p></a> <a href="/posts/marx3/" class="btn btn-outline-primary" prompt="下一篇" ><p>「逐字稿」《费尔巴哈论》四、对认识论立场的超越</p></a></div><div id="tcomment" class="no-show-comment"></div></div></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-11 post-content"><div id="search-hints"><div id="access-tags"><div class="panel-heading">热门标签</div><div class="d-flex flex-wrap mt-3 mb-1 me-3"> <a class="post-tag btn btn-outline-primary" href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a> <a class="post-tag btn btn-outline-primary" href="/tags/%E5%86%99%E7%9C%9F/">写真</a> <a class="post-tag btn btn-outline-primary" href="/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/">解决问题</a> <a class="post-tag btn btn-outline-primary" href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/">羽毛球</a> <a class="post-tag btn btn-outline-primary" href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">黑苹果</a> <a class="post-tag btn btn-outline-primary" href="/tags/efi/">EFI</a> <a class="post-tag btn btn-outline-primary" href="/tags/%E5%81%A5%E5%BA%B7/">健康</a> <a class="post-tag btn btn-outline-primary" href="/tags/apache/">Apache</a> <a class="post-tag btn btn-outline-primary" href="/tags/bot/">Bot</a> <a class="post-tag btn btn-outline-primary" href="/tags/bt/">Bt</a></div></div></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div></div><footer><div class="container px-lg-4"><div class="d-flex justify-content-center align-items-center text-muted mx-md-3" ><p> 本站采用 <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>，主题 <a data-bs-toggle="tooltip" data-bs-placement="top" title="v7.0.1" href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener" >Chirpy</a> ，使用 GitHub Pages部署。</p><p>© 2025 <a href="https://twitter.com/2000_python">RAINSIN</a>. <span data-bs-toggle="tooltip" data-bs-placement="top" title="除非另有说明，本网站上的博客文章均由作者按照知识共享署名 4.0 国际 (CC BY 4.0) 许可协议进行授权。" >保留部分权利。</span></p></div><style> .font-links-a:hover{ border-bottom: none; }</style><div class="justify-content-center align-items-center text-muted mx-md-3" style="display: flex; padding: 0 0 9px 0;flex-wrap: wrap;"> 友情链接：&nbsp;&nbsp; <a class="font-links-a" href="https://sweetjing.cc/" target="_blank" title="保持热爱，奔赴山海。">半截の诗</a>， <a class="font-links-a" href="https://www.foreverblog.cn/go.html" target="_blank" title="穿梭虫洞-随机访问十年之约友链博客">虫洞</a>， <a class="font-links-a" href="https://www.travellings.cn/go-by-clouds.html" target="_blank" title="开往-友链接力">开往</a>， <a class="font-links-a" href="https://www.foreverblog.cn/" target="_blank" title="一个人的寂寞，一群人的狂欢。">十年之约</a>， <a class="font-links-a" href="https://blogwe.com" target="_blank">[🏠BlogWe]</a>， <a class="font-links-a" href="https://storeweb.cn/" target="_blank" title="个站商店">个站商店</a> 。</div><div class="justify-content-center align-items-center text-muted mx-md-3" style="display: flex; padding: 0 0 20px 0;flex-wrap: wrap;"> <i class="fa fa-cog fa-spin fa-1x fa-fw"></i> <span>本站已运行 <span id="days" style="font-weight:800; color:#1ba784"> </span> </span></div></div></footer><script src="/assets/js/heti.js"></script> <script type="text/javascript"> Charch(document); </script> <script src="/assets/gzip/heti-addon.min.js"></script> <script> const heti_addon = new Heti('.heti'); heti_addon.autoSpacing(); </script> <script language=javascript> function siteTime(){ window.setTimeout("siteTime()", 1000); var seconds = 1000; var minutes = seconds * 60; var hours = minutes * 60; var days = hours * 24; var years = days * 365; var today = new Date(); var todayYear = today.getFullYear(); var todayMonth = today.getMonth()+1; var todayDate = today.getDate(); var todayHour = today.getHours(); var todayMinute = today.getMinutes(); var todaySecond = today.getSeconds(); var t1 = Date.UTC(2023,06,01,00,00,00); var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond); var diff = t2-t1; var diffYears = Math.floor(diff/years); var diffDays = Math.floor((diff/days)-diffYears*365); var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours); var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes); var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds); document.getElementById("days").innerHTML=+diffYears+"年"+diffDays+"天"+diffHours+"时"+diffMinutes+"分钟"+diffSeconds+"秒"; } siteTime(); </script> <script src="/assets/js/text-autospace.min.js"></script><link rel="stylesheet" href="/assets/css/autospace-ex-min.css"><div id="mask"></div><a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a><div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-animation="true" data-bs-autohide="false" ><div class="toast-header"> <button type="button" class="btn-close ms-auto" data-bs-dismiss="toast" aria-label="Close" ></button></div><div class="toast-body text-center pt-0"><p class="px-2 mb-3">发现新版本的内容。</p><button type="button" class="btn btn-primary" aria-label="Update"> 更新 </button></div></div><script> /* Note: dependent library will be loaded in `js-selector.html` */ SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="px-1 px-sm-2 px-lg-4 px-xl-0"> <a href="{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5"></p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); </script> <script> window.onload = () => { if(window.load_event){ for(const key in window.load_event){ if(key != "load_anime"){ console.log(key); window.load_event[key](); } } }else{ console.log("没有load事件！"); } }; </script>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h4 id="具体实现"><span class="me-2">具体实现</span><a href="#具体实现" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
+<blockquote class="prompt-tip">
+  <p>烂代码没啥鲁棒性，你可以自己实现一下，实现完了留言告诉我，我可以用一用，具体代码详见<a href="https://github.com/rainsins/rainsins.github.io/blob/379f2da2103b51ecab9280bacea3c688f2fc8237/assets/js/heti.js" target="_blank">github</a>。</p>
+</blockquote>
+
+</div>
+
+<div class="post-tail-wrapper text-muted">
+
+  <!-- categories -->
+  
+  <div class="post-meta mb-3">
+    <i class="far fa-folder-open fa-fw me-1"></i>
+    
+      <a href='/categories/%E5%B7%A5%E5%85%B7/'>工具</a>,
+      <a href='/categories/%E6%8E%92%E7%89%88/'>排版</a>
+  </div>
+  
+
+  <!-- tags -->
+  
+  <div class="post-tags">
+    <i class="fa fa-tags fa-fw me-1"></i>
+      
+      <a href="/tags/%E5%B7%A5%E5%85%B7/"
+          class="post-tag no-text-decoration" >工具</a>
+      
+  </div>
+  
+
+  <div class="post-tail-bottom
+    d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+    <div class="license-wrapper">
+
+      
+
+        
+
+        本文由作者按照 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         进行授权
+
+      
+    </div>
+
+    <!-- Post sharing snippet -->
+
+<div class="share-wrapper">
+  <span class="share-label text-muted me-1">分享</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+      
+      <a
+        href="https://twitter.com/intent/tweet?text=%E3%80%8C%E5%88%86%E4%BA%AB%E3%80%8D%E4%B8%80%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84%E4%B8%AD%E6%96%87%E6%8E%92%E7%89%88%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog%EF%BD%9C%E4%B8%80%E4%B8%AA%E7%B2%97%E7%B3%99%E7%9A%84%E7%AE%80%E5%8D%95%E7%9A%84%E5%B0%8F%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%88%86%E4%BA%AB%E4%B9%90%E8%B6%A3%E3%80%82&url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fheti%2F"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Twitter"
+        target="_blank"
+        rel="noopener"
+        aria-label="Twitter"
+      >
+        <i class="fa-fw fab fa-twitter"></i>
+      </a>
+    
+      
+      <a
+        href="https://www.facebook.com/sharer/sharer.php?title=%E3%80%8C%E5%88%86%E4%BA%AB%E3%80%8D%E4%B8%80%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84%E4%B8%AD%E6%96%87%E6%8E%92%E7%89%88%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog%EF%BD%9C%E4%B8%80%E4%B8%AA%E7%B2%97%E7%B3%99%E7%9A%84%E7%AE%80%E5%8D%95%E7%9A%84%E5%B0%8F%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%88%86%E4%BA%AB%E4%B9%90%E8%B6%A3%E3%80%82&u=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fheti%2F"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Facebook"
+        target="_blank"
+        rel="noopener"
+        aria-label="Facebook"
+      >
+        <i class="fa-fw fab fa-facebook-square"></i>
+      </a>
+    
+      
+      <a
+        href="https://t.me/share/url?url=https%3A%2F%2Fblog.rainsin.cn%2Fposts%2Fheti%2F&text=%E3%80%8C%E5%88%86%E4%BA%AB%E3%80%8D%E4%B8%80%E6%AC%BE%E5%A5%BD%E7%94%A8%E7%9A%84%E4%B8%AD%E6%96%87%E6%8E%92%E7%89%88%E5%B7%A5%E5%85%B7%20-%20Rainsin%20%E2%80%A2%20Blog%EF%BD%9C%E4%B8%80%E4%B8%AA%E7%B2%97%E7%B3%99%E7%9A%84%E7%AE%80%E5%8D%95%E7%9A%84%E5%B0%8F%E5%8D%9A%E5%AE%A2%EF%BC%8C%E5%88%86%E4%BA%AB%E4%B9%90%E8%B6%A3%E3%80%82"
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="Telegram"
+        target="_blank"
+        rel="noopener"
+        aria-label="Telegram"
+      >
+        <i class="fa-fw fab fa-telegram"></i>
+      </a>
+    
+
+    <i
+      id="copy-link"
+      class="fa-fw fas fa-link small"
+      data-bs-toggle="tooltip"
+      data-bs-placement="top"
+      title="分享链接"
+      data-title-succeed="链接已复制！"
+    >
+    </i>
+  </span>
+</div>
+
+
+  </div><!-- .post-tail-bottom -->
+
+</div><!-- div.post-tail-wrapper -->
+   
+    </div>
+  </div>
+  
+  <!-- #core-wrapper -->
+
+  <!-- panel -->
+  <div id="panel-wrapper" class="col-xl-3 ps-2 text-muted">
+    <div class="access">
+      <!-- Get the last 5 posts from lastmod list. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="access-lastmod" class="post">
+    <div class="panel-heading">最近更新</div>
+    <ul class="post-content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/video/">「视频」我的影视房，放些我找的资源</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/niannian/">「神秘」年年的高雅集</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/mac/">「文件」一个趋于完美的黑苹果引导文件</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/gzip/">「解决问题」jekyll开启gzip和brotli</a>
+        </li>
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/posts/marx8/">「逐字稿」《费尔巴哈论》九、近代个人主义原理的来历</a>
+        </li>
+      
+    </ul>
+  </div>
+  <!-- #access-lastmod -->
+
+ <!-- The trending tags list -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <div id="access-tags">
+    <div class="panel-heading">热门标签</div>
+    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%86%99%E7%9C%9F/">写真</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/">解决问题</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/">羽毛球</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">黑苹果</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/efi/">EFI</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%81%A5%E5%BA%B7/">健康</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/apache/">Apache</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/bot/">Bot</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/bt/">Bt</a>
+      
+    </div>
+  </div>
+
+
+    </div>
+
+      
+
+
+
+  <div id="toc-wrapper" class="ps-0 pe-4 mb-5">
+    <div class="panel-heading ps-3 pt-2 mb-2">文章内容</div>
+    <nav id="toc"></nav>
+  </div>
+
+ 
+  </div>
+</div>
+
+<!-- tail -->
+
+<div class="row">
+  <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-3 pe-xl-4 mt-5">
+      <!-- Navigation buttons at the bottom of the post. -->
+
+<div class="post-navigation d-flex justify-content-between">
+  
+    <a
+      href="/posts/marx2/"
+      class="btn btn-outline-primary"
+      prompt="上一篇"
+    >
+      <p>「逐字稿」《费尔巴哈论》三、扬弃唯物与唯心的对立</p>
+    </a>
+  
+
+  
+    <a
+      href="/posts/marx3/"
+      class="btn btn-outline-primary"
+      prompt="下一篇"
+    >
+      <p>「逐字稿」《费尔巴哈论》四、对认识论立场的超越</p>
+    </a>
+  
+</div>
+   <!--  The comments switcher -->
+
+
+ 
+
+    <div id="tcomment" class="no-show-comment"></div>
+  </div>
+</div>
+
+
+        <!-- The Search results -->
+
+<div id="search-result-wrapper" class="d-flex justify-content-center unloaded">
+  <div class="col-11 post-content">
+    <div id="search-hints">
+      <!-- The trending tags list -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+
+
+  <div id="access-tags">
+    <div class="panel-heading">热门标签</div>
+    <div class="d-flex flex-wrap mt-3 mb-1 me-3">
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%93%B2%E5%AD%A6/">哲学</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%86%99%E7%9C%9F/">写真</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E8%A7%A3%E5%86%B3%E9%97%AE%E9%A2%98/">解决问题</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E7%BE%BD%E6%AF%9B%E7%90%83/">羽毛球</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">黑苹果</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/efi/">EFI</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/%E5%81%A5%E5%BA%B7/">健康</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/apache/">Apache</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/bot/">Bot</a>
+      
+        
+        <a class="post-tag btn btn-outline-primary" href="/tags/bt/">Bt</a>
+      
+    </div>
+  </div>
+
+
+    </div>
+    <div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+    <!-- The Footer -->
+
+<footer>
+  <div class="container px-lg-4">
+    <div class="d-flex justify-content-center align-items-center text-muted mx-md-3" >
+      <p>
+        本站采用
+      <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>，主题 
+      <a
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="v7.0.1"
+        href="https://github.com/cotes2020/jekyll-theme-chirpy"
+        target="_blank"
+        rel="noopener"
+      >Chirpy</a>
+
+        ，使用 GitHub Pages部署。
+      </p>
+
+      <p>©
+        2025
+        <a href="https://twitter.com/2000_python">RAINSIN</a>.
+        
+          <span
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="除非另有说明，本网站上的博客文章均由作者按照知识共享署名 4.0 国际 (CC BY 4.0) 许可协议进行授权。"
+          >保留部分权利。</span>
+        
+      </p>
+    </div>
+    <style>
+      .font-links-a:hover{
+        border-bottom: none;
+      }
+    </style>
+    <div class="justify-content-center align-items-center text-muted mx-md-3" style="display: flex;  padding: 0 0 9px 0;flex-wrap: wrap;">
+      友情链接：&nbsp;&nbsp;
+      <a class="font-links-a" href="https://sweetjing.cc/" target="_blank" title="保持热爱，奔赴山海。">半截の诗</a>，
+      <a class="font-links-a" href="https://www.foreverblog.cn/go.html" target="_blank" title="穿梭虫洞-随机访问十年之约友链博客">虫洞</a>，
+      <a class="font-links-a" href="https://www.travellings.cn/go-by-clouds.html" target="_blank" title="开往-友链接力">开往</a>，
+      <a class="font-links-a" href="https://www.foreverblog.cn/" target="_blank" title="一个人的寂寞，一群人的狂欢。">十年之约</a>，
+      <a class="font-links-a" href="https://blogwe.com" target="_blank">[🏠BlogWe]</a>，
+      <a class="font-links-a" href="https://storeweb.cn/" target="_blank" title="个站商店">个站商店</a>
+      。
+    </div>
+    <div class="justify-content-center align-items-center text-muted mx-md-3" style="display: flex;  padding: 0 0 20px 0;flex-wrap: wrap;">
+<i class="fa fa-cog fa-spin fa-1x fa-fw"></i>
+<span>本站已运行 <span id="days" style="font-weight:800; color:#1ba784"> </span> </span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="/assets/js/heti.js"></script>
+
+
+
+  <script type="text/javascript">
+  Charch(document);
+  </script>
+
+
+
+<script src="/assets/gzip/heti-addon.min.js"></script>
+
+<script>
+  const heti_addon = new Heti('.heti');
+  heti_addon.autoSpacing();
+</script>
+
+
+<script language=javascript>
+  function siteTime(){
+      window.setTimeout("siteTime()", 1000);
+      var seconds = 1000;
+      var minutes = seconds * 60;
+      var hours = minutes * 60;
+      var days = hours * 24;
+      var years = days * 365;
+      var today = new Date();
+      var todayYear = today.getFullYear();
+      var todayMonth = today.getMonth()+1;
+      var todayDate = today.getDate();
+      var todayHour = today.getHours();
+      var todayMinute = today.getMinutes();
+      var todaySecond = today.getSeconds();
+      var t1 = Date.UTC(2023,06,01,00,00,00);
+      var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+      var diff = t2-t1;
+      var diffYears = Math.floor(diff/years);
+      var diffDays = Math.floor((diff/days)-diffYears*365);
+      var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+      var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+      var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      document.getElementById("days").innerHTML=+diffYears+"年"+diffDays+"天"+diffHours+"时"+diffMinutes+"分钟"+diffSeconds+"秒";
+  }
+  siteTime();
+</script>
+
+
+
+  <script src="/assets/js/text-autospace.min.js"></script>
+
+  <link rel="stylesheet" href="/assets/css/autospace-ex-min.css">
+ 
+
+    <div id="mask"></div>
+
+    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    
+      <div
+        id="notification"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        data-bs-animation="true"
+        data-bs-autohide="false"
+      >
+        <div class="toast-header">
+          <button
+            type="button"
+            class="btn-close ms-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body text-center pt-0">
+          <p class="px-2 mb-3">发现新版本的内容。</p>
+          <button type="button" class="btn btn-primary" aria-label="Update">
+            更新
+          </button>
+        </div>
+      </div>
+    
+
+    
+
+    <!--
+  Jekyll Simple Search loader
+  See: <https://github.com/christian-fei/Simple-Jekyll-Search>
+-->
+
+
+
+
+
+<script>
+  /* Note: dependent library will be loaded in `js-selector.html` */
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '/assets/js/data/search.json',
+    searchResultTemplate: '<div class="px-1 px-sm-2 px-lg-4 px-xl-0">  <a href="{url}">{title}</a>  <div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1">    {categories}    {tags}  </div>  <p>{snippet}</p></div>',
+    noResultsText: '<p class="mt-5"></p>',
+    templateMiddleware: function(prop, value, template) {
+      if (prop === 'categories') {
+        if (value === '') {
+          return `${value}`;
+        } else {
+          return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`;
+        }
+      }
+
+      if (prop === 'tags') {
+        if (value === '') {
+          return `${value}`;
+        } else {
+          return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`;
+        }
+      }
+    }
+  });
+</script>
+
+
+    <script>
+      window.onload = () => {
+        if(window.load_event){
+          for(const key in window.load_event){
+            if(key != "load_anime"){
+              console.log(key);
+              window.load_event[key]();
+            }
+          }
+        }else{
+          console.log("没有load事件！");
+        }
+      };
+    </script>
+  </body>
+</html>
+
