@@ -32,20 +32,20 @@ const threeav = [
         url: "https://xslist.org/zh/model/358.html"
     },
     {
-        name: "紗倉まな",
-        age: "1993.03.22.",
-        three: "B89 / W58 / H89",
-        out: "2016.06.",
-        color: "#cf3881",
-        color1: "#2B6C8A",
+        name: "小野夕子",
+        age: "1993.12.02.",
+        three: "B92 / W58 / H88",
+        out: "2014.08.",
+        color: "#e1b5a0",
+        color1: "#a96d56",
         color2: "#2092C5",
-        color3: "#0DC0E5",
-        color4: "#BF9989",
-        img: "https://file.rainsin.cn/d/blog/img/comment/%E7%B4%97%E5%80%89%E3%81%BE%E3%81%AA%E5%A4%B4.jpg",
-        bgimg: "https://file.rainsin.cn/d/blog/img/comment/%E7%B4%97%E5%80%89%E3%81%BE%E3%81%AA.webp",
-        mfact: "SOD",
-        mfactlogo: "https://file.rainsin.cn/d/blog/img/comment/SOD.webp",
-        url: "https://xslist.org/zh/model/172.html"
+        color3: "#a27a6c",
+        color4: "#431b10",
+        img: "https://file.rainsin.cn/d/blog/img/comment/%E5%A5%B6%E8%91%B5%E5%A4%B4.webp",
+        bgimg: "https://file.rainsin.cn/d/blog/img/comment/%E5%A5%B6%E8%91%B5.webp",
+        mfact: "DAHLIA",
+        mfactlogo: "https://file.rainsin.cn/d/blog/img/comment/toplogo.png",
+        url: "https://xslist.org/en/model/66603.html"
     },
     {
         name: "神木丽",
